@@ -26,7 +26,7 @@ function AreaCard({ area, category }) {
 }
 
 function AreaSection({ section, areas, category, cols, bg }) {
-  const colClass = cols === 3 ? 'col-6 col-md-4' : 'col-6 col-lg-3'
+  const colClass = cols === 3 ? 'col-12 col-md-4' : 'col-12 col-md-6 col-lg-3'
   return (
     <section className={'hl-section' + (bg ? ' hl-bg-cream' : '')}>
       <div className="hl-container">

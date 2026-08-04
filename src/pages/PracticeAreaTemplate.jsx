@@ -10,7 +10,7 @@ import images from '../assets/images.js'
  * `page` is the data object; `path`/`crumb` drive SEO + breadcrumbs.
  */
 export default function PracticeAreaTemplate({ page, path, crumb, category, cols = 4 }) {
-  const colClass = cols === 3 ? 'col-md-6 col-lg-4' : 'col-6 col-lg-3'
+  const colClass = cols === 3 ? 'col-12 col-md-6 col-lg-4' : 'col-12 col-md-6 col-lg-3'
 
   return (
     <>
