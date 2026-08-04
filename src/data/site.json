@@ -1,0 +1,769 @@
+{
+  "business": {
+    "name": "Hirani Law Firm PLLC",
+    "shortName": "Hirani Law Firm",
+    "attorney": "Sehar Hirani",
+    "phone": "281-665-8188",
+    "phoneHref": "tel:+12816658188",
+    "email": "info@hiranilawfirm.com",
+    "tagline": "Family law in Greater Houston and personal injury representation across Texas.",
+    "areasServed": ["Houston", "Katy", "Fort Bend", "Montgomery", "Galveston", "Austin County"],
+    "url": "https://www.hiranilawfirm.com",
+    "founded": "2018",
+    "social": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "tiktok": "https://tiktok.com"
+    }
+  },
+  "nav": {
+    "topBarText": "Call For A Consultation:",
+    "links": [
+      { "label": "Home", "to": "/" },
+      {
+        "label": "About",
+        "to": "/about",
+        "children": [
+          { "label": "About Us", "to": "/about" },
+          { "label": "Meet Sehar Hirani", "to": "/about/sehar-hirani" },
+          { "label": "Our Team", "to": "/about/our-team" },
+          { "label": "Service Areas", "to": "/about/service-areas" }
+        ]
+      },
+      {
+        "label": "Practice Areas",
+        "to": "/practice-areas",
+        "children": [
+          { "label": "Family Law", "to": "/practice-areas/family-law" },
+          { "label": "Personal Injury", "to": "/practice-areas/personal-injury" }
+        ]
+      },
+      {
+        "label": "Reviews",
+        "to": "/reviews",
+        "children": [
+          { "label": "Client Reviews", "to": "/reviews" },
+          { "label": "FAQs", "to": "/faqs" }
+        ]
+      },
+      { "label": "Contact", "to": "/contact" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Houston and Katy Family Law Attorney",
+    "title": "Facing a Family Challenge or Serious Injury?",
+    "description": "Attorney Sehar Hirani helps clients across Greater Houston move through divorce, custody, modifications, child support, adoption, name changes, enforcement matters, and personal injury claims with clear guidance and steady advocacy.",
+    "primaryCta": { "label": "Free Case Evaluation", "to": "/contact" },
+    "secondaryCta": { "label": "Explore Practice Areas", "to": "/practice-areas" },
+    "form": {
+      "eyebrow": "Free Case Evaluation",
+      "title": "Tell us what happened.",
+      "description": "A confidential first conversation can help you understand your options before the next deadline or court date arrives.",
+      "helpOptions": [
+        "Divorce",
+        "Child Custody",
+        "Child Support",
+        "Adoption",
+        "Name Change",
+        "Personal Injury",
+        "Other"
+      ],
+      "submitLabel": "Submit"
+    }
+  },
+  "stats": [
+    { "value": "Since 2018", "label": "Serving Texas Families" },
+    { "value": "200+", "label": "Families Guided" },
+    { "value": "Houston & Katy", "label": "Local Court Experience" },
+    { "value": "Free", "label": "Confidential Consultation" }
+  ],
+  "practiceAreas": {
+    "eyebrow": "Our Practice Areas",
+    "title": "Comprehensive legal services for families and individuals.",
+    "description": "The firm is built around two high-stress legal needs: protecting families during transition and helping injured people pursue recovery.",
+    "cards": [
+      {
+        "title": "Family Law",
+        "image": "family-law",
+        "description": "Divorce, child custody, modifications, child support, father's rights, conservatorship, name changes, adoptions, enforcements, property division, and marital agreements.",
+        "to": "/practice-areas/family-law"
+      },
+      {
+        "title": "Personal Injury",
+        "image": "personal-injury",
+        "description": "Personal injury, car accidents, 18-wheeler accidents, slip and falls, workplace injuries, and motorcycle accidents.",
+        "to": "/practice-areas/personal-injury"
+      }
+    ]
+  },
+  "attorney": {
+    "eyebrow": "Meet Sehar Hirani",
+    "title": "A mother, advocate, and steady guide for families in transition.",
+    "image": "team",
+    "paragraphs": [
+      "As a mom of two, Attorney Sehar Hirani understands how deeply family legal matters can affect children, parents, and the future of a household. She is passionate about protecting children, supporting families, and defending fathers who want to remain present and active in their children's lives.",
+      "Sehar graduated from the University of Houston and South Texas College of Law. She has been licensed in the State of Texas since 2018."
+    ],
+    "cta": { "label": "Read Full Profile", "to": "/about" }
+  },
+  "memberships": {
+    "eyebrow": "Memberships",
+    "logos": [
+      { "src": "m1", "alt": "State Bar of Texas" },
+      { "src": "m2", "alt": "Houston Young Lawyers Association" },
+      { "src": "m3", "alt": "Lawyers of Distinction" },
+      { "src": "m4", "alt": "Avvo Rated" },
+      { "src": "m5", "alt": "Houston Bar Association" },
+      { "src": "m6", "alt": "Fort Bend County Bar Association" }
+    ]
+  },
+  "clientsMention": {
+    "title": "What Clients Consistently Mention",
+    "description": "Based on client feedback across family law and personal injury matters, these are the qualities people mention most often.",
+    "metrics": [
+      { "label": "Family Law Advocacy", "value": 95 },
+      { "label": "Clear Communication", "value": 90 },
+      { "label": "Local Court Experience", "value": 88 },
+      { "label": "Personalized Strategy", "value": 92 },
+      { "label": "Compassionate Representation", "value": 94 }
+    ]
+  },
+  "testimonials": {
+    "title": "What Clients Are Saying",
+    "cta": { "label": "Read More Client Reviews", "to": "/reviews" },
+    "reviews": [
+      {
+        "name": "Jennifer Adams",
+        "initials": "JA",
+        "when": "9 months ago",
+        "rating": 5,
+        "text": "Attorney Hirani was there for me during one of the hardest times of my life. She fought for custody of my child and they had great communication throughout the case. I could not have asked for a better advocate for my family."
+      },
+      {
+        "name": "Maria Rodriguez",
+        "initials": "MR",
+        "when": "8 months ago",
+        "rating": 5,
+        "text": "Attorney Hirani handled my divorce case with incredible care and professionalism. She kept me informed every step of the way and fought hard to protect my rights. I felt supported throughout the entire process."
+      },
+      {
+        "name": "David Thompson",
+        "initials": "DT",
+        "when": "6 months ago",
+        "rating": 5,
+        "text": "Sehar Hirani is an exceptional attorney. She helped me navigate a complex child custody situation with patience and expertise. Her knowledge of Texas family law is outstanding and she genuinely cares about her clients."
+      },
+      {
+        "name": "Amanda Lewis",
+        "initials": "AL",
+        "when": "5 months ago",
+        "rating": 5,
+        "text": "I cannot thank Attorney Hirani enough for everything she did for my family. Going through an adoption can be overwhelming but she made the entire process smooth and stress-free. Her team is responsive and caring."
+      },
+      {
+        "name": "Robert Chen",
+        "initials": "RC",
+        "when": "4 months ago",
+        "rating": 5,
+        "text": "After my car accident I did not know where to turn. Attorney Hirani handled my personal injury claim professionally and got me a settlement that covered my medical bills. Highly recommend this firm."
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "eyebrow": "Why Choose Us",
+    "title": "Clear strategy, local knowledge, and steady communication.",
+    "features": [
+      {
+        "icon": "strategy",
+        "title": "Personalized Attention",
+        "description": "Your case gets a strategy shaped around your family, timeline, and legal goals."
+      },
+      {
+        "icon": "experience",
+        "title": "Experienced Representation",
+        "description": "Sehar Hirani has guided clients through family law and injury matters since 2018."
+      },
+      {
+        "icon": "communication",
+        "title": "Consistent Communication",
+        "description": "The firm prioritizes direct updates so clients know what is happening and why."
+      },
+      {
+        "icon": "court",
+        "title": "Local Court Knowledge",
+        "description": "Experience with Harris, Fort Bend, Montgomery, Galveston, and Austin County courts."
+      },
+      {
+        "icon": "evaluation",
+        "title": "Free Case Evaluation",
+        "description": "Start with a confidential consultation before deciding on the next step."
+      }
+    ]
+  },
+  "resources": {
+    "eyebrow": "Resources",
+    "title": "Additional useful resources for you.",
+    "cards": [
+      {
+        "title": "2026 Custody Sharing Calendar",
+        "description": "Free, printable co-parenting calendar to help Texas families plan custody schedules and possession time.",
+        "meta": "PDF · Free Download",
+        "to": "/contact"
+      }
+    ]
+  },
+  "contactCta": {
+    "eyebrow": "Start Here",
+    "title": "Your first step to resolution starts with a conversation.",
+    "description": "Book a free, confidential consultation with Hirani Law Firm PLLC.",
+    "phoneLabel": "Phone",
+    "form": {
+      "helpOptions": [
+        "Divorce",
+        "Child Custody",
+        "Child Support",
+        "Adoption",
+        "Name Change",
+        "Personal Injury",
+        "Other"
+      ],
+      "submitLabel": "Request Consultation"
+    }
+  },
+  "footer": {
+    "contactHeading": "Contact",
+    "bookLabel": "Book a Free Consultation",
+    "disclaimer": "(c) 2026 Hirani Law Firm, PLLC. Licensed to practice law in Texas. This website provides general information and does not create an attorney-client relationship."
+  },
+  "aboutPage": {
+    "seo": {
+      "title": "About Us",
+      "description": "Hirani Law Firm PLLC is built on one principle: your case is personal. Learn about our client-first approach to family law and personal injury in Greater Houston."
+    },
+    "intro": {
+      "eyebrow": "Who We Are",
+      "title": "A law firm built on one powerful principle.",
+      "image": "team",
+      "paragraphs": [
+        "We believe every client deserves a dedicated team committed to protecting their rights and securing their future. We are more than just your lawyers — we are your partners and your advocates during life's most difficult chapters.",
+        "Whether you are navigating a divorce, fighting for child custody, pursuing a personal injury claim, or handling an adoption, Hirani Law Firm brings the same commitment: your case is personal to us."
+      ],
+      "stats": [
+        { "value": "2018", "label": "Year Founded" },
+        { "value": "200+", "label": "Families Guided" },
+        { "value": "5 Counties", "label": "Greater Houston" }
+      ],
+      "cta": { "label": "Meet The Team", "to": "/about/our-team" }
+    },
+    "quote": "You deserve a legal team that knows your name, understands your struggle, and is personally committed to your success.",
+    "mission": {
+      "eyebrow": "Our Mission",
+      "title": "A Client-First Approach to Law",
+      "description": "Our mission is simple: to provide exceptional legal representation that eases the emotional and financial burden on our clients. The \"Hirani Law Firm difference\" is our unwavering commitment to a client-first approach. This means we prioritize:",
+      "cards": [
+        {
+          "title": "Clear Communication",
+          "description": "Keeping you informed and empowered at every stage of your case — no jargon, no unanswered calls."
+        },
+        {
+          "title": "Compassionate Guidance",
+          "description": "Understanding the human side of your struggle and providing the support you need through family law and personal injury matters."
+        },
+        {
+          "title": "Aggressive Representation",
+          "description": "Fighting relentlessly in negotiations and in the courtroom to achieve the best possible outcome for you and your family."
+        }
+      ]
+    },
+    "values": {
+      "eyebrow": "Our Story & Values",
+      "title": "Founded out of a belief that legal representation should be personal.",
+      "description": "Attorney Sehar Hirani founded Hirani Law Firm in 2018 out of a frustration with the impersonal, volume-based nature of many larger firms. She envisioned a practice where every client's case is treated with the urgency and personal attention it deserves. This vision is the foundation of our core values:",
+      "cards": [
+        {
+          "title": "Integrity",
+          "description": "We uphold the highest ethical standards, ensuring our actions are always aligned with your best interests."
+        },
+        {
+          "title": "Empathy",
+          "description": "We understand that behind every case are real people with real concerns. We approach every situation with the compassion and understanding it deserves."
+        },
+        {
+          "title": "Tenacity",
+          "description": "We are relentless in our pursuit of justice for our clients. We do not back down from a fight when our clients' futures are on the line."
+        }
+      ]
+    },
+    "difference": {
+      "eyebrow": "What It Means To Work With Us",
+      "title": "When you choose Hirani Law Firm, you are choosing a different kind of legal experience.",
+      "cards": [
+        {
+          "image": "w1",
+          "title": "A Dedicated Team in Your Corner",
+          "description": "From intake to resolution, our entire team is dedicated to supporting you — no hand-offs, no starting over."
+        },
+        {
+          "image": "w2",
+          "title": "Direct Communication",
+          "description": "We are committed to providing you with clear, consistent, and honest updates about the status of your case at every stage."
+        },
+        {
+          "image": "w3",
+          "title": "Clarity and Transparency",
+          "description": "We believe in straightforward communication about the legal process and transparent billing practices — no surprises."
+        },
+        {
+          "image": "w4",
+          "title": "Compassion and Strength",
+          "description": "We provide the empathetic support you need to get through this difficult time and the aggressive legal representation required to win."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Your Case Deserves A Personal Commitment",
+      "title": "Your story matters to us. Let's discuss how our team can help you move forward.",
+      "primary": { "label": "Tell Us Your Story", "to": "/contact" }
+    }
+  },
+  "teamPage": {
+    "seo": {
+      "title": "Our Team",
+      "description": "Meet the Hirani Law Firm team — a collaborative group supporting you from your first call to the final resolution of your case."
+    },
+    "hero": {
+      "title": "Meet the Hirani Law Firm Team",
+      "description": "Our strength lies in our collaborative, team-based approach. From your first call to the final resolution of your case, our dedicated team is here to support you."
+    },
+    "eyebrow": "Our Team",
+    "members": [
+      { "name": "Sehar Hirani", "role": "Managing Attorney", "image": "sehar-portrait", "to": "/about/sehar-hirani" },
+      { "name": "Carlos Peraza", "role": "Intake Manager", "image": "carlos" },
+      { "name": "Sami Hirani", "role": "Billing Specialist / Intake", "image": "sami" },
+      { "name": "Nicole Erazo", "role": "Receptionist", "image": "nicole" },
+      { "name": "Noraly Martinez", "role": "Paralegal", "image": "noraly" }
+    ]
+  },
+  "attorneyPage": {
+    "seo": {
+      "title": "Sehar Hirani | Attorney Profile",
+      "description": "Attorney Sehar Hirani — Family Law & Personal Injury attorney licensed in Texas since 2018. A mother, an advocate, and a steady guide through life's most difficult legal moments."
+    },
+    "hero": {
+      "eyebrow": "Attorney Profile",
+      "name": "Sehar Hirani",
+      "image": "sehar-standing",
+      "subtitle": ["Family Law & Personal Injury Attorney", "Licensed in Texas Since 2018"],
+      "description": "A mother of two, an advocate for families, and a steady guide through some of life's most difficult legal moments — Sehar Hirani brings both personal understanding and practiced legal skill to every case she takes on.",
+      "cta": { "label": "Schedule a Free Consultation", "to": "/contact" }
+    },
+    "sections": [
+      {
+        "title": "A Practice Built on Compassion and Personal Connection",
+        "paragraphs": [
+          "Sehar Hirani is a mom of two, and that perspective shapes the way she serves families. She understands that divorce, custody, support, adoption, and enforcement matters can affect a client's children, home, finances, and sense of stability all at once. When you sit across from Sehar, you are not talking to someone who has only read about these challenges in a textbook — you are talking to someone who understands what is at stake.",
+          "She believes strongly in father's rights and in defending fathers who want to remain present and active in their children's lives. Her work is guided by a deep passion for children and family, and by the belief that every parent deserves to be heard with dignity and represented with skill."
+        ]
+      }
+    ],
+    "quote": {
+      "text": "Clients often come to the firm during a painful or uncertain season. My goal is to make sure they leave every meeting feeling clearer, steadier, and more prepared for what comes next.",
+      "author": "Sehar Hirani"
+    },
+    "strategy": {
+      "title": "Sensitive Approach, Strategic Thinking",
+      "image": "team",
+      "paragraphs": [
+        "Sehar uses a sensitive approach that balances genuine compassion with clear legal direction. She helps clients understand the process and prepare for the decisions ahead — not just emotionally, but strategically. Every case receives a legal plan built around the client's specific family, timeline, and goals.",
+        "While she always works to reach amicable resolutions, she is fully prepared to be a fierce advocate in mediation or in the courtroom when the other party refuses to be reasonable. Every case is prepared as if it will go to trial — which gives clients maximum leverage at every stage."
+      ]
+    },
+    "education": {
+      "title": "Education, Credentials & Local Court Experience",
+      "paragraphs": [
+        "Sehar graduated from the University of Houston and South Texas College of Law. She has been licensed in the State of Texas since 2018 and is an active member of the State Bar of Texas, the Family Law Section of the State Bar of Texas, the Houston Bar Association, and the Fort Bend County Bar Association.",
+        "Her family law practice covers Harris, Fort Bend, Montgomery, Galveston, Austin, Waller, and Liberty counties. Personal injury cases may be handled throughout the State of Texas."
+      ]
+    },
+    "sidebar": {
+      "consult": {
+        "eyebrow": "Free Consultation",
+        "title": "Talk to Sehar Hirani Today",
+        "note": "Confidential · No obligation · We respond within 24 hours.",
+        "cta": { "label": "Request Consultation", "to": "/contact" }
+      },
+      "practiceAreas": {
+        "title": "Practice Areas",
+        "items": ["Divorce", "Child Custody", "Child Support", "Adoption", "Father's Rights", "Auto Accident", "18-Wheeler Accident"]
+      },
+      "reviews": {
+        "title": "What Clients Say",
+        "items": [
+          { "text": "Knowledgeable, professional, and prompt in communication.", "author": "Victor Sims" },
+          { "text": "Informative, compassionate, and professional throughout the process.", "author": "Astryd McIntyre-Pahls" }
+        ]
+      }
+    }
+  },
+  "serviceAreaPage": {
+    "seo": {
+      "title": "Service Areas",
+      "description": "Hirani Law Firm provides family law and personal injury representation across Greater Houston — Harris, Fort Bend, Montgomery, Galveston, Austin, Waller, and Liberty counties."
+    },
+    "intro": {
+      "eyebrow": "Deeply Rooted In The Communities We Serve",
+      "title": "Local knowledge. Powerful advantage.",
+      "paragraphs": [
+        "From our central office in Katy, Hirani Law Firm provides dedicated legal representation across the Greater Houston area. We believe that a successful case often depends on having a local attorney who understands your community and your court. We are that law firm. We are committed to being that trusted legal partner for our entire community.",
+        "Being a local law firm means more than just having an office here; it means understanding the communities we serve. Attorney Sehar Hirani has built her practice on a deep familiarity with the local legal landscape. We understand the specific nuances of the different court systems, the procedures of the local judges, and the values that matter to the families in this region. This local knowledge is a powerful advantage, allowing us to provide tailored and effective legal strategies for your case."
+      ],
+      "citiesLabel": "Cities We Serve",
+      "cities": ["Houston", "Katy", "Sugar Land", "Fulshear", "Rosenberg", "Tomball", "Spring", "The Woodlands", "Pasadena", "Missouri City", "Cypress"]
+    },
+    "contactCard": {
+      "eyebrow": "Contact Your Local Attorney",
+      "phoneLabel": "Phone",
+      "addressLabel": "Address",
+      "address": ["22336 Grand Corner Drive", "Suite 130", "Katy, TX 77494"],
+      "hoursLabel": "Hours",
+      "hours": ["Monday – Friday", "9:00 AM – 5:00 PM"],
+      "emailLabel": "Email",
+      "email": "info@hiranilawfirm.com",
+      "cta": { "label": "Free Consultation", "to": "/contact" }
+    },
+    "areas": {
+      "eyebrow": "Our Core Service Areas",
+      "title": "Comprehensive legal support across all our service areas.",
+      "counties": [
+        {
+          "name": "Harris County",
+          "description": "As the region's largest county, Harris County's legal system can be complex to navigate. Our attorneys have significant experience advocating for clients at the Harris County Family Law Center, confidently handling the unique procedures and pace of Houston's busy courts. We proudly serve clients in Houston, Pasadena, Cypress, Spring, Tomball, and all surrounding communities.",
+          "cities": ["Houston", "Pasadena", "Cypress", "Spring", "Tomball"],
+          "map": "Harris County, TX"
+        },
+        {
+          "name": "Fort Bend County",
+          "description": "Based in the heart of Fort Bend County, our firm has a strong presence in the local community. We regularly represent our neighbors, navigating the specific procedures of the Fort Bend County courts in Richmond with confidence and skill. We serve clients across Sugar Land, Richmond, Rosenberg, Missouri City, and, of course, our home base of Katy.",
+          "cities": ["Sugar Land", "Fulshear", "Rosenberg", "Missouri City", "Katy"],
+          "map": "Fort Bend County, TX"
+        },
+        {
+          "name": "Montgomery County",
+          "description": "We serve families throughout Montgomery County, bringing the same dedicated advocacy to clients in the rapidly growing communities north of Houston. We understand the local courts and provide the same client-first approach to every family we represent in this region, from The Woodlands to Conroe.",
+          "cities": ["The Woodlands", "Spring", "Conroe", "Magnolia"],
+          "map": "Montgomery County, TX"
+        },
+        {
+          "name": "Galveston County",
+          "description": "We extend our commitment to serving Texas families all the way to the Gulf Coast. If you have a family law or personal injury case in Galveston County, you can expect the same high level of dedicated advocacy we provide to all our clients. Our service areas include Galveston, League City, Texas City, Friendswood, and Dickinson.",
+          "cities": ["Galveston", "League City", "Texas City", "Friendswood", "Dickinson"],
+          "map": "Galveston County, TX"
+        },
+        {
+          "name": "Austin County",
+          "description": "We believe that expert legal representation should be accessible to everyone, including those in the more rural communities of our region. Hirani Law Firm is proud to serve clients throughout Austin County, including the cities of Bellville, Sealy, and Wallis.",
+          "cities": ["Bellville", "Sealy", "Wallis"],
+          "map": "Austin County, TX"
+        },
+        {
+          "name": "Waller County",
+          "description": "Our firm proudly extends representation to families and individuals in Waller County, ensuring that clients in the growing west Houston corridor have access to the same quality legal advocacy that defines our practice.",
+          "cities": ["Hempstead", "Prairie View", "Brookshire"],
+          "map": "Waller County, TX"
+        },
+        {
+          "name": "Liberty County",
+          "description": "Hirani Law Firm serves clients in Liberty County as part of our Greater Houston family law coverage area, providing the same client-first approach to families east of the city.",
+          "cities": ["Liberty", "Dayton", "Baytown"],
+          "map": "Liberty County, TX"
+        },
+        {
+          "name": "Personal Injury — All of Texas",
+          "description": "For personal injury matters — auto accidents, 18-wheelers, motorcycle accidents, slip and fall, and workers' compensation — Hirani Law Firm practices all over Texas. Your location is never a barrier to representation. No matter where in Texas your accident occurred, we can help.",
+          "cities": ["Auto Accidents", "18-Wheeler Accidents", "Motorcycle Accidents", "Slip & Fall", "Workers' Compensation"],
+          "map": "Texas",
+          "highlight": true
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Your First Step To Resolution Starts Here",
+      "title": "Contact your local Houston & Katy attorney.",
+      "description": "We are committed to protecting your rights, listening to your concerns, and working tirelessly to achieve the best possible outcome for you and your family. Your journey towards a resolution begins with a conversation.",
+      "addressLabel": "Address",
+      "address": "22336 Grand Corner Drive, Suite 130, Katy, TX 77494"
+    }
+  },
+  "practiceIndex": {
+    "seo": {
+      "title": "Practice Areas",
+      "description": "Hirani Law Firm handles family law and personal injury matters across Greater Houston and Texas — divorce, custody, support, adoption, car accidents, and more."
+    },
+    "hero": {
+      "title": "Legal Help for Families & Injury Victims Across Greater Houston",
+      "description": "Two focused practice areas. Deep expertise in each. Attorney Sehar Hirani handles family law across Greater Houston and personal injury cases throughout Texas."
+    },
+    "familySection": {
+      "title": "Family Law Services in Houston & Katy, TX",
+      "description": "Attorney Sehar Hirani guides families through every stage of family legal matters — from initial filings to final orders and post-judgment modifications.",
+      "cta": { "label": "All Family Law Services", "to": "/practice-areas/family-law" }
+    },
+    "injurySection": {
+      "title": "Personal Injury Representation Throughout Texas",
+      "description": "When you have been seriously hurt, you need an attorney who will fight for the full compensation you deserve. Hirani Law Firm takes injury cases on a contingency basis — you pay nothing unless we win.",
+      "cta": { "label": "All Personal Injury Services", "to": "/practice-areas/personal-injury" }
+    }
+  },
+  "familyLawPage": {
+    "seo": {
+      "title": "Family Law Attorney | Houston & Katy",
+      "description": "Divorce, child custody, support, adoption, father's rights, and more. Attorney Sehar Hirani protects Texas families through life's most difficult legal transitions."
+    },
+    "eyebrow": "Family Law in Texas",
+    "title": "Protecting families through life's most difficult legal transitions.",
+    "paragraphs": [
+      "Family law matters are rarely just legal problems. They involve your children, your home, your finances, and your sense of stability. Attorney Sehar Hirani understands that — and she approaches every case with both strategic legal thinking and genuine personal care."
+    ],
+    "stats": [
+      { "value": "200+", "label": "Families Guided" },
+      { "value": "7", "label": "Counties Served" },
+      { "value": "2018", "label": "Licensed in Texas" }
+    ],
+    "slide": { "image": "fl-hero", "eyebrow": "Child Custody", "title": "Protecting the bond that matters most." },
+    "areasTitle": "Areas of Family Law We Handle",
+    "areas": [
+      { "slug": "divorce", "image": "fl-divorce", "title": "Divorce", "description": "Contested & uncontested divorce, property division, spousal support, and final decree filings in Texas." },
+      { "slug": "child-custody", "image": "fl-custody", "title": "Child Custody", "description": "Conservatorship, possession schedules, best-interest determinations, and parenting plan negotiations." },
+      { "slug": "child-support", "image": "fl-support", "title": "Child Support", "description": "Establishing, enforcing, and modifying child support orders under Texas statutory guidelines." },
+      { "slug": "adoption", "image": "fl-adoption", "title": "Adoption", "description": "Child and adult adoptions, stepparent adoptions, and family formation proceedings in Texas courts." },
+      { "slug": "fathers-rights", "image": "fl-fathers", "title": "Father's Rights", "description": "Protecting fathers' legal rights to access, custody, and meaningful involvement in their children's lives." },
+      { "slug": "conservatorship", "image": "fl-conservatorship", "title": "Conservatorship", "description": "Sole and joint managing conservatorship, rights and duties, and possession order structuring." },
+      { "slug": "modifications", "image": "fl-modifications", "title": "Modifications", "description": "Modifying custody, support, and visitation orders when life circumstances have materially changed." },
+      { "slug": "enforcement-contempt", "image": "fl-enforcement", "title": "Enforcement & Contempt", "description": "Holding non-compliant parties accountable and enforcing existing court orders through legal action." },
+      { "slug": "property-division", "image": "fl-property", "title": "Property Division", "description": "Community property analysis, asset valuation, and equitable division of marital estate under Texas law." },
+      { "slug": "prenuptial-agreements", "image": "fl-prenup", "title": "Prenuptial Agreements", "description": "Drafting and reviewing premarital agreements that protect both parties and hold up in Texas courts." },
+      { "slug": "postnuptial-agreements", "image": "fl-postnup", "title": "Postnuptial Agreements", "description": "Marital property agreements entered into after marriage to clarify asset ownership and expectations." },
+      { "slug": "name-changes", "image": "fl-namechange", "title": "Name Changes", "description": "Adult and minor name change petitions filed and handled through the appropriate Texas courts." }
+    ],
+    "attorney": {
+      "eyebrow": "Your Attorney",
+      "title": "Sehar Hirani — Houston Family Law Attorney Since 2018",
+      "description": "As a mother of two, Sehar understands what is at stake when families face legal challenges. She has built her practice around clear communication, personal attention, and results-driven advocacy for clients across Greater Houston.",
+      "image": "fl-attorney",
+      "cta": { "label": "Read Attorney Profile", "to": "/about/sehar-hirani" }
+    }
+  },
+  "personalInjuryPage": {
+    "seo": {
+      "title": "Personal Injury Attorney | Houston & Texas",
+      "description": "Car accidents, 18-wheeler crashes, motorcycle accidents, slip and fall, and workers' compensation. No fee unless we win. Free case review with Hirani Law Firm."
+    },
+    "eyebrow": "Personal Injury in Texas",
+    "title": "You should be focused on recovery. We handle the fight.",
+    "paragraphs": [
+      "Insurance companies move fast after an accident — often contacting victims before they have legal representation, hoping to settle claims for far less than they are worth. Attorney Sehar Hirani levels that playing field. She handles injury cases on a contingency basis, which means you pay nothing unless we recover compensation for you.",
+      "The firm represents injury victims throughout the State of Texas, with particular experience in the Houston and Katy area. From the first call to the final settlement or verdict, your case gets the personal attention it deserves."
+    ],
+    "stats": [
+      { "value": "$0", "label": "Upfront — Contingency Fee" },
+      { "value": "Texas-Wide", "label": "Personal Injury Coverage" },
+      { "value": "Free", "label": "Initial Consultation" }
+    ],
+    "slide": { "image": "pi-hero", "eyebrow": "Personal Injury", "title": "When an accident changes everything, steady guidance matters." },
+    "areasTitle": "Types of Injury Cases We Handle",
+    "reviewCta": { "label": "Free Case Review", "to": "/contact" },
+    "areas": [
+      { "slug": "auto-accidents", "image": "pi-auto", "title": "Auto Accidents", "description": "Car accident claims, insurance negotiations, and litigation for crash victims across Houston and Texas. Whether it is a rear-end collision or a multi-vehicle accident, we fight for full compensation." },
+      { "slug": "18-wheeler-accidents", "image": "pi-truck", "title": "18-Wheeler Accidents", "description": "Trucking accident cases involving federal regulations, commercial carriers, logbook violations, and catastrophic injuries. These cases require specialized knowledge — we have it." },
+      { "slug": "motorcycle-accidents", "image": "pi-moto", "title": "Motorcycle Accidents", "description": "Protecting injured motorcyclists from biased insurance adjusters and pursuing the full compensation they deserve." },
+      { "slug": "slip-and-fall", "image": "pi-slip", "title": "Slip & Fall", "description": "Premises liability claims against property owners and businesses that failed to maintain reasonably safe conditions." },
+      { "slug": "workers-compensation", "image": "pi-workers", "title": "Workers' Compensation", "description": "Workplace injury claims, denied benefits, and employer disputes handled throughout Texas." }
+    ],
+    "attorney": {
+      "eyebrow": "Your Attorney",
+      "title": "Sehar Hirani — Personal Injury Attorney",
+      "description": "Attorney Sehar Hirani brings the same tenacity to personal injury cases that she brings to family law — relentless pursuit of justice, clear communication, and personal attention to every client. When the other side has a legal team, so should you.",
+      "image": "sehar-standing",
+      "cta": { "label": "Read Attorney Profile", "to": "/about/sehar-hirani" }
+    }
+  },
+  "reviewsPage": {
+    "seo": {
+      "title": "Client Reviews",
+      "description": "Read what Hirani Law Firm clients say about communication, preparation, family law guidance, and support during stressful legal matters."
+    },
+    "hero": {
+      "title": "Client Reviews",
+      "description": "What clients say about communication, preparation, family law guidance, and support during stressful legal matters."
+    },
+    "reviews": [
+      { "name": "Vicky Chapa", "initials": "VC", "when": "3 months ago", "rating": 5, "text": "I was involved in an auto accident and was extremely hurt. Because of my injuries, I was unable to do much on my own and did not even have a car, which made the situation even more stressful and overwhelming. During this difficult time, the Hirani Law Firm made everything easier." },
+      { "name": "Salman Mithani", "initials": "SM", "when": "3 months ago", "rating": 5, "text": "I've had an amazing experience working with my attorney, Sehar Hirani, on my personal injury case. She has been extremely professional, responsive, and genuinely caring throughout the entire process. Sehar took the time to explain every step." },
+      { "name": "Roxana Carrillo", "initials": "RC", "when": "7 months ago", "rating": 5, "text": "I would wholeheartedly recommend The Hirani Law Firm PLLC and its excellent team to anyone seeking a high-quality law firm with a personal touch that makes you feel comfortable, regardless of your legal situation. I am grateful to The Hirani Law Firm." },
+      { "name": "Laura Padron", "initials": "LP", "when": "2 years ago", "rating": 5, "text": "I had a difficult legal matter, and she guided me through every step with clarity and compassion. She was always responsive and detail-oriented, making a stressful situation manageable. I felt supported, and her expertise ensured a positive outcome." },
+      { "name": "Aya Sanada", "initials": "AS", "when": "2 years ago", "rating": 5, "text": "I worked with attorney Sehar Hirani on my custody modification, and she was truly wonderful. She was always kind, professional, and quick to respond, which made me feel supported every step of the way. As a single mom, I really appreciated that." },
+      { "name": "Lissette", "initials": "LI", "when": "2 years ago", "rating": 5, "text": "I cannot thank the Hirani Law Firm enough for everything they did for me and my family. I came to them during one of the most stressful moments of my life — when my daughter's father refused to return her to me. They immediately took my case seriously." },
+      { "name": "Bailey Martinez", "initials": "BM", "when": "1 year ago", "rating": 5, "text": "I just want to take a moment to thank the Hirani Law Firm for everything they've done for me. I was in a difficult domestic situation and fighting for custody of my children. When I say this firm had my hand through it all, I truly mean it." },
+      { "name": "Michael Maglitto", "initials": "MM", "when": "1 year ago", "rating": 5, "text": "The team at the Hirani Law firm did an amazing job during a tough situation I would highly recommend using them I had a very difficult case. The way they navigated an complicated an explained steps we had to take was amazing thank you very much for everything." },
+      { "name": "Jose Aldana", "initials": "JA", "when": "6 months ago", "rating": 5, "text": "Attorney Hirani is an exceptional attorney. From the very beginning, she demonstrated a high level of professionalism, integrity, and extensive legal knowledge. She was always clear and honest in explaining every step of the process, patiently answering." },
+      { "name": "Victor Sims", "initials": "VS", "when": "10 months ago", "rating": 5, "text": "I had a great experience working with Attorney Sehar Hirani. She was knowledgeable, professional, and always prompt in her communication. Her guidance throughout my legal matter was clear and reassuring. I truly appreciated the personal attention." },
+      { "name": "Josue Gomez", "initials": "JG", "when": "11 months ago", "rating": 5, "text": "Mrs. Hirani is one of a kind! She's someone who loves what she does. I can honestly say her and her team treat their clients like family. There is genuinely no other law firm like hers. This law firm is consistent, punctual, and passionate." },
+      { "name": "Raquel Garcia", "initials": "RG", "when": "8 months ago", "rating": 5, "text": "I am forever grateful that God put Sehar in my life! When another attorney left without any explanation, Hirani Law Firm picked up where I was abandoned and held my hand through the end of my adoption case. I highly recommend them." },
+      { "name": "Bruce Flunker", "initials": "BF", "when": "1 year ago", "rating": 5, "text": "The Hirani Law Firm is absolutely the best experience that I have had with any law firm. Their method of operations from the very knowledgeable Carlos at intake, their paralegal Mariela promptly returning emails and anything needed. Sammy is wonderful." },
+      { "name": "Roy Fraction", "initials": "RF", "when": "1 year ago", "rating": 5, "text": "The Hirani Law firm is one of the best if not the best firm in Texas when it comes to family Law. I must say what I loved the most initially was out of all the firms that reached out to me from the Texas Bar association when I explained my case." },
+      { "name": "Dylan Rowan", "initials": "DR", "when": "1 year ago", "rating": 5, "text": "I've been going through a stressful time during his custody battle but, I can honestly say Mrs. Hirani and her team of amazing beautiful people have been a gift from god. They are very proactive, professional and responsive. Mrs. Hirani is amazing." }
+    ],
+    "themes": {
+      "eyebrow": "Review Themes",
+      "title": "Clients often mention communication, preparation, and compassion.",
+      "cards": [
+        { "title": "Clear", "description": "Legal explanations during stressful decisions." },
+        { "title": "Prompt", "description": "Communication and practical next steps." },
+        { "title": "Strong", "description": "Advocacy for parents, children, and injured clients." }
+      ]
+    }
+  },
+  "faqPage": {
+    "seo": {
+      "title": "Frequently Asked Questions",
+      "description": "Clear answers to common questions about Texas divorce, custody, child support, CPS defense, and personal injury claims from Hirani Law Firm."
+    },
+    "hero": {
+      "title": "Frequently Asked Questions",
+      "description": "When you're facing a serious legal issue, the uncertainty can be overwhelming. We have created this page to provide clear, straightforward answers to the most common questions we receive from clients in Houston and the surrounding areas."
+    },
+    "groups": [
+      {
+        "label": "Family Law",
+        "categories": [
+          {
+            "id": "divorce-separation",
+            "title": "Divorce & Separation",
+            "items": [
+              { "q": "What is the difference between a contested and an uncontested divorce?", "a": "An uncontested divorce is one where both spouses agree on all major issues — property division, custody, support, and debts. A contested divorce is one where the spouses cannot agree on one or more of these issues, requiring negotiation, mediation, or a court to decide. Uncontested cases are generally faster and less expensive." },
+              { "q": "How is property divided in a Texas divorce? Is it always 50/50?", "a": "Texas is a community property state, meaning most property acquired during the marriage is subject to division. However, the standard is a \"just and right\" division, not automatically 50/50. Courts consider factors like earning capacity, fault, and who has custody of the children when dividing the community estate." },
+              { "q": "What is spousal support (alimony), and who is eligible for it in Texas?", "a": "Texas allows for \"spousal maintenance,\" but eligibility is limited. It may be awarded when a spouse lacks sufficient property to meet minimum reasonable needs and the marriage lasted 10+ years, or where there is family violence or a disability. Amounts and durations are capped by statute." },
+              { "q": "How long does a divorce take in Texas?", "a": "Texas requires a minimum 60-day waiting period from the date of filing before a divorce can be finalized. An uncontested divorce may resolve shortly after that window, while a contested case involving custody or complex property can take several months to over a year." },
+              { "q": "Do I need a lawyer for an amicable or uncontested divorce?", "a": "Even when spouses agree, a lawyer ensures the final decree is drafted correctly and fully protects your rights — especially regarding property, retirement accounts, and custody. A small error in an agreed decree can create serious problems years later." }
+            ]
+          },
+          {
+            "id": "custody-conservatorship",
+            "title": "Child Custody & Conservatorship",
+            "items": [
+              { "q": "What is the difference between \"custody\" and \"conservatorship\" in Texas?", "a": "Texas law uses the term \"conservatorship\" rather than \"custody.\" Conservatorship refers to a parent's legal rights and duties regarding the child, while \"possession and access\" refers to the physical schedule of when each parent has the child." },
+              { "q": "How do Texas courts decide who gets custody? What is the \"best interest of the child\"?", "a": "The court's guiding standard is always the best interest of the child. Judges weigh factors including each parent's ability to care for the child, stability, the child's wishes (if old enough), and any history of family violence or neglect." },
+              { "q": "Do Texas courts favor mothers over fathers?", "a": "No. Texas law prohibits courts from favoring a parent based on gender. Both parents start on equal footing, and decisions are based on the best interest of the child. We regularly advocate for father's rights to remain active in their children's lives." },
+              { "q": "What is a Standard Possession Order (SPO)?", "a": "A Standard Possession Order is the schedule the Texas Family Code presumes is in a child's best interest for parents who live within 100 miles of each other. It typically gives the non-primary parent possession on the first, third, and fifth weekends, Thursday evenings, and alternating holidays." },
+              { "q": "How can I modify my current custody or visitation order?", "a": "You can request a modification when there has been a material and substantial change in circumstances since the last order — such as a move, a change in a parent's situation, or the child's needs. The change must still serve the child's best interest." }
+            ]
+          },
+          {
+            "id": "child-support",
+            "title": "Child Support",
+            "items": [
+              { "q": "How is child support calculated in Texas?", "a": "Texas uses statutory guidelines based on the paying parent's net monthly resources and the number of children — generally 20% of net resources for one child, increasing with additional children. Courts can deviate from the guidelines in certain circumstances." },
+              { "q": "What do I do if the other parent stops paying child support?", "a": "You can file an enforcement action. Texas courts have powerful tools to compel payment, including wage garnishment, license suspension, interception of tax refunds, and even contempt of court, which can carry jail time." },
+              { "q": "Can my child support amount be changed if my income changes?", "a": "Yes. If there has been a material and substantial change — such as a significant income change — or if it has been three years since the last order and the amount would change by a set threshold, you can request a modification." },
+              { "q": "How long does child support last in Texas?", "a": "Child support generally continues until the child turns 18 or graduates from high school, whichever is later. Support may continue indefinitely for a child with a disability that requires ongoing care." }
+            ]
+          },
+          {
+            "id": "cps-defense",
+            "title": "CPS Defense",
+            "items": [
+              { "q": "What are my rights if a CPS caseworker comes to my door?", "a": "You have the right to ask for identification, to know the allegations, and to consult an attorney before answering questions or allowing a home visit. In most cases you are not required to let a caseworker into your home without a court order. Contact a lawyer immediately." },
+              { "q": "Do I have to sign a CPS Safety Plan?", "a": "A Safety Plan is generally voluntary, but declining can have consequences. These plans can significantly restrict your parental rights. It's important to speak with an attorney before signing anything so you understand exactly what you're agreeing to." },
+              { "q": "Can CPS take my children without a court order?", "a": "CPS can remove children without a prior court order only in emergencies where there is an immediate danger to the child's safety. Even then, they must promptly seek court approval. If your children have been removed, you should seek legal representation right away." },
+              { "q": "How can I fight false allegations from CPS?", "a": "An experienced attorney can help you respond appropriately, gather evidence, present your side, and protect your rights throughout the investigation and any court proceedings. Do not attempt to navigate a CPS case alone." }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Personal Injury",
+        "categories": [
+          {
+            "id": "after-accident",
+            "title": "After an Accident & Initial Steps",
+            "items": [
+              { "q": "What should I do immediately after a car accident?", "a": "Ensure everyone's safety and call 911. Seek medical attention even if you feel fine, document the scene with photos, exchange information, and get a police report. Avoid admitting fault and contact an attorney before speaking with insurance adjusters." },
+              { "q": "How long do I have to file a personal injury claim in Texas?", "a": "In most cases, Texas has a two-year statute of limitations from the date of the injury. Missing this deadline usually means losing your right to recover compensation, so it's important to act promptly." },
+              { "q": "What evidence is most important for my personal injury claim?", "a": "Key evidence includes the police report, medical records, photos of the scene and injuries, witness statements, and documentation of lost wages and expenses. The sooner an attorney gets involved, the more evidence can be preserved." },
+              { "q": "Should I talk to the other party's insurance company?", "a": "It's best not to give a recorded statement to the other party's insurer before consulting an attorney. Adjusters are trained to minimize payouts, and early statements can be used to reduce or deny your claim." }
+            ]
+          },
+          {
+            "id": "legal-process",
+            "title": "The Legal Process & Compensation",
+            "items": [
+              { "q": "How much is my personal injury case worth?", "a": "Every case is different. Value depends on the severity of injuries, medical costs, lost income, long-term impact, and available insurance. An attorney can evaluate your specific situation after reviewing the facts and medical documentation." },
+              { "q": "What types of damages can I recover?", "a": "You may be able to recover economic damages (medical bills, lost wages, property damage) and non-economic damages (pain and suffering, disfigurement, loss of enjoyment of life). In rare cases involving gross negligence, punitive damages may apply." },
+              { "q": "How does a personal injury lawyer get paid?", "a": "We handle personal injury cases on a contingency fee basis. That means you pay nothing upfront, and we only get paid if we recover compensation for you — our fee comes as a percentage of the recovery." },
+              { "q": "Will my case go to trial, or will it settle?", "a": "Most personal injury cases settle out of court. However, we prepare every case as if it will go to trial. That readiness gives you maximum leverage in settlement negotiations and ensures we're prepared if a fair settlement isn't offered." },
+              { "q": "How long does it take to resolve a personal injury case?", "a": "Some cases resolve in a few months, while others — particularly those with serious injuries or disputed liability — can take a year or more. We focus on getting the best result, not just the fastest one." }
+            ]
+          },
+          {
+            "id": "insurance-liability",
+            "title": "Insurance & Liability",
+            "items": [
+              { "q": "What if I were partially at fault for the accident?", "a": "Texas follows a modified comparative fault rule. You can still recover damages as long as you were not more than 50% at fault, though your recovery is reduced by your percentage of fault." },
+              { "q": "What happens if the at-fault driver doesn't have insurance?", "a": "You may be able to recover through your own uninsured/underinsured motorist coverage if you have it. We can help identify all available sources of compensation for your injuries." },
+              { "q": "Can I sue for a slip and fall accident on someone else's property?", "a": "Possibly. Property owners have a duty to maintain reasonably safe conditions. If they knew or should have known about a hazard and failed to address it, they may be liable for resulting injuries under premises liability law." },
+              { "q": "What is a wrongful death claim, and who can file one?", "a": "A wrongful death claim seeks compensation when a person dies due to another's negligence. In Texas, the surviving spouse, children, and parents of the deceased may file such a claim, typically within two years of the death." }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "contactPage": {
+    "seo": {
+      "title": "Contact",
+      "description": "Schedule your free, confidential consultation with Hirani Law Firm PLLC. Call 281-665-8188 or send a message. Office in Katy, TX serving Greater Houston."
+    },
+    "hero": {
+      "title": "Schedule Your Free Consultation",
+      "description": "Confidential · No obligation · We respond within 24 hours."
+    },
+    "form": {
+      "eyebrow": "Get In Touch",
+      "title": "Tell us about your situation.",
+      "description": "Attorney Sehar Hirani reviews every inquiry personally. All communications are protected by attorney-client privilege."
+    },
+    "info": {
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "email": "info@hiranilawfirm.com",
+      "addressLabel": "Office Address",
+      "address": ["22336 Grand Corner Drive", "Suite 130", "Katy, TX 77494"],
+      "directionsLabel": "Get Directions",
+      "hoursLabel": "Office Hours",
+      "hours": [
+        { "day": "Monday – Friday", "time": "9:00 AM – 5:00 PM" },
+        { "day": "Saturday", "time": "By appointment" },
+        { "day": "Sunday", "time": "Closed" }
+      ]
+    },
+    "map": "Hirani Law Firm, 22336 Grand Corner Dr Ste 130, Katy, TX 77494",
+    "links": [
+      { "label": "Speak with a Houston Family Lawyer Today — Get Your Free Consultation", "to": "/contact" },
+      { "label": "Our Mission: A Client-First Approach to Law", "to": "/about" },
+      { "label": "Our Story & Values", "to": "/about" },
+      { "label": "Meet the Hirani Law Firm Team", "to": "/about/our-team" },
+      { "label": "What It Means to Work With Us", "to": "/about" }
+    ],
+    "whyApart": {
+      "eyebrow": "Why Hirani Law Firm",
+      "title": "What sets us apart in personal injury representation.",
+      "cards": [
+        { "title": "No Fee Unless We Win", "description": "We handle personal injury cases on a contingency basis. You owe us nothing unless we recover compensation for you." },
+        { "title": "Texas-Wide Coverage", "description": "Personal injury representation is available throughout the State of Texas, not just the Houston metro area." },
+        { "title": "Fast Response", "description": "Evidence disappears quickly after accidents. We move fast to preserve records, photos, reports, and witness statements." },
+        { "title": "Trial-Ready Preparation", "description": "Every case is prepared as if it will go to trial — which gives you maximum leverage in settlement negotiations." }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+import { Link } from 'react-router-dom'
+import LeadForm from './LeadForm.jsx'
+import data from '../../data/site.json'
+
+const { hero } = data
+
+export default function Hero() {
+  return (
+    <section className="hl-hero hl-section">
+      <div className="hl-container">
+        <div className="row align-items-center g-5">
+          {/* Copy */}
+          <div className="col-lg-7">
+            <span className="hl-eyebrow">{hero.eyebrow}</span>
+            <h1 className="hl-display hl-hero-title mb-4">{hero.title}</h1>
+            <p className="hl-hero-desc mb-4">{hero.description}</p>
+            <div className="d-flex flex-wrap gap-3">
+              <Link to={hero.primaryCta.to} className="btn btn-gold">
+                {hero.primaryCta.label}
+              </Link>
+              <Link to={hero.secondaryCta.to} className="btn btn-outline-light-hl">
+                {hero.secondaryCta.label}
+              </Link>
+            </div>
+          </div>
+
+          {/* Lead form */}
+          <div className="col-lg-5">
+            <div className="hl-hero-form">
+              <span className="hl-eyebrow mb-2">{hero.form.eyebrow}</span>
+              <h3 className="hl-h3 mb-2">{hero.form.title}</h3>
+              <p className="text-muted mb-4" style={{ fontSize: '0.98rem' }}>
+                {hero.form.description}
+              </p>
+              <LeadForm
+                helpOptions={hero.form.helpOptions}
+                submitLabel={hero.form.submitLabel}
+                submitClass="btn-dark-solid"
+                layout="stacked"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
