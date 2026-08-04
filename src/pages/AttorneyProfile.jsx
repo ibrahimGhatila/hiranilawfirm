@@ -80,7 +80,7 @@ export default function AttorneyProfile() {
       </section>
 
       {/* Body + sidebar */}
-      <section className="hl-section pt-0">
+      <section className="hl-section pt-0 hl-profile-biography">
         <div className="hl-container">
           <div className="row g-5">
             {/* Main column */}
