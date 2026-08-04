@@ -1,6 +1,7 @@
 import TopBar from './TopBar.jsx'
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
+import ConsultationPopup from '../common/ConsultationPopup.jsx'
 
 export default function Layout({ children }) {
   return (
@@ -9,6 +10,7 @@ export default function Layout({ children }) {
       <Header />
       <main className="flex-grow-1">{children}</main>
       <Footer />
+      <ConsultationPopup />
     </div>
   )
 }

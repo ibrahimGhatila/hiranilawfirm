@@ -22,7 +22,7 @@ export default function Hero() {
             <span className="hl-eyebrow">{hero.eyebrow}</span>
             <h1 className="hl-display hl-hero-title mb-4">{hero.title}</h1>
             <p className="hl-hero-desc mb-4">{hero.description}</p>
-            <div className="d-flex flex-wrap gap-3">
+            <div className="d-flex flex-wrap gap-3 hl-hero-actions">
               <Link to={hero.primaryCta.to} className="btn btn-gold">
                 {hero.primaryCta.label}
               </Link>
@@ -33,7 +33,7 @@ export default function Hero() {
           </div>
 
           {/* Lead form */}
-          <div className="col-lg-5">
+          <div className="col-lg-5 hl-hero-form-col">
             <div className="hl-hero-form">
               <span className="hl-eyebrow mb-2">{hero.form.eyebrow}</span>
               <h3 className="hl-h3 mb-2">{hero.form.title}</h3>
