@@ -85,13 +85,13 @@
     "cards": [
       {
         "title": "Family Law",
-        "image": "family-law",
+        "image": "fl-support",
         "description": "Divorce, child custody, modifications, child support, father's rights, conservatorship, name changes, adoptions, enforcements, property division, and marital agreements.",
         "to": "/practice-areas/family-law"
       },
       {
         "title": "Personal Injury",
-        "image": "personal-injury",
+        "image": "pi-auto",
         "description": "Personal injury, car accidents, 18-wheeler accidents, slip and falls, workplace injuries, and motorcycle accidents.",
         "to": "/practice-areas/personal-injury"
       }
@@ -100,7 +100,7 @@
   "attorney": {
     "eyebrow": "Meet Sehar Hirani",
     "title": "A mother, advocate, and steady guide for families in transition.",
-    "image": "team",
+    "image": "meet-sehar-team",
     "paragraphs": [
       "As a mom of two, Attorney Sehar Hirani understands how deeply family legal matters can affect children, parents, and the future of a household. She is passionate about protecting children, supporting families, and defending fathers who want to remain present and active in their children's lives.",
       "Sehar graduated from the University of Houston and South Texas College of Law. She has been licensed in the State of Texas since 2018."
@@ -244,7 +244,7 @@
     "intro": {
       "eyebrow": "Who We Are",
       "title": "A law firm built on one powerful principle.",
-      "image": "team",
+      "images": ["about-team-hallway", "about-team-office"],
       "paragraphs": [
         "We believe every client deserves a dedicated team committed to protecting their rights and securing their future. We are more than just your lawyers — we are your partners and your advocates during life's most difficult chapters.",
         "Whether you are navigating a divorce, fighting for child custody, pursuing a personal injury claim, or handling an adoption, Hirani Law Firm brings the same commitment: your case is personal to us."
@@ -264,15 +264,15 @@
       "cards": [
         {
           "title": "Clear Communication",
-          "description": "Keeping you informed and empowered at every stage of your case — no jargon, no unanswered calls."
+          "description": "Keeping you informed and empowered at every stage of your case — no jargon, no unanswered calls. You will always understand where your case stands, what happens next, and why each decision matters."
         },
         {
           "title": "Compassionate Guidance",
-          "description": "Understanding the human side of your struggle and providing the support you need through family law and personal injury matters."
+          "description": "Understanding the human side of your struggle and providing the support you need through family law and personal injury matters. We meet you where you are and help you move forward with confidence and dignity."
         },
         {
           "title": "Aggressive Representation",
-          "description": "Fighting relentlessly in negotiations and in the courtroom to achieve the best possible outcome for you and your family."
+          "description": "Fighting relentlessly in negotiations and in the courtroom to achieve the best possible outcome for you and your family. When the other side has a legal team, you deserve an advocate who is fully prepared to fight."
         }
       ]
     },
@@ -283,15 +283,15 @@
       "cards": [
         {
           "title": "Integrity",
-          "description": "We uphold the highest ethical standards, ensuring our actions are always aligned with your best interests."
+          "description": "We uphold the highest ethical standards, ensuring our actions are always aligned with your best interests. Honest counsel and transparent advice are the foundation of every client relationship we build."
         },
         {
           "title": "Empathy",
-          "description": "We understand that behind every case are real people with real concerns. We approach every situation with the compassion and understanding it deserves."
+          "description": "We understand that behind every case are real people with real concerns. We approach every situation with the compassion and understanding it deserves, treating your family the way we would want ours treated."
         },
         {
           "title": "Tenacity",
-          "description": "We are relentless in our pursuit of justice for our clients. We do not back down from a fight when our clients' futures are on the line."
+          "description": "We are relentless in our pursuit of justice for our clients. We do not back down from a fight when our clients' futures are on the line, and we prepare every case as though it will be decided in the courtroom."
         }
       ]
     },
@@ -353,9 +353,9 @@
     "hero": {
       "eyebrow": "Attorney Profile",
       "name": "Sehar Hirani",
-      "image": "sehar-standing",
+      "image": "sehar-attorney-profile",
       "subtitle": ["Family Law & Personal Injury Attorney", "Licensed in Texas Since 2018"],
-      "description": "A mother of two, an advocate for families, and a steady guide through some of life's most difficult legal moments — Sehar Hirani brings both personal understanding and practiced legal skill to every case she takes on.",
+      "description": "A mother of two, an advocate for families, and a steady guide through some of life's most difficult legal moments — Sehar Hirani brings both personal understanding and practiced legal skill to every case she takes on. She founded Hirani Law Firm to give clients the personal attention, honest communication, and determined advocacy that larger, volume-based firms too often overlook. When you work with Sehar, you work directly with an attorney who treats your case as if it were her own family's.",
       "cta": { "label": "Schedule a Free Consultation", "to": "/contact" }
     },
     "sections": [
@@ -373,7 +373,7 @@
     },
     "strategy": {
       "title": "Sensitive Approach, Strategic Thinking",
-      "image": "team",
+      "images": ["about-team-hallway", "about-team-office"],
       "paragraphs": [
         "Sehar uses a sensitive approach that balances genuine compassion with clear legal direction. She helps clients understand the process and prepare for the decisions ahead — not just emotionally, but strategically. Every case receives a legal plan built around the client's specific family, timeline, and goals.",
         "While she always works to reach amicable resolutions, she is fully prepared to be a fierce advocate in mediation or in the courtroom when the other party refuses to be reasonable. Every case is prepared as if it will go to trial — which gives clients maximum leverage at every stage."
@@ -522,6 +522,7 @@
     },
     "eyebrow": "Family Law in Texas",
     "title": "Protecting families through life's most difficult legal transitions.",
+    "heroSubtitle": "From initial filings to final orders — steady, strategic family law representation for Houston and Katy families.",
     "paragraphs": [
       "Family law matters are rarely just legal problems. They involve your children, your home, your finances, and your sense of stability. Attorney Sehar Hirani understands that — and she approaches every case with both strategic legal thinking and genuine personal care."
     ],
@@ -561,6 +562,7 @@
     },
     "eyebrow": "Personal Injury in Texas",
     "title": "You should be focused on recovery. We handle the fight.",
+    "heroSubtitle": "No fee unless we win. Contingency-based personal injury representation throughout the State of Texas.",
     "paragraphs": [
       "Insurance companies move fast after an accident — often contacting victims before they have legal representation, hoping to settle claims for far less than they are worth. Attorney Sehar Hirani levels that playing field. She handles injury cases on a contingency basis, which means you pay nothing unless we recover compensation for you.",
       "The firm represents injury victims throughout the State of Texas, with particular experience in the Houston and Katy area. From the first call to the final settlement or verdict, your case gets the personal attention it deserves."

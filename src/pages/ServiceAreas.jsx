@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/common/SEO.jsx'
-import Breadcrumbs from '../components/layout/Breadcrumbs.jsx'
+import PageHero from '../components/common/PageHero.jsx'
 import LeadForm from '../components/home/LeadForm.jsx'
 import data from '../data/site.json'
 
@@ -31,7 +31,15 @@ export default function ServiceAreas() {
         description={serviceAreaPage.seo.description}
         path="/about/service-areas"
       />
-      <Breadcrumbs items={[{ label: 'Service Areas', to: '/about/service-areas' }]} />
+      <PageHero
+        title={intro.title}
+        description={serviceAreaPage.seo.description}
+        crumbs={[
+          { label: 'About', to: '/about' },
+          { label: 'Service Areas', to: '/about/service-areas' },
+        ]}
+        bgImage="page-hero-banner"
+      />
 
       {/* Intro + contact card */}
       <section className="hl-section">
@@ -39,7 +47,6 @@ export default function ServiceAreas() {
           <div className="row g-5">
             <div className="col-lg-8">
               <span className="hl-eyebrow">{intro.eyebrow}</span>
-              <h2 className="hl-h2 mb-4">{intro.title}</h2>
               {intro.paragraphs.map((p, i) => (
                 <p key={i} className="hl-body-muted">
                   {p}

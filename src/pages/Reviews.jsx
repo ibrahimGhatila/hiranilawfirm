@@ -46,7 +46,7 @@ export default function Reviews() {
       <section className="hl-section hl-testimonials">
         <div className="hl-container">
           <h2 className="hl-testimonials-title">What Clients Are Saying</h2>
-          <div className="row g-4">
+          <div className="row g-3 hl-reviews-grid">
             {reviewsPage.reviews.map((review) => (
               <div className="col-md-6 col-lg-4" key={review.name}>
                 <article className="hl-review-card h-100">

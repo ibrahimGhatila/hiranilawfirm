@@ -63,7 +63,7 @@ export default function PracticeAreas() {
         title={practiceIndex.hero.title}
         description={practiceIndex.hero.description}
         crumbs={[{ label: 'Practice Areas', to: '/practice-areas' }]}
-        bgImage="justice-band"
+        bgImage="page-hero-banner"
       />
 
       <AreaSection

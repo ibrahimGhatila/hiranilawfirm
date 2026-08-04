@@ -7,7 +7,7 @@ import images from '../../assets/images.js'
  * `crumbs` = [{ label, to }] (current page last).
  * `bgImage` = optional image key rendered behind a dark overlay.
  */
-export default function PageHero({ title, description, crumbs = [], bgImage }) {
+export default function PageHero({ title, description, crumbs = [], bgImage = 'page-hero-banner' }) {
   const trail = [{ label: 'Home', to: '/' }, ...crumbs]
   const style = bgImage
     ? { backgroundImage: `url(${images[bgImage]})` }

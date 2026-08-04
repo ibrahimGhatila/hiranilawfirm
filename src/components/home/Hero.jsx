@@ -1,12 +1,20 @@
 import { Link } from 'react-router-dom'
 import LeadForm from './LeadForm.jsx'
+import images from '../../assets/images.js'
 import data from '../../data/site.json'
 
 const { hero } = data
 
+// Drop an image named `hero-banner.(jpg|png|webp)` into src/assets to activate
+// the hero background banner — it auto-registers and shows behind a dark overlay.
+const banner = images['hero-banner']
+
 export default function Hero() {
   return (
-    <section className="hl-hero hl-section">
+    <section
+      className={'hl-hero hl-section' + (banner ? ' has-banner' : '')}
+      style={banner ? { backgroundImage: `url(${banner})` } : undefined}
+    >
       <div className="hl-container">
         <div className="row align-items-center g-5">
           {/* Copy */}

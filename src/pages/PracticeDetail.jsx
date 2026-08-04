@@ -44,7 +44,7 @@ export default function PracticeDetail() {
           { label: group.label, to: categoryPath },
           { label: item.title, to: `${categoryPath}/${slug}` },
         ]}
-        bgImage="justice-band"
+        bgImage="page-hero-banner"
       />
 
       <section className="hl-section">

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
 import SEO from '../components/common/SEO.jsx'
-import Breadcrumbs from '../components/layout/Breadcrumbs.jsx'
+import PageHero from '../components/common/PageHero.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
 import images from '../assets/images.js'
 
@@ -15,7 +15,12 @@ export default function PracticeAreaTemplate({ page, path, crumb, category, cols
   return (
     <>
       <SEO title={page.seo.title} description={page.seo.description} path={path} />
-      <Breadcrumbs items={[{ label: 'Practice Areas', to: '/practice-areas' }, { label: crumb, to: path }]} />
+      <PageHero
+        title={page.title}
+        description={page.heroSubtitle}
+        crumbs={[{ label: 'Practice Areas', to: '/practice-areas' }, { label: crumb, to: path }]}
+        bgImage="page-hero-banner"
+      />
 
       {/* Intro + stats + slideshow image */}
       <section className="hl-section">
@@ -23,13 +28,12 @@ export default function PracticeAreaTemplate({ page, path, crumb, category, cols
           <div className="row g-5 align-items-center">
             <div className="col-lg-6">
               <span className="hl-eyebrow">{page.eyebrow}</span>
-              <h1 className="hl-h2 mb-4">{page.title}</h1>
               {page.paragraphs.map((p, i) => (
                 <p key={i} className="hl-body-muted">
                   {p}
                 </p>
               ))}
-              <div className="hl-about-stats mt-4">
+              <div className="hl-practice-stats mt-4">
                 {page.stats.map((s) => (
                   <div className="hl-about-stat" key={s.label}>
                     <div className="hl-about-stat-value">{s.value}</div>

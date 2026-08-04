@@ -1,7 +1,8 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
 import SEO from '../components/common/SEO.jsx'
-import Breadcrumbs from '../components/layout/Breadcrumbs.jsx'
+import PageHero from '../components/common/PageHero.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
 import images from '../assets/images.js'
 import data from '../data/site.json'
@@ -10,6 +11,19 @@ const { attorneyPage, business, memberships } = data
 
 export default function AttorneyProfile() {
   const { hero, sections, quote, strategy, education, sidebar } = attorneyPage
+  const strategyImages = strategy.images || [strategy.image]
+  const [activeStrategyImage, setActiveStrategyImage] = useState(0)
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveStrategyImage((current) => (current + 1) % strategyImages.length)
+    }, 5000)
+    return () => window.clearInterval(timer)
+  }, [strategyImages.length])
+
+  const showStrategyImage = (index) => {
+    setActiveStrategyImage((index + strategyImages.length) % strategyImages.length)
+  }
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -32,23 +46,30 @@ export default function AttorneyProfile() {
         jsonLd={jsonLd}
       />
 
-      {/* Dark hero */}
-      <section className="hl-attorney-hero">
+      <PageHero
+        title={hero.name}
+        description="Family Law & Personal Injury Attorney serving Greater Houston and clients across Texas."
+        crumbs={[{ label: 'About Us', to: '/about' }, { label: hero.name, to: '/about/sehar-hirani' }]}
+        bgImage="page-hero-banner"
+      />
+
+      {/* Attorney profile introduction */}
+      <section className="hl-section-sm hl-attorney-profile-intro">
         <div className="hl-container">
-          <div className="row g-0 align-items-stretch">
-            <div className="col-lg-5">
+          <div className="row g-5 align-items-center">
+            <div className="col-lg-4">
               <img src={images[hero.image]} alt={hero.name} className="hl-attorney-hero-img" />
             </div>
-            <div className="col-lg-7">
-              <div className="hl-attorney-hero-body">
+            <div className="col-lg-8">
+              <div className="hl-attorney-profile-body">
                 <span className="hl-eyebrow">{hero.eyebrow}</span>
-                <h1 className="hl-display text-white mb-2">{hero.name}</h1>
+                <h2 className="hl-h2 mb-2">{hero.name}</h2>
                 {hero.subtitle.map((s) => (
                   <div key={s} className="hl-attorney-hero-sub">
                     {s}
                   </div>
                 ))}
-                <p className="hl-attorney-hero-desc mt-3">{hero.description}</p>
+                <p className="hl-body-muted hl-attorney-profile-desc mt-3">{hero.description}</p>
                 <Link to={hero.cta.to} className="btn btn-gold mt-3">
                   {hero.cta.label}
                 </Link>
@@ -58,10 +79,8 @@ export default function AttorneyProfile() {
         </div>
       </section>
 
-      <Breadcrumbs items={[{ label: 'Sehar Hirani', to: '/about/sehar-hirani' }]} />
-
       {/* Body + sidebar */}
-      <section className="hl-section">
+      <section className="hl-section pt-0">
         <div className="hl-container">
           <div className="row g-5">
             {/* Main column */}
@@ -92,12 +111,19 @@ export default function AttorneyProfile() {
                   ))}
                 </div>
                 <div className="col-md-6">
-                  <img
-                    src={images[strategy.image]}
-                    alt="Hirani Law Firm team"
-                    className="hl-rounded-img"
-                    loading="lazy"
-                  />
+                  <div className="hl-about-carousel hl-strategy-carousel" aria-roledescription="carousel" aria-label="Hirani Law Firm team photos">
+                    <img
+                      src={images[strategyImages[activeStrategyImage]]}
+                      alt={`Hirani Law Firm team photo ${activeStrategyImage + 1} of ${strategyImages.length}`}
+                      className="hl-strategy-carousel-img"
+                      loading="lazy"
+                    />
+                    <div className="hl-about-carousel-dots" aria-label="Choose team photo">
+                      {strategyImages.map((image, index) => (
+                        <button type="button" key={image} className={index === activeStrategyImage ? 'active' : ''} onClick={() => showStrategyImage(index)} aria-label={`Show team photo ${index + 1}`} aria-current={index === activeStrategyImage ? 'true' : undefined} />
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -127,6 +153,7 @@ export default function AttorneyProfile() {
 
             {/* Sidebar */}
             <div className="col-lg-4">
+              <div className="hl-attorney-sidebar">
               <div className="hl-side-consult mb-4">
                 <span className="hl-eyebrow">{sidebar.consult.eyebrow}</span>
                 <h3 className="hl-h3 text-white mb-2">{sidebar.consult.title}</h3>
@@ -163,6 +190,7 @@ export default function AttorneyProfile() {
                     <span className="hl-side-review-author">— {r.author}</span>
                   </div>
                 ))}
+              </div>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@
   --hl-sans: "Mulish", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Wider container + generous base font per requirements */
-  --hl-container: 1520px;
+  --hl-container: 1600px;
   --hl-gutter: clamp(1.15rem, 3.5vw, 2.75rem);
 }
 
@@ -79,8 +79,43 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.12;
 }
 
+/* Gold-accented headings on light backgrounds (black → gold gradient).
+   Dark-context headings use .text-white / inline color:#fff, which win. */
+.hl-h2 {
+  background: linear-gradient(108deg, var(--hl-ink) 0%, #7b5b25 28%, var(--hl-gold) 43%, var(--hl-ink) 62%, #8a6a2e 82%, var(--hl-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.hl-h2.text-white,
+.hl-page-hero .hl-h2 {
+  background: linear-gradient(108deg, #fff 0%, #fff 20%, #e6c979 38%, #fff 55%, #fff 68%, #d7ad4b 86%, #fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .hl-h3 {
   font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+/* Premium gold touch for hero titles and key content headings. */
+.hl-hero-title,
+.hl-page-hero .hl-display {
+  background: linear-gradient(108deg, #fff 0%, #fff 18%, #e8cf89 36%, #c99d3d 46%, #fff 62%, #fff 72%, #d4aa48 88%, #f7ecd0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.hl-underline-title {
+  background: linear-gradient(108deg, var(--hl-ink) 0%, #7a5923 30%, var(--hl-gold) 44%, var(--hl-ink) 64%, #8a682b 84%, var(--hl-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .hl-lead {
@@ -153,6 +188,15 @@ h1, h2, h3, h4, h5, h6,
   color: var(--hl-dark);
   border-color: #fff;
 }
+.btn-outline-dark-hl {
+  background: transparent;
+  color: var(--hl-ink);
+  border: 1px solid var(--hl-ink);
+}
+.btn-outline-dark-hl:hover {
+  background: var(--hl-ink);
+  color: #fff;
+}
 
 /* ---------- Inline text link (learn more etc.) ---------- */
 .hl-link {
@@ -195,14 +239,30 @@ h1, h2, h3, h4, h5, h6,
    TOP BAR + NAVBAR
    ============================================================ */
 .hl-topbar {
-  background: var(--hl-darker);
-  color: #cfcabf;
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 0.55rem 0;
+  background: linear-gradient(90deg, var(--hl-gold-dark) 0%, var(--hl-gold) 45%, var(--hl-gold-light) 100%);
+  color: #1a1408;
+  font-size: 0.92rem;
+  padding: 0.5rem 0;
   letter-spacing: 0.02em;
 }
-.hl-topbar a { color: var(--hl-gold); text-decoration: none; font-weight: 600; }
+.hl-topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #1a1408;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+.hl-topbar-item:hover { color: #000; transform: translateY(-1px); }
+.hl-topbar-item svg { flex-shrink: 0; }
+.hl-topbar-item strong { font-weight: 800; }
+@media (max-width: 575.98px) {
+  .hl-topbar { font-size: clamp(0.7rem, 3.15vw, 0.82rem); padding-block: 0.42rem; }
+  .hl-topbar .hl-container { flex-wrap: nowrap !important; justify-content: center !important; gap: 0.65rem !important; }
+  .hl-topbar-item { flex-shrink: 0; gap: 0.3rem; white-space: nowrap; }
+  .hl-topbar-item:first-child span { display: none; }
+}
 
 .hl-navbar {
   background: var(--hl-darker);
@@ -217,14 +277,29 @@ h1, h2, h3, h4, h5, h6,
   color: #efece4 !important;
   font-family: var(--hl-sans);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.12rem;
   letter-spacing: 0.02em;
-  padding: 0.5rem 1rem !important;
+  padding: 0.5rem 1.05rem !important;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
+  position: relative;
+  transition: color 0.18s ease;
 }
+.hl-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 1.05rem;
+  right: 1.05rem;
+  bottom: 0.15rem;
+  height: 2px;
+  background: var(--hl-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+}
+.hl-nav-link:hover::after, .hl-nav-link.active::after { transform: scaleX(1); }
 .hl-nav-link:hover, .hl-nav-link.active { color: var(--hl-gold) !important; }
 .hl-lang-btn {
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -419,19 +494,27 @@ h1, h2, h3, h4, h5, h6,
   overflow: hidden;
   background-color: #0c0b09;
   background-size: cover;
-  background-position: right center;
+  background-position: center;
 }
-/* Opaque on the left (covers the source image's baked-in text) and clears
-   toward the right so the photo subject peeks through. */
 .hl-practice-card::before {
   content: "";
   position: absolute;
   inset: 0;
+  /* Clean photo shows faintly through a dark overlay */
   background: linear-gradient(
-    90deg,
-    rgba(10, 9, 7, 0.98) 0%,
-    rgba(10, 9, 7, 0.96) 62%,
-    rgba(10, 9, 7, 0.9) 100%
+    115deg,
+    rgba(10, 9, 7, 0.9) 0%,
+    rgba(10, 9, 7, 0.82) 55%,
+    rgba(10, 9, 7, 0.7) 100%
+  );
+  transition: background 0.3s ease;
+}
+.hl-practice-card:hover::before {
+  background: linear-gradient(
+    115deg,
+    rgba(10, 9, 7, 0.86) 0%,
+    rgba(10, 9, 7, 0.74) 55%,
+    rgba(10, 9, 7, 0.58) 100%
   );
 }
 .hl-practice-card > * { position: relative; z-index: 2; }
@@ -447,7 +530,7 @@ h1, h2, h3, h4, h5, h6,
 .hl-attorney-panel {
   background: #faf8f3;
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   grid-template-areas:
     "image heading"
     "image content";
@@ -465,6 +548,7 @@ h1, h2, h3, h4, h5, h6,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   min-height: 460px;
 }
 .hl-attorney-content p { color: var(--hl-muted); font-size: 1.08rem; }
@@ -496,14 +580,22 @@ h1, h2, h3, h4, h5, h6,
   border-left: 1px solid rgba(255, 255, 255, 0.06);
 }
 .hl-membership-cell:last-child { border-right: 1px solid rgba(255, 255, 255, 0.06); }
-.hl-membership-cell img {
-  max-height: 68px;
-  width: auto;
-  opacity: 0.72;
-  filter: grayscale(1) brightness(1.4);
-  transition: opacity 0.2s ease;
+.hl-membership-cell {
+  padding: 1.5rem 1rem;
 }
-.hl-membership-cell img:hover { opacity: 1; }
+.hl-membership-cell img {
+  max-height: 104px;
+  max-width: 100%;
+  width: auto;
+  opacity: 0.78;
+  filter: grayscale(1) brightness(1.5);
+  transition: opacity 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+.hl-membership-cell img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+  filter: grayscale(0) brightness(1.5);
+}
 
 /* ============================================================
    CLIENTS MENTION (progress bars)
@@ -590,6 +682,12 @@ h1, h2, h3, h4, h5, h6,
   scroll-snap-align: start;
   box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
 }
+.hl-reviews-grid .hl-review-card {
+  width: 100%;
+  min-height: 310px;
+  padding: clamp(1.75rem, 3vw, 2.25rem);
+}
+.hl-reviews-grid .hl-review-text { -webkit-line-clamp: 7; }
 @media (max-width: 575.98px) {
   .hl-review-card { flex-basis: 82vw; width: 82vw; }
 }
@@ -641,6 +739,23 @@ h1, h2, h3, h4, h5, h6,
   transition: all 0.2s ease;
 }
 .hl-carousel-btn:hover { background: var(--hl-gold); border-color: var(--hl-gold); }
+.hl-carousel-btn { position: relative; z-index: 3; cursor: pointer; }
+.hl-testimonial-dots { display: none; }
+@media (max-width: 575.98px) {
+  .hl-review-carousel { padding-inline: 0.75rem; }
+  .hl-review-carousel .hl-carousel-btn { display: none; }
+  .hl-testimonial-dots {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 0.45rem;
+    max-width: 18rem; margin: 0.5rem auto 0; padding-inline: 1rem;
+  }
+  .hl-testimonial-dots button {
+    width: 8px; height: 8px; padding: 0; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.7); background: transparent;
+  }
+  .hl-testimonial-dots button.active {
+    width: 22px; border-radius: 999px; background: var(--hl-gold); border-color: var(--hl-gold);
+  }
+}
 
 /* ============================================================
    WHY CHOOSE US
@@ -864,16 +979,19 @@ h1, h2, h3, h4, h5, h6,
 }
 .hl-page-hero.has-bg {
   background-size: cover;
-  background-position: right center;
+  background-position: center 48%;
+  background-repeat: no-repeat;
 }
 .hl-page-hero.has-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(12,11,9,0.98) 0%, rgba(12,11,9,0.9) 55%, rgba(12,11,9,0.68) 100%);
+  background:
+    linear-gradient(90deg, rgba(8,7,6,0.93) 0%, rgba(8,7,6,0.84) 54%, rgba(8,7,6,0.72) 100%),
+    rgba(0, 0, 0, 0.28);
 }
 .hl-page-hero.has-bg .hl-container { position: relative; z-index: 2; }
-.hl-page-hero .hl-display { color: #fff; }
+.hl-page-hero .hl-display { color: transparent; }
 .hl-page-hero-crumbs {
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -891,9 +1009,18 @@ h1, h2, h3, h4, h5, h6,
   max-width: 44rem;
   margin-top: 1.25rem;
 }
+@media (max-width: 767.98px) {
+  .hl-page-hero.has-bg { background-position: 62% center; }
+  .hl-page-hero.has-bg::before { background: rgba(8, 7, 6, 0.84); }
+}
 
 /* ABOUT — intro */
-.hl-about-intro-img { width: 100%; height: auto; box-shadow: 0 30px 60px -30px rgba(0,0,0,0.4); }
+.hl-about-carousel { position: relative; overflow: hidden; background: var(--hl-dark); box-shadow: 0 30px 60px -30px rgba(0,0,0,0.4); }
+.hl-about-intro-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; display: block; }
+.hl-about-carousel-dots { position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%); display: flex; gap: 0.55rem; z-index: 2; }
+.hl-about-carousel-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 1px solid #fff; background: transparent; }
+.hl-about-carousel-dots button.active { width: 24px; border-radius: 999px; background: var(--hl-gold); border-color: var(--hl-gold); }
+.hl-strategy-carousel-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; display: block; }
 .hl-about-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -960,21 +1087,22 @@ h1, h2, h3, h4, h5, h6,
 .hl-about-cta .hl-h2 { color: #fff; }
 
 /* TEAM cards */
-.hl-team-card { background: var(--hl-dark); }
+.hl-team-card { background: var(--hl-dark); overflow: hidden; }
 .hl-team-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
 .hl-team-info { padding: 1rem 1rem 1.25rem; text-align: center; border-top: 2px solid var(--hl-gold); }
 .hl-team-name { font-family: var(--hl-serif); color: #fff; font-size: 1.2rem; }
 .hl-team-role { color: var(--hl-gold); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; margin-top: 0.3rem; }
 
-/* ATTORNEY profile hero */
-.hl-attorney-hero { background: var(--hl-dark); }
-.hl-attorney-hero-img { width: 100%; height: 100%; min-height: 460px; object-fit: cover; object-position: top center; }
-.hl-attorney-hero-body { padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.5rem, 4vw, 3.5rem); }
+/* ATTORNEY profile introduction */
+.hl-attorney-profile-intro { background: var(--hl-cream); }
+.hl-attorney-hero-img { width: 100%; height: 620px; object-fit: cover; object-position: center top; display: block; box-shadow: 0 26px 54px -30px rgba(0,0,0,0.45); }
+.hl-attorney-profile-body { max-width: 46rem; }
 .hl-attorney-hero-sub { color: var(--hl-gold); font-weight: 600; font-size: 1.02rem; }
-.hl-attorney-hero-desc { color: #c9c5bc; font-size: 1.1rem; max-width: 40rem; }
+.hl-attorney-profile-desc { font-size: 1.08rem; line-height: 1.75; }
 
 /* Attorney sidebar */
 .hl-side-consult { background: var(--hl-dark); border-top: 3px solid var(--hl-gold); padding: 1.75rem; }
+.hl-attorney-sidebar { position: sticky; top: 112px; }
 .hl-side-phone { display: block; text-align: center; color: var(--hl-gold); font-size: 1.3rem; font-weight: 600; text-decoration: none; }
 .hl-side-list { border: 1px solid var(--hl-border); padding: 1.25rem 1.5rem; background: #fff; }
 .hl-side-list-title { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; font-weight: 700; color: var(--hl-gold); padding-bottom: 0.75rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--hl-border); }
@@ -988,8 +1116,15 @@ h1, h2, h3, h4, h5, h6,
 
 /* Membership inline tiles */
 .hl-membership-tiles { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-.hl-membership-tile { background: var(--hl-dark); padding: 0.75rem 1.25rem; display: flex; align-items: center; justify-content: center; min-width: 90px; }
-.hl-membership-tile img { max-height: 44px; width: auto; filter: grayscale(1) brightness(1.4); opacity: 0.8; }
+.hl-membership-tile { background: var(--hl-dark); padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: center; min-width: 145px; min-height: 112px; transition: transform 0.25s ease; }
+.hl-membership-tile:hover { transform: translateY(-3px); }
+.hl-membership-tile img { max-height: 88px; max-width: 112px; width: auto; filter: grayscale(1) brightness(1.5); opacity: 0.82; transition: opacity 0.25s ease, filter 0.25s ease; }
+.hl-membership-tile:hover img { opacity: 1; filter: grayscale(0) brightness(1.5); }
+@media (min-width: 992px) {
+  .hl-membership-tiles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.5rem; }
+  .hl-membership-tile { min-width: 0; min-height: 100px; padding: 0.75rem 0.5rem; }
+  .hl-membership-tile img { max-width: 100%; max-height: 78px; }
+}
 
 /* SERVICE AREAS */
 .hl-contact-card { border: 1px solid var(--hl-gold); border-top-width: 3px; padding: 1.75rem; background: #fff; }
@@ -1030,7 +1165,7 @@ h1, h2, h3, h4, h5, h6,
    ============================================================ */
 .hl-practice-slide {
   position: relative;
-  min-height: 420px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1066,7 +1201,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* Attorney band (dark) */
 .hl-attorney-band { background: var(--hl-dark); border-top: 3px solid var(--hl-gold); padding: clamp(3rem, 6vw, 4.5rem) 0; }
-.hl-attorney-band-img { width: 100%; height: auto; object-fit: cover; box-shadow: 0 24px 48px -28px rgba(0,0,0,0.6); }
+.hl-attorney-band-img { width: min(100%, 310px); height: 380px; object-fit: cover; object-position: top center; display: block; margin-inline: auto; box-shadow: 0 24px 48px -28px rgba(0,0,0,0.6); }
 
 /* Review theme cards */
 .hl-theme-card { background: var(--hl-dark); border-top: 3px solid var(--hl-gold); padding: 2rem 1.75rem; }
@@ -1100,12 +1235,16 @@ h1, h2, h3, h4, h5, h6,
 .hl-link-row {
   display: flex; justify-content: space-between; align-items: center; gap: 1.5rem;
   padding: 1.5rem clamp(1rem, 3vw, 2.5rem); border-bottom: 1px solid var(--hl-border);
+  width: 100%; background: #fff; text-align: left; font: inherit;
   text-decoration: none; color: var(--hl-ink); transition: background 0.15s ease;
 }
-.hl-link-row:nth-child(even) { background: var(--hl-cream); }
+.hl-contact-accordion:nth-child(even) .hl-link-row { background: var(--hl-cream); }
 .hl-link-row span:first-child { font-family: var(--hl-serif); font-size: clamp(1.15rem, 1.8vw, 1.4rem); }
 .hl-link-row:hover { background: var(--hl-cream-2); color: var(--hl-gold-dark); }
-.hl-link-row-more { color: var(--hl-gold); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; font-weight: 700; border: 1px solid var(--hl-border); padding: 0.5rem 0.9rem; white-space: nowrap; }
+.hl-link-row-more { color: var(--hl-gold); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; font-weight: 700; border: 1px solid var(--hl-border); padding: 0.5rem 0.9rem; white-space: nowrap; display: inline-flex; align-items: center; gap: 0.45rem; }
+.hl-contact-accordion.open .hl-link-row { background: var(--hl-cream-2); color: var(--hl-gold-dark); }
+.hl-contact-accordion-answer { padding: 0 2.5rem 1.75rem; border-bottom: 1px solid var(--hl-border); background: var(--hl-cream-2); }
+.hl-contact-accordion-answer p { max-width: 72ch; margin: 0; color: var(--hl-muted); line-height: 1.7; }
 
 .hl-bg-dark { background: var(--hl-dark) !important; }
 .hl-apart-card { background: #161514; border-left: 3px solid var(--hl-gold); padding: 1.75rem 2rem; }
@@ -1143,3 +1282,231 @@ h1, h2, h3, h4, h5, h6,
 .hl-side-link:last-child { border-bottom: none; }
 .hl-side-link:hover { color: var(--hl-gold); }
 .hl-side-link.active { color: var(--hl-gold-dark); font-weight: 700; }
+
+/* ============================================================
+   GLOBAL HOVER / TRANSITION / SHADOW EFFECTS
+   ============================================================ */
+.hl-area-card,
+.hl-difference-card,
+.hl-team-card,
+.hl-resource-card,
+.hl-review-card,
+.hl-value-card,
+.hl-theme-card,
+.hl-apart-card,
+.hl-contact-card,
+.hl-practice-card,
+.hl-practice-slide {
+  transition: transform 0.28s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.28s ease;
+  will-change: transform;
+}
+
+/* Lift + shadow on hover (light-surface cards) */
+.hl-area-card:hover,
+.hl-difference-card:hover,
+.hl-resource-card:hover,
+.hl-contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 50px -24px rgba(24, 18, 6, 0.28);
+  border-color: var(--hl-gold);
+}
+
+/* Dark-surface cards */
+.hl-team-card:hover,
+.hl-value-card:hover,
+.hl-theme-card:hover,
+.hl-apart-card:hover,
+.hl-review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 50px -20px rgba(0, 0, 0, 0.55);
+}
+
+/* Image zoom inside cards */
+.hl-area-card img,
+.hl-difference-card img,
+.hl-team-card img,
+.hl-about-intro-img,
+.hl-rounded-img,
+.hl-attorney-band-img,
+.hl-attorney-img {
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.hl-area-card:hover img,
+.hl-difference-card:hover img,
+.hl-team-card:hover img { transform: scale(1.06); }
+
+/* Practice slide + practice cards subtle scale on hover */
+.hl-practice-card:hover,
+.hl-practice-slide:hover {
+  box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.6);
+}
+
+/* Why-choose-us cells + service pills */
+.hl-why-cell { transition: background 0.25s ease, transform 0.25s ease; }
+.hl-why-cell:hover { background: #fffdf8; }
+.hl-why-icon { transition: transform 0.3s ease, background 0.25s ease, color 0.25s ease; }
+.hl-why-cell:hover .hl-why-icon { transform: translateY(-4px) rotate(-6deg); background: var(--hl-gold); color: #fff; }
+.hl-pill { transition: all 0.2s ease; }
+.hl-pill:hover { border-color: var(--hl-gold); color: var(--hl-gold-dark); transform: translateY(-2px); }
+
+/* Buttons: subtle lift */
+.btn { transition: transform 0.18s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+.btn-gold:hover, .btn-dark-solid:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.4); }
+
+/* Resource card icon pulse */
+.hl-resource-icon { transition: transform 0.3s ease; }
+.hl-resource-card:hover .hl-resource-icon { transform: translateY(-4px) scale(1.08); }
+
+/* Section reveal-friendly: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+/* ============================================================
+   404 — NOT FOUND (legal style)
+   ============================================================ */
+.hl-404 {
+  background: var(--hl-cream);
+  padding: clamp(4rem, 9vw, 8rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+.hl-404::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(184, 148, 63, 0.1), transparent 55%);
+  pointer-events: none;
+}
+.hl-404 .hl-container { position: relative; z-index: 2; max-width: 820px; }
+.hl-404-code {
+  font-family: var(--hl-serif);
+  font-weight: 700;
+  font-size: clamp(6rem, 18vw, 12rem);
+  line-height: 0.9;
+  background: linear-gradient(160deg, var(--hl-ink) 20%, var(--hl-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+.hl-404-title {
+  color: var(--hl-ink);
+  font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+  margin: 0.5rem auto 1.25rem;
+  max-width: 20ch;
+}
+.hl-404-desc {
+  color: var(--hl-muted);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 44rem;
+  margin: 0 auto 2rem;
+}
+.hl-404-links { border-top: 1px solid var(--hl-border); padding-top: 2rem; margin-top: 1rem; }
+.hl-404-links-label {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--hl-gold);
+  margin-bottom: 1rem;
+}
+.hl-404-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fff;
+  border: 1px solid var(--hl-border);
+  padding: 0.6rem 1.1rem;
+  color: #3a352d;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+.hl-404-chip:hover {
+  border-color: var(--hl-gold);
+  color: var(--hl-gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -14px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================================
+   MISC TWEAKS (batch)
+   ============================================================ */
+
+/* Practice-area intro stats — larger, heavier */
+.hl-practice-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--hl-dark);
+  border-top: 2px solid var(--hl-gold);
+}
+.hl-practice-stats .hl-about-stat { padding: 1.75rem 1.25rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+.hl-practice-stats .hl-about-stat:last-child { border-right: none; }
+.hl-practice-stats .hl-about-stat-value {
+  font-family: var(--hl-serif);
+  color: var(--hl-gold);
+  font-size: clamp(2.15rem, 3vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+.hl-practice-stats .hl-about-stat-label {
+  color: #b7b0a2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+}
+@media (max-width: 575.98px) {
+  .hl-practice-stats { grid-template-columns: 1fr; }
+  .hl-practice-stats .hl-about-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .hl-practice-stats .hl-about-stat:last-child { border-bottom: none; }
+}
+
+@media (max-width: 991.98px) {
+  .hl-attorney-sidebar { position: static; }
+  .hl-attorney-hero-img { height: 560px; max-width: 440px; margin-inline: auto; }
+}
+
+@media (max-width: 575.98px) {
+  .hl-attorney-hero-img { height: 500px; }
+  .hl-contact-accordion-answer { padding-inline: 1rem; }
+  .hl-link-row { align-items: flex-start; }
+}
+
+/* Wider resources card, centered */
+.hl-resource-card--wide {
+  max-width: 620px;
+  padding: 3rem 2.5rem;
+}
+.hl-resource-card--wide h3 { font-size: 1.7rem; }
+.hl-resource-card--wide p { font-size: 1.08rem; }
+
+/* Landing hero optional background banner */
+.hl-hero.has-banner {
+  background-size: cover;
+  background-position: center 42%;
+  background-repeat: no-repeat;
+}
+.hl-hero.has-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(10,9,7,0.92) 0%, rgba(10,9,7,0.8) 48%, rgba(10,9,7,0.72) 100%),
+    rgba(10, 9, 7, 0.32);
+  z-index: 0;
+}
+.hl-hero.has-banner .hl-container { position: relative; z-index: 2; }
+
+@media (max-width: 767.98px) {
+  .hl-hero.has-banner { background-position: 58% center; }
+  .hl-hero.has-banner::after {
+    background: linear-gradient(180deg, rgba(10,9,7,0.82) 0%, rgba(10,9,7,0.9) 100%);
+  }
+}

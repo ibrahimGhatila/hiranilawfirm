@@ -1,6 +1,7 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/common/SEO.jsx'
-import Breadcrumbs from '../components/layout/Breadcrumbs.jsx'
+import PageHero from '../components/common/PageHero.jsx'
 import images from '../assets/images.js'
 import data from '../data/site.json'
 
@@ -24,21 +25,58 @@ function ValueCards({ cards }) {
 
 export default function About() {
   const { intro, quote, mission, values, difference, cta } = aboutPage
+  const [activeImage, setActiveImage] = useState(0)
+  const introImages = intro.images || [intro.image]
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveImage((current) => (current + 1) % introImages.length)
+    }, 5000)
+    return () => window.clearInterval(timer)
+  }, [introImages.length])
+
+  const showImage = (index) => {
+    setActiveImage((index + introImages.length) % introImages.length)
+  }
+
   return (
     <>
       <SEO title={aboutPage.seo.title} description={aboutPage.seo.description} path="/about" />
-      <Breadcrumbs items={[{ label: 'About Us', to: '/about' }]} />
+      <PageHero
+        title={intro.title}
+        description={aboutPage.seo.description}
+        crumbs={[{ label: 'About Us', to: '/about' }]}
+        bgImage="page-hero-banner"
+      />
 
       {/* Intro */}
       <section className="hl-section">
         <div className="hl-container">
           <div className="row g-5 align-items-center">
-            <div className="col-lg-6 order-lg-1 order-2">
-              <img src={images[intro.image]} alt="Hirani Law Firm team" className="hl-about-intro-img" />
+            <div className="col-lg-5 order-1">
+              <span className="hl-eyebrow d-lg-none mb-3">{intro.eyebrow}</span>
+              <div className="hl-about-carousel" aria-roledescription="carousel" aria-label="Hirani Law Firm team photos">
+                <img
+                  src={images[introImages[activeImage]]}
+                  alt={`Hirani Law Firm team photo ${activeImage + 1} of ${introImages.length}`}
+                  className="hl-about-intro-img"
+                />
+                <div className="hl-about-carousel-dots" aria-label="Choose team photo">
+                  {introImages.map((image, index) => (
+                    <button
+                      type="button"
+                      key={image}
+                      className={index === activeImage ? 'active' : ''}
+                      onClick={() => showImage(index)}
+                      aria-label={`Show team photo ${index + 1}`}
+                      aria-current={index === activeImage ? 'true' : undefined}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="col-lg-6 order-lg-2 order-1">
-              <span className="hl-eyebrow">{intro.eyebrow}</span>
-              <h2 className="hl-h2 mb-4">{intro.title}</h2>
+            <div className="col-lg-7 order-2">
+              <span className="hl-eyebrow d-none d-lg-inline-block">{intro.eyebrow}</span>
               {intro.paragraphs.map((p, i) => (
                 <p key={i} className="hl-lead" style={{ fontSize: '1.1rem' }}>
                   {p}

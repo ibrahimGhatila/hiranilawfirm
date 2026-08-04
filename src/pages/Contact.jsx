@@ -1,5 +1,6 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight, FiPlus, FiMinus } from 'react-icons/fi'
 import SEO from '../components/common/SEO.jsx'
 import PageHero from '../components/common/PageHero.jsx'
 import LeadForm from '../components/home/LeadForm.jsx'
@@ -9,6 +10,7 @@ import data from '../data/site.json'
 const { contactPage, contactCta, business } = data
 
 export default function Contact() {
+  const [openLink, setOpenLink] = useState(null)
   const { hero, form, info, map, links, whyApart } = contactPage
   const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(
     map
@@ -95,16 +97,25 @@ export default function Contact() {
       <section className="hl-section-sm">
         <div className="hl-container">
           <div className="hl-link-list">
-            {links.map((link, i) => (
-              <Link
-                to={link.to}
-                key={i}
-                className={'hl-link-row' + (i % 2 === 1 ? ' alt' : '')}
-              >
-                <span>{link.label}</span>
-                <span className="hl-link-row-more">Read More</span>
-              </Link>
-            ))}
+            {links.map((link, i) => {
+              const isOpen = openLink === i
+              return (
+                <div className={'hl-contact-accordion' + (isOpen ? ' open' : '')} key={link.label}>
+                  <button type="button" className="hl-link-row" onClick={() => setOpenLink(isOpen ? null : i)} aria-expanded={isOpen} aria-controls={`contact-answer-${i}`}>
+                    <span>{link.label}</span>
+                    <span className="hl-link-row-more">
+                      {isOpen ? 'Close' : 'Read More'} {isOpen ? <FiMinus /> : <FiPlus />}
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <div className="hl-contact-accordion-answer" id={`contact-answer-${i}`}>
+                      <p>{link.description || 'Learn more about our client-focused approach and how Hirani Law Firm can help you move forward with clarity and confidence.'}</p>
+                      <Link to={link.to} className="hl-link-arrow">Learn More <FiArrowRight size={13} /></Link>
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

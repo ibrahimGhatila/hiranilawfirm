@@ -33,8 +33,8 @@ export default function Header() {
           <img src={images.logo} alt="Hirani Law Firm" />
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="d-none d-lg-flex align-items-center gap-1">
+        {/* Desktop nav — pushed to the right */}
+        <nav className="d-none d-lg-flex align-items-center gap-1 ms-auto">
           {nav.links.map((link) => (
             <div key={link.label} className="hl-dropdown">
               <NavLink
@@ -60,20 +60,15 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="d-flex align-items-center gap-2">
-          <button className="hl-lang-btn d-none d-lg-inline-block" type="button">
-            ES
-          </button>
-          {/* Mobile hamburger */}
-          <button
-            className="hl-burger d-lg-none"
-            type="button"
-            aria-label="Open menu"
-            onClick={() => setOpen(true)}
-          >
-            <FiMenu />
-          </button>
-        </div>
+        {/* Mobile hamburger */}
+        <button
+          className="hl-burger d-lg-none ms-auto"
+          type="button"
+          aria-label="Open menu"
+          onClick={() => setOpen(true)}
+        >
+          <FiMenu />
+        </button>
       </div>
 
       {/* Mobile sidebar (max 80% width) */}
@@ -133,9 +128,6 @@ export default function Header() {
               )}
             </div>
           ))}
-          <button className="hl-lang-btn mt-4" type="button">
-            ES
-          </button>
         </nav>
       </aside>
     </header>
