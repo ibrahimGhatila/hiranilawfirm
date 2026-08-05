@@ -109,12 +109,12 @@ export default function About() {
       <section className="hl-section hl-bg-cream">
         <div className="hl-container">
           <div className="row g-5">
-            <div className="col-lg-4">
+            <div className="col-lg-5">
               <span className="hl-eyebrow">{mission.eyebrow}</span>
               <h2 className="hl-h2 mb-3">{mission.title}</h2>
               <p className="hl-lead mb-0">{mission.description}</p>
             </div>
-            <div className="col-lg-8">
+            <div className="col-lg-7">
               <ValueCards cards={mission.cards} />
             </div>
           </div>
@@ -125,12 +125,12 @@ export default function About() {
       <section className="hl-section">
         <div className="hl-container">
           <div className="row g-5">
-            <div className="col-lg-4">
+            <div className="col-lg-5">
               <span className="hl-eyebrow">{values.eyebrow}</span>
               <h2 className="hl-h2 mb-3">{values.title}</h2>
               <p className="hl-lead mb-0">{values.description}</p>
             </div>
-            <div className="col-lg-8">
+            <div className="col-lg-7">
               <ValueCards cards={values.cards} />
             </div>
           </div>
@@ -141,7 +141,8 @@ export default function About() {
       <section className="hl-section pt-0">
         <div className="hl-container">
           <span className="hl-eyebrow">{difference.eyebrow}</span>
-          <h2 className="hl-h2 mb-5" style={{ maxWidth: '30ch' }}>
+          {/* Wide enough to hold the title to two lines. */}
+          <h2 className="hl-h2 mb-5" style={{ maxWidth: '50rem' }}>
             {difference.title}
           </h2>
           <div className="row g-4">

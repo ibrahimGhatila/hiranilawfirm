@@ -1180,11 +1180,21 @@ h1, h2, h3, h4, h5, h6,
 /* Dark value cards (mission/values) */
 .hl-value-card {
   background: var(--hl-dark);
-  border-top: 3px solid var(--hl-gold);
-  padding: 2rem 1.75rem;
+  border: 1px solid var(--hl-gold);
+  padding: 2.4rem 2rem;
 }
-.hl-value-card h3 { color: var(--hl-gold); font-size: 1.19rem; margin-bottom: 1rem; }
-.hl-value-card p { color: #cfcabf; font-size: 0.85rem; line-height: 1.6; }
+/* Bolder than the 500 the shared heading rule sets, with a rule under it
+   running the full inner width of the card. */
+.hl-value-card h3 {
+  color: var(--hl-gold);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(198, 160, 78, 0.55);
+  margin-bottom: 1.6rem;
+}
+.hl-value-card p { color: #cfcabf; font-size: 0.9rem; line-height: 1.75; }
 
 /* Difference image cards */
 .hl-difference-card {
