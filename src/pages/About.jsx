@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/common/SEO.jsx'
-import PageHero from '../components/common/PageHero.jsx'
 import images from '../assets/images.js'
 import data from '../data/site.json'
 
@@ -42,18 +41,12 @@ export default function About() {
   return (
     <>
       <SEO title={aboutPage.seo.title} description={aboutPage.seo.description} path="/about" />
-      <PageHero
-        title={intro.title}
-        description={aboutPage.seo.description}
-        crumbs={[{ label: 'About Us', to: '/about' }]}
-        bgImage="page-hero-banner"
-      />
 
-      {/* Intro */}
+      {/* Intro — the page opens straight into this, with no hero banner. */}
       <section className="hl-section">
         <div className="hl-container">
           <div className="row g-5 align-items-center">
-            <div className="col-lg-5 order-1">
+            <div className="col-lg-6 order-1">
               <span className="hl-eyebrow d-lg-none mb-3">{intro.eyebrow}</span>
               <div className="hl-about-carousel" aria-roledescription="carousel" aria-label="Hirani Law Firm team photos">
                 <img
@@ -75,8 +68,12 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-7 order-2">
+            <div className="col-lg-6 order-2">
               <span className="hl-eyebrow d-none d-lg-inline-block">{intro.eyebrow}</span>
+              {/* Held to the reference width so the title breaks after "one". */}
+              <h2 className="hl-h2 mb-4" style={{ maxWidth: '30rem' }}>
+                {intro.title}
+              </h2>
               {intro.paragraphs.map((p, i) => (
                 <p key={i} className="hl-lead" style={{ fontSize: '0.935rem' }}>
                   {p}
