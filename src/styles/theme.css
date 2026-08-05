@@ -1238,6 +1238,55 @@ h1, h2, h3, h4, h5, h6,
 .hl-team-name { font-family: var(--hl-serif); color: #fff; font-size: 1.02rem; }
 .hl-team-role { color: var(--hl-gold); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.612rem; margin-top: 0.3rem; }
 
+/* TEAM MEMBER page */
+.hl-member { padding-bottom: clamp(3.5rem, 7vw, 6.5rem); }
+.hl-member-crumbs { padding-block: clamp(2rem, 4vw, 3.25rem) clamp(1.5rem, 3vw, 2.5rem); }
+.hl-member-crumbs .hl-breadcrumbs { padding-block: 0; border: none; background: none; }
+.hl-member-crumbs .sep { display: none; }
+.hl-member-crumbs a,
+.hl-member-crumbs .current {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--hl-gold-dark);
+}
+.hl-member-crumbs a::after { content: "/"; margin: 0 0.5rem; color: var(--hl-muted-light); }
+
+/* Photo sits over a gold hairline frame offset up and to the right. */
+.hl-member-photo { position: relative; display: block; }
+.hl-member-photo::before {
+  content: "";
+  position: absolute;
+  inset: -18px -13px 18px 13px;
+  border: 1px solid var(--hl-gold);
+  pointer-events: none;
+}
+.hl-member-photo img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hl-member-name {
+  font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--hl-border);
+}
+.hl-member-bio { color: var(--hl-muted); font-size: 1rem; line-height: 1.8; }
+.hl-member-bio + .hl-member-bio { margin-top: 1.4rem; }
+
+@media (max-width: 991.98px) {
+  .hl-member-photo { max-width: 420px; }
+  .hl-member-photo::before { inset: -12px -9px 12px 9px; }
+}
+
 /* ATTORNEY profile hero — dark, and one viewport tall like the other heroes. */
 .hl-attorney-hero {
   background: var(--hl-darker);
@@ -1337,28 +1386,38 @@ h1, h2, h3, h4, h5, h6,
 /* ============================================================
    PRACTICE AREA pages
    ============================================================ */
+/* These slides ship as finished artwork — the gold frame, the label, the
+   headline and the dots are all baked into the image — so nothing is drawn
+   over them here. */
 .hl-practice-slide {
   position: relative;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2.75rem;
-  color: #fff;
   overflow: hidden;
   background-color: #0c0b09;
-  background-size: cover;
-  background-position: right center;
 }
-.hl-practice-slide::before {
-  content: "";
+.hl-practice-slide-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hl-practice-slide-dots {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(10,9,7,0.97) 0%, rgba(10,9,7,0.95) 52%, rgba(10,9,7,0.6) 82%, rgba(10,9,7,0.4) 100%);
+  left: 50%;
+  bottom: 1.6rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.55rem;
 }
-.hl-practice-slide > * { position: relative; z-index: 2; }
-.hl-practice-slide-eyebrow { color: var(--hl-gold); text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.663rem; font-weight: 700; margin-bottom: 1rem; }
-.hl-practice-slide-title { font-family: var(--hl-serif); color: #fff; font-size: clamp(1.53rem, 2.55vw, 2.21rem); line-height: 1.2; max-width: 16ch; }
+.hl-practice-slide-dots button {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
+.hl-practice-slide-dots button.active { background: var(--hl-gold); border-color: var(--hl-gold); }
+
+/* Practice area hero */
+.hl-practice-hero-title { margin-bottom: 1.5rem; }
+.hl-practice-hero-lead { font-size: 1.02rem; line-height: 1.8; max-width: 42rem; }
+.hl-inline-link { color: var(--hl-gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+.hl-inline-link:hover { color: var(--hl-gold); }
 
 /* Area cards */
 .hl-area-card { background: #fff; border: 1px solid var(--hl-border); overflow: hidden; display: flex; flex-direction: column; }

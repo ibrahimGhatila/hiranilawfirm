@@ -17,8 +17,10 @@ function MemberCard({ member }) {
       </div>
     </div>
   )
-  return member.to ? (
-    <Link to={member.to} className="text-decoration-none d-block">
+  // Sehar links to her full attorney profile; everyone else to their own page.
+  const to = member.to || (member.slug && `/about/our-team/${member.slug}`)
+  return to ? (
+    <Link to={to} className="text-decoration-none d-block">
       {card}
     </Link>
   ) : (

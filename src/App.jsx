@@ -6,6 +6,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import AttorneyProfile from './pages/AttorneyProfile.jsx'
 import OurTeam from './pages/OurTeam.jsx'
+import TeamMember from './pages/TeamMember.jsx'
 import ServiceAreas from './pages/ServiceAreas.jsx'
 import PracticeAreas from './pages/PracticeAreas.jsx'
 import FamilyLaw from './pages/FamilyLaw.jsx'
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/about/sehar-hirani" element={<AttorneyProfile />} />
           <Route path="/about/our-team" element={<OurTeam />} />
+          <Route path="/about/our-team/:slug" element={<TeamMember />} />
           <Route path="/about/service-areas" element={<ServiceAreas />} />
           <Route path="/practice-areas" element={<PracticeAreas />} />
           <Route path="/practice-areas/family-law" element={<FamilyLaw />} />

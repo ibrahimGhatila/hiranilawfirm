@@ -6,7 +6,6 @@ export default function FamilyLaw() {
     <PracticeAreaTemplate
       page={data.familyLawPage}
       path="/practice-areas/family-law"
-      crumb="Family Law"
       category="family-law"
       cols={4}
     />

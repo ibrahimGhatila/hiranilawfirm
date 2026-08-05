@@ -6,7 +6,6 @@ export default function PersonalInjury() {
     <PracticeAreaTemplate
       page={data.personalInjuryPage}
       path="/practice-areas/personal-injury"
-      crumb="Personal Injury"
       category="personal-injury"
       cols={3}
     />
