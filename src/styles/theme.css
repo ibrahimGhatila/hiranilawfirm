@@ -71,21 +71,22 @@ h1, h2, h3, h4, h5, h6,
 .hl-serif {
   font-family: var(--hl-serif);
   color: var(--hl-ink);
-  font-weight: 600;
-  line-height: 1.12;
+  font-weight: 500;
+  line-height: 1.1;
   letter-spacing: -0.01em;
 }
 
 .hl-display {
   font-size: clamp(2.21rem, 4.42vw, 3.74rem);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.05;
 }
 
 .hl-h2 {
-  font-size: clamp(2.1rem, 3.75vw, 3.65rem);
-  font-weight: 600;
-  line-height: 1.06;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 /* Gold-accented headings on light backgrounds (black → gold gradient).
@@ -602,7 +603,7 @@ h1, h2, h3, h4, h5, h6,
   display: block;
 }
 .hl-attorney-heading .hl-eyebrow { margin-bottom: 0.9rem; }
-.hl-attorney-heading .hl-h2 { max-width: 30ch; }
+.hl-attorney-heading .hl-h2 { max-width: 30ch; margin-bottom: 20px; }
 .hl-attorney-content p {
   color: #5f5b53;
   font-size: 1.1rem;

@@ -9,7 +9,7 @@ export default function Resources() {
     <section className="hl-section hl-bg-cream">
       <div className="hl-container text-center">
         <span className="hl-eyebrow">{resources.eyebrow}</span>
-        <h2 className="hl-h2 mb-5 mx-auto" style={{ maxWidth: '64rem' }}>
+        <h2 className="hl-h2 mb-5 mx-auto" style={{ maxWidth: '46rem' }}>
           {resources.title}
         </h2>
 
