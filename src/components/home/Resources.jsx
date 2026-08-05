@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { FiDownload } from 'react-icons/fi'
 import data from '../../data/site.json'
 
@@ -13,10 +12,15 @@ export default function Resources() {
           {resources.title}
         </h2>
 
-        <div className="row g-4 justify-content-center">
+        <div className="row g-2 justify-content-center">
           {resources.cards.map((card) => (
             <div className="col-md-8 col-lg-6" key={card.title}>
-              <Link to={card.to} className="text-decoration-none d-block">
+              <a
+                href={card.to}
+                download
+                className="text-decoration-none d-block"
+                aria-label={`Download ${card.title}`}
+              >
                 <div className="hl-resource-card hl-resource-card--wide mx-auto">
                   <div className="hl-resource-icon">
                     <FiDownload />
@@ -25,7 +29,7 @@ export default function Resources() {
                   <p className="mb-0">{card.description}</p>
                   <div className="hl-resource-meta">{card.meta}</div>
                 </div>
-              </Link>
+              </a>
             </div>
           ))}
         </div>

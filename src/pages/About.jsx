@@ -6,15 +6,34 @@ import data from '../data/site.json'
 
 const { aboutPage, business } = data
 
+/**
+ * Splits body copy on any phrase listed in `links` and turns those phrases
+ * into real links, so the data can stay plain strings.
+ */
+function withLinks(text, links) {
+  if (!links || links.length === 0) return text
+  const escaped = links.map((l) => l.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+  return text.split(new RegExp(`(${escaped.join('|')})`, 'g')).map((part, i) => {
+    const link = links.find((l) => l.text === part)
+    return link ? (
+      <Link key={i} to={link.to} className="hl-inline-link">
+        {part}
+      </Link>
+    ) : (
+      part
+    )
+  })
+}
+
 /** Reusable trio of dark gold-bordered value cards. */
 function ValueCards({ cards }) {
   return (
-    <div className="row g-4">
+    <div className="row g-2">
       {cards.map((card) => (
         <div className="col-md-4" key={card.title}>
           <div className="hl-value-card h-100">
             <h3>{card.title}</h3>
-            <p className="mb-0">{card.description}</p>
+            <p className="mb-0">{withLinks(card.description, card.links)}</p>
           </div>
         </div>
       ))}
@@ -48,23 +67,25 @@ export default function About() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 order-1">
               <span className="hl-eyebrow d-lg-none mb-3">{intro.eyebrow}</span>
-              <div className="hl-about-carousel" aria-roledescription="carousel" aria-label="Hirani Law Firm team photos">
-                <img
-                  src={images[introImages[activeImage]]}
-                  alt={`Hirani Law Firm team photo ${activeImage + 1} of ${introImages.length}`}
-                  className="hl-about-intro-img"
-                />
-                <div className="hl-about-carousel-dots" aria-label="Choose team photo">
-                  {introImages.map((image, index) => (
-                    <button
-                      type="button"
-                      key={image}
-                      className={index === activeImage ? 'active' : ''}
-                      onClick={() => showImage(index)}
-                      aria-label={`Show team photo ${index + 1}`}
-                      aria-current={index === activeImage ? 'true' : undefined}
-                    />
-                  ))}
+              <div className="hl-about-intro-frame">
+                <div className="hl-about-carousel" aria-roledescription="carousel" aria-label="Hirani Law Firm team photos">
+                  <img
+                    src={images[introImages[activeImage]]}
+                    alt={`Hirani Law Firm team photo ${activeImage + 1} of ${introImages.length}`}
+                    className="hl-about-intro-img"
+                  />
+                  <div className="hl-about-carousel-dots" aria-label="Choose team photo">
+                    {introImages.map((image, index) => (
+                      <button
+                        type="button"
+                        key={image}
+                        className={index === activeImage ? 'active' : ''}
+                        onClick={() => showImage(index)}
+                        aria-label={`Show team photo ${index + 1}`}
+                        aria-current={index === activeImage ? 'true' : undefined}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -98,7 +119,7 @@ export default function About() {
       {/* Quote band */}
       <section
         className="hl-quote-band"
-        style={{ backgroundImage: `url(${images['justice-band']})` }}
+        style={{ backgroundImage: `url(${images['page-hero-banner']})` }}
       >
         <div className="hl-container">
           <p className="hl-quote-text">&ldquo;{quote}&rdquo;</p>
@@ -108,7 +129,7 @@ export default function About() {
       {/* Mission */}
       <section className="hl-section hl-bg-cream">
         <div className="hl-container">
-          <div className="row g-5">
+          <div className="row g-3">
             <div className="col-lg-5">
               <span className="hl-eyebrow">{mission.eyebrow}</span>
               <h2 className="hl-h2 mb-3">{mission.title}</h2>
@@ -124,11 +145,11 @@ export default function About() {
       {/* Values */}
       <section className="hl-section">
         <div className="hl-container">
-          <div className="row g-5">
+          <div className="row g-3">
             <div className="col-lg-5">
               <span className="hl-eyebrow">{values.eyebrow}</span>
               <h2 className="hl-h2 mb-3">{values.title}</h2>
-              <p className="hl-lead mb-0">{values.description}</p>
+              <p className="hl-lead mb-0">{withLinks(values.description, values.descriptionLinks)}</p>
             </div>
             <div className="col-lg-7">
               <ValueCards cards={values.cards} />
@@ -141,11 +162,10 @@ export default function About() {
       <section className="hl-section pt-0">
         <div className="hl-container">
           <span className="hl-eyebrow">{difference.eyebrow}</span>
-          {/* Wide enough to hold the title to two lines. */}
-          <h2 className="hl-h2 mb-5" style={{ maxWidth: '50rem' }}>
+          <h2 className="hl-h2 mb-5">
             {difference.title}
           </h2>
-          <div className="row g-4">
+          <div className="row g-2">
             {difference.cards.map((card) => (
               <div className="col-md-6" key={card.title}>
                 <div className="hl-difference-card h-100">

@@ -39,7 +39,7 @@ function AreaSection({ section, areas, category, cols, bg }) {
             {section.cta.label}
           </Link>
         </div>
-        <div className="row g-4">
+        <div className="row g-2">
           {areas.map((area) => (
             <div className={colClass} key={area.slug}>
               <AreaCard area={area} category={category} />

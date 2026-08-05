@@ -45,7 +45,7 @@ export default function OurTeam() {
       <section className="hl-section">
         <div className="hl-container">
           <span className="hl-eyebrow">{teamPage.eyebrow}</span>
-          <div className="row g-4 mt-1">
+          <div className="row g-2 mt-1">
             {teamPage.members.map((member) => (
               <div className="col-6 col-md-4 col-lg-3" key={member.name}>
                 <MemberCard member={member} />

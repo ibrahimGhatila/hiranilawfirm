@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { FiChevronDown, FiMenu, FiX } from 'react-icons/fi'
+import { FiChevronDown, FiX } from 'react-icons/fi'
 
 import data from '../../data/site.json'
 import images from '../../assets/images.js'
@@ -33,8 +33,8 @@ export default function Header() {
           <img src={images.logo} alt="Hirani Law Firm" />
         </Link>
 
-        {/* Desktop nav — pushed to the right */}
-        <nav className="d-none d-lg-flex align-items-center gap-1 ms-auto">
+        {/* Center on desktop: nav links */}
+        <nav className="d-none d-lg-flex align-items-center gap-1">
           {nav.links.map((link) => (
             <div key={link.label} className="hl-dropdown">
               <NavLink
@@ -60,14 +60,30 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Center on mobile: language switch */}
         <button
-          className="hl-burger d-lg-none ms-auto"
           type="button"
+          className="hl-lang-btn d-lg-none"
+          aria-label="Switch language to Spanish"
+        >
+          ES
+        </button>
+
+        {/* Right: language (desktop) / menu (mobile) */}
+        <button
+          type="button"
+          className="hl-lang-btn d-none d-lg-inline-block"
+          aria-label="Switch language to Spanish"
+        >
+          ES
+        </button>
+        <button
+          type="button"
+          className="hl-menu-btn d-lg-none"
           aria-label="Open menu"
           onClick={() => setOpen(true)}
         >
-          <FiMenu />
+          MENU
         </button>
       </div>
 

@@ -18,12 +18,12 @@ export default function PracticeAreas() {
 
           {/* Cards */}
           <div className="col-lg-8">
-            <div className="row g-4">
+            <div className="row g-2">
               {practiceAreas.cards.map((card) => (
                 <div className="col-md-6" key={card.title}>
                   <div
                     className="hl-practice-card h-100"
-                    style={{ backgroundImage: `url(${images[card.image]})` }}
+                    style={{ '--card-bg': `url(${images[card.image]})` }}
                   >
                     <h3 className="mb-3">{card.title}</h3>
                     <p className="mb-4">{card.description}</p>

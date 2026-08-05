@@ -147,7 +147,7 @@ export default function Contact() {
           <h2 className="hl-h2 text-white mb-5" style={{ color: '#fff', maxWidth: '28ch' }}>
             {whyApart.title}
           </h2>
-          <div className="row g-4">
+          <div className="row g-2">
             {whyApart.cards.map((card) => (
               <div className="col-md-6" key={card.title}>
                 <div className="hl-apart-card h-100">

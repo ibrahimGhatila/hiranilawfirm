@@ -46,7 +46,7 @@ export default function Reviews() {
       <section className="hl-section hl-testimonials">
         <div className="hl-container">
           <h2 className="hl-testimonials-title">What Clients Are Saying</h2>
-          <div className="row g-3 hl-reviews-grid">
+          <div className="row g-2 hl-reviews-grid">
             {reviewsPage.reviews.map((review) => (
               <div className="col-md-6 col-lg-4" key={review.name}>
                 <ReviewCard review={review} className="h-100" />
@@ -63,7 +63,7 @@ export default function Reviews() {
           <h2 className="hl-h2 mb-5" style={{ maxWidth: '30ch' }}>
             {reviewsPage.themes.title}
           </h2>
-          <div className="row g-4">
+          <div className="row g-2">
             {reviewsPage.themes.cards.map((card) => (
               <div className="col-md-4" key={card.title}>
                 <div className="hl-theme-card h-100">

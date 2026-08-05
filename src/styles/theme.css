@@ -232,29 +232,32 @@ h1, h2, h3, h4, h5, h6,
    TOP BAR + NAVBAR
    ============================================================ */
 .hl-topbar {
-  background: linear-gradient(90deg, var(--hl-gold-dark) 0%, var(--hl-gold) 45%, var(--hl-gold-light) 100%);
-  color: #1a1408;
+  background: var(--hl-darker);
+  color: var(--hl-gold);
   font-size: 0.782rem;
   padding: 0.5rem 0;
   letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 .hl-topbar-item {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  color: #1a1408;
+  color: var(--hl-gold);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.18s ease, transform 0.18s ease;
 }
-.hl-topbar-item:hover { color: #000; transform: translateY(-1px); }
+.hl-topbar-item:hover { color: var(--hl-gold-light); transform: translateY(-1px); }
 .hl-topbar-item svg { flex-shrink: 0; }
 .hl-topbar-item strong { font-weight: 800; }
 @media (max-width: 575.98px) {
-  .hl-topbar { font-size: clamp(0.595rem, 2.6775vw, 0.697rem); padding-block: 0.42rem; }
+  .hl-topbar { font-size: clamp(0.64rem, 3vw, 0.75rem); padding-block: 0.45rem; }
   .hl-topbar .hl-container { flex-wrap: nowrap !important; justify-content: center !important; gap: 0.65rem !important; }
   .hl-topbar-item { flex-shrink: 0; gap: 0.3rem; white-space: nowrap; }
-  .hl-topbar-item:first-child span { display: none; }
+  /* Phones: show only the "Call For A Consultation" line, centered, no icon. */
+  .hl-topbar-item:first-child { display: none; }
+  .hl-topbar-item svg { display: none; }
 }
 
 .hl-navbar {
@@ -266,11 +269,22 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 .hl-navbar .navbar-brand img { height: 46px; width: auto; }
+
+/* Small screens: tighten the wide side gutters and shrink the logo so the
+   navbar (and every section) uses the available width. */
+@media (max-width: 767.98px) {
+  :root { --hl-gutter: 1.35rem; }
+}
+@media (max-width: 575.98px) {
+  :root { --hl-gutter: 1rem; }
+  .hl-navbar { padding-block: 0.6rem; }
+  .hl-navbar .navbar-brand img { height: 34px; }
+}
 .hl-nav-link {
   color: #efece4 !important;
   font-family: var(--hl-sans);
   font-weight: 600;
-  font-size: 0.952rem;
+  font-size: 0.86rem;
   letter-spacing: 0.02em;
   padding: 0.5rem 1.05rem !important;
   text-decoration: none;
@@ -347,6 +361,20 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1;
   padding: 0.25rem 0.5rem;
 }
+
+/* Mobile "MENU" text button (matches the ES box, a touch bolder) */
+.hl-menu-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #efece4;
+  font-size: 0.7225rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.9rem;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.hl-menu-btn:hover { border-color: var(--hl-gold); color: var(--hl-gold); }
 
 /* Mobile sidebar (max 80% width) */
 .hl-sidebar-overlay {
@@ -543,14 +571,25 @@ h1, h2, h3, h4, h5, h6,
   color: #fff;
   overflow: hidden;
   background-color: #0c0b09;
-  background-size: cover;
-  background-position: center;
 }
+/* Image layer — starts gently zoomed in, eases back out (zoom-out) on hover. */
 .hl-practice-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* Clean photo shows faintly through a dark overlay */
+  background-image: var(--card-bg);
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.08);
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+.hl-practice-card:hover::before { transform: scale(1); }
+/* Dark overlay keeps the copy legible; lightens a touch on hover. */
+.hl-practice-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
     115deg,
     rgba(10, 9, 7, 0.9) 0%,
@@ -558,8 +597,9 @@ h1, h2, h3, h4, h5, h6,
     rgba(10, 9, 7, 0.7) 100%
   );
   transition: background 0.3s ease;
+  z-index: 1;
 }
-.hl-practice-card:hover::before {
+.hl-practice-card:hover::after {
   background: linear-gradient(
     115deg,
     rgba(10, 9, 7, 0.86) 0%,
@@ -570,12 +610,26 @@ h1, h2, h3, h4, h5, h6,
 .hl-practice-card > * { position: relative; z-index: 2; }
 .hl-practice-card h3 { color: #fff; font-size: clamp(1.53rem, 2.21vw, 2.04rem); }
 .hl-practice-card p { color: #e6e2d9; font-size: 0.867rem; line-height: 1.6; max-width: 22rem; }
+/* Learn More: plain by default, turns gold when the card is hovered. */
+.hl-practice-card .hl-link {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.hl-practice-card:hover .hl-link,
+.hl-practice-card .hl-link:hover {
+  color: var(--hl-gold);
+  border-bottom-color: var(--hl-gold);
+}
 
 /* ============================================================
    MEET ATTORNEY
    ============================================================ */
 .hl-attorney {
-  background: var(--hl-cream);
+  background: #fff;
+  /* Clear divider so this white section reads as separate from the cream
+     Practice Areas block directly above it. */
+  border-top: 1px solid var(--hl-border);
 }
 .hl-attorney-panel {
   /* Narrow image rail on the left, roomy copy panel on the right. */
@@ -604,7 +658,7 @@ h1, h2, h3, h4, h5, h6,
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  min-height: 500px;
+  min-height: 460px;
   display: block;
 }
 .hl-attorney-heading .hl-eyebrow { margin-bottom: 0.9rem; }
@@ -651,7 +705,7 @@ h1, h2, h3, h4, h5, h6,
 }
 .hl-membership-cell:last-child { border-right: 1px solid rgba(255, 255, 255, 0.08); }
 .hl-membership-cell img {
-  max-height: 108px;
+  max-height: 76px;
   max-width: 100%;
   width: auto;
   opacity: 1;
@@ -747,17 +801,18 @@ h1, h2, h3, h4, h5, h6,
 .hl-review-card {
   background: #fff;
   color: #222;
+  border: 2px solid var(--hl-border);
   border-radius: 8px;
-  padding: 1.6rem;
-  flex: 0 0 360px;
-  width: 360px;
+  padding: 1.85rem;
+  flex: 0 0 380px;
+  width: 380px;
   scroll-snap-align: start;
   box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
 }
 .hl-reviews-grid .hl-review-card {
   width: 100%;
-  min-height: 310px;
-  padding: clamp(1.75rem, 3vw, 2.25rem);
+  min-height: 340px;
+  padding: clamp(2rem, 3vw, 2.5rem);
 }
 .hl-reviews-grid .hl-review-text { -webkit-line-clamp: 7; }
 @media (max-width: 575.98px) {
@@ -798,7 +853,14 @@ h1, h2, h3, h4, h5, h6,
   gap: 0.4rem;
   margin-bottom: 0.6rem;
 }
-.hl-review-stars { color: #f5b301; letter-spacing: 2px; font-size: 0.8075rem; line-height: 1; }
+.hl-review-stars {
+  color: #f5b301;
+  letter-spacing: 2px;
+  font-size: 1.02rem;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 0 0.35px currentColor;
+}
 .hl-review-verified { width: 14px; height: 14px; flex-shrink: 0; }
 .hl-review-text {
   color: #3c4043;
@@ -844,19 +906,11 @@ h1, h2, h3, h4, h5, h6,
 .hl-carousel-btn { position: relative; z-index: 3; cursor: pointer; }
 .hl-testimonial-dots { display: none; }
 @media (max-width: 575.98px) {
-  .hl-review-carousel { padding-inline: 0.75rem; }
-  .hl-review-carousel .hl-carousel-btn { display: none; }
-  .hl-testimonial-dots {
-    display: flex; justify-content: center; flex-wrap: wrap; gap: 0.45rem;
-    max-width: 18rem; margin: 0.5rem auto 0; padding-inline: 1rem;
-  }
-  .hl-testimonial-dots button {
-    width: 8px; height: 8px; padding: 0; border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.7); background: transparent;
-  }
-  .hl-testimonial-dots button.active {
-    width: 22px; border-radius: 999px; background: var(--hl-gold); border-color: var(--hl-gold);
-  }
+  .hl-review-carousel { padding-inline: 0.5rem; gap: 0.5rem; }
+  .hl-carousel-btn { width: 38px; height: 38px; }
+  /* With 40+ reviews the per-review dots wrapped into several rows on phones.
+     Hide them and let the arrows (plus swipe) drive the carousel instead. */
+  .hl-testimonial-dots { display: none; }
 }
 
 /* ============================================================
@@ -1089,8 +1143,8 @@ h1, h2, h3, h4, h5, h6,
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(8,7,6,0.93) 0%, rgba(8,7,6,0.84) 54%, rgba(8,7,6,0.72) 100%),
-    rgba(0, 0, 0, 0.28);
+    linear-gradient(90deg, rgba(8,7,6,0.82) 0%, rgba(8,7,6,0.70) 54%, rgba(8,7,6,0.58) 100%),
+    rgba(0, 0, 0, 0.16);
 }
 .hl-page-hero.has-bg .hl-container { position: relative; z-index: 2; }
 .hl-page-hero .hl-display { color: #fff; }
@@ -1113,7 +1167,7 @@ h1, h2, h3, h4, h5, h6,
 }
 @media (max-width: 767.98px) {
   .hl-page-hero.has-bg { background-position: 62% center; }
-  .hl-page-hero.has-bg::before { background: rgba(8, 7, 6, 0.84); }
+  .hl-page-hero.has-bg::before { background: rgba(8, 7, 6, 0.72); }
 }
 
 /* ABOUT — intro */
@@ -1134,8 +1188,8 @@ h1, h2, h3, h4, h5, h6,
 @media (min-width: 992px) {
   .hl-about-intro .hl-about-intro-img {
     aspect-ratio: auto;
-    height: calc(100vh - var(--hl-chrome) - 8rem);
-    height: calc(100svh - var(--hl-chrome) - 8rem);
+    height: calc(100vh - var(--hl-chrome) - 10rem);
+    height: calc(100svh - var(--hl-chrome) - 10rem);
   }
 }
 
@@ -1151,11 +1205,27 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .hl-about-carousel { position: relative; overflow: hidden; background: var(--hl-dark); box-shadow: 0 30px 60px -30px rgba(0,0,0,0.4); }
+.hl-about-intro-frame { position: relative; }
+.hl-about-intro-frame::before {
+  content: "";
+  position: absolute;
+  inset: -18px -13px 18px 13px;
+  border: 1px solid var(--hl-gold);
+  pointer-events: none;
+}
 .hl-about-intro-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; display: block; }
 .hl-about-carousel-dots { position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%); display: flex; gap: 0.55rem; z-index: 2; }
 .hl-about-carousel-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 1px solid #fff; background: transparent; }
 .hl-about-carousel-dots button.active { width: 24px; border-radius: 999px; background: var(--hl-gold); border-color: var(--hl-gold); }
-.hl-strategy-carousel-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; display: block; }
+.hl-strategy-frame { position: relative; }
+.hl-strategy-frame::before {
+  content: "";
+  position: absolute;
+  inset: -12px -9px 12px 9px;
+  border: 1px solid var(--hl-gold);
+  pointer-events: none;
+}
+.hl-strategy-carousel-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center; display: block; }
 .hl-about-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1179,7 +1249,7 @@ h1, h2, h3, h4, h5, h6,
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(10, 9, 7, 0.9);
+  background: rgba(10, 9, 7, 0.68);
 }
 .hl-quote-band .hl-container { position: relative; z-index: 2; }
 .hl-quote-text {
@@ -1197,18 +1267,18 @@ h1, h2, h3, h4, h5, h6,
 .hl-value-card {
   background: var(--hl-dark);
   border: 1px solid var(--hl-gold);
-  padding: 2.4rem 2rem;
+  padding: 1.55rem 1.4rem;
 }
 /* Bolder than the 500 the shared heading rule sets, with a rule under it
    running the full inner width of the card. */
 .hl-value-card h3 {
   color: var(--hl-gold);
-  font-size: 1.4rem;
+  font-size: 1.16rem;
   font-weight: 700;
   line-height: 1.25;
-  padding-bottom: 0.85rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid rgba(198, 160, 78, 0.55);
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.9rem;
 }
 .hl-value-card p { color: #cfcabf; font-size: 0.9rem; line-height: 1.75; }
 
@@ -1218,7 +1288,7 @@ h1, h2, h3, h4, h5, h6,
   border: 1px solid var(--hl-border);
   overflow: hidden;
 }
-.hl-difference-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.hl-difference-card img { width: 100%; height: 286px; object-fit: cover; display: block; }
 .hl-difference-body { padding: 1.75rem; }
 .hl-difference-body h3 { font-size: 1.1475rem; margin-bottom: 0.6rem; }
 .hl-difference-body p { color: var(--hl-muted); font-size: 0.85rem; }
@@ -1265,7 +1335,7 @@ h1, h2, h3, h4, h5, h6,
 .hl-member-photo img {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 15 / 14;
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -1341,12 +1411,12 @@ h1, h2, h3, h4, h5, h6,
 .hl-membership-tiles { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .hl-membership-tile { background: var(--hl-dark); padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: center; min-width: 145px; min-height: 112px; transition: transform 0.25s ease; }
 .hl-membership-tile:hover { transform: translateY(-3px); }
-.hl-membership-tile img { max-height: 88px; max-width: 112px; width: auto; filter: grayscale(1) brightness(1.5); opacity: 0.82; transition: opacity 0.25s ease, filter 0.25s ease; }
+.hl-membership-tile img { max-height: 62px; max-width: 78px; width: auto; filter: grayscale(1) brightness(1.5); opacity: 0.82; transition: opacity 0.25s ease, filter 0.25s ease; }
 .hl-membership-tile:hover img { opacity: 1; filter: grayscale(0) brightness(1.5); }
 @media (min-width: 992px) {
   .hl-membership-tiles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.5rem; }
   .hl-membership-tile { min-width: 0; min-height: 100px; padding: 0.75rem 0.5rem; }
-  .hl-membership-tile img { max-width: 100%; max-height: 78px; }
+  .hl-membership-tile img { max-width: 70%; max-height: 55px; }
 }
 
 /* SERVICE AREAS */
@@ -1438,8 +1508,8 @@ h1, h2, h3, h4, h5, h6,
 
 /* Review theme cards */
 .hl-theme-card { background: var(--hl-dark); border-top: 3px solid var(--hl-gold); padding: 2rem 1.75rem; }
-.hl-theme-card h3 { color: var(--hl-gold); font-family: var(--hl-serif); font-size: 1.36rem; margin-bottom: 0.75rem; }
-.hl-theme-card p { color: #cfcabf; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.68rem; }
+.hl-theme-card h3 { color: var(--hl-gold); font-family: var(--hl-serif); font-size: 1.5rem; margin-bottom: 0.75rem; }
+.hl-theme-card p { color: #cfcabf; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.78rem; line-height: 1.6; }
 
 /* ============================================================
    FAQ page

@@ -11,10 +11,10 @@
     "url": "https://www.hiranilawfirm.com",
     "founded": "2018",
     "social": {
-      "facebook": "https://facebook.com",
-      "instagram": "https://instagram.com",
-      "linkedin": "https://linkedin.com",
-      "tiktok": "https://tiktok.com"
+      "facebook": "https://www.facebook.com/Hiranilawfirm/",
+      "instagram": "https://www.instagram.com/hiranilawfirm/",
+      "linkedin": "https://www.linkedin.com/in/sehar-hirani-3581b687",
+      "tiktok": "https://www.tiktok.com/@hiranilawfirm"
     }
   },
   "nav": {
@@ -100,7 +100,7 @@
   "attorney": {
     "eyebrow": "Meet Sehar Hirani",
     "title": "A mother, advocate, and steady guide for families in transition.",
-    "image": "meet-sehar-team",
+    "image": "team-photo",
     "paragraphs": [
       "As a mom of two, Attorney Sehar Hirani understands how deeply family legal matters can affect children, parents, and the future of a household. She is passionate about protecting children, supporting families, and defending fathers who want to remain present and active in their children's lives.",
       "Sehar graduated from the University of Houston and South Texas College of Law. She has been licensed in the State of Texas since 2018."
@@ -110,12 +110,12 @@
   "memberships": {
     "eyebrow": "Memberships",
     "logos": [
-      { "src": "m1", "alt": "State Bar of Texas" },
-      { "src": "m2", "alt": "Houston Young Lawyers Association" },
-      { "src": "m3", "alt": "Lawyers of Distinction" },
-      { "src": "m4", "alt": "Avvo Rated" },
-      { "src": "m5", "alt": "Houston Bar Association" },
-      { "src": "m6", "alt": "Fort Bend County Bar Association" }
+      { "src": "logo-state-bar-texas", "alt": "State Bar of Texas" },
+      { "src": "logo-houston-bar-association", "alt": "Houston Bar Association" },
+      { "src": "logo-fort-bend-county-bar", "alt": "Fort Bend County Bar Association" },
+      { "src": "logo-avvo", "alt": "Avvo" },
+      { "src": "logo-lead-counsel", "alt": "Lead Counsel Verified" },
+      { "src": "logo-family-law-section", "alt": "State Bar of Texas — Family Law Section" }
     ]
   },
   "clientsMention": {
@@ -209,7 +209,7 @@
         "title": "2026 Custody Sharing Calendar",
         "description": "Free, printable co-parenting calendar to help Texas families plan custody schedules and possession time.",
         "meta": "PDF · Free Download",
-        "to": "/contact"
+        "to": "/assets/2026-hirani-law-firm-custody-sharing-calendar.pdf"
       }
     ]
   },
@@ -264,15 +264,20 @@
       "cards": [
         {
           "title": "Clear Communication",
-          "description": "Keeping you informed and empowered at every stage of your case — no jargon, no unanswered calls. You will always understand where your case stands, what happens next, and why each decision matters."
+          "description": "Keeping you informed and empowered at every stage of your case — no jargon, no unanswered calls.",
+          "links": [{ "text": "case", "to": "/practice-areas" }]
         },
         {
           "title": "Compassionate Guidance",
-          "description": "Understanding the human side of your struggle and providing the support you need through family law and personal injury matters. We meet you where you are and help you move forward with confidence and dignity."
+          "description": "Understanding the human side of your struggle and providing the support you need through family law and personal injury matters.",
+          "links": [
+            { "text": "family law", "to": "/practice-areas/family-law" },
+            { "text": "personal injury", "to": "/practice-areas/personal-injury" }
+          ]
         },
         {
           "title": "Aggressive Representation",
-          "description": "Fighting relentlessly in negotiations and in the courtroom to achieve the best possible outcome for you and your family. When the other side has a legal team, you deserve an advocate who is fully prepared to fight."
+          "description": "Fighting relentlessly in negotiations and in the courtroom to achieve the best possible outcome for you and your family."
         }
       ]
     },
@@ -280,18 +285,19 @@
       "eyebrow": "Our Story & Values",
       "title": "Founded out of a belief that legal representation should be personal.",
       "description": "Attorney Sehar Hirani founded Hirani Law Firm in 2018 out of a frustration with the impersonal, volume-based nature of many larger firms. She envisioned a practice where every client's case is treated with the urgency and personal attention it deserves. This vision is the foundation of our core values:",
+      "descriptionLinks": [{ "text": "Attorney Sehar Hirani", "to": "/about/sehar-hirani" }],
       "cards": [
         {
           "title": "Integrity",
-          "description": "We uphold the highest ethical standards, ensuring our actions are always aligned with your best interests. Honest counsel and transparent advice are the foundation of every client relationship we build."
+          "description": "We uphold the highest ethical standards, ensuring our actions are always aligned with your best interests."
         },
         {
           "title": "Empathy",
-          "description": "We understand that behind every case are real people with real concerns. We approach every situation with the compassion and understanding it deserves, treating your family the way we would want ours treated."
+          "description": "We understand that behind every case are real people with real concerns. We approach every situation with the compassion and understanding it deserves."
         },
         {
           "title": "Tenacity",
-          "description": "We are relentless in our pursuit of justice for our clients. We do not back down from a fight when our clients' futures are on the line, and we prepare every case as though it will be decided in the courtroom."
+          "description": "We are relentless in our pursuit of justice for our clients. We do not back down from a fight when our clients' futures are on the line."
         }
       ]
     },
@@ -300,22 +306,22 @@
       "title": "When you choose Hirani Law Firm, you are choosing a different kind of legal experience.",
       "cards": [
         {
-          "image": "w1",
+          "image": "team-photo-2",
           "title": "A Dedicated Team in Your Corner",
           "description": "From intake to resolution, our entire team is dedicated to supporting you — no hand-offs, no starting over."
         },
         {
-          "image": "w2",
+          "image": "client-representation",
           "title": "Direct Communication",
           "description": "We are committed to providing you with clear, consistent, and honest updates about the status of your case at every stage."
         },
         {
-          "image": "w3",
+          "image": "clarity-compassion",
           "title": "Clarity and Transparency",
           "description": "We believe in straightforward communication about the legal process and transparent billing practices — no surprises."
         },
         {
-          "image": "w4",
+          "image": "clarity-compassion",
           "title": "Compassion and Strength",
           "description": "We provide the empathetic support you need to get through this difficult time and the aggressive legal representation required to win."
         }
@@ -355,8 +361,8 @@
         "image": "sami",
         "slug": "sami-hirani",
         "bio": [
-          "Sami keeps the practical side of your case clear and predictable. As our Billing Specialist, they handle invoicing and account questions directly, so you always understand what you are being charged and why — no surprises, no guesswork.",
-          "Sami also supports the intake team, so many clients speak with them early on. Whether the question is about a statement or a first appointment, they answer it plainly and follow through."
+          "Financial stress can be one of the most challenging parts of a legal case. Sami is dedicated to providing clarity and transparency in all billing matters, ensuring you understand the costs involved with no surprises. He also provides a supportive role during the intake process, helping to make your transition into working with our firm seamless.",
+          "Sami believes that clear, honest communication about costs allows clients to focus on what truly matters — their case and their family."
         ]
       },
       {
@@ -365,8 +371,8 @@
         "image": "nicole",
         "slug": "nicole-erazo",
         "bio": [
-          "Nicole is the first voice most clients hear when they call Hirani Law Firm. Nicole greets every caller with warmth and makes sure your message reaches the right person, whether you are a long-standing client or reaching out for the first time.",
-          "From scheduling consultations to keeping the front office running smoothly, they make sure nothing falls through the cracks and no one is left waiting for an answer."
+          "As the friendly face of our firm, Nicole is dedicated to providing every client with a warm welcome and exceptional service from the very first interaction. She is passionate about the legal field and aspires to become an attorney, bringing enthusiasm and a strong work ethic to our team every day.",
+          "Outside of the office, she enjoys staying active through fitness and believes that discipline and determination are key to success both personally and professionally."
         ]
       },
       {
@@ -375,8 +381,8 @@
         "image": "noraly",
         "slug": "noraly-martinez",
         "bio": [
-          "Noraly works on the detail that cases turn on. As a paralegal, they prepare filings, organize records, and track deadlines, keeping each matter moving and properly documented.",
-          "Noraly works closely with Attorney Sehar Hirani on both family law and personal injury matters, and clients often hear from them with case updates as a matter progresses."
+          "Noraly Martinez is a dedicated paralegal who is passionate about helping clients navigate difficult legal matters with compassion and care. She aspires to become an attorney and is committed to expanding her knowledge of the law while advocating for those who need it most.",
+          "Outside of the office, Noraly enjoys spending time with her nieces and nephews and brings her patient, caring nature to every client interaction."
         ]
       }
     ]
@@ -845,7 +851,7 @@
         "bullets": [
           { "label": "Sehar Hirani: Managing Attorney", "text": "— As the firm's founder and lead legal strategist, Sehar Hirani sets the tone for our aggressive, client-focused advocacy. She is your compassionate guide through the legal process and your powerful voice in the courtroom, personally overseeing the strategy for every case we handle." },
           { "label": "Carlos Peraza: Intake Manager", "text": "— Your first call for legal help can be intimidating. Carlos is here to change that. As our Intake Manager, his most important role is to provide a calm, reassuring voice on the other end of the line. He listens with patience and empathy, transforming an anxious first step into a confident one." },
-          { "label": "Sami Hirani: Billing Specialist / Intake", "text": "— Financial stress can be one of the most challenging parts of a legal case. Sami is dedicated to providing clarity and transparency in all billing matters, ensuring you understand the costs involved with no surprises. She also provides a supportive role during the intake process, helping to make your transition into working with our firm seamless." }
+          { "label": "Sami Hirani: Billing Specialist / Intake", "text": "— Financial stress can be one of the most challenging parts of a legal case. Sami is dedicated to providing clarity and transparency in all billing matters, ensuring you understand the costs involved with no surprises. He also provides a supportive role during the intake process, helping to make your transition into working with our firm seamless." }
         ]
       },
       {

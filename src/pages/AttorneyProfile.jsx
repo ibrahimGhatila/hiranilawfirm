@@ -101,17 +101,19 @@ export default function AttorneyProfile() {
                   ))}
                 </div>
                 <div className="col-md-6">
-                  <div className="hl-about-carousel hl-strategy-carousel" aria-roledescription="carousel" aria-label="Hirani Law Firm team photos">
-                    <img
-                      src={images[strategyImages[activeStrategyImage]]}
-                      alt={`Hirani Law Firm team photo ${activeStrategyImage + 1} of ${strategyImages.length}`}
-                      className="hl-strategy-carousel-img"
-                      loading="lazy"
-                    />
-                    <div className="hl-about-carousel-dots" aria-label="Choose team photo">
-                      {strategyImages.map((image, index) => (
-                        <button type="button" key={image} className={index === activeStrategyImage ? 'active' : ''} onClick={() => showStrategyImage(index)} aria-label={`Show team photo ${index + 1}`} aria-current={index === activeStrategyImage ? 'true' : undefined} />
-                      ))}
+                  <div className="hl-strategy-frame">
+                    <div className="hl-about-carousel hl-strategy-carousel" aria-roledescription="carousel" aria-label="Hirani Law Firm team photos">
+                      <img
+                        src={images[strategyImages[activeStrategyImage]]}
+                        alt={`Hirani Law Firm team photo ${activeStrategyImage + 1} of ${strategyImages.length}`}
+                        className="hl-strategy-carousel-img"
+                        loading="lazy"
+                      />
+                      <div className="hl-about-carousel-dots" aria-label="Choose team photo">
+                        {strategyImages.map((image, index) => (
+                          <button type="button" key={image} className={index === activeStrategyImage ? 'active' : ''} onClick={() => showStrategyImage(index)} aria-label={`Show team photo ${index + 1}`} aria-current={index === activeStrategyImage ? 'true' : undefined} />
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

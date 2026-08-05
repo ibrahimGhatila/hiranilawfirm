@@ -107,7 +107,7 @@ export default function PracticeAreaTemplate({ page, path, category, cols = 4 })
             )}
           </div>
 
-          <div className="row g-4">
+          <div className="row g-2">
             {page.areas.map((area) => (
               <div className={colClass} key={area.title}>
                 <Link
