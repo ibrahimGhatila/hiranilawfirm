@@ -27,7 +27,7 @@ export default function PracticeAreas() {
                   >
                     <h3 className="mb-3">{card.title}</h3>
                     <p className="mb-4">{card.description}</p>
-                    <Link to={card.to} className="hl-link mt-auto align-self-start">
+                    <Link to={card.to} className="hl-link align-self-start">
                       Learn More
                     </Link>
                   </div>

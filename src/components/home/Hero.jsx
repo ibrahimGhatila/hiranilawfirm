@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="hl-container">
         <div className="row align-items-center g-5">
           {/* Copy */}
-          <div className="col-lg-7">
+          <div className="col-lg-8">
             <span className="hl-eyebrow">{hero.eyebrow}</span>
             <h1 className="hl-display hl-hero-title mb-4">{hero.title}</h1>
             <p className="hl-hero-desc mb-4">{hero.description}</p>
@@ -33,7 +33,7 @@ export default function Hero() {
           </div>
 
           {/* Lead form */}
-          <div className="col-lg-5 hl-hero-form-col">
+          <div className="col-lg-4 hl-hero-form-col">
             <div className="hl-hero-form">
               <span className="hl-eyebrow mb-2">{hero.form.eyebrow}</span>
               <h3 className="hl-h3 mb-2">{hero.form.title}</h3>

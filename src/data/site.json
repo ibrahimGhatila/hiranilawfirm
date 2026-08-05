@@ -85,13 +85,13 @@
     "cards": [
       {
         "title": "Family Law",
-        "image": "fl-support",
+        "image": "home-family-law",
         "description": "Divorce, child custody, modifications, child support, father's rights, conservatorship, name changes, adoptions, enforcements, property division, and marital agreements.",
         "to": "/practice-areas/family-law"
       },
       {
         "title": "Personal Injury",
-        "image": "pi-auto",
+        "image": "home-personal-injury",
         "description": "Personal injury, car accidents, 18-wheeler accidents, slip and falls, workplace injuries, and motorcycle accidents.",
         "to": "/practice-areas/personal-injury"
       }
