@@ -602,11 +602,17 @@ h1, h2, h3, h4, h5, h6,
   display: block;
 }
 .hl-attorney-heading .hl-eyebrow { margin-bottom: 0.9rem; }
-.hl-attorney-heading .hl-h2 { max-width: 32ch; }
+/* This section leads with the headline, so it runs a larger, tighter display
+   size than the shared .hl-h2 scale and a slightly bigger body copy. */
+.hl-attorney-heading .hl-h2 {
+  max-width: 30ch;
+  font-size: clamp(2.05rem, 3.7vw, 3.6rem);
+  line-height: 1.05;
+}
 .hl-attorney-content p {
   color: #5f5b53;
-  font-size: 1rem;
-  line-height: 1.85;
+  font-size: 1.1rem;
+  line-height: 1.8;
   max-width: 46rem;
 }
 .hl-attorney-content p + p { margin-top: 1.15rem; }
