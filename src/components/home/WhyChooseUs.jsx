@@ -22,7 +22,7 @@ export default function WhyChooseUs() {
     <section className="hl-section hl-why">
       <div className="hl-container">
         <span className="hl-eyebrow">{whyChooseUs.eyebrow}</span>
-        <h2 className="hl-h2 mb-5" style={{ maxWidth: '52rem' }}>
+        <h2 className="hl-h2 mb-5" style={{ maxWidth: '68rem' }}>
           {whyChooseUs.title}
         </h2>
 
