@@ -339,10 +339,46 @@
     "eyebrow": "Our Team",
     "members": [
       { "name": "Sehar Hirani", "role": "Managing Attorney", "image": "sehar-portrait", "to": "/about/sehar-hirani" },
-      { "name": "Carlos Peraza", "role": "Intake Manager", "image": "carlos" },
-      { "name": "Sami Hirani", "role": "Billing Specialist / Intake", "image": "sami" },
-      { "name": "Nicole Erazo", "role": "Receptionist", "image": "nicole" },
-      { "name": "Noraly Martinez", "role": "Paralegal", "image": "noraly" }
+      {
+        "name": "Carlos Peraza",
+        "role": "Intake Manager",
+        "image": "carlos",
+        "slug": "carlos-peraza",
+        "bio": [
+          "Your first call for legal help can be intimidating. Carlos is here to change that. As our Intake Manager, his most important role is to provide a calm, reassuring voice on the other end of the line. He listens with patience and empathy, transforming an anxious first step into a confident one.",
+          "Carlos guides every prospective client through the intake process with warmth and professionalism, ensuring that from the very first conversation, you feel heard, respected, and in capable hands."
+        ]
+      },
+      {
+        "name": "Sami Hirani",
+        "role": "Billing Specialist / Intake",
+        "image": "sami",
+        "slug": "sami-hirani",
+        "bio": [
+          "Sami keeps the practical side of your case clear and predictable. As our Billing Specialist, they handle invoicing and account questions directly, so you always understand what you are being charged and why — no surprises, no guesswork.",
+          "Sami also supports the intake team, so many clients speak with them early on. Whether the question is about a statement or a first appointment, they answer it plainly and follow through."
+        ]
+      },
+      {
+        "name": "Nicole Erazo",
+        "role": "Receptionist",
+        "image": "nicole",
+        "slug": "nicole-erazo",
+        "bio": [
+          "Nicole is the first voice most clients hear when they call Hirani Law Firm. Nicole greets every caller with warmth and makes sure your message reaches the right person, whether you are a long-standing client or reaching out for the first time.",
+          "From scheduling consultations to keeping the front office running smoothly, they make sure nothing falls through the cracks and no one is left waiting for an answer."
+        ]
+      },
+      {
+        "name": "Noraly Martinez",
+        "role": "Paralegal",
+        "image": "noraly",
+        "slug": "noraly-martinez",
+        "bio": [
+          "Noraly works on the detail that cases turn on. As a paralegal, they prepare filings, organize records, and track deadlines, keeping each matter moving and properly documented.",
+          "Noraly works closely with Attorney Sehar Hirani on both family law and personal injury matters, and clients often hear from them with case updates as a matter progresses."
+        ]
+      }
     ]
   },
   "attorneyPage": {
