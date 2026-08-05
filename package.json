@@ -6,7 +6,7 @@
   "description": "Hirani Law Firm PLLC — Houston & Katy family law and personal injury attorney website.",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-social-pages.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
