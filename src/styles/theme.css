@@ -21,7 +21,7 @@
 
   /* Wider container + generous base font per requirements */
   --hl-container: 1600px;
-  --hl-gutter: clamp(1.38rem, 4.2vw, 4.75rem);
+  --hl-gutter: clamp(1.66rem, 5.04vw, 5.7rem);
 
   /* Height of the fixed chrome above the hero (top bar + sticky navbar).
      Used to make the hero fill exactly one viewport. */
@@ -586,12 +586,12 @@ h1, h2, h3, h4, h5, h6,
 .hl-attorney-heading {
   grid-area: heading;
   align-self: end;
-  padding: clamp(2.5rem, 4.5vw, 4.5rem) clamp(2.5rem, 4.5vw, 4.5rem) 0;
+  padding: clamp(2.5rem, 4.5vw, 3.6rem) clamp(2.5rem, 4.5vw, 3.6rem) 0;
 }
 .hl-attorney-content {
   grid-area: content;
   align-self: start;
-  padding: 0 clamp(2.5rem, 4.5vw, 4.5rem) clamp(2.5rem, 4.5vw, 4.5rem);
+  padding: 0 clamp(2.5rem, 4.5vw, 3.6rem) clamp(2.5rem, 4.5vw, 3.6rem);
 }
 .hl-attorney-img {
   width: 100%;
