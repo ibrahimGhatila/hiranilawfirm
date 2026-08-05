@@ -1101,6 +1101,39 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ABOUT — intro */
+/* The intro doubles as the page's hero, so it fills exactly one viewport.
+   Same approach as the home hero: --hl-chrome is the measured height of the
+   top bar + navbar, so this holds at any breakpoint or zoom. */
+.hl-about-intro {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - var(--hl-chrome));
+  min-height: calc(100svh - var(--hl-chrome));
+  padding-block: clamp(2rem, 4vh, 4rem);
+}
+.hl-about-intro > .hl-container { width: 100%; }
+/* The photo is the tallest thing in the row, so it is what has to be bounded
+   for the section to fit one screen. Below lg the columns stack and the copy
+   alone is taller than a viewport, so the 4/5 crop stays. */
+@media (min-width: 992px) {
+  .hl-about-intro .hl-about-intro-img {
+    aspect-ratio: auto;
+    height: calc(100vh - var(--hl-chrome) - 8rem);
+    height: calc(100svh - var(--hl-chrome) - 8rem);
+  }
+}
+
+/* Short laptop viewports: below roughly 820px tall the copy column, not the
+   photo, is what stops the section fitting, so tighten its rhythm. */
+@media (min-width: 992px) and (max-height: 820px) {
+  .hl-about-intro { padding-block: 1.75rem; }
+  .hl-about-intro .hl-h2 { margin-bottom: 0.7rem !important; }
+  .hl-about-intro .hl-lead { margin-bottom: 0.7rem; line-height: 1.6; }
+  .hl-about-intro .hl-about-stats { margin-top: 1rem !important; }
+  .hl-about-intro .hl-about-stat { padding: 0.9rem 1rem; }
+  .hl-about-intro .btn { margin-top: 1rem !important; }
+}
+
 .hl-about-carousel { position: relative; overflow: hidden; background: var(--hl-dark); box-shadow: 0 30px 60px -30px rgba(0,0,0,0.4); }
 .hl-about-intro-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; display: block; }
 .hl-about-carousel-dots { position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%); display: flex; gap: 0.55rem; z-index: 2; }

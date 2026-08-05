@@ -43,7 +43,7 @@ export default function About() {
       <SEO title={aboutPage.seo.title} description={aboutPage.seo.description} path="/about" />
 
       {/* Intro — the page opens straight into this, with no hero banner. */}
-      <section className="hl-section">
+      <section className="hl-section hl-about-intro">
         <div className="hl-container">
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 order-1">
