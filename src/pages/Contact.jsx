@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { FiArrowRight, FiPlus, FiMinus } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
 import SEO from '../components/common/SEO.jsx'
 import PageHero from '../components/common/PageHero.jsx'
 import LeadForm from '../components/home/LeadForm.jsx'
@@ -10,8 +9,12 @@ import data from '../data/site.json'
 const { contactPage, contactCta, business } = data
 
 export default function Contact() {
-  const [openLink, setOpenLink] = useState(null)
-  const { hero, form, info, map, links, whyApart } = contactPage
+  // Each panel opens independently; they all start collapsed (Read More) on
+  // every page load — no persisted state.
+  const [openAbout, setOpenAbout] = useState(() => contactPage.about.map(() => false))
+  const toggleAbout = (i) =>
+    setOpenAbout((prev) => prev.map((v, idx) => (idx === i ? !v : v)))
+  const { hero, form, info, map, about, whyApart } = contactPage
   const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(
     map
   )}&t=&z=14&ie=UTF8&iwloc=&output=embed`
@@ -93,32 +96,49 @@ export default function Contact() {
         referrerPolicy="no-referrer-when-downgrade"
       />
 
-      {/* Link accordion */}
-      <section className="hl-section-sm">
-        <div className="hl-container">
-          <div className="hl-link-list">
-            {links.map((link, i) => {
-              const isOpen = openLink === i
-              return (
-                <div className={'hl-contact-accordion' + (isOpen ? ' open' : '')} key={link.label}>
-                  <button type="button" className="hl-link-row" onClick={() => setOpenLink(isOpen ? null : i)} aria-expanded={isOpen} aria-controls={`contact-answer-${i}`}>
-                    <span>{link.label}</span>
-                    <span className="hl-link-row-more">
-                      {isOpen ? 'Close' : 'Read More'} {isOpen ? <FiMinus /> : <FiPlus />}
-                    </span>
-                  </button>
-                  {isOpen && (
-                    <div className="hl-contact-accordion-answer" id={`contact-answer-${i}`}>
-                      <p>{link.description || 'Learn more about our client-focused approach and how Hirani Law Firm can help you move forward with clarity and confidence.'}</p>
-                      <Link to={link.to} className="hl-link-arrow">Learn More <FiArrowRight size={13} /></Link>
-                    </div>
+      {/* About accordion */}
+      {about.map((item, i) => {
+        const isOpen = openAbout[i]
+        const panelId = `about-panel-${i}`
+        return (
+          <section
+            key={item.heading}
+            className={'hl-section hl-about-acc' + (i % 2 === 1 ? ' hl-bg-cream' : '')}
+          >
+            <div className="hl-container">
+              <div className="hl-about-acc-head">
+                <h2 className="hl-h2 mb-0">{item.heading}</h2>
+                <button
+                  type="button"
+                  className="hl-about-acc-toggle"
+                  onClick={() => toggleAbout(i)}
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                >
+                  {isOpen ? 'Show Less' : 'Read More'}
+                </button>
+              </div>
+              <hr className="hl-about-acc-rule" />
+              {isOpen && (
+                <div className="hl-about-acc-body" id={panelId}>
+                  {item.intro && <p className="hl-body-muted">{item.intro}</p>}
+                  {item.bullets && (
+                    <ul className="hl-about-acc-list">
+                      {item.bullets.map((b, bi) => (
+                        <li key={bi}>
+                          <strong>{b.label}</strong>{' '}
+                          <span className="hl-body-muted">{b.text}</span>
+                        </li>
+                      ))}
+                    </ul>
                   )}
+                  {item.outro && <p className="hl-body-muted mb-0">{item.outro}</p>}
                 </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+              )}
+            </div>
+          </section>
+        )
+      })}
 
       {/* Why apart */}
       <section className="hl-section hl-bg-dark">

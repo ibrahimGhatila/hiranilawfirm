@@ -809,7 +809,23 @@ h1, h2, h3, h4, h5, h6,
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.hl-review-more { color: #70757a; font-weight: 500; font-size: 0.765rem; margin-top: 0.7rem; display: inline-block; }
+.hl-review-text.is-expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+  overflow: visible;
+}
+.hl-review-more {
+  color: #70757a;
+  font-weight: 500;
+  font-size: 0.765rem;
+  margin-top: 0.7rem;
+  display: inline-block;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.hl-review-more:hover { color: var(--hl-gold); text-decoration: underline; }
 .hl-carousel-btn {
   width: 44px;
   height: 44px;
@@ -1404,6 +1420,46 @@ h1, h2, h3, h4, h5, h6,
 .hl-contact-accordion-answer { padding: 0 2.5rem 1.75rem; border-bottom: 1px solid var(--hl-border); background: var(--hl-cream-2); }
 .hl-contact-accordion-answer p { max-width: 72ch; margin: 0; color: var(--hl-muted); line-height: 1.7; }
 
+/* Contact "About" accordion — full-width expandable panels */
+/* Tighter than a normal section so collapsed rows stay compact. */
+.hl-about-acc { padding-block: clamp(1.5rem, 3vw, 2.25rem); }
+.hl-about-acc-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.hl-about-acc-head .hl-h2 { font-size: clamp(1.35rem, 2.4vw, 1.85rem); }
+.hl-about-acc-toggle {
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+  background: none;
+  border: 1px solid var(--hl-border);
+  color: var(--hl-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.612rem;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.hl-about-acc-toggle:hover { color: var(--hl-gold-dark); border-color: var(--hl-gold); }
+.hl-about-acc-rule { border: 0; border-top: 1px solid var(--hl-border); margin: 0.85rem 0 1.4rem; }
+.hl-about-acc-body { max-width: 74ch; }
+.hl-about-acc-body > p { color: var(--hl-muted); font-size: 0.918rem; line-height: 1.75; margin-bottom: 1.2rem; }
+.hl-about-acc-list { list-style: none; margin: 0 0 1.2rem; padding: 0; }
+.hl-about-acc-list li {
+  border-left: 2px solid var(--hl-gold);
+  padding-left: 1rem;
+  margin-bottom: 1.1rem;
+  font-size: 0.918rem;
+  line-height: 1.75;
+}
+.hl-about-acc-list li:last-child { margin-bottom: 0; }
+.hl-about-acc-list li strong { color: var(--hl-ink); font-weight: 700; }
+
 .hl-bg-dark { background: var(--hl-dark) !important; }
 .hl-apart-card { background: #161514; border-left: 3px solid var(--hl-gold); padding: 1.75rem 2rem; }
 .hl-apart-card h3 { color: #fff; font-size: 1.1475rem; margin-bottom: 0.6rem; }
@@ -1427,6 +1483,26 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.25;
 }
 .hl-detail-section .hl-body-muted { margin-bottom: 1rem; }
+.hl-detail-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+.hl-detail-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.65rem;
+}
+.hl-detail-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 7px;
+  height: 7px;
+  background: var(--hl-gold);
+  transform: rotate(45deg);
+}
 
 /* Sidebar sibling links */
 .hl-side-link {

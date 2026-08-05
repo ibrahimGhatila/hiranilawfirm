@@ -52,14 +52,23 @@ export default function PracticeDetail() {
           <div className="row g-5">
             {/* Main content */}
             <div className="col-lg-8">
-              {item.sections.map((sec) => (
-                <div className="hl-detail-section" key={sec.heading}>
-                  <h2 className="hl-detail-heading">{sec.heading}</h2>
-                  {sec.paragraphs.map((p, i) => (
+              {item.sections.map((sec, si) => (
+                <div className="hl-detail-section" key={si}>
+                  {sec.heading && <h2 className="hl-detail-heading">{sec.heading}</h2>}
+                  {sec.paragraphs?.map((p, i) => (
                     <p key={i} className="hl-body-muted">
                       {p}
                     </p>
                   ))}
+                  {sec.bullets && (
+                    <ul className="hl-detail-list">
+                      {sec.bullets.map((b, i) => (
+                        <li key={i} className="hl-body-muted">
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>

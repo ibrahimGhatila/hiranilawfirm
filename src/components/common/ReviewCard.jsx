@@ -2,6 +2,7 @@
  * Google-style client review card — shared by the home carousel and the
  * Reviews page grid so both stay identical.
  */
+import { useState, useRef, useEffect } from 'react'
 
 function GoogleMark() {
   return (
@@ -43,6 +44,25 @@ function VerifiedBadge() {
 }
 
 export default function ReviewCard({ review, className = '' }) {
+  const [expanded, setExpanded] = useState(false)
+  const [clamped, setClamped] = useState(false)
+  const textRef = useRef(null)
+
+  // Only show the toggle when the collapsed text actually overflows its clamp.
+  // While expanded we skip re-measuring so the clamped flag (and therefore the
+  // "Read less" control) stays put.
+  useEffect(() => {
+    const el = textRef.current
+    if (!el) return
+    const measure = () => {
+      if (expanded) return
+      setClamped(el.scrollHeight > el.clientHeight + 1)
+    }
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [review.text, expanded])
+
   return (
     <article className={`hl-review-card ${className}`.trim()}>
       <div className="hl-review-head">
@@ -61,8 +81,19 @@ export default function ReviewCard({ review, className = '' }) {
         {review.verified && <VerifiedBadge />}
       </div>
 
-      <p className="hl-review-text">{review.text}</p>
-      <span className="hl-review-more">Read more</span>
+      <p ref={textRef} className={'hl-review-text' + (expanded ? ' is-expanded' : '')}>
+        {review.text}
+      </p>
+      {(clamped || expanded) && (
+        <button
+          type="button"
+          className="hl-review-more"
+          aria-expanded={expanded}
+          onClick={() => setExpanded((v) => !v)}
+        >
+          {expanded ? 'Read less' : 'Read more'}
+        </button>
+      )}
     </article>
   )
 }
