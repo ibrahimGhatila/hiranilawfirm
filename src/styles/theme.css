@@ -46,14 +46,19 @@ html {
   scroll-behavior: smooth;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  /* No overflow-x here on purpose. Constraining it on the root element breaks
+     the sticky navbar: `hidden` makes the root a scroll container so the bar
+     never sticks, and `clip` leaves it stuck in layout but painting a gap
+     above itself. The guard lives on body instead, which has neither problem. */
 }
 
 body {
   font-family: var(--hl-sans);
   color: #33302b;
   background: #fff;
-  overflow-x: hidden;
+  /* `clip`, not `hidden` — `hidden` would make body a scroll container and
+     stop the navbar sticking. */
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
 }
