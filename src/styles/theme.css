@@ -1126,7 +1126,7 @@ h1, h2, h3, h4, h5, h6,
 /* Short laptop viewports: below roughly 820px tall the copy column, not the
    photo, is what stops the section fitting, so tighten its rhythm. */
 @media (min-width: 992px) and (max-height: 820px) {
-  .hl-about-intro { padding-block: 1.75rem; }
+  .hl-about-intro { padding-block: 1.25rem; }
   .hl-about-intro .hl-h2 { margin-bottom: 0.7rem !important; }
   .hl-about-intro .hl-lead { margin-bottom: 0.7rem; line-height: 1.6; }
   .hl-about-intro .hl-about-stats { margin-top: 1rem !important; }
