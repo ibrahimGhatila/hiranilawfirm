@@ -21,7 +21,7 @@
 
   /* Wider container + generous base font per requirements */
   --hl-container: 1600px;
-  --hl-gutter: clamp(1.66rem, 5.04vw, 5.7rem);
+  --hl-gutter: clamp(2.91rem, calc(5.04vw + 20px), 6.95rem);
 
   /* Height of the fixed chrome above the hero (top bar + sticky navbar).
      Used to make the hero fill exactly one viewport. */
@@ -1222,11 +1222,39 @@ h1, h2, h3, h4, h5, h6,
 .hl-team-name { font-family: var(--hl-serif); color: #fff; font-size: 1.02rem; }
 .hl-team-role { color: var(--hl-gold); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.612rem; margin-top: 0.3rem; }
 
-/* ATTORNEY profile introduction */
-.hl-attorney-profile-intro { background: var(--hl-cream); }
+/* ATTORNEY profile hero — dark, and one viewport tall like the other heroes. */
+.hl-attorney-hero {
+  background: var(--hl-darker);
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - var(--hl-chrome));
+  min-height: calc(100svh - var(--hl-chrome));
+  padding-block: clamp(2rem, 4vh, 4rem);
+}
+.hl-attorney-hero > .hl-container { width: 100%; }
 .hl-attorney-hero-img { width: 100%; height: 620px; object-fit: cover; object-position: center top; display: block; box-shadow: 0 26px 54px -30px rgba(0,0,0,0.45); }
+.hl-attorney-hero-name { color: #fff; margin-bottom: 0.75rem; }
+.hl-attorney-hero-sub { color: var(--hl-gold); font-weight: 600; font-size: 1.05rem; line-height: 1.6; }
+.hl-attorney-hero-desc { color: #cfcabf; font-size: 1.02rem; line-height: 1.75; margin-top: 1.6rem; max-width: 44rem; }
+/* Full width of the copy column, as in the reference. */
+.hl-attorney-hero-cta { display: block; width: 100%; text-align: center; margin-top: 1.9rem; }
+
+/* The portrait is the tallest thing in the row, so bound it to the viewport.
+   Below lg the columns stack and the fixed crops further down take over. */
+@media (min-width: 992px) {
+  .hl-attorney-hero-img {
+    height: calc(100vh - var(--hl-chrome) - 8rem);
+    height: calc(100svh - var(--hl-chrome) - 8rem);
+  }
+}
+/* Short laptop viewports: here the copy, not the portrait, is what overruns. */
+@media (min-width: 992px) and (max-height: 820px) {
+  .hl-attorney-hero { padding-block: 1.75rem; }
+  .hl-attorney-hero-name { margin-bottom: 0.4rem; }
+  .hl-attorney-hero-desc { margin-top: 1rem; line-height: 1.6; }
+  .hl-attorney-hero-cta { margin-top: 1.2rem; }
+}
 .hl-attorney-profile-body { max-width: 46rem; }
-.hl-attorney-hero-sub { color: var(--hl-gold); font-weight: 600; font-size: 0.867rem; }
 .hl-attorney-profile-desc { font-size: 0.918rem; line-height: 1.75; }
 .hl-profile-biography { padding-top: clamp(2rem, 4vw, 3.5rem) !important; }
 

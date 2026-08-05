@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
 import SEO from '../components/common/SEO.jsx'
-import PageHero from '../components/common/PageHero.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
 import images from '../assets/images.js'
 import data from '../data/site.json'
@@ -46,34 +45,25 @@ export default function AttorneyProfile() {
         jsonLd={jsonLd}
       />
 
-      <PageHero
-        title={hero.name}
-        description="Family Law & Personal Injury Attorney serving Greater Houston and clients across Texas."
-        crumbs={[{ label: 'About Us', to: '/about' }, { label: hero.name, to: '/about/sehar-hirani' }]}
-        bgImage="page-hero-banner"
-      />
-
-      {/* Attorney profile introduction */}
-      <section className="hl-section-sm hl-attorney-profile-intro">
+      {/* Hero — the page opens straight into this, sized to one viewport. */}
+      <section className="hl-attorney-hero">
         <div className="hl-container">
           <div className="row g-5 align-items-center">
-            <div className="col-lg-4">
+            <div className="col-lg-5">
               <img src={images[hero.image]} alt={hero.name} className="hl-attorney-hero-img" />
             </div>
-            <div className="col-lg-8">
-              <div className="hl-attorney-profile-body">
-                <span className="hl-eyebrow">{hero.eyebrow}</span>
-                <h2 className="hl-h2 mb-2">{hero.name}</h2>
-                {hero.subtitle.map((s) => (
-                  <div key={s} className="hl-attorney-hero-sub">
-                    {s}
-                  </div>
-                ))}
-                <p className="hl-body-muted hl-attorney-profile-desc mt-3">{hero.description}</p>
-                <Link to={hero.cta.to} className="btn btn-gold mt-3">
-                  {hero.cta.label}
-                </Link>
-              </div>
+            <div className="col-lg-7">
+              <span className="hl-eyebrow">{hero.eyebrow}</span>
+              <h1 className="hl-display hl-attorney-hero-name">{hero.name}</h1>
+              {hero.subtitle.map((s) => (
+                <div key={s} className="hl-attorney-hero-sub">
+                  {s}
+                </div>
+              ))}
+              <p className="hl-attorney-hero-desc">{hero.description}</p>
+              <Link to={hero.cta.to} className="btn btn-gold hl-attorney-hero-cta">
+                {hero.cta.label}
+              </Link>
             </div>
           </div>
         </div>
