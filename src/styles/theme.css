@@ -1370,28 +1370,38 @@ h1, h2, h3, h4, h5, h6,
 /* ============================================================
    PRACTICE AREA pages
    ============================================================ */
+/* These slides ship as finished artwork — the gold frame, the label, the
+   headline and the dots are all baked into the image — so nothing is drawn
+   over them here. */
 .hl-practice-slide {
   position: relative;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2.75rem;
-  color: #fff;
   overflow: hidden;
   background-color: #0c0b09;
-  background-size: cover;
-  background-position: right center;
 }
-.hl-practice-slide::before {
-  content: "";
+.hl-practice-slide-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hl-practice-slide-dots {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(10,9,7,0.97) 0%, rgba(10,9,7,0.95) 52%, rgba(10,9,7,0.6) 82%, rgba(10,9,7,0.4) 100%);
+  left: 50%;
+  bottom: 1.6rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.55rem;
 }
-.hl-practice-slide > * { position: relative; z-index: 2; }
-.hl-practice-slide-eyebrow { color: var(--hl-gold); text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.663rem; font-weight: 700; margin-bottom: 1rem; }
-.hl-practice-slide-title { font-family: var(--hl-serif); color: #fff; font-size: clamp(1.53rem, 2.55vw, 2.21rem); line-height: 1.2; max-width: 16ch; }
+.hl-practice-slide-dots button {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
+.hl-practice-slide-dots button.active { background: var(--hl-gold); border-color: var(--hl-gold); }
+
+/* Practice area hero */
+.hl-practice-hero-title { margin-bottom: 1.5rem; }
+.hl-practice-hero-lead { font-size: 1.02rem; line-height: 1.8; max-width: 42rem; }
+.hl-inline-link { color: var(--hl-gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+.hl-inline-link:hover { color: var(--hl-gold); }
 
 /* Area cards */
 .hl-area-card { background: #fff; border: 1px solid var(--hl-border); overflow: hidden; display: flex; flex-direction: column; }

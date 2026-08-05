@@ -1,36 +1,62 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
 import SEO from '../components/common/SEO.jsx'
-import PageHero from '../components/common/PageHero.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
 import images from '../assets/images.js'
 
 /**
- * Shared layout for a single practice area (Family Law / Personal Injury).
- * `page` is the data object; `path`/`crumb` drive SEO + breadcrumbs.
+ * Splits body copy on any phrase listed in `links` and turns those phrases
+ * into real links, so the data can stay plain strings.
  */
-export default function PracticeAreaTemplate({ page, path, crumb, category, cols = 4 }) {
+function withLinks(text, links) {
+  if (!links || links.length === 0) return text
+  const escaped = links.map((l) => l.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+  return text.split(new RegExp(`(${escaped.join('|')})`, 'g')).map((part, i) => {
+    const link = links.find((l) => l.text === part)
+    return link ? (
+      <Link key={i} to={link.to} className="hl-inline-link">
+        {part}
+      </Link>
+    ) : (
+      part
+    )
+  })
+}
+
+/**
+ * Shared layout for a single practice area (Family Law / Personal Injury).
+ * `page` is the data object; `path` drives SEO.
+ */
+export default function PracticeAreaTemplate({ page, path, category, cols = 4 }) {
   const colClass = cols === 3 ? 'col-12 col-md-6 col-lg-4' : 'col-12 col-md-6 col-lg-3'
+  const slides = page.slides || [page.slide]
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  useEffect(() => {
+    if (slides.length < 2) return undefined
+    const timer = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % slides.length)
+    }, 5000)
+    return () => window.clearInterval(timer)
+  }, [slides.length])
+
+  const slide = slides[activeSlide]
 
   return (
     <>
       <SEO title={page.seo.title} description={page.seo.description} path={path} />
-      <PageHero
-        title={page.title}
-        description={page.heroSubtitle}
-        crumbs={[{ label: 'Practice Areas', to: '/practice-areas' }, { label: crumb, to: path }]}
-        bgImage="page-hero-banner"
-      />
 
-      {/* Intro + stats + slideshow image */}
-      <section className="hl-section">
+      {/* Hero — the page opens straight into this, with no banner above it. */}
+      <section className="hl-section hl-practice-hero">
         <div className="hl-container">
           <div className="row g-5 align-items-center">
             <div className="col-lg-6">
               <span className="hl-eyebrow">{page.eyebrow}</span>
+              <h1 className="hl-h2 hl-practice-hero-title">{page.title}</h1>
               {page.paragraphs.map((p, i) => (
-                <p key={i} className="hl-body-muted">
-                  {p}
+                <p key={i} className="hl-body-muted hl-practice-hero-lead">
+                  {withLinks(p, page.paragraphLinks)}
                 </p>
               ))}
               <div className="hl-practice-stats mt-4">
@@ -43,12 +69,26 @@ export default function PracticeAreaTemplate({ page, path, crumb, category, cols
               </div>
             </div>
             <div className="col-lg-6">
-              <div
-                className="hl-practice-slide"
-                style={{ backgroundImage: `url(${images[page.slide.image]})` }}
-              >
-                <span className="hl-practice-slide-eyebrow">{page.slide.eyebrow}</span>
-                <h2 className="hl-practice-slide-title">{page.slide.title}</h2>
+              <div className="hl-practice-slide">
+                <img
+                  src={images[slide.image]}
+                  alt={`${slide.eyebrow} — ${slide.title}`}
+                  className="hl-practice-slide-img"
+                />
+                {slides.length > 1 && (
+                  <div className="hl-practice-slide-dots" aria-label="Choose slide">
+                    {slides.map((s, index) => (
+                      <button
+                        type="button"
+                        key={s.image}
+                        className={index === activeSlide ? 'active' : ''}
+                        onClick={() => setActiveSlide(index)}
+                        aria-label={`Show slide ${index + 1}`}
+                        aria-current={index === activeSlide ? 'true' : undefined}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>

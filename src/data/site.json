@@ -567,7 +567,10 @@
       { "value": "7", "label": "Counties Served" },
       { "value": "2018", "label": "Licensed in Texas" }
     ],
-    "slide": { "image": "fl-hero", "eyebrow": "Child Custody", "title": "Protecting the bond that matters most." },
+    "paragraphLinks": [{ "text": "Attorney Sehar Hirani", "to": "/about/sehar-hirani" }],
+    "slides": [
+      { "image": "fl-hero", "eyebrow": "Child Custody", "title": "Protecting the bond that matters most." }
+    ],
     "areasTitle": "Areas of Family Law We Handle",
     "areas": [
       { "slug": "divorce", "image": "fl-divorce", "title": "Divorce", "description": "Contested & uncontested divorce, property division, spousal support, and final decree filings in Texas." },
