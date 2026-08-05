@@ -3,7 +3,7 @@ import PageHero from '../components/common/PageHero.jsx'
 import ClientsMention from '../components/home/ClientsMention.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
 import ReviewCard from '../components/common/ReviewCard.jsx'
-import data from '../data/site.json'
+import data from '../data/active.js'
 
 const { reviewsPage, business } = data
 

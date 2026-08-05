@@ -4,7 +4,7 @@ import SEO from '../components/common/SEO.jsx'
 import PageHero from '../components/common/PageHero.jsx'
 import LeadForm from '../components/home/LeadForm.jsx'
 import Testimonials from '../components/home/Testimonials.jsx'
-import data from '../data/site.json'
+import data from '../data/active.js'
 
 const { contactPage, contactCta, business } = data
 

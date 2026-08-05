@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/common/SEO.jsx'
 import images from '../assets/images.js'
-import data from '../data/site.json'
+import data from '../data/active.js'
 
 const { aboutPage, business } = data
 
@@ -66,7 +66,6 @@ export default function About() {
         <div className="hl-container">
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 order-1">
-              <span className="hl-eyebrow d-lg-none mb-3">{intro.eyebrow}</span>
               <div className="hl-about-intro-frame">
                 <div className="hl-about-carousel" aria-roledescription="carousel" aria-label="Hirani Law Firm team photos">
                   <img
@@ -90,7 +89,7 @@ export default function About() {
               </div>
             </div>
             <div className="col-lg-6 order-2">
-              <span className="hl-eyebrow d-none d-lg-inline-block">{intro.eyebrow}</span>
+              <span className="hl-eyebrow">{intro.eyebrow}</span>
               {/* Held to the reference width so the title breaks after "one". */}
               <h2 className="hl-h2 mb-4" style={{ maxWidth: '30rem' }}>
                 {intro.title}

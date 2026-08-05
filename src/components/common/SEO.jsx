@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const { business } = data
 

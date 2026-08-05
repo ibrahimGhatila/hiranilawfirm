@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import LeadForm from './LeadForm.jsx'
 import images from '../../assets/images.js'
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const { hero } = data
 

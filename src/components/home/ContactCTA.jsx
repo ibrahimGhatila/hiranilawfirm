@@ -1,5 +1,5 @@
 import LeadForm from './LeadForm.jsx'
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const { contactCta, business } = data
 

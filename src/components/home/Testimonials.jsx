@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi'
 import ReviewCard from '../common/ReviewCard.jsx'
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const { testimonials, reviewsPage } = data
 // Pull the full review set from the Reviews page so the landing carousel

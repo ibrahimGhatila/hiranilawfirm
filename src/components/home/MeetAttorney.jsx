@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 import images from '../../assets/images.js'
 
 const { attorney } = data

@@ -1,5 +1,5 @@
 import { FiDownload } from 'react-icons/fi'
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const { resources } = data
 

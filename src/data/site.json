@@ -100,7 +100,7 @@
   "attorney": {
     "eyebrow": "Meet Sehar Hirani",
     "title": "A mother, advocate, and steady guide for families in transition.",
-    "image": "team-photo",
+    "image": "meet-sehar",
     "paragraphs": [
       "As a mom of two, Attorney Sehar Hirani understands how deeply family legal matters can affect children, parents, and the future of a household. She is passionate about protecting children, supporting families, and defending fathers who want to remain present and active in their children's lives.",
       "Sehar graduated from the University of Houston and South Texas College of Law. She has been licensed in the State of Texas since 2018."
@@ -321,7 +321,7 @@
           "description": "We believe in straightforward communication about the legal process and transparent billing practices — no surprises."
         },
         {
-          "image": "clarity-compassion",
+          "image": "fl-custody",
           "title": "Compassion and Strength",
           "description": "We provide the empathetic support you need to get through this difficult time and the aggressive legal representation required to win."
         }
@@ -437,7 +437,15 @@
       },
       "practiceAreas": {
         "title": "Practice Areas",
-        "items": ["Divorce", "Child Custody", "Child Support", "Adoption", "Father's Rights", "Auto Accident", "18-Wheeler Accident"]
+        "items": [
+          { "label": "Divorce", "to": "/practice-areas/family-law/divorce-attorney-houston" },
+          { "label": "Child Custody", "to": "/practice-areas/family-law/child-custody-attorney-houston" },
+          { "label": "Child Support", "to": "/practice-areas/family-law/child-support-attorney-houston" },
+          { "label": "Adoption", "to": "/practice-areas/family-law/adoption-attorney-houston" },
+          { "label": "Father's Rights", "to": "/practice-areas/family-law/father-rights-attorney-houston" },
+          { "label": "Auto Accident", "to": "/practice-areas/personal-injury/houston-auto-accident-attorney" },
+          { "label": "18-Wheeler Accident", "to": "/practice-areas/personal-injury/18-wheeler-accident-attorney-houston" }
+        ]
       },
       "reviews": {
         "title": "What Clients Say",
@@ -575,7 +583,9 @@
     ],
     "paragraphLinks": [{ "text": "Attorney Sehar Hirani", "to": "/about/sehar-hirani" }],
     "slides": [
-      { "image": "fl-hero", "eyebrow": "Child Custody", "title": "Protecting the bond that matters most." }
+      { "image": "flh-divorce-family-law", "eyebrow": "Family Law", "title": "Protecting what matters most in a divorce." },
+      { "image": "flh-child-custody-family-law", "eyebrow": "Child Custody", "title": "Protecting the bond that matters most." },
+      { "image": "flh-adoption-family-law", "eyebrow": "Adoption", "title": "Helping Texas families grow." }
     ],
     "areasTitle": "Areas of Family Law We Handle",
     "areas": [
@@ -596,7 +606,7 @@
       "eyebrow": "Your Attorney",
       "title": "Sehar Hirani — Houston Family Law Attorney Since 2018",
       "description": "As a mother of two, Sehar understands what is at stake when families face legal challenges. She has built her practice around clear communication, personal attention, and results-driven advocacy for clients across Greater Houston.",
-      "image": "fl-attorney",
+      "image": "meet-hirani",
       "cta": { "label": "Read Attorney Profile", "to": "/about/sehar-hirani" }
     }
   },
@@ -617,7 +627,11 @@
       { "value": "Texas-Wide", "label": "Personal Injury Coverage" },
       { "value": "Free", "label": "Initial Consultation" }
     ],
-    "slide": { "image": "pi-hero", "eyebrow": "Personal Injury", "title": "When an accident changes everything, steady guidance matters." },
+    "slides": [
+      { "image": "pih-accident-personal-injury-houston", "eyebrow": "Personal Injury", "title": "When an accident changes everything, steady guidance matters." },
+      { "image": "pih-compensation-support-houston-law", "eyebrow": "Personal Injury", "title": "Injured because someone failed to keep you safe?" },
+      { "image": "pih-personal-injury-support", "eyebrow": "Personal Injury", "title": "You focus on healing. We help protect your claim." }
+    ],
     "areasTitle": "Types of Injury Cases We Handle",
     "reviewCta": { "label": "Free Case Review", "to": "/contact" },
     "areas": [

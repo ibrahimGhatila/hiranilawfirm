@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "topBarText": "Llame Para Una Consulta:",
+    "links": [
+      { "label": "Inicio", "to": "/" },
+      {
+        "label": "Nosotros",
+        "to": "/about",
+        "children": [
+          { "label": "Sobre Nosotros", "to": "/about" },
+          { "label": "Conozca a Sehar Hirani", "to": "/about/sehar-hirani" },
+          { "label": "Nuestro Equipo", "to": "/about/our-team" },
+          { "label": "Áreas de Servicio", "to": "/about/service-areas" }
+        ]
+      },
+      {
+        "label": "Áreas de Práctica",
+        "to": "/practice-areas",
+        "children": [
+          { "label": "Derecho Familiar", "to": "/practice-areas/family-law" },
+          { "label": "Lesiones Personales", "to": "/practice-areas/personal-injury" }
+        ]
+      },
+      {
+        "label": "Reseñas",
+        "to": "/reviews",
+        "children": [
+          { "label": "Reseñas de Clientes", "to": "/reviews" },
+          { "label": "Preguntas Frecuentes", "to": "/faqs" }
+        ]
+      },
+      { "label": "Contacto", "to": "/contact" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Abogada de Derecho Familiar en Houston y Katy",
+    "title": "¿Enfrenta un Desafío Familiar o una Lesión Grave?",
+    "description": "La abogada Sehar Hirani ayuda a clientes en todo el área de Houston a navegar el divorcio, custodia, modificaciones, manutención de menores, adopción, cambios de nombre, ejecución de órdenes y reclamaciones de lesiones personales con orientación clara y representación firme.",
+    "primaryCta": { "label": "Evaluación Gratuita de su Caso", "to": "/contact" },
+    "secondaryCta": { "label": "Explorar Áreas de Práctica", "to": "/practice-areas" },
+    "form": {
+      "eyebrow": "Evaluación Gratuita de su Caso",
+      "title": "Cuéntenos lo que pasó.",
+      "description": "Una primera conversación confidencial puede ayudarle a entender sus opciones antes del próximo plazo o fecha en la corte.",
+      "helpOptions": ["Divorcio", "Custodia de Menores", "Manutención de Menores", "Adopción", "Cambio de Nombre", "Lesiones Personales", "Otro"],
+      "submitLabel": "Comenzar Mi Evaluación"
+    }
+  },
+  "stats": [
+    { "value": "Desde 2018", "label": "Sirviendo a familias de Texas" },
+    { "value": "200+", "label": "Familias Asesoradas" },
+    { "value": "Houston & Katy", "label": "Experiencia en cortes locales" },
+    { "value": "Gratis", "label": "Consulta confidencial" }
+  ],
+  "practiceAreas": {
+    "eyebrow": "Nuestras Áreas de Práctica",
+    "title": "Servicios legales integrales para familias e individuos.",
+    "description": "El bufete se enfoca en dos necesidades legales de alta importancia: proteger a las familias en transición y ayudar a las personas lesionadas a obtener la compensación que merecen.",
+    "cards": [
+      {
+        "title": "Derecho Familiar",
+        "image": "home-family-law",
+        "description": "Divorcio, custodia de menores, modificaciones, manutención de menores, derechos del padre, tutela, cambios de nombre, adopciones, ejecución de órdenes, división de bienes y acuerdos matrimoniales.",
+        "to": "/practice-areas/family-law"
+      },
+      {
+        "title": "Lesiones Personales",
+        "image": "home-personal-injury",
+        "description": "Lesiones personales, accidentes de auto, accidentes de camión de 18 ruedas, caídas, lesiones en el lugar de trabajo y accidentes de motocicleta.",
+        "to": "/practice-areas/personal-injury"
+      }
+    ]
+  },
+  "attorney": {
+    "eyebrow": "Conozca a Sehar Hirani",
+    "title": "Madre, defensora y guía firme para familias en transición.",
+    "paragraphs": [
+      "Como madre de dos hijos, la abogada Sehar Hirani comprende profundamente cómo los asuntos legales familiares pueden afectar a los niños, los padres y el futuro del hogar. Le apasiona proteger a los niños, apoyar a las familias y defender a los padres que desean permanecer presentes y activos en la vida de sus hijos.",
+      "Sehar se graduó de la Universidad de Houston y del South Texas College of Law. Ha tenido licencia para ejercer en el Estado de Texas desde 2018."
+    ],
+    "cta": { "label": "Ver Perfil Completo" }
+  },
+  "memberships": { "eyebrow": "Membresías" },
+  "clientsMention": {
+    "title": "Lo que los Clientes Mencionan Consistentemente",
+    "description": "Basado en los comentarios de clientes en casos de derecho familiar y lesiones personales, estas son las cualidades que más se mencionan.",
+    "metrics": [
+      { "label": "Defensa en Derecho Familiar", "value": 95 },
+      { "label": "Comunicación Clara", "value": 90 },
+      { "label": "Experiencia en Cortes Locales", "value": 88 },
+      { "label": "Estrategia Personalizada", "value": 92 },
+      { "label": "Representación Compasiva", "value": 94 }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "cta": { "label": "Leer Más Reseñas de Clientes" }
+  },
+  "whyChooseUs": {
+    "eyebrow": "¿Por Qué Elegirnos?",
+    "title": "Estrategia clara, conocimiento local y comunicación constante.",
+    "features": [
+      { "icon": "strategy", "title": "Atención Personalizada", "description": "Su caso recibe una estrategia diseñada en torno a su familia, sus plazos y sus objetivos legales." },
+      { "icon": "experience", "title": "Representación con Experiencia", "description": "Sehar Hirani ha guiado a clientes en asuntos de derecho familiar y lesiones desde 2018." },
+      { "icon": "communication", "title": "Comunicación Constante", "description": "El bufete prioriza las actualizaciones directas para que los clientes sepan qué está pasando y por qué." },
+      { "icon": "court", "title": "Conocimiento de Cortes Locales", "description": "Experiencia con las cortes de Harris, Fort Bend, Montgomery, Galveston y Austin County." },
+      { "icon": "evaluation", "title": "Evaluación Gratuita de su Caso", "description": "Comience con una consulta confidencial antes de decidir el siguiente paso." }
+    ]
+  },
+  "resources": {
+    "eyebrow": "Recursos",
+    "title": "Recursos adicionales útiles para usted.",
+    "cards": [
+      {
+        "title": "Calendario de Custodia Compartida 2026",
+        "description": "Calendario gratuito e imprimible para ayudar a familias de Texas a planificar horarios de custodia y posesión.",
+        "meta": "PDF · Descarga Gratuita",
+        "to": "/assets/2026-hirani-law-firm-custody-sharing-calendar.pdf"
+      }
+    ]
+  },
+  "contactCta": {
+    "eyebrow": "Comience Aquí",
+    "title": "Su primer paso hacia la resolución comienza con una conversación.",
+    "description": "Reserve una consulta gratuita y confidencial con Hirani Law Firm PLLC.",
+    "phoneLabel": "Teléfono",
+    "form": {
+      "helpOptions": ["Divorcio", "Custodia de Menores", "Manutención de Menores", "Adopción", "Cambio de Nombre", "Lesiones Personales", "Otro"],
+      "submitLabel": "Solicitar Consulta"
+    }
+  },
+  "footer": {
+    "contactHeading": "Contacto",
+    "bookLabel": "Reserve una Consulta Gratuita",
+    "disclaimer": "© 2026 Hirani Law Firm, PLLC. Con licencia para ejercer la abogacía en el Estado de Texas. Este sitio web proporciona información general y no crea una relación abogado-cliente."
+  }
+}

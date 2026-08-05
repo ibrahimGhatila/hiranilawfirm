@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { FiChevronDown, FiX } from 'react-icons/fi'
 
-import data from '../../data/site.json'
+import data, { currentLang, toggleLang } from '../../data/active.js'
 import images from '../../assets/images.js'
 
 const { nav } = data
@@ -64,26 +64,28 @@ export default function Header() {
         <button
           type="button"
           className="hl-lang-btn d-lg-none"
-          aria-label="Switch language to Spanish"
+          aria-label={currentLang === 'es' ? 'Cambiar idioma a inglés' : 'Switch language to Spanish'}
+          onClick={toggleLang}
         >
-          ES
+          {currentLang === 'es' ? 'EN' : 'ES'}
         </button>
 
         {/* Right: language (desktop) / menu (mobile) */}
         <button
           type="button"
           className="hl-lang-btn d-none d-lg-inline-block"
-          aria-label="Switch language to Spanish"
+          aria-label={currentLang === 'es' ? 'Cambiar idioma a inglés' : 'Switch language to Spanish'}
+          onClick={toggleLang}
         >
-          ES
+          {currentLang === 'es' ? 'EN' : 'ES'}
         </button>
         <button
           type="button"
           className="hl-menu-btn d-lg-none"
-          aria-label="Open menu"
+          aria-label={currentLang === 'es' ? 'Abrir menú' : 'Open menu'}
           onClick={() => setOpen(true)}
         >
-          MENU
+          {currentLang === 'es' ? 'Menú' : 'MENU'}
         </button>
       </div>
 

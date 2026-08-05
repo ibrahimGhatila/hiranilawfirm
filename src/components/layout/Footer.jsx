@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok } from 'react-icons/fa'
 
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const { business, footer } = data
 

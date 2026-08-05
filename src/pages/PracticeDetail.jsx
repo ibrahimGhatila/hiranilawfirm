@@ -2,7 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import SEO from '../components/common/SEO.jsx'
 import PageHero from '../components/common/PageHero.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
-import data from '../data/site.json'
+import data from '../data/active.js'
 import details from '../data/practiceDetails.json'
 
 const { business } = data

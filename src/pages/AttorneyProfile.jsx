@@ -4,7 +4,7 @@ import { FaStar } from 'react-icons/fa'
 import SEO from '../components/common/SEO.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
 import images from '../assets/images.js'
-import data from '../data/site.json'
+import data from '../data/active.js'
 
 const { attorneyPage, business, memberships } = data
 
@@ -163,9 +163,9 @@ export default function AttorneyProfile() {
               <div className="hl-side-list mb-4">
                 <div className="hl-side-list-title">{sidebar.practiceAreas.title}</div>
                 {sidebar.practiceAreas.items.map((item) => (
-                  <div className="hl-side-list-item" key={item}>
-                    {item}
-                  </div>
+                  <Link className="hl-side-list-item" to={item.to} key={item.to}>
+                    {item.label}
+                  </Link>
                 ))}
               </div>
 

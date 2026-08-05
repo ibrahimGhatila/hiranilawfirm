@@ -9,7 +9,7 @@ import Testimonials from '../components/home/Testimonials.jsx'
 import WhyChooseUs from '../components/home/WhyChooseUs.jsx'
 import Resources from '../components/home/Resources.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
-import data from '../data/site.json'
+import data from '../data/active.js'
 
 const { business } = data
 

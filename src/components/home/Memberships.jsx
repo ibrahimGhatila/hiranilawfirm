@@ -1,4 +1,4 @@
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 import images from '../../assets/images.js'
 
 const { memberships } = data

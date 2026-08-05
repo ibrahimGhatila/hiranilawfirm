@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const { clientsMention } = data
 

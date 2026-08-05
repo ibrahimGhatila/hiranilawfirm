@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
 import SEO from '../components/common/SEO.jsx'
-import data from '../data/site.json'
+import data from '../data/active.js'
 
 const { business } = data
 

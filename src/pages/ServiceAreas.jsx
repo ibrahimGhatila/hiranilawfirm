@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import SEO from '../components/common/SEO.jsx'
 import PageHero from '../components/common/PageHero.jsx'
 import LeadForm from '../components/home/LeadForm.jsx'
-import data from '../data/site.json'
+import data from '../data/active.js'
 
 const { serviceAreaPage, business, contactCta } = data
 

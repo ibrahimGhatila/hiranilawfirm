@@ -51,7 +51,7 @@ export default function PracticeAreaTemplate({ page, path, category, cols = 4 })
       <section className="hl-section hl-practice-hero">
         <div className="hl-container">
           <div className="row g-5 align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-2 order-lg-1">
               <span className="hl-eyebrow">{page.eyebrow}</span>
               <h1 className="hl-h2 hl-practice-hero-title">{page.title}</h1>
               {page.paragraphs.map((p, i) => (
@@ -68,7 +68,7 @@ export default function PracticeAreaTemplate({ page, path, category, cols = 4 })
                 ))}
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-1 order-lg-2">
               <div className="hl-practice-slide">
                 <img
                   src={images[slide.image]}

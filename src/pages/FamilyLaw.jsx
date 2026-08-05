@@ -1,5 +1,5 @@
 import PracticeAreaTemplate from './PracticeAreaTemplate.jsx'
-import data from '../data/site.json'
+import data from '../data/active.js'
 
 export default function FamilyLaw() {
   return (

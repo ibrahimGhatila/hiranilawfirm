@@ -1,4 +1,4 @@
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const { stats } = data
 

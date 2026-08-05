@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { FiChevronRight } from 'react-icons/fi'
 
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const { business } = data
 

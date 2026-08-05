@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { FiX } from 'react-icons/fi'
 import LeadForm from '../home/LeadForm.jsx'
 import images from '../../assets/images.js'
-import data from '../../data/site.json'
+import data from '../../data/active.js'
 
 const POPUP_KEY = 'hl-consultation-popup-shown'
 

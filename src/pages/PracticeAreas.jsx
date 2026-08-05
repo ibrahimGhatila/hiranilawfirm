@@ -4,7 +4,7 @@ import SEO from '../components/common/SEO.jsx'
 import PageHero from '../components/common/PageHero.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
 import images from '../assets/images.js'
-import data from '../data/site.json'
+import data from '../data/active.js'
 
 const { practiceIndex, familyLawPage, personalInjuryPage } = data
 
