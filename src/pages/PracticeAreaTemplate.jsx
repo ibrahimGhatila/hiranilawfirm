@@ -106,7 +106,7 @@ export default function PracticeAreaTemplate({ page, path, crumb, category, cols
               <h2 className="hl-h2 text-white mb-3" style={{ color: '#fff' }}>
                 {page.attorney.title}
               </h2>
-              <p className="mb-4" style={{ color: '#c9c5bc', fontSize: '1.1rem' }}>
+              <p className="mb-4" style={{ color: '#c9c5bc', fontSize: '0.935rem' }}>
                 {page.attorney.description}
               </p>
               <Link to={page.attorney.cta.to} className="btn btn-gold">

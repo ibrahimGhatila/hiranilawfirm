@@ -2,7 +2,7 @@ import SEO from '../components/common/SEO.jsx'
 import PageHero from '../components/common/PageHero.jsx'
 import ClientsMention from '../components/home/ClientsMention.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
-import { FaGoogle } from 'react-icons/fa'
+import ReviewCard from '../components/common/ReviewCard.jsx'
 import data from '../data/site.json'
 
 const { reviewsPage, business } = data
@@ -49,19 +49,7 @@ export default function Reviews() {
           <div className="row g-3 hl-reviews-grid">
             {reviewsPage.reviews.map((review) => (
               <div className="col-md-6 col-lg-4" key={review.name}>
-                <article className="hl-review-card h-100">
-                  <div className="hl-review-head">
-                    <div className="hl-review-avatar">{review.initials}</div>
-                    <div>
-                      <div className="hl-review-name">{review.name}</div>
-                      <div className="hl-review-when">{review.when}</div>
-                    </div>
-                    <FaGoogle className="hl-review-google" />
-                  </div>
-                  <div className="hl-review-stars">{'★'.repeat(review.rating)}</div>
-                  <p className="hl-review-text">{review.text}</p>
-                  <span className="hl-review-more">Read more</span>
-                </article>
+                <ReviewCard review={review} className="h-100" />
               </div>
             ))}
           </div>

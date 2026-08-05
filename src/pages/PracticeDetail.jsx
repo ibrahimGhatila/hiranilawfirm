@@ -69,7 +69,7 @@ export default function PracticeDetail() {
               <div className="hl-side-consult mb-4">
                 <span className="hl-eyebrow">Free Consultation</span>
                 <h3 className="hl-h3 text-white mb-2">Talk to Sehar Hirani Today</h3>
-                <p className="mb-3" style={{ color: '#b7b2a8', fontSize: '0.95rem' }}>
+                <p className="mb-3" style={{ color: '#b7b2a8', fontSize: '0.8075rem' }}>
                   Confidential · No obligation · We respond within 24 hours.
                 </p>
                 <Link to="/contact" className="btn btn-gold w-100 mb-3">

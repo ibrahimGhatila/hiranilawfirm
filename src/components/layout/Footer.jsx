@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
 
           <div className="col-lg-5">
-            <h4 style={{ fontSize: '1.25rem' }}>{footer.contactHeading}</h4>
+            <h4 style={{ fontSize: '1.0625rem' }}>{footer.contactHeading}</h4>
             <p className="mb-2">
               <a href={business.phoneHref}>{business.phone}</a>
             </p>

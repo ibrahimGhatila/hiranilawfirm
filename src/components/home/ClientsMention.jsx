@@ -25,9 +25,9 @@ export default function ClientsMention() {
   }, [])
 
   return (
-    <section className="hl-section hl-bg-cream">
+    <section className="hl-section hl-bg-cream hl-clients-mention">
       <div className="hl-container" ref={ref}>
-        <div className="hl-card-accent p-4 p-lg-5">
+        <div className="hl-card-accent">
           <h2 className="hl-h2 mb-3">{clientsMention.title}</h2>
           <p className="hl-lead mb-4 mb-lg-5">{clientsMention.description}</p>
 

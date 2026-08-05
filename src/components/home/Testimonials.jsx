@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi'
-import { FaGoogle } from 'react-icons/fa'
+import ReviewCard from '../common/ReviewCard.jsx'
 import data from '../../data/site.json'
 
 const { testimonials, reviewsPage } = data
@@ -70,21 +70,7 @@ export default function Testimonials() {
 
         <div className="hl-review-scroll" ref={trackRef} onScroll={updateActiveReview}>
           {reviews.map((review) => (
-            <article className="hl-review-card" key={review.name}>
-              <div className="hl-review-head">
-                <div className="hl-review-avatar">{review.initials}</div>
-                <div>
-                  <div className="hl-review-name">{review.name}</div>
-                  <div className="hl-review-when">{review.when}</div>
-                </div>
-                <FaGoogle className="hl-review-google" />
-              </div>
-              <div className="hl-review-stars">
-                {'★'.repeat(review.rating)}
-              </div>
-              <p className="hl-review-text">{review.text}</p>
-              <span className="hl-review-more">Read more</span>
-            </article>
+            <ReviewCard review={review} key={review.name} />
           ))}
         </div>
 

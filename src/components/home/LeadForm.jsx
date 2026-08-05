@@ -37,7 +37,7 @@ export default function LeadForm({
         <p className="mb-1 fw-bold" style={{ color: 'var(--hl-gold)' }}>
           Thank you.
         </p>
-        <p className="mb-0 text-muted" style={{ fontSize: '0.95rem' }}>
+        <p className="mb-0 text-muted" style={{ fontSize: '0.8075rem' }}>
           We received your request and will reach out shortly.
         </p>
       </div>

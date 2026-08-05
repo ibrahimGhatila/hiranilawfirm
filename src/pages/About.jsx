@@ -78,7 +78,7 @@ export default function About() {
             <div className="col-lg-7 order-2">
               <span className="hl-eyebrow d-none d-lg-inline-block">{intro.eyebrow}</span>
               {intro.paragraphs.map((p, i) => (
-                <p key={i} className="hl-lead" style={{ fontSize: '1.1rem' }}>
+                <p key={i} className="hl-lead" style={{ fontSize: '0.935rem' }}>
                   {p}
                 </p>
               ))}

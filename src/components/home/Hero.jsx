@@ -37,7 +37,7 @@ export default function Hero() {
             <div className="hl-hero-form">
               <span className="hl-eyebrow mb-2">{hero.form.eyebrow}</span>
               <h3 className="hl-h3 mb-2">{hero.form.title}</h3>
-              <p className="text-muted mb-4" style={{ fontSize: '0.98rem' }}>
+              <p className="text-muted mb-4" style={{ fontSize: '0.833rem' }}>
                 {hero.form.description}
               </p>
               <LeadForm

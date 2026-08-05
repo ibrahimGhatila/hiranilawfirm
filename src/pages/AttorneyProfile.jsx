@@ -157,7 +157,7 @@ export default function AttorneyProfile() {
               <div className="hl-side-consult mb-4">
                 <span className="hl-eyebrow">{sidebar.consult.eyebrow}</span>
                 <h3 className="hl-h3 text-white mb-2">{sidebar.consult.title}</h3>
-                <p className="mb-3" style={{ color: '#b7b2a8', fontSize: '0.95rem' }}>
+                <p className="mb-3" style={{ color: '#b7b2a8', fontSize: '0.8075rem' }}>
                   {sidebar.consult.note}
                 </p>
                 <Link to={sidebar.consult.cta.to} className="btn btn-gold w-100 mb-3">
