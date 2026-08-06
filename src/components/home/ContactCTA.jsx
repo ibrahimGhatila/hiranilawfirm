@@ -9,21 +9,23 @@ export default function ContactCTA() {
       <div className="hl-container">
         <div className="hl-card-accent p-4 p-lg-5">
           <div className="row g-5 align-items-center">
-            {/* Copy + phone */}
+            {/* Copy + phone (phone is prominent on desktop only) */}
             <div className="col-lg-6">
               <span className="hl-eyebrow">{contactCta.eyebrow}</span>
               <h2 className="hl-h2 mb-4">{contactCta.title}</h2>
               <p className="hl-lead mb-4">{contactCta.description}</p>
-              <div className="hl-cta-divider" />
-              <div className="hl-cta-phone-label mb-1">
-                {contactCta.phoneLabel}
+              <div className="d-none d-lg-block">
+                <div className="hl-cta-divider" />
+                <div className="hl-cta-phone-label mb-1">
+                  {contactCta.phoneLabel}
+                </div>
+                <a href={business.phoneHref} className="hl-cta-phone">
+                  {business.phone}
+                </a>
               </div>
-              <a href={business.phoneHref} className="hl-cta-phone">
-                {business.phone}
-              </a>
             </div>
 
-            {/* Form */}
+            {/* Form — the primary action on mobile; phone sits below it, muted */}
             <div className="col-lg-6">
               <LeadForm
                 helpOptions={contactCta.form.helpOptions}
@@ -31,6 +33,9 @@ export default function ContactCTA() {
                 submitClass="btn-dark-solid"
                 layout="spaced"
               />
+              <a href={business.phoneHref} className="hl-cta-phone-mini d-lg-none">
+                {contactCta.phoneLabel}: <strong>{business.phone}</strong>
+              </a>
             </div>
           </div>
         </div>

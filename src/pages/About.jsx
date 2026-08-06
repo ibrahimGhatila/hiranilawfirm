@@ -107,9 +107,11 @@ export default function About() {
                   </div>
                 ))}
               </div>
-              <Link to={intro.cta.to} className="btn btn-dark-solid mt-4">
-                {intro.cta.label}
-              </Link>
+              <div className="text-center text-lg-start">
+                <Link to={intro.cta.to} className="btn btn-dark-solid mt-4">
+                  {intro.cta.label}
+                </Link>
+              </div>
             </div>
           </div>
         </div>

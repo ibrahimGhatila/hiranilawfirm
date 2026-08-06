@@ -923,12 +923,25 @@ h1, h2, h3, h4, h5, h6,
 .hl-carousel-btn { position: relative; z-index: 3; cursor: pointer; }
 .hl-testimonial-dots { display: none; }
 @media (max-width: 575.98px) {
-  /* Arrows ate into the row width and clipped the cards, and 40+ dots wrapped
-     into several rows — hide both on phones and drive the carousel by swipe,
-     with even side padding so a card is never cut. */
+  /* Full-bleed scroll on phones; the arrows sit as translucent overlays on the
+     edges (a visual swipe hint) instead of taking layout width and clipping
+     the cards. 40+ dots wrapped into rows, so those stay hidden. */
   .hl-review-carousel { padding-inline: 0; gap: 0; }
-  .hl-review-carousel .hl-carousel-btn { display: none; }
   .hl-review-scroll { padding-inline: 1rem; scroll-padding-inline: 1rem; gap: 1rem; }
+  .hl-review-carousel .hl-carousel-btn {
+    display: flex;
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    background: rgba(30, 30, 30, 0.55);
+    border-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(2px);
+  }
+  .hl-review-carousel .hl-carousel-prev { left: 0.5rem; }
+  .hl-review-carousel .hl-carousel-next { right: 0.5rem; }
   .hl-testimonial-dots { display: none; }
 }
 
@@ -1021,6 +1034,16 @@ h1, h2, h3, h4, h5, h6,
   text-decoration: none;
 }
 .hl-cta-divider { border-top: 1px solid var(--hl-border); margin: 1.75rem 0 1.25rem; }
+/* Deprioritized phone shown under the form on mobile — small, muted, secondary. */
+.hl-cta-phone-mini {
+  display: block;
+  margin-top: 0.9rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--hl-muted);
+  text-decoration: none;
+}
+.hl-cta-phone-mini strong { color: var(--hl-ink); font-weight: 600; }
 
 /* ============================================================
    FOOTER
