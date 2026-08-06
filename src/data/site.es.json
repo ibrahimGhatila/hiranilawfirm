@@ -80,11 +80,13 @@
       "description": "Una primera conversación confidencial puede ayudarle a entender sus opciones antes del próximo plazo o fecha en la corte.",
       "helpOptions": [
         "Divorcio",
-        "Custodia de Menores",
-        "Manutención de Menores",
+        "Custodia/Manutención de Menores",
         "Adopción",
-        "Cambio de Nombre",
+        "Derechos del Padre",
+        "Modificación de Orden",
+        "Ejecución / Contempt",
         "Lesiones Personales",
+        "Accidente de Auto",
         "Otro"
       ],
       "submitLabel": "Comenzar Mi Evaluación"
@@ -224,11 +226,13 @@
     "form": {
       "helpOptions": [
         "Divorcio",
-        "Custodia de Menores",
-        "Manutención de Menores",
+        "Custodia/Manutención de Menores",
         "Adopción",
-        "Cambio de Nombre",
+        "Derechos del Padre",
+        "Modificación de Orden",
+        "Ejecución / Contempt",
         "Lesiones Personales",
+        "Accidente de Auto",
         "Otro"
       ],
       "submitLabel": "Solicitar Consulta"

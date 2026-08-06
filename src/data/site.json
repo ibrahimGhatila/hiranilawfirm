@@ -105,11 +105,13 @@
       "description": "A confidential first conversation can help you understand your options before the next deadline or court date arrives.",
       "helpOptions": [
         "Divorce",
-        "Child Custody",
-        "Child Support",
+        "Child custody/support",
         "Adoption",
-        "Name Change",
-        "Personal Injury",
+        "Father’s rights",
+        "Order modification",
+        "Enforcement / contempt",
+        "Personal injury",
+        "Auto accident",
         "Other"
       ],
       "submitLabel": "Submit"
@@ -315,11 +317,13 @@
     "form": {
       "helpOptions": [
         "Divorce",
-        "Child Custody",
-        "Child Support",
+        "Child custody/support",
         "Adoption",
-        "Name Change",
-        "Personal Injury",
+        "Father’s rights",
+        "Order modification",
+        "Enforcement / contempt",
+        "Personal injury",
+        "Auto accident",
         "Other"
       ],
       "submitLabel": "Request Consultation"
