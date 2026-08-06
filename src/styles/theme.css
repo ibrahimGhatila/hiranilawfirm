@@ -931,7 +931,7 @@ h1, h2, h3, h4, h5, h6,
   .hl-review-carousel .hl-carousel-btn {
     display: flex;
     position: absolute;
-    top: 42%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 5;
     width: 40px;
@@ -1039,7 +1039,7 @@ h1, h2, h3, h4, h5, h6,
   display: block;
   margin-top: 0.9rem;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: var(--hl-muted);
   text-decoration: none;
 }

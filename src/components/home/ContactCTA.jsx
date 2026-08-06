@@ -8,7 +8,7 @@ export default function ContactCTA() {
     <section className="hl-section hl-cta">
       <div className="hl-container">
         <div className="hl-card-accent p-4 p-lg-5">
-          <div className="row g-5 align-items-center">
+          <div className="row g-4 g-lg-5 align-items-center">
             {/* Copy + phone (phone is prominent on desktop only) */}
             <div className="col-lg-6">
               <span className="hl-eyebrow">{contactCta.eyebrow}</span>

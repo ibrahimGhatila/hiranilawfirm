@@ -40,15 +40,11 @@ export default function Testimonials() {
     const track = trackRef.current
     if (!track) return
     const card = track.querySelector('.hl-review-card')
-    const amount = card ? card.offsetWidth + 24 : 340
-    const atStart = track.scrollLeft <= 4
-    const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4
-    const left = dir > 0 && atEnd
-      ? 0
-      : dir < 0 && atStart
-        ? track.scrollWidth
-        : track.scrollLeft + dir * amount
-    track.scrollTo({ left, behavior: 'smooth' })
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 16
+    const amount = card ? card.offsetWidth + gap : 340
+    // Move exactly one card; the browser clamps at the ends, so it simply
+    // stops when the reviews run out — no wrap-around to the other side.
+    track.scrollBy({ left: dir * amount, behavior: 'smooth' })
   }
 
   return (
