@@ -39,7 +39,7 @@ export default function OurTeam() {
       <PageHero
         title={teamPage.hero.title}
         description={teamPage.hero.description}
-        crumbs={[{ label: 'Our Team', to: '/about/our-team' }]}
+        crumbs={[{ label: data.ui.crumbs.ourTeam, to: '/about/our-team' }]}
       />
 
       <section className="hl-section">

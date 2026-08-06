@@ -35,8 +35,8 @@ export default function ServiceAreas() {
         title={intro.title}
         description={serviceAreaPage.seo.description}
         crumbs={[
-          { label: 'About', to: '/about' },
-          { label: 'Service Areas', to: '/about/service-areas' },
+          { label: data.ui.crumbs.about, to: '/about' },
+          { label: data.ui.crumbs.serviceAreas, to: '/about/service-areas' },
         ]}
         bgImage="page-hero-banner"
       />
@@ -151,7 +151,7 @@ export default function ServiceAreas() {
               <div className="col-lg-6">
                 <LeadForm
                   helpOptions={contactCta.form.helpOptions}
-                  submitLabel="Submit"
+                  submitLabel={contactCta.form.submitLabel}
                   submitClass="btn-dark-solid"
                 />
               </div>

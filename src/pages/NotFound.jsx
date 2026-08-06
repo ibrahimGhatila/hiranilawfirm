@@ -4,42 +4,41 @@ import SEO from '../components/common/SEO.jsx'
 import data from '../data/active.js'
 
 const { business } = data
+const { crumbs, practiceAreasLabel, notFound } = data.ui
 
 const quickLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'Practice Areas', to: '/practice-areas' },
-  { label: 'Meet Sehar Hirani', to: '/about/sehar-hirani' },
-  { label: 'Client Reviews', to: '/reviews' },
-  { label: 'Contact Us', to: '/contact' },
+  { label: crumbs.home, to: '/' },
+  { label: practiceAreasLabel, to: '/practice-areas' },
+  { label: crumbs.meetSehar, to: '/about/sehar-hirani' },
+  { label: crumbs.clientReviews, to: '/reviews' },
+  { label: crumbs.contactUs, to: '/contact' },
 ]
 
 export default function NotFound() {
   return (
     <>
-      <SEO title="Page Not Found" description="The page you were looking for could not be found." path="/404" />
+      <SEO title={notFound.seoTitle} description={notFound.desc} path="/404" />
 
       <section className="hl-404">
         <div className="hl-container text-center">
           <div className="hl-404-code">404</div>
-          <span className="hl-eyebrow">Case Not Found</span>
-          <h1 className="hl-display hl-404-title">This page could not be located in our records.</h1>
+          <span className="hl-eyebrow">{notFound.eyebrow}</span>
+          <h1 className="hl-display hl-404-title">{notFound.title}</h1>
           <p className="hl-404-desc">
-            The page you are looking for may have been moved, renamed, or no longer
-            exists. Let's get you back on the right path — or reach out and we'll
-            point you in the right direction.
+            {notFound.desc}
           </p>
 
           <div className="d-flex flex-wrap justify-content-center gap-3 mb-5">
             <Link to="/" className="btn btn-gold">
-              Back to Home
+              {notFound.backHome}
             </Link>
             <a href={business.phoneHref} className="btn btn-outline-dark-hl">
-              Call {business.phone}
+              {notFound.callLabel} {business.phone}
             </a>
           </div>
 
           <div className="hl-404-links">
-            <div className="hl-404-links-label">Helpful Links</div>
+            <div className="hl-404-links-label">{notFound.helpfulLinks}</div>
             <div className="d-flex flex-wrap justify-content-center gap-2">
               {quickLinks.map((l) => (
                 <Link key={l.to} to={l.to} className="hl-404-chip">

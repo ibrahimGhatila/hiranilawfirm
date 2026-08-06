@@ -49,22 +49,22 @@ export default function ConsultationPopup() {
         aria-labelledby="consult-popup-title"
         onMouseDown={(event) => event.stopPropagation()}
       >
-        <button ref={closeRef} type="button" className="hl-consult-popup-close" onClick={() => setOpen(false)} aria-label="Close consultation form">
+        <button ref={closeRef} type="button" className="hl-consult-popup-close" onClick={() => setOpen(false)} aria-label={data.ui.popup.close}>
           <FiX />
         </button>
 
         <div className="hl-consult-popup-image-wrap">
           <img src={images['sehar-attorney-profile']} alt="Attorney Sehar Hirani" />
-          <div className="hl-consult-popup-image-caption">Sehar Hirani · Attorney at Law</div>
+          <div className="hl-consult-popup-image-caption">{data.ui.popup.caption}</div>
         </div>
 
         <div className="hl-consult-popup-content">
-          <span className="hl-eyebrow">We&rsquo;re Here to Help</span>
-          <h2 id="consult-popup-title" className="hl-h3 mb-2">Need a consultation?</h2>
-          <p className="hl-body-muted mb-4">Tell us what you&rsquo;re facing. Your first conversation is free and confidential.</p>
+          <span className="hl-eyebrow">{data.ui.popup.eyebrow}</span>
+          <h2 id="consult-popup-title" className="hl-h3 mb-2">{data.ui.popup.title}</h2>
+          <p className="hl-body-muted mb-4">{data.ui.popup.body}</p>
           <LeadForm
             helpOptions={data.contactCta.form.helpOptions}
-            submitLabel="Request Consultation"
+            submitLabel={data.ui.requestConsultation}
             submitClass="btn-dark-solid"
           />
         </div>

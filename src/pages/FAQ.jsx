@@ -49,7 +49,7 @@ export default function FAQ() {
       <PageHero
         title={faqPage.hero.title}
         description={faqPage.hero.description}
-        crumbs={[{ label: 'FAQs', to: '/faqs' }]}
+        crumbs={[{ label: data.ui.crumbs.faqs, to: '/faqs' }]}
       />
 
       <section className="hl-section">

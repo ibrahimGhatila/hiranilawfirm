@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FiChevronRight } from 'react-icons/fi'
 import images from '../../assets/images.js'
+import data from '../../data/active.js'
 
 /**
  * Dark page hero with an inline breadcrumb trail.
@@ -8,7 +9,7 @@ import images from '../../assets/images.js'
  * `bgImage` = optional image key rendered behind a dark overlay.
  */
 export default function PageHero({ title, description, crumbs = [], bgImage = 'page-hero-banner' }) {
-  const trail = [{ label: 'Home', to: '/' }, ...crumbs]
+  const trail = [{ label: data.ui.crumbs.home, to: '/' }, ...crumbs]
   const style = bgImage
     ? { backgroundImage: `url(${images[bgImage]})` }
     : undefined

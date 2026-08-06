@@ -62,7 +62,7 @@ export default function PracticeAreas() {
       <PageHero
         title={practiceIndex.hero.title}
         description={practiceIndex.hero.description}
-        crumbs={[{ label: 'Practice Areas', to: '/practice-areas' }]}
+        crumbs={[{ label: data.ui.practiceAreasLabel, to: '/practice-areas' }]}
         bgImage="page-hero-banner"
       />
 

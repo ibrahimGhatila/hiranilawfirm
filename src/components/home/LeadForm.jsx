@@ -1,12 +1,15 @@
 import { useState } from 'react'
+import data from '../../data/active.js'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE_RE = /^[\d\s()+.-]{7,}$/
+// Interface copy follows the active language (English / Spanish).
+const t = data.ui.form
 
 /** Reusable lead form delivered through the server-side Resend endpoint. */
 export default function LeadForm({
   helpOptions = [],
-  submitLabel = 'Submit',
+  submitLabel = t.submit,
   submitClass = 'btn-dark-solid',
   layout = 'stacked',
 }) {
@@ -32,13 +35,13 @@ export default function LeadForm({
 
   const validate = () => {
     const next = {}
-    if (!form.firstName.trim()) next.firstName = 'Please enter your first name.'
-    if (!form.lastName.trim()) next.lastName = 'Please enter your last name.'
-    if (!form.email.trim()) next.email = 'Please enter your email address.'
-    else if (!EMAIL_RE.test(form.email.trim())) next.email = 'Please enter a valid email address.'
+    if (!form.firstName.trim()) next.firstName = t.errFirstName
+    if (!form.lastName.trim()) next.lastName = t.errLastName
+    if (!form.email.trim()) next.email = t.errEmailRequired
+    else if (!EMAIL_RE.test(form.email.trim())) next.email = t.errEmailInvalid
     if (form.phone.trim() && !PHONE_RE.test(form.phone.trim()))
-      next.phone = 'Please enter a valid phone number.'
-    if (!form.help) next.help = 'Please tell us what you need help with.'
+      next.phone = t.errPhoneInvalid
+    if (!form.help) next.help = t.errHelp
     return next
   }
 
@@ -63,10 +66,10 @@ export default function LeadForm({
         }),
       })
       const result = await response.json().catch(() => ({}))
-      if (!response.ok) throw new Error(result.error || 'Unable to send your request.')
+      if (!response.ok) throw new Error(result.error || t.errGeneric)
       setSent(true)
     } catch (error) {
-      setSubmitError(error.message || 'Unable to send your request. Please try again.')
+      setSubmitError(error.message || t.errGeneric)
     } finally {
       setSending(false)
     }
@@ -75,9 +78,9 @@ export default function LeadForm({
   if (sent) {
     return (
       <div className="p-3 text-center" role="status">
-        <p className="mb-1 fw-bold" style={{ color: 'var(--hl-gold)' }}>Thank you.</p>
+        <p className="mb-1 fw-bold" style={{ color: 'var(--hl-gold)' }}>{t.successTitle}</p>
         <p className="mb-0 text-muted" style={{ fontSize: '0.8075rem' }}>
-          Your consultation request has been sent successfully. Our team will contact you soon.
+          {t.successBody}
         </p>
       </div>
     )
@@ -92,28 +95,28 @@ export default function LeadForm({
 
       <div className="row g-3">
         <div className="col-6">
-          <input type="text" className={'form-control' + (errors.firstName ? ' is-invalid' : '')} placeholder="First Name" value={form.firstName} onChange={update('firstName')} required aria-label="First name" />
+          <input type="text" className={'form-control' + (errors.firstName ? ' is-invalid' : '')} placeholder={t.firstName} value={form.firstName} onChange={update('firstName')} required aria-label={t.firstName} />
           {errors.firstName && <div className="invalid-feedback d-block">{errors.firstName}</div>}
         </div>
         <div className="col-6">
-          <input type="text" className={'form-control' + (errors.lastName ? ' is-invalid' : '')} placeholder="Last Name" value={form.lastName} onChange={update('lastName')} required aria-label="Last name" />
+          <input type="text" className={'form-control' + (errors.lastName ? ' is-invalid' : '')} placeholder={t.lastName} value={form.lastName} onChange={update('lastName')} required aria-label={t.lastName} />
           {errors.lastName && <div className="invalid-feedback d-block">{errors.lastName}</div>}
         </div>
       </div>
 
       <div>
-        <input type="email" className={'form-control' + (errors.email ? ' is-invalid' : '')} placeholder="Email address" value={form.email} onChange={update('email')} required aria-label="Email address" />
+        <input type="email" className={'form-control' + (errors.email ? ' is-invalid' : '')} placeholder={t.email} value={form.email} onChange={update('email')} required aria-label={t.email} />
         {errors.email && <div className="invalid-feedback d-block">{errors.email}</div>}
       </div>
 
       <div>
-        <input type="tel" className={'form-control' + (errors.phone ? ' is-invalid' : '')} placeholder="Phone number" value={form.phone} onChange={update('phone')} aria-label="Phone number" />
+        <input type="tel" className={'form-control' + (errors.phone ? ' is-invalid' : '')} placeholder={t.phone} value={form.phone} onChange={update('phone')} aria-label={t.phone} />
         {errors.phone && <div className="invalid-feedback d-block">{errors.phone}</div>}
       </div>
 
       <div>
-        <select className={'form-select' + (errors.help ? ' is-invalid' : '')} value={form.help} onChange={update('help')} aria-label="What do you need help with?" required>
-          <option value="" disabled>What do you need help with?</option>
+        <select className={'form-select' + (errors.help ? ' is-invalid' : '')} value={form.help} onChange={update('help')} aria-label={t.helpPlaceholder} required>
+          <option value="" disabled>{t.helpPlaceholder}</option>
           {helpOptions.map((option) => <option key={option} value={option}>{option}</option>)}
         </select>
         {errors.help && <div className="invalid-feedback d-block">{errors.help}</div>}
@@ -121,7 +124,7 @@ export default function LeadForm({
 
       {submitError && <div className="alert alert-danger py-2 mb-0" role="alert" style={{ fontSize: '0.8075rem' }}>{submitError}</div>}
       <button type="submit" className={`btn ${submitClass} w-100`} disabled={sending}>
-        {sending ? 'Sending…' : submitLabel}
+        {sending ? t.sending : submitLabel}
       </button>
     </form>
   )

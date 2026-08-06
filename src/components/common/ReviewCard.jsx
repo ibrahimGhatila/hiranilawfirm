@@ -3,6 +3,7 @@
  * Reviews page grid so both stay identical.
  */
 import { useState, useRef, useEffect } from 'react'
+import data from '../../data/active.js'
 
 function GoogleMark() {
   return (
@@ -91,7 +92,7 @@ export default function ReviewCard({ review, className = '' }) {
           aria-expanded={expanded}
           onClick={() => setExpanded((v) => !v)}
         >
-          {expanded ? 'Read less' : 'Read more'}
+          {expanded ? data.ui.readLess : data.ui.readMore}
         </button>
       )}
     </article>

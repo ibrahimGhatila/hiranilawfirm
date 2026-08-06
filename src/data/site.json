@@ -7,7 +7,14 @@
     "phoneHref": "tel:+12816658188",
     "email": "info@hiranilawfirm.com",
     "tagline": "Family law in Greater Houston and personal injury representation across Texas.",
-    "areasServed": ["Houston", "Katy", "Fort Bend", "Montgomery", "Galveston", "Austin County"],
+    "areasServed": [
+      "Houston",
+      "Katy",
+      "Fort Bend",
+      "Montgomery",
+      "Galveston",
+      "Austin County"
+    ],
     "url": "https://www.hiranilawfirm.com",
     "founded": "2018",
     "social": {
@@ -20,42 +27,78 @@
   "nav": {
     "topBarText": "Call For A Consultation:",
     "links": [
-      { "label": "Home", "to": "/" },
+      {
+        "label": "Home",
+        "to": "/"
+      },
       {
         "label": "About",
         "to": "/about",
         "children": [
-          { "label": "About Us", "to": "/about" },
-          { "label": "Meet Sehar Hirani", "to": "/about/sehar-hirani" },
-          { "label": "Our Team", "to": "/about/our-team" },
-          { "label": "Service Areas", "to": "/about/service-areas" }
+          {
+            "label": "About Us",
+            "to": "/about"
+          },
+          {
+            "label": "Meet Sehar Hirani",
+            "to": "/about/sehar-hirani"
+          },
+          {
+            "label": "Our Team",
+            "to": "/about/our-team"
+          },
+          {
+            "label": "Service Areas",
+            "to": "/about/service-areas"
+          }
         ]
       },
       {
         "label": "Practice Areas",
         "to": "/practice-areas",
         "children": [
-          { "label": "Family Law", "to": "/practice-areas/family-law" },
-          { "label": "Personal Injury", "to": "/practice-areas/personal-injury" }
+          {
+            "label": "Family Law",
+            "to": "/practice-areas/family-law"
+          },
+          {
+            "label": "Personal Injury",
+            "to": "/practice-areas/personal-injury"
+          }
         ]
       },
       {
         "label": "Reviews",
         "to": "/reviews",
         "children": [
-          { "label": "Client Reviews", "to": "/reviews" },
-          { "label": "FAQs", "to": "/faqs" }
+          {
+            "label": "Client Reviews",
+            "to": "/reviews"
+          },
+          {
+            "label": "FAQs",
+            "to": "/faqs"
+          }
         ]
       },
-      { "label": "Contact", "to": "/contact" }
+      {
+        "label": "Contact",
+        "to": "/contact"
+      }
     ]
   },
   "hero": {
     "eyebrow": "Houston and Katy Family Law Attorney",
     "title": "Facing a Family Challenge or Serious Injury?",
     "description": "Attorney Sehar Hirani helps clients across Greater Houston move through divorce, custody, modifications, child support, adoption, name changes, enforcement matters, and personal injury claims with clear guidance and steady advocacy.",
-    "primaryCta": { "label": "Request Consultation", "to": "/contact" },
-    "secondaryCta": { "label": "Explore Practice Areas", "to": "/practice-areas" },
+    "primaryCta": {
+      "label": "Request Consultation",
+      "to": "/contact"
+    },
+    "secondaryCta": {
+      "label": "Explore Practice Areas",
+      "to": "/practice-areas"
+    },
     "form": {
       "eyebrow": "Free Case Evaluation",
       "title": "Tell us what happened.",
@@ -73,10 +116,22 @@
     }
   },
   "stats": [
-    { "value": "Since 2018", "label": "Serving Texas Families" },
-    { "value": "200+", "label": "Families Guided" },
-    { "value": "Houston & Katy", "label": "Local Court Experience" },
-    { "value": "Free", "label": "Confidential Consultation" }
+    {
+      "value": "Since 2018",
+      "label": "Serving Texas Families"
+    },
+    {
+      "value": "200+",
+      "label": "Families Guided"
+    },
+    {
+      "value": "Houston & Katy",
+      "label": "Local Court Experience"
+    },
+    {
+      "value": "Free",
+      "label": "Confidential Consultation"
+    }
   ],
   "practiceAreas": {
     "eyebrow": "Our Practice Areas",
@@ -105,33 +160,72 @@
       "As a mom of two, Attorney Sehar Hirani understands how deeply family legal matters can affect children, parents, and the future of a household. She is passionate about protecting children, supporting families, and defending fathers who want to remain present and active in their children's lives.",
       "Sehar graduated from the University of Houston and South Texas College of Law. She has been licensed in the State of Texas since 2018."
     ],
-    "cta": { "label": "Read Full Profile", "to": "/about" }
+    "cta": {
+      "label": "Read Full Profile",
+      "to": "/about"
+    }
   },
   "memberships": {
     "eyebrow": "Memberships",
     "logos": [
-      { "src": "logo-state-bar-texas", "alt": "State Bar of Texas" },
-      { "src": "logo-houston-bar-association", "alt": "Houston Bar Association" },
-      { "src": "logo-fort-bend-county-bar", "alt": "Fort Bend County Bar Association" },
-      { "src": "logo-avvo", "alt": "Avvo" },
-      { "src": "logo-lead-counsel", "alt": "Lead Counsel Verified" },
-      { "src": "logo-family-law-section", "alt": "State Bar of Texas — Family Law Section" }
+      {
+        "src": "logo-state-bar-texas",
+        "alt": "State Bar of Texas"
+      },
+      {
+        "src": "logo-houston-bar-association",
+        "alt": "Houston Bar Association"
+      },
+      {
+        "src": "logo-fort-bend-county-bar",
+        "alt": "Fort Bend County Bar Association"
+      },
+      {
+        "src": "logo-avvo",
+        "alt": "Avvo"
+      },
+      {
+        "src": "logo-lead-counsel",
+        "alt": "Lead Counsel Verified"
+      },
+      {
+        "src": "logo-family-law-section",
+        "alt": "State Bar of Texas — Family Law Section"
+      }
     ]
   },
   "clientsMention": {
     "title": "What Clients Consistently Mention",
     "description": "Based on client feedback across family law and personal injury matters, these are the qualities people mention most often.",
     "metrics": [
-      { "label": "Family Law Advocacy", "value": 95 },
-      { "label": "Clear Communication", "value": 90 },
-      { "label": "Local Court Experience", "value": 88 },
-      { "label": "Personalized Strategy", "value": 92 },
-      { "label": "Compassionate Representation", "value": 94 }
+      {
+        "label": "Family Law Advocacy",
+        "value": 95
+      },
+      {
+        "label": "Clear Communication",
+        "value": 90
+      },
+      {
+        "label": "Local Court Experience",
+        "value": 88
+      },
+      {
+        "label": "Personalized Strategy",
+        "value": 92
+      },
+      {
+        "label": "Compassionate Representation",
+        "value": 94
+      }
     ]
   },
   "testimonials": {
     "title": "What Clients Are Saying",
-    "cta": { "label": "Read More Client Reviews", "to": "/reviews" },
+    "cta": {
+      "label": "Read More Client Reviews",
+      "to": "/reviews"
+    },
     "reviews": [
       {
         "name": "Jennifer Adams",
@@ -244,17 +338,32 @@
     "intro": {
       "eyebrow": "Who We Are",
       "title": "A law firm built on one powerful principle.",
-      "images": ["about-team-hallway", "about-team-office"],
+      "images": [
+        "about-team-hallway",
+        "about-team-office"
+      ],
       "paragraphs": [
         "We believe every client deserves a dedicated team committed to protecting their rights and securing their future. We are more than just your lawyers — we are your partners and your advocates during life's most difficult chapters.",
         "Whether you are navigating a divorce, fighting for child custody, pursuing a personal injury claim, or handling an adoption, Hirani Law Firm brings the same commitment: your case is personal to us."
       ],
       "stats": [
-        { "value": "2018", "label": "Year Founded" },
-        { "value": "200+", "label": "Families Guided" },
-        { "value": "5 Counties", "label": "Greater Houston" }
+        {
+          "value": "2018",
+          "label": "Year Founded"
+        },
+        {
+          "value": "200+",
+          "label": "Families Guided"
+        },
+        {
+          "value": "5 Counties",
+          "label": "Greater Houston"
+        }
       ],
-      "cta": { "label": "Meet The Team", "to": "/about/our-team" }
+      "cta": {
+        "label": "Meet The Team",
+        "to": "/about/our-team"
+      }
     },
     "quote": "You deserve a legal team that knows your name, understands your struggle, and is personally committed to your success.",
     "mission": {
@@ -265,14 +374,25 @@
         {
           "title": "Clear Communication",
           "description": "Keeping you informed and empowered at every stage of your case — no jargon, no unanswered calls.",
-          "links": [{ "text": "case", "to": "/practice-areas" }]
+          "links": [
+            {
+              "text": "case",
+              "to": "/practice-areas"
+            }
+          ]
         },
         {
           "title": "Compassionate Guidance",
           "description": "Understanding the human side of your struggle and providing the support you need through family law and personal injury matters.",
           "links": [
-            { "text": "family law", "to": "/practice-areas/family-law" },
-            { "text": "personal injury", "to": "/practice-areas/personal-injury" }
+            {
+              "text": "family law",
+              "to": "/practice-areas/family-law"
+            },
+            {
+              "text": "personal injury",
+              "to": "/practice-areas/personal-injury"
+            }
           ]
         },
         {
@@ -285,7 +405,12 @@
       "eyebrow": "Our Story & Values",
       "title": "Founded out of a belief that legal representation should be personal.",
       "description": "Attorney Sehar Hirani founded Hirani Law Firm in 2018 out of a frustration with the impersonal, volume-based nature of many larger firms. She envisioned a practice where every client's case is treated with the urgency and personal attention it deserves. This vision is the foundation of our core values:",
-      "descriptionLinks": [{ "text": "Attorney Sehar Hirani", "to": "/about/sehar-hirani" }],
+      "descriptionLinks": [
+        {
+          "text": "Attorney Sehar Hirani",
+          "to": "/about/sehar-hirani"
+        }
+      ],
       "cards": [
         {
           "title": "Integrity",
@@ -330,7 +455,10 @@
     "cta": {
       "eyebrow": "Your Case Deserves A Personal Commitment",
       "title": "Your story matters to us. Let's discuss how our team can help you move forward.",
-      "primary": { "label": "Tell Us Your Story", "to": "/contact" }
+      "primary": {
+        "label": "Tell Us Your Story",
+        "to": "/contact"
+      }
     }
   },
   "teamPage": {
@@ -344,7 +472,12 @@
     },
     "eyebrow": "Our Team",
     "members": [
-      { "name": "Sehar Hirani", "role": "Managing Attorney", "image": "sehar-portrait", "to": "/about/sehar-hirani" },
+      {
+        "name": "Sehar Hirani",
+        "role": "Managing Attorney",
+        "image": "sehar-portrait",
+        "to": "/about/sehar-hirani"
+      },
       {
         "name": "Carlos Peraza",
         "role": "Intake Manager",
@@ -396,9 +529,15 @@
       "eyebrow": "Attorney Profile",
       "name": "Sehar Hirani",
       "image": "sehar-attorney-profile",
-      "subtitle": ["Family Law & Personal Injury Attorney", "Licensed in Texas Since 2018"],
+      "subtitle": [
+        "Family Law & Personal Injury Attorney",
+        "Licensed in Texas Since 2018"
+      ],
       "description": "A mother of two, an advocate for families, and a steady guide through some of life's most difficult legal moments — Sehar Hirani brings both personal understanding and practiced legal skill to every case she takes on. She founded Hirani Law Firm to give clients the personal attention, honest communication, and determined advocacy that larger, volume-based firms too often overlook. When you work with Sehar, you work directly with an attorney who treats your case as if it were her own family's.",
-      "cta": { "label": "Schedule a Free Consultation", "to": "/contact" }
+      "cta": {
+        "label": "Schedule a Free Consultation",
+        "to": "/contact"
+      }
     },
     "sections": [
       {
@@ -415,7 +554,10 @@
     },
     "strategy": {
       "title": "Sensitive Approach, Strategic Thinking",
-      "images": ["about-team-hallway", "about-team-office"],
+      "images": [
+        "about-team-hallway",
+        "about-team-office"
+      ],
       "paragraphs": [
         "Sehar uses a sensitive approach that balances genuine compassion with clear legal direction. She helps clients understand the process and prepare for the decisions ahead — not just emotionally, but strategically. Every case receives a legal plan built around the client's specific family, timeline, and goals.",
         "While she always works to reach amicable resolutions, she is fully prepared to be a fierce advocate in mediation or in the courtroom when the other party refuses to be reasonable. Every case is prepared as if it will go to trial — which gives clients maximum leverage at every stage."
@@ -433,25 +575,55 @@
         "eyebrow": "Free Consultation",
         "title": "Talk to Sehar Hirani Today",
         "note": "Confidential · No obligation · We respond within 24 hours.",
-        "cta": { "label": "Request Consultation", "to": "/contact" }
+        "cta": {
+          "label": "Request Consultation",
+          "to": "/contact"
+        }
       },
       "practiceAreas": {
         "title": "Practice Areas",
         "items": [
-          { "label": "Divorce", "to": "/practice-areas/family-law/divorce-attorney-houston" },
-          { "label": "Child Custody", "to": "/practice-areas/family-law/child-custody-attorney-houston" },
-          { "label": "Child Support", "to": "/practice-areas/family-law/child-support-attorney-houston" },
-          { "label": "Adoption", "to": "/practice-areas/family-law/adoption-attorney-houston" },
-          { "label": "Father's Rights", "to": "/practice-areas/family-law/father-rights-attorney-houston" },
-          { "label": "Auto Accident", "to": "/practice-areas/personal-injury/houston-auto-accident-attorney" },
-          { "label": "18-Wheeler Accident", "to": "/practice-areas/personal-injury/18-wheeler-accident-attorney-houston" }
+          {
+            "label": "Divorce",
+            "to": "/practice-areas/family-law/divorce-attorney-houston"
+          },
+          {
+            "label": "Child Custody",
+            "to": "/practice-areas/family-law/child-custody-attorney-houston"
+          },
+          {
+            "label": "Child Support",
+            "to": "/practice-areas/family-law/child-support-attorney-houston"
+          },
+          {
+            "label": "Adoption",
+            "to": "/practice-areas/family-law/adoption-attorney-houston"
+          },
+          {
+            "label": "Father's Rights",
+            "to": "/practice-areas/family-law/father-rights-attorney-houston"
+          },
+          {
+            "label": "Auto Accident",
+            "to": "/practice-areas/personal-injury/houston-auto-accident-attorney"
+          },
+          {
+            "label": "18-Wheeler Accident",
+            "to": "/practice-areas/personal-injury/18-wheeler-accident-attorney-houston"
+          }
         ]
       },
       "reviews": {
         "title": "What Clients Say",
         "items": [
-          { "text": "Knowledgeable, professional, and prompt in communication.", "author": "Victor Sims" },
-          { "text": "Informative, compassionate, and professional throughout the process.", "author": "Astryd McIntyre-Pahls" }
+          {
+            "text": "Knowledgeable, professional, and prompt in communication.",
+            "author": "Victor Sims"
+          },
+          {
+            "text": "Informative, compassionate, and professional throughout the process.",
+            "author": "Astryd McIntyre-Pahls"
+          }
         ]
       }
     }
@@ -469,18 +641,40 @@
         "Being a local law firm means more than just having an office here; it means understanding the communities we serve. Attorney Sehar Hirani has built her practice on a deep familiarity with the local legal landscape. We understand the specific nuances of the different court systems, the procedures of the local judges, and the values that matter to the families in this region. This local knowledge is a powerful advantage, allowing us to provide tailored and effective legal strategies for your case."
       ],
       "citiesLabel": "Cities We Serve",
-      "cities": ["Houston", "Katy", "Sugar Land", "Fulshear", "Rosenberg", "Tomball", "Spring", "The Woodlands", "Pasadena", "Missouri City", "Cypress"]
+      "cities": [
+        "Houston",
+        "Katy",
+        "Sugar Land",
+        "Fulshear",
+        "Rosenberg",
+        "Tomball",
+        "Spring",
+        "The Woodlands",
+        "Pasadena",
+        "Missouri City",
+        "Cypress"
+      ]
     },
     "contactCard": {
       "eyebrow": "Contact Your Local Attorney",
       "phoneLabel": "Phone",
       "addressLabel": "Address",
-      "address": ["22336 Grand Corner Drive", "Suite 130", "Katy, TX 77494"],
+      "address": [
+        "22336 Grand Corner Drive",
+        "Suite 130",
+        "Katy, TX 77494"
+      ],
       "hoursLabel": "Hours",
-      "hours": ["Monday – Friday", "9:00 AM – 5:00 PM"],
+      "hours": [
+        "Monday – Friday",
+        "9:00 AM – 5:00 PM"
+      ],
       "emailLabel": "Email",
       "email": "info@hiranilawfirm.com",
-      "cta": { "label": "Free Consultation", "to": "/contact" }
+      "cta": {
+        "label": "Free Consultation",
+        "to": "/contact"
+      }
     },
     "areas": {
       "eyebrow": "Our Core Service Areas",
@@ -489,49 +683,90 @@
         {
           "name": "Harris County",
           "description": "As the region's largest county, Harris County's legal system can be complex to navigate. Our attorneys have significant experience advocating for clients at the Harris County Family Law Center, confidently handling the unique procedures and pace of Houston's busy courts. We proudly serve clients in Houston, Pasadena, Cypress, Spring, Tomball, and all surrounding communities.",
-          "cities": ["Houston", "Pasadena", "Cypress", "Spring", "Tomball"],
+          "cities": [
+            "Houston",
+            "Pasadena",
+            "Cypress",
+            "Spring",
+            "Tomball"
+          ],
           "map": "Harris County, TX"
         },
         {
           "name": "Fort Bend County",
           "description": "Based in the heart of Fort Bend County, our firm has a strong presence in the local community. We regularly represent our neighbors, navigating the specific procedures of the Fort Bend County courts in Richmond with confidence and skill. We serve clients across Sugar Land, Richmond, Rosenberg, Missouri City, and, of course, our home base of Katy.",
-          "cities": ["Sugar Land", "Fulshear", "Rosenberg", "Missouri City", "Katy"],
+          "cities": [
+            "Sugar Land",
+            "Fulshear",
+            "Rosenberg",
+            "Missouri City",
+            "Katy"
+          ],
           "map": "Fort Bend County, TX"
         },
         {
           "name": "Montgomery County",
           "description": "We serve families throughout Montgomery County, bringing the same dedicated advocacy to clients in the rapidly growing communities north of Houston. We understand the local courts and provide the same client-first approach to every family we represent in this region, from The Woodlands to Conroe.",
-          "cities": ["The Woodlands", "Spring", "Conroe", "Magnolia"],
+          "cities": [
+            "The Woodlands",
+            "Spring",
+            "Conroe",
+            "Magnolia"
+          ],
           "map": "Montgomery County, TX"
         },
         {
           "name": "Galveston County",
           "description": "We extend our commitment to serving Texas families all the way to the Gulf Coast. If you have a family law or personal injury case in Galveston County, you can expect the same high level of dedicated advocacy we provide to all our clients. Our service areas include Galveston, League City, Texas City, Friendswood, and Dickinson.",
-          "cities": ["Galveston", "League City", "Texas City", "Friendswood", "Dickinson"],
+          "cities": [
+            "Galveston",
+            "League City",
+            "Texas City",
+            "Friendswood",
+            "Dickinson"
+          ],
           "map": "Galveston County, TX"
         },
         {
           "name": "Austin County",
           "description": "We believe that expert legal representation should be accessible to everyone, including those in the more rural communities of our region. Hirani Law Firm is proud to serve clients throughout Austin County, including the cities of Bellville, Sealy, and Wallis.",
-          "cities": ["Bellville", "Sealy", "Wallis"],
+          "cities": [
+            "Bellville",
+            "Sealy",
+            "Wallis"
+          ],
           "map": "Austin County, TX"
         },
         {
           "name": "Waller County",
           "description": "Our firm proudly extends representation to families and individuals in Waller County, ensuring that clients in the growing west Houston corridor have access to the same quality legal advocacy that defines our practice.",
-          "cities": ["Hempstead", "Prairie View", "Brookshire"],
+          "cities": [
+            "Hempstead",
+            "Prairie View",
+            "Brookshire"
+          ],
           "map": "Waller County, TX"
         },
         {
           "name": "Liberty County",
           "description": "Hirani Law Firm serves clients in Liberty County as part of our Greater Houston family law coverage area, providing the same client-first approach to families east of the city.",
-          "cities": ["Liberty", "Dayton", "Baytown"],
+          "cities": [
+            "Liberty",
+            "Dayton",
+            "Baytown"
+          ],
           "map": "Liberty County, TX"
         },
         {
           "name": "Personal Injury — All of Texas",
           "description": "For personal injury matters — auto accidents, 18-wheelers, motorcycle accidents, slip and fall, and workers' compensation — Hirani Law Firm practices all over Texas. Your location is never a barrier to representation. No matter where in Texas your accident occurred, we can help.",
-          "cities": ["Auto Accidents", "18-Wheeler Accidents", "Motorcycle Accidents", "Slip & Fall", "Workers' Compensation"],
+          "cities": [
+            "Auto Accidents",
+            "18-Wheeler Accidents",
+            "Motorcycle Accidents",
+            "Slip & Fall",
+            "Workers' Compensation"
+          ],
           "map": "Texas",
           "highlight": true
         }
@@ -557,12 +792,18 @@
     "familySection": {
       "title": "Family Law Services in Houston & Katy, TX",
       "description": "Attorney Sehar Hirani guides families through every stage of family legal matters — from initial filings to final orders and post-judgment modifications.",
-      "cta": { "label": "All Family Law Services", "to": "/practice-areas/family-law" }
+      "cta": {
+        "label": "All Family Law Services",
+        "to": "/practice-areas/family-law"
+      }
     },
     "injurySection": {
       "title": "Personal Injury Representation Throughout Texas",
       "description": "When you have been seriously hurt, you need an attorney who will fight for the full compensation you deserve. Hirani Law Firm takes injury cases on a contingency basis — you pay nothing unless we win.",
-      "cta": { "label": "All Personal Injury Services", "to": "/practice-areas/personal-injury" }
+      "cta": {
+        "label": "All Personal Injury Services",
+        "to": "/practice-areas/personal-injury"
+      }
     }
   },
   "familyLawPage": {
@@ -577,37 +818,126 @@
       "Family law matters are rarely just legal problems. They involve your children, your home, your finances, and your sense of stability. Attorney Sehar Hirani understands that — and she approaches every case with both strategic legal thinking and genuine personal care."
     ],
     "stats": [
-      { "value": "200+", "label": "Families Guided" },
-      { "value": "7", "label": "Counties Served" },
-      { "value": "2018", "label": "Licensed in Texas" }
+      {
+        "value": "200+",
+        "label": "Families Guided"
+      },
+      {
+        "value": "7",
+        "label": "Counties Served"
+      },
+      {
+        "value": "2018",
+        "label": "Licensed in Texas"
+      }
     ],
-    "paragraphLinks": [{ "text": "Attorney Sehar Hirani", "to": "/about/sehar-hirani" }],
+    "paragraphLinks": [
+      {
+        "text": "Attorney Sehar Hirani",
+        "to": "/about/sehar-hirani"
+      }
+    ],
     "slides": [
-      { "image": "flh-divorce-family-law", "eyebrow": "Family Law", "title": "Protecting what matters most in a divorce." },
-      { "image": "flh-child-custody-family-law", "eyebrow": "Child Custody", "title": "Protecting the bond that matters most." },
-      { "image": "flh-adoption-family-law", "eyebrow": "Adoption", "title": "Helping Texas families grow." }
+      {
+        "image": "flh-divorce-family-law",
+        "eyebrow": "Family Law",
+        "title": "Protecting what matters most in a divorce."
+      },
+      {
+        "image": "flh-child-custody-family-law",
+        "eyebrow": "Child Custody",
+        "title": "Protecting the bond that matters most."
+      },
+      {
+        "image": "flh-adoption-family-law",
+        "eyebrow": "Adoption",
+        "title": "Helping Texas families grow."
+      }
     ],
     "areasTitle": "Areas of Family Law We Handle",
     "areas": [
-      { "slug": "divorce-attorney-houston", "image": "fl-divorce", "title": "Divorce", "description": "Contested & uncontested divorce, property division, spousal support, and final decree filings in Texas." },
-      { "slug": "child-custody-attorney-houston", "image": "fl-custody", "title": "Child Custody", "description": "Conservatorship, possession schedules, best-interest determinations, and parenting plan negotiations." },
-      { "slug": "child-support-attorney-houston", "image": "fl-support", "title": "Child Support", "description": "Establishing, enforcing, and modifying child support orders under Texas statutory guidelines." },
-      { "slug": "adoption-attorney-houston", "image": "fl-adoption", "title": "Adoption", "description": "Child and adult adoptions, stepparent adoptions, and family formation proceedings in Texas courts." },
-      { "slug": "father-rights-attorney-houston", "image": "fl-fathers", "title": "Father's Rights", "description": "Protecting fathers' legal rights to access, custody, and meaningful involvement in their children's lives." },
-      { "slug": "conservatorship-attorney-houston", "image": "fl-conservatorship", "title": "Conservatorship", "description": "Sole and joint managing conservatorship, rights and duties, and possession order structuring." },
-      { "slug": "houston-order-modification-attorney", "image": "fl-modifications", "title": "Modifications", "description": "Modifying custody, support, and visitation orders when life circumstances have materially changed." },
-      { "slug": "enforcement-contempt-attorney-houston", "image": "fl-enforcement", "title": "Enforcement & Contempt", "description": "Holding non-compliant parties accountable and enforcing existing court orders through legal action." },
-      { "slug": "property-division-attorney-houston", "image": "fl-property", "title": "Property Division", "description": "Community property analysis, asset valuation, and equitable division of marital estate under Texas law." },
-      { "slug": "houston-prenups-marital-agreements-attorney", "image": "fl-prenup", "title": "Prenuptial Agreements", "description": "Drafting and reviewing premarital agreements that protect both parties and hold up in Texas courts." },
-      { "slug": "postnuptial-agreements-attorney-houston", "image": "fl-postnup", "title": "Postnuptial Agreements", "description": "Marital property agreements entered into after marriage to clarify asset ownership and expectations." },
-      { "slug": "name-changes-attorney-houston", "image": "fl-namechange", "title": "Name Changes", "description": "Adult and minor name change petitions filed and handled through the appropriate Texas courts." }
+      {
+        "slug": "divorce-attorney-houston",
+        "image": "fl-divorce",
+        "title": "Divorce",
+        "description": "Contested & uncontested divorce, property division, spousal support, and final decree filings in Texas."
+      },
+      {
+        "slug": "child-custody-attorney-houston",
+        "image": "fl-custody",
+        "title": "Child Custody",
+        "description": "Conservatorship, possession schedules, best-interest determinations, and parenting plan negotiations."
+      },
+      {
+        "slug": "child-support-attorney-houston",
+        "image": "fl-support",
+        "title": "Child Support",
+        "description": "Establishing, enforcing, and modifying child support orders under Texas statutory guidelines."
+      },
+      {
+        "slug": "adoption-attorney-houston",
+        "image": "fl-adoption",
+        "title": "Adoption",
+        "description": "Child and adult adoptions, stepparent adoptions, and family formation proceedings in Texas courts."
+      },
+      {
+        "slug": "father-rights-attorney-houston",
+        "image": "fl-fathers",
+        "title": "Father's Rights",
+        "description": "Protecting fathers' legal rights to access, custody, and meaningful involvement in their children's lives."
+      },
+      {
+        "slug": "conservatorship-attorney-houston",
+        "image": "fl-conservatorship",
+        "title": "Conservatorship",
+        "description": "Sole and joint managing conservatorship, rights and duties, and possession order structuring."
+      },
+      {
+        "slug": "houston-order-modification-attorney",
+        "image": "fl-modifications",
+        "title": "Modifications",
+        "description": "Modifying custody, support, and visitation orders when life circumstances have materially changed."
+      },
+      {
+        "slug": "enforcement-contempt-attorney-houston",
+        "image": "fl-enforcement",
+        "title": "Enforcement & Contempt",
+        "description": "Holding non-compliant parties accountable and enforcing existing court orders through legal action."
+      },
+      {
+        "slug": "property-division-attorney-houston",
+        "image": "fl-property",
+        "title": "Property Division",
+        "description": "Community property analysis, asset valuation, and equitable division of marital estate under Texas law."
+      },
+      {
+        "slug": "houston-prenups-marital-agreements-attorney",
+        "image": "fl-prenup",
+        "title": "Prenuptial Agreements",
+        "description": "Drafting and reviewing premarital agreements that protect both parties and hold up in Texas courts."
+      },
+      {
+        "slug": "postnuptial-agreements-attorney-houston",
+        "image": "fl-postnup",
+        "title": "Postnuptial Agreements",
+        "description": "Marital property agreements entered into after marriage to clarify asset ownership and expectations."
+      },
+      {
+        "slug": "name-changes-attorney-houston",
+        "image": "fl-namechange",
+        "title": "Name Changes",
+        "description": "Adult and minor name change petitions filed and handled through the appropriate Texas courts."
+      }
     ],
     "attorney": {
       "eyebrow": "Your Attorney",
       "title": "Sehar Hirani — Houston Family Law Attorney Since 2018",
       "description": "As a mother of two, Sehar understands what is at stake when families face legal challenges. She has built her practice around clear communication, personal attention, and results-driven advocacy for clients across Greater Houston.",
       "image": "meet-hirani",
-      "cta": { "label": "Read Attorney Profile", "to": "/about/sehar-hirani" }
+      "cta": {
+        "label": "Read Attorney Profile",
+        "to": "/about/sehar-hirani"
+      }
     }
   },
   "personalInjuryPage": {
@@ -623,30 +953,82 @@
       "The firm represents injury victims throughout the State of Texas, with particular experience in the Houston and Katy area. From the first call to the final settlement or verdict, your case gets the personal attention it deserves."
     ],
     "stats": [
-      { "value": "$0", "label": "Upfront — Contingency Fee" },
-      { "value": "Texas-Wide", "label": "Personal Injury Coverage" },
-      { "value": "Free", "label": "Initial Consultation" }
+      {
+        "value": "$0",
+        "label": "Upfront — Contingency Fee"
+      },
+      {
+        "value": "Texas-Wide",
+        "label": "Personal Injury Coverage"
+      },
+      {
+        "value": "Free",
+        "label": "Initial Consultation"
+      }
     ],
     "slides": [
-      { "image": "pih-accident-personal-injury-houston", "eyebrow": "Personal Injury", "title": "When an accident changes everything, steady guidance matters." },
-      { "image": "pih-compensation-support-houston-law", "eyebrow": "Personal Injury", "title": "Injured because someone failed to keep you safe?" },
-      { "image": "pih-personal-injury-support", "eyebrow": "Personal Injury", "title": "You focus on healing. We help protect your claim." }
+      {
+        "image": "pih-accident-personal-injury-houston",
+        "eyebrow": "Personal Injury",
+        "title": "When an accident changes everything, steady guidance matters."
+      },
+      {
+        "image": "pih-compensation-support-houston-law",
+        "eyebrow": "Personal Injury",
+        "title": "Injured because someone failed to keep you safe?"
+      },
+      {
+        "image": "pih-personal-injury-support",
+        "eyebrow": "Personal Injury",
+        "title": "You focus on healing. We help protect your claim."
+      }
     ],
     "areasTitle": "Types of Injury Cases We Handle",
-    "reviewCta": { "label": "Free Case Review", "to": "/contact" },
+    "reviewCta": {
+      "label": "Free Case Review",
+      "to": "/contact"
+    },
     "areas": [
-      { "slug": "houston-auto-accident-attorney", "image": "pi-auto", "title": "Auto Accidents", "description": "Car accident claims, insurance negotiations, and litigation for crash victims across Houston and Texas. Whether it is a rear-end collision or a multi-vehicle accident, we fight for full compensation." },
-      { "slug": "18-wheeler-accident-attorney-houston", "image": "pi-truck", "title": "18-Wheeler Accidents", "description": "Trucking accident cases involving federal regulations, commercial carriers, logbook violations, and catastrophic injuries. These cases require specialized knowledge — we have it." },
-      { "slug": "motorcycle-accident-attorney-houston", "image": "pi-moto", "title": "Motorcycle Accidents", "description": "Protecting injured motorcyclists from biased insurance adjusters and pursuing the full compensation they deserve." },
-      { "slug": "houston-slip-fall-accident-attorney", "image": "pi-slip", "title": "Slip & Fall", "description": "Premises liability claims against property owners and businesses that failed to maintain reasonably safe conditions." },
-      { "slug": "houston-workers-compensation-attorney", "image": "pi-workers", "title": "Workers' Compensation", "description": "Workplace injury claims, denied benefits, and employer disputes handled throughout Texas." }
+      {
+        "slug": "houston-auto-accident-attorney",
+        "image": "pi-auto",
+        "title": "Auto Accidents",
+        "description": "Car accident claims, insurance negotiations, and litigation for crash victims across Houston and Texas. Whether it is a rear-end collision or a multi-vehicle accident, we fight for full compensation."
+      },
+      {
+        "slug": "18-wheeler-accident-attorney-houston",
+        "image": "pi-truck",
+        "title": "18-Wheeler Accidents",
+        "description": "Trucking accident cases involving federal regulations, commercial carriers, logbook violations, and catastrophic injuries. These cases require specialized knowledge — we have it."
+      },
+      {
+        "slug": "motorcycle-accident-attorney-houston",
+        "image": "pi-moto",
+        "title": "Motorcycle Accidents",
+        "description": "Protecting injured motorcyclists from biased insurance adjusters and pursuing the full compensation they deserve."
+      },
+      {
+        "slug": "houston-slip-fall-accident-attorney",
+        "image": "pi-slip",
+        "title": "Slip & Fall",
+        "description": "Premises liability claims against property owners and businesses that failed to maintain reasonably safe conditions."
+      },
+      {
+        "slug": "houston-workers-compensation-attorney",
+        "image": "pi-workers",
+        "title": "Workers' Compensation",
+        "description": "Workplace injury claims, denied benefits, and employer disputes handled throughout Texas."
+      }
     ],
     "attorney": {
       "eyebrow": "Your Attorney",
       "title": "Sehar Hirani — Personal Injury Attorney",
       "description": "Attorney Sehar Hirani brings the same tenacity to personal injury cases that she brings to family law — relentless pursuit of justice, clear communication, and personal attention to every client. When the other side has a legal team, so should you.",
       "image": "meet-hirani",
-      "cta": { "label": "Read Attorney Profile", "to": "/about/sehar-hirani" }
+      "cta": {
+        "label": "Read Attorney Profile",
+        "to": "/about/sehar-hirani"
+      }
     }
   },
   "reviewsPage": {
@@ -659,55 +1041,392 @@
       "description": "What clients say about communication, preparation, family law guidance, and support during stressful legal matters."
     },
     "reviews": [
-      {"name": "Vicky Chapa", "initials": "VC", "when": "5 months ago", "rating": 5, "text": "I was involved in an auto accident and was extremely hurt. Because of my injuries, I was unable to do much on my own and did not even have a car, which made the situation even more stressful and overwhelming. During this difficult time Ms. Hirani was incredibly helpful and supportive. They guided me through the entire process, answered all of my questions, and made sure I understood every step. They also helped get me in contact with doctors so I could receive the treatment I needed. The communication was excellent, and I truly felt that they cared about my well being. I am very grateful for their dedication and support, and I highly recommend the Hirani Law Firm to anyone who has been injured and needs guidance after an accident.", "source": "Google", "verified": true},
-      {"name": "Salman Mithani", "initials": "SM", "when": "8 months ago", "rating": 5, "text": "I've had an amazing experience working with my attorney, Sehar Hirani, on my personal injury case. She has been extremely professional, responsive, and genuinely caring throughout the entire process. Sehar took the time to explain every step, answered all my questions, and made sure I felt informed and supported from start to finish. Her attention to detail and dedication to getting the best outcome truly set her apart. I highly recommend Sehar to anyone looking for a knowledgeable and compassionate attorney who will fight for you and keep your best interests at heart.", "source": "Google", "verified": true},
-      {"name": "Roxana Carrillo", "initials": "RC", "when": "7 months ago", "rating": 5, "text": "I would wholeheartedly recommend The Hirani Law Firm PLLC and its excellent team to anyone seeking a high-quality law firm with a personal touch that makes you feel comfortable, regardless of your legal situation. I am grateful to The Hirani Law Firm PLLC for their invaluable support, patience, attention to detail, and for taking the time to address all my concerns during this difficult time in my life, which led to a positive outcome. I also appreciate their professionalism and commitment to my case. I wish them continued success in their personal and professional lives. God bless you.", "source": "Google", "verified": true},
-      {"name": "Laura Padron", "initials": "LP", "when": "2 weeks ago", "rating": 5, "text": "I had a difficult legal matter, and she guided me through every step with clarity and compassion. She was always responsive and detail-oriented, making a stressful situation manageable. I felt supported, and her expertise ensured a positive outcome.", "source": "Google", "verified": true},
-      {"name": "Aya Sanada", "initials": "AS", "when": "8 months ago", "rating": 5, "text": "I worked with attorney Sehar Hirani on my custody modification, and she was truly wonderful. She was always kind, professional, and quick to respond, which made me feel supported every step of the way. As a single mom, I really appreciated that she helped make the legal fees manageable and never made me feel pressured. She took the time to explain everything clearly and always kept my daughter's best interest in focus. I'm very grateful for what she has done for us, and I would absolutely recommend her to anyone who needs help with a family matter.", "source": "Google", "verified": true},
-      {"name": "Lissette", "initials": "LI", "when": "7 months ago", "rating": 5, "text": "I cannot thank the Hirani Law Firm enough for everything they did for me and my family. I came to them during one of the most stressful moments of my life—when my daughter's father refused to return her to me. They immediately took my situation seriously and guided me through the habeas process with professionalism, compassion, and confidence. Their team moved quickly, kept me informed every step of the way, and fought hard on my behalf. Because of their dedication and expertise, the case was resolved in my favor and my daughter was safely returned to me. There are no words that can express the relief and gratitude I feel. If you are looking for a law firm that truly cares, listens, and delivers results, I highly recommend Hirani Law Firm.", "source": "Google", "verified": true},
-      {"name": "Bailey Martinez", "initials": "BM", "when": "8 months ago", "rating": 5, "text": "I just want to take a moment to thank the Hirani Law Firm for everything they've done for me. I was in a difficult domestic situation and fighting for custody of my children. When I say this firm held my hand through it all, I truly mean it. Attorney Hirani treated me like family and answered every question I had with care and patience. The process was long, but with this firm by my side, I felt supported, safe. Thanks to their hard work, my children and I are now safe and together. I'm forever grateful to Attorney Hirani and her team!", "source": "Google", "verified": true},
-      {"name": "Michael Maglitto", "initials": "MM", "when": "5 months ago", "rating": 5, "text": "The team at the Hirani Law firm did a amazing job during a tough situation I would highly recommend using them I had a very difficult case. The way they navigated an communicated an explained steps we had to take was amazing thank you very much for the out come we received.", "source": "Google", "verified": true},
-      {"name": "Jose Aldana", "initials": "JA", "when": "4 months ago", "rating": 5, "text": "Attorney Hirani is an exceptional professional. From the very beginning, she demonstrated a high level of professionalism, integrity, and extensive legal knowledge. She was always clear and honest in explaining every step of the process, patiently answering all of my questions and keeping me well informed. She paid close attention to the details of my case and showed a genuine commitment throughout the entire process. Thanks to her experience and dedication, I felt confident and well represented at all times. I highly recommend Attorney Hirani for her responsibility, professionalism, and excellent quality of work.", "source": "Google", "verified": true},
-      {"name": "Victor Sims", "initials": "VS", "when": "10 months ago", "rating": 5, "text": "I had a great experience working with Attorney Sehar Hirani. She was knowledgeable, professional, and always prompt in her communication. Her guidance throughout my legal matter was clear and reassuring. I truly appreciated her attention to detail and her dedication to my case. Highly recommend her services to anyone in need of a reliable and competent attorney.", "source": "Google", "verified": true},
-      {"name": "Josue Gomez", "initials": "JG", "when": "11 months ago", "rating": 5, "text": "Mrs. Hirani is one of a kind! She's someone who loves what she does. I can honestly say her and her team treat their clients like family. There is genuinely no other law firm like hers. This law firm is consistent, punctual, and passionate. She truly advocates for her clients. As a father struggling with a stressful custody battle, I can honestly say this law firm has made this stressful process 10x more reassuring. I would recommend this law firm to any parent.", "source": "Google", "verified": true},
-      {"name": "Raquel Garcia", "initials": "RG", "when": "a year ago", "rating": 5, "text": "I am forever grateful that God put Sehar in my life!!! When another attorney left without any explanation Hirani Law Firm picked up where I was abandoned and held my hand through the end of my adoption case! I highly recommend them they are extremely professional and take each case as if their own!", "source": "Google", "verified": true},
-      {"name": "Bruce Flunker", "initials": "BF", "when": "a year ago", "rating": 5, "text": "The Hirani Law Firm is absolutely the best experience that I have had with any law firm. Their method of operations from the very knowledgeable Carlos at intake, their paralegal Mariela promptly returning emails and anything needed. Sammy in billing. Ms. Hirani calls when I was informed that she would, and she handled my divorce in very professional manner, explaining everything to me. They understand what you are going through. I went in trying to do it myself, and I was told, we will handle everything from here. You do your part, and they will do theirs. This a well organized law firm, very professional, and I would recommend this firm for anyone going through a divorce.", "source": "Google", "verified": true},
-      {"name": "Roy Fraction", "initials": "RF", "when": "a year ago", "rating": 5, "text": "The Hirani Law firm is one of the best if not the best firm in Texas when it comes to family Law. I must say what I loved the most initially was out of all the firms that reached out to me from the Texas Bar association when I uploaded my case inquiry they were the only ones who called me and left me a warm voice message. They stated that they specialized in working and getting justice for single fathers. That prompted me to call them, meet with them and the process has been fulfilling, and seamless throughout. I also learned that Attorney Hirani has a passion for getting justice for children and that's what lead me to choosing this firm. I feel confident that this firm will bring justice for my daughter and I truly thank them in advance!", "source": "Google", "verified": true},
-      {"name": "Dylan Rowan", "initials": "DR", "when": "11 months ago", "rating": 5, "text": "My partner is going through a stressful time during his custody battle but, I can honestly say Mrs. Hirani and her team of amazing beautiful people have been a gift from god. They are very proactive, professional and responsive. Mrs. Hirani is beautiful, intelligent and most of all fierce. She does not play about her clients. I would recommend her to any father who weren't dealt a fair hand. She truly advocates for fathers, (and parents). My partner is a great dad and despite all odds continues to push through, and Mrs. Hirani has done a great job at reassuring him and giving him hope.", "source": "Google", "verified": true},
-      {"name": "Yailin Castano", "initials": "YC", "when": "5 months ago", "rating": 5, "text": "I had an amazing experience with the whole team at Hirani law firm. The whole staff was great and got my divorce granted!", "source": "Google", "verified": true},
-      {"name": "Sandra Mechele Adams", "initials": "SM", "when": "a year ago", "rating": 5, "text": "Sehar was very caring and compassionate about our family needs beyond the courtroom. You cannot find a better Family Attorney for your custody needs. She believes in the children and fights for what is best for them.", "source": "Google", "verified": true},
-      {"name": "Sarah K.", "initials": "SK", "when": "2 years ago", "rating": 5, "text": "Sehar, Mariela and the whole team at Hirani Law firm have been a complete blessing in my life going through a divorce. They have not only made things easy on the legal side of things but they have supported me and showed me an immense amount of kindness going through this difficult process. If your looking for a good divorce lawyer and team to support you until the end of your case and all along the way Sehar and her staff will be there. Thank you all from the bottom of my heart!", "source": "Google", "verified": true},
-      {"name": "Matthew Estes", "initials": "ME", "when": "a year ago", "rating": 5, "text": "Mrs. Hirani is fantastic and so helpful, she explains things in a way that can be understood and is not condescending! Mariela the paralegal is just as awesome and helpful! Everyone that is involved in this firm has gone above and beyond my expectations and I am extremely grateful for all of their help! I will definitely be recommending them to anyone who needs it!", "source": "Google", "verified": true},
-      {"name": "Adair Bennett", "initials": "AB", "when": "2 years ago", "rating": 5, "text": "Single dad here that had some issues with child custody arrangements and Ms. Hirani delivered. I'm proud to say that she's my lawyer and my child is back home. I highly recommend this law firm, they're extremely understanding and personable. Nonetheless, Ms. Hirani gets the job done and most of all AFFORDABLE!", "source": "Google", "verified": true},
-      {"name": "Caveman Margolis", "initials": "CM", "when": "a year ago", "rating": 5, "text": "They have helped me through things outside of my control have resulted in a nasty divorce process. Ms. Hirani and her team are patient with me as I ask many questions. The staff at The Hirani Law Firm is professional and they do an excellent job.", "source": "Google", "verified": true},
-      {"name": "Valerie Everett", "initials": "VE", "when": "a year ago", "rating": 5, "text": "My lawyer showed a deep understanding of my personal situation. Your staff always kept me in touch with what was happening in my case. She was very thorough and very experience. The Hirani law firm was very professional and answered all my questions I had about my case. I highly recommend the HIRANI law firm.", "source": "Google", "verified": true},
-      {"name": "Jennifer Navarro", "initials": "JN", "when": "2 years ago", "rating": 5, "text": "Sehar is truly one of the best family law attorney's out there! She is family oriented, honest, knowledgeable, confident and passionate about each client's case. From the very first meeting, Sehar and her legal team work hard to ensure that every client feels comfortable and understood. The legal team goes above and beyond to fight on the behalf of each and every client. Highly recommended this law firm for all your family law needs!", "source": "Google", "verified": true},
-      {"name": "Rupesh Kanabar", "initials": "RK", "when": "a year ago", "rating": 5, "text": "I've spent all my fortune on lawyers and courts for the last 6 years with ZERO results!! I'm a father of three beautiful children and was totally shut out by the system. Spent all my paychecks on child support and still wasn't able to spend time with my children. Ms Hirani and her team turned the tables like you wouldn't believe. Now I'm the custodial parent and mom pays me child support!! Simple, honest, and packed with claws and teeth!! My children and I are off to a fresh new beginning thanks to The Hirani Law Firm.", "source": "Google", "verified": true},
-      {"name": "Abdul Dawood", "initials": "AD", "when": "a year ago", "rating": 5, "text": "We had two difficult and time consuming cases ongoing at the same time, and the Hirani Law Firm group together coordinated with each other, and us, in order to prepare the best defense feasible. The Hirani Law Firm group has the experience and knowledge needed to tackle the difficult cases, so if you are in dire need and require the very best, specially if you are in need of a payment plan, you should contact The Hirani Law Firm group.", "source": "Google", "verified": true},
-      {"name": "Melanie Hernandez", "initials": "MH", "when": "2 years ago", "rating": 5, "text": "I hired Hirani Law firm in 2022, after i had a really bad experience with another law firm. As soon as Hirani took over my case I was able to see my son after a long 7 months of not seeing him. They moved extremely quick with my case and ALWAYS made sure I was updated with what was happening and every move they were making with my case. Prices were amazing and they work with payment plans!! Finally my case was finalized and I have my son back home with me, and that's all thanks to the Hirani Law firm. If I was to EVER need another representative I would most definitely hire them again without even thinking it twice.", "source": "Google", "verified": true},
-      {"name": "Jose Estrada", "initials": "JE", "when": "2 years ago", "rating": 5, "text": "Carlos, Mariela, and Hirani are the best team. They not only handle everything fast, but the way they treated my family is what I liked the most. They explained everything so well and the whole process was smooth. I will highly recommend this firm to everyone!", "source": "Google", "verified": true},
-      {"name": "Carleen Reyes", "initials": "CR", "when": "2 years ago", "rating": 5, "text": "I am so satisfied with my services with Hirani Law Office. From the day I met with staff Carlos to working effortlessly with Mariela and Ms. Hirani was a great experience they worked so hard for my case and I recommend their services to anyone needing the assistance. Best in town by far.", "source": "Google", "verified": true},
-      {"name": "Javier Puluc", "initials": "JP", "when": "2 years ago", "rating": 5, "text": "If you're looking for a team that will assist you with just about anything, look no further The Hirani Law Firm is who you're looking for! Mariela, Carlos and Ms. Hirani are amazing. Anything that you might not understand they are there to explain and will make sure the process is very smooth. Communication is amazing and will work with you on any circumstance that might arise. 10/10 Would recommend to family and friends!", "source": "Google", "verified": true},
-      {"name": "Melanie Amieiro", "initials": "MA", "when": "a year ago", "rating": 5, "text": "Hello my name is Melanie Amieiro i had a simple divorce with no kids, Hirani Law firm made me feel so comfortable about the steps they were going to take to get my divorce finalized, their communication with me and updates on my case were amazing I would highly recommend them to anyone, and they help with payment plans which was amazing.", "source": "Google", "verified": true},
-      {"name": "Eliseo Bonilla", "initials": "EB", "when": "10 months ago", "rating": 5, "text": "Ms. Hirani was so amazing they had great communication and handled my child custody very well.", "source": "Google", "verified": true},
-      {"name": "Roxana Gonzales Castillo", "initials": "RG", "when": "6 days ago", "rating": 5, "text": "I started a divorce process back in October with Ms. Hirani and it was smooth sailing thanks to her hard work and dedication. She strives to make sure her clients are taken care of in every aspect she works with you in every way possible. Thank you Ms. Hirani!! God Bless", "source": "Google", "verified": true},
-      {"name": "Nicole Erazo", "initials": "NE", "when": "2 months ago", "rating": 5, "text": "Phenomenal service. Sehar has been extremely thorough, professional, and informative throughout the entire process. She explains the legal system in a way that's easy to understand and has been very responsive and supportive every step of the way. I was honestly surprised to see some of the negative reviews because that has not been my experience at all. From my perspective, she has been nothing but helpful, knowledgeable, and genuinely committed to making sure everything is handled correctly. I highly recommend working with her.", "source": "Google", "verified": true},
-      {"name": "Valerie Guzman", "initials": "VG", "when": "a month ago", "rating": 5, "text": "I just want to take this time to thank the entire Hirani Law Firm family. I went through a very difficult divorce and was struggling financially, especially since I had never worked in my life. The attorney and paralegal were extremely kind and professional throughout the entire process. They helped me obtain spousal support and achieved everything I was asking for. They guided me step by step through the entire case, always sending me text and email reminders about hearings and preparing me thoroughly for each one. Although I don't speak English, the paralegal explained every court procedure to me very clearly and always made sure I understood everything that was happening. I truly recommend this firm 100%.", "source": "Google", "verified": true},
-      {"name": "Ronnie A. Pacheco", "initials": "RA", "when": "a year ago", "rating": 5, "text": "Mi Experiencia con la Lic.Hirani es muy Buena y Profesional. La Lic.Hirani me atendió mi caso muy Profesional y estoy muy Conforme con mi caso de Divorcio. Se la recomiendo a cualquier Persona que quiere sus servicios. Estoy muy satisfecho con mi caso que me atendió la Lic.Hirani law firm. También con su equipo de trabajo Mariela y Carlos son muy Buenos y Profesional. Gracias Lic.Hirani por su servicio. Estoy muy contento y satisfecho por todo lo que usted hizo con mi caso de Divorcio. Se la recomiendo 100%", "source": "Google", "verified": true},
-      {"name": "Luis Tapia", "initials": "LT", "when": "a month ago", "rating": 5, "text": "Luis Tapia esta contento por el servicio que le an dado todo su equipo fueron muy atento se los recomiendo", "source": "Google", "verified": true},
-      {"name": "Yamila Cabezas", "initials": "YC", "when": "5 months ago", "rating": 5, "text": "Los mejores abogados, muy satisfecha con su trabajo y unos resultados excelentes, 100 por ciento recomendado", "source": "Google", "verified": true},
-      {"name": "Constructions365", "initials": "CO", "when": "a year ago", "rating": 5, "text": "Fue una experiencia sumamente agradable! Carlos y Mariela fueron muy profesionales siempre me asesoraron de la mejor manera fueron muy atentos y siempre estuvieron pendiente de mi caso en todo momento. Mi experiencia fue excelente al 100%", "source": "Google", "verified": true},
-      {"name": "Roger Lopaz", "initials": "RL", "when": "2 years ago", "rating": 5, "text": "Si Google tiene para 5 estrellas a ella y todo su personal les voy a dar 20 estrellas, desde el principio el Señor Carlos y su asistente Mariela la abogada fueron muy profesionales conmigo, me hicieron sentir la confianza, y darme una voz en lo jurídico, se los Recomiendo 100% para sus servicios Gracias por todo estoy muy feliz por el resultado", "source": "Google", "verified": true},
-      {"name": "Luis Zamora", "initials": "LZ", "when": "a year ago", "rating": 5, "text": "Buen servicio, me ayudaron con mi caso", "source": "Google", "verified": true},
-      {"name": "Dinora De Leon", "initials": "DD", "when": "a month ago", "rating": 5, "text": "No puedo recomendar a Hirani Law Firm lo suficiente. Pasar por un asunto de derecho familiar es increíblemente estresante, pero Hirani me hizo sentir respaldada, escuchada y protegida en cada paso del camino. Es una profesional altamente calificada, notablemente astuta y excepcionalmente organizada. Lo que más me impresionó fue su capacidad para explicar detalles legales complejos de manera sencilla, asegurándose de que yo siempre conociera mis opciones. Nunca hizo promesas que no pudiera cumplir, pero luchó con determinación para obtener el mejor resultado posible para mi familia. Si necesita una abogada de familia que combine una experiencia legal de primer nivel con una empatía genuina, no busque más: Hirani es la opción ideal.", "source": "Google", "verified": true}
+      {
+        "name": "Vicky Chapa",
+        "initials": "VC",
+        "when": "5 months ago",
+        "rating": 5,
+        "text": "I was involved in an auto accident and was extremely hurt. Because of my injuries, I was unable to do much on my own and did not even have a car, which made the situation even more stressful and overwhelming. During this difficult time Ms. Hirani was incredibly helpful and supportive. They guided me through the entire process, answered all of my questions, and made sure I understood every step. They also helped get me in contact with doctors so I could receive the treatment I needed. The communication was excellent, and I truly felt that they cared about my well being. I am very grateful for their dedication and support, and I highly recommend the Hirani Law Firm to anyone who has been injured and needs guidance after an accident.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Salman Mithani",
+        "initials": "SM",
+        "when": "8 months ago",
+        "rating": 5,
+        "text": "I've had an amazing experience working with my attorney, Sehar Hirani, on my personal injury case. She has been extremely professional, responsive, and genuinely caring throughout the entire process. Sehar took the time to explain every step, answered all my questions, and made sure I felt informed and supported from start to finish. Her attention to detail and dedication to getting the best outcome truly set her apart. I highly recommend Sehar to anyone looking for a knowledgeable and compassionate attorney who will fight for you and keep your best interests at heart.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Roxana Carrillo",
+        "initials": "RC",
+        "when": "7 months ago",
+        "rating": 5,
+        "text": "I would wholeheartedly recommend The Hirani Law Firm PLLC and its excellent team to anyone seeking a high-quality law firm with a personal touch that makes you feel comfortable, regardless of your legal situation. I am grateful to The Hirani Law Firm PLLC for their invaluable support, patience, attention to detail, and for taking the time to address all my concerns during this difficult time in my life, which led to a positive outcome. I also appreciate their professionalism and commitment to my case. I wish them continued success in their personal and professional lives. God bless you.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Laura Padron",
+        "initials": "LP",
+        "when": "2 weeks ago",
+        "rating": 5,
+        "text": "I had a difficult legal matter, and she guided me through every step with clarity and compassion. She was always responsive and detail-oriented, making a stressful situation manageable. I felt supported, and her expertise ensured a positive outcome.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Aya Sanada",
+        "initials": "AS",
+        "when": "8 months ago",
+        "rating": 5,
+        "text": "I worked with attorney Sehar Hirani on my custody modification, and she was truly wonderful. She was always kind, professional, and quick to respond, which made me feel supported every step of the way. As a single mom, I really appreciated that she helped make the legal fees manageable and never made me feel pressured. She took the time to explain everything clearly and always kept my daughter's best interest in focus. I'm very grateful for what she has done for us, and I would absolutely recommend her to anyone who needs help with a family matter.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Lissette",
+        "initials": "LI",
+        "when": "7 months ago",
+        "rating": 5,
+        "text": "I cannot thank the Hirani Law Firm enough for everything they did for me and my family. I came to them during one of the most stressful moments of my life—when my daughter's father refused to return her to me. They immediately took my situation seriously and guided me through the habeas process with professionalism, compassion, and confidence. Their team moved quickly, kept me informed every step of the way, and fought hard on my behalf. Because of their dedication and expertise, the case was resolved in my favor and my daughter was safely returned to me. There are no words that can express the relief and gratitude I feel. If you are looking for a law firm that truly cares, listens, and delivers results, I highly recommend Hirani Law Firm.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Bailey Martinez",
+        "initials": "BM",
+        "when": "8 months ago",
+        "rating": 5,
+        "text": "I just want to take a moment to thank the Hirani Law Firm for everything they've done for me. I was in a difficult domestic situation and fighting for custody of my children. When I say this firm held my hand through it all, I truly mean it. Attorney Hirani treated me like family and answered every question I had with care and patience. The process was long, but with this firm by my side, I felt supported, safe. Thanks to their hard work, my children and I are now safe and together. I'm forever grateful to Attorney Hirani and her team!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Michael Maglitto",
+        "initials": "MM",
+        "when": "5 months ago",
+        "rating": 5,
+        "text": "The team at the Hirani Law firm did a amazing job during a tough situation I would highly recommend using them I had a very difficult case. The way they navigated an communicated an explained steps we had to take was amazing thank you very much for the out come we received.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Jose Aldana",
+        "initials": "JA",
+        "when": "4 months ago",
+        "rating": 5,
+        "text": "Attorney Hirani is an exceptional professional. From the very beginning, she demonstrated a high level of professionalism, integrity, and extensive legal knowledge. She was always clear and honest in explaining every step of the process, patiently answering all of my questions and keeping me well informed. She paid close attention to the details of my case and showed a genuine commitment throughout the entire process. Thanks to her experience and dedication, I felt confident and well represented at all times. I highly recommend Attorney Hirani for her responsibility, professionalism, and excellent quality of work.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Victor Sims",
+        "initials": "VS",
+        "when": "10 months ago",
+        "rating": 5,
+        "text": "I had a great experience working with Attorney Sehar Hirani. She was knowledgeable, professional, and always prompt in her communication. Her guidance throughout my legal matter was clear and reassuring. I truly appreciated her attention to detail and her dedication to my case. Highly recommend her services to anyone in need of a reliable and competent attorney.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Josue Gomez",
+        "initials": "JG",
+        "when": "11 months ago",
+        "rating": 5,
+        "text": "Mrs. Hirani is one of a kind! She's someone who loves what she does. I can honestly say her and her team treat their clients like family. There is genuinely no other law firm like hers. This law firm is consistent, punctual, and passionate. She truly advocates for her clients. As a father struggling with a stressful custody battle, I can honestly say this law firm has made this stressful process 10x more reassuring. I would recommend this law firm to any parent.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Raquel Garcia",
+        "initials": "RG",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "I am forever grateful that God put Sehar in my life!!! When another attorney left without any explanation Hirani Law Firm picked up where I was abandoned and held my hand through the end of my adoption case! I highly recommend them they are extremely professional and take each case as if their own!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Bruce Flunker",
+        "initials": "BF",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "The Hirani Law Firm is absolutely the best experience that I have had with any law firm. Their method of operations from the very knowledgeable Carlos at intake, their paralegal Mariela promptly returning emails and anything needed. Sammy in billing. Ms. Hirani calls when I was informed that she would, and she handled my divorce in very professional manner, explaining everything to me. They understand what you are going through. I went in trying to do it myself, and I was told, we will handle everything from here. You do your part, and they will do theirs. This a well organized law firm, very professional, and I would recommend this firm for anyone going through a divorce.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Roy Fraction",
+        "initials": "RF",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "The Hirani Law firm is one of the best if not the best firm in Texas when it comes to family Law. I must say what I loved the most initially was out of all the firms that reached out to me from the Texas Bar association when I uploaded my case inquiry they were the only ones who called me and left me a warm voice message. They stated that they specialized in working and getting justice for single fathers. That prompted me to call them, meet with them and the process has been fulfilling, and seamless throughout. I also learned that Attorney Hirani has a passion for getting justice for children and that's what lead me to choosing this firm. I feel confident that this firm will bring justice for my daughter and I truly thank them in advance!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Dylan Rowan",
+        "initials": "DR",
+        "when": "11 months ago",
+        "rating": 5,
+        "text": "My partner is going through a stressful time during his custody battle but, I can honestly say Mrs. Hirani and her team of amazing beautiful people have been a gift from god. They are very proactive, professional and responsive. Mrs. Hirani is beautiful, intelligent and most of all fierce. She does not play about her clients. I would recommend her to any father who weren't dealt a fair hand. She truly advocates for fathers, (and parents). My partner is a great dad and despite all odds continues to push through, and Mrs. Hirani has done a great job at reassuring him and giving him hope.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Yailin Castano",
+        "initials": "YC",
+        "when": "5 months ago",
+        "rating": 5,
+        "text": "I had an amazing experience with the whole team at Hirani law firm. The whole staff was great and got my divorce granted!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Sandra Mechele Adams",
+        "initials": "SM",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "Sehar was very caring and compassionate about our family needs beyond the courtroom. You cannot find a better Family Attorney for your custody needs. She believes in the children and fights for what is best for them.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Sarah K.",
+        "initials": "SK",
+        "when": "2 years ago",
+        "rating": 5,
+        "text": "Sehar, Mariela and the whole team at Hirani Law firm have been a complete blessing in my life going through a divorce. They have not only made things easy on the legal side of things but they have supported me and showed me an immense amount of kindness going through this difficult process. If your looking for a good divorce lawyer and team to support you until the end of your case and all along the way Sehar and her staff will be there. Thank you all from the bottom of my heart!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Matthew Estes",
+        "initials": "ME",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "Mrs. Hirani is fantastic and so helpful, she explains things in a way that can be understood and is not condescending! Mariela the paralegal is just as awesome and helpful! Everyone that is involved in this firm has gone above and beyond my expectations and I am extremely grateful for all of their help! I will definitely be recommending them to anyone who needs it!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Adair Bennett",
+        "initials": "AB",
+        "when": "2 years ago",
+        "rating": 5,
+        "text": "Single dad here that had some issues with child custody arrangements and Ms. Hirani delivered. I'm proud to say that she's my lawyer and my child is back home. I highly recommend this law firm, they're extremely understanding and personable. Nonetheless, Ms. Hirani gets the job done and most of all AFFORDABLE!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Caveman Margolis",
+        "initials": "CM",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "They have helped me through things outside of my control have resulted in a nasty divorce process. Ms. Hirani and her team are patient with me as I ask many questions. The staff at The Hirani Law Firm is professional and they do an excellent job.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Valerie Everett",
+        "initials": "VE",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "My lawyer showed a deep understanding of my personal situation. Your staff always kept me in touch with what was happening in my case. She was very thorough and very experience. The Hirani law firm was very professional and answered all my questions I had about my case. I highly recommend the HIRANI law firm.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Jennifer Navarro",
+        "initials": "JN",
+        "when": "2 years ago",
+        "rating": 5,
+        "text": "Sehar is truly one of the best family law attorney's out there! She is family oriented, honest, knowledgeable, confident and passionate about each client's case. From the very first meeting, Sehar and her legal team work hard to ensure that every client feels comfortable and understood. The legal team goes above and beyond to fight on the behalf of each and every client. Highly recommended this law firm for all your family law needs!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Rupesh Kanabar",
+        "initials": "RK",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "I've spent all my fortune on lawyers and courts for the last 6 years with ZERO results!! I'm a father of three beautiful children and was totally shut out by the system. Spent all my paychecks on child support and still wasn't able to spend time with my children. Ms Hirani and her team turned the tables like you wouldn't believe. Now I'm the custodial parent and mom pays me child support!! Simple, honest, and packed with claws and teeth!! My children and I are off to a fresh new beginning thanks to The Hirani Law Firm.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Abdul Dawood",
+        "initials": "AD",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "We had two difficult and time consuming cases ongoing at the same time, and the Hirani Law Firm group together coordinated with each other, and us, in order to prepare the best defense feasible. The Hirani Law Firm group has the experience and knowledge needed to tackle the difficult cases, so if you are in dire need and require the very best, specially if you are in need of a payment plan, you should contact The Hirani Law Firm group.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Melanie Hernandez",
+        "initials": "MH",
+        "when": "2 years ago",
+        "rating": 5,
+        "text": "I hired Hirani Law firm in 2022, after i had a really bad experience with another law firm. As soon as Hirani took over my case I was able to see my son after a long 7 months of not seeing him. They moved extremely quick with my case and ALWAYS made sure I was updated with what was happening and every move they were making with my case. Prices were amazing and they work with payment plans!! Finally my case was finalized and I have my son back home with me, and that's all thanks to the Hirani Law firm. If I was to EVER need another representative I would most definitely hire them again without even thinking it twice.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Jose Estrada",
+        "initials": "JE",
+        "when": "2 years ago",
+        "rating": 5,
+        "text": "Carlos, Mariela, and Hirani are the best team. They not only handle everything fast, but the way they treated my family is what I liked the most. They explained everything so well and the whole process was smooth. I will highly recommend this firm to everyone!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Carleen Reyes",
+        "initials": "CR",
+        "when": "2 years ago",
+        "rating": 5,
+        "text": "I am so satisfied with my services with Hirani Law Office. From the day I met with staff Carlos to working effortlessly with Mariela and Ms. Hirani was a great experience they worked so hard for my case and I recommend their services to anyone needing the assistance. Best in town by far.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Javier Puluc",
+        "initials": "JP",
+        "when": "2 years ago",
+        "rating": 5,
+        "text": "If you're looking for a team that will assist you with just about anything, look no further The Hirani Law Firm is who you're looking for! Mariela, Carlos and Ms. Hirani are amazing. Anything that you might not understand they are there to explain and will make sure the process is very smooth. Communication is amazing and will work with you on any circumstance that might arise. 10/10 Would recommend to family and friends!",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Melanie Amieiro",
+        "initials": "MA",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "Hello my name is Melanie Amieiro i had a simple divorce with no kids, Hirani Law firm made me feel so comfortable about the steps they were going to take to get my divorce finalized, their communication with me and updates on my case were amazing I would highly recommend them to anyone, and they help with payment plans which was amazing.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Eliseo Bonilla",
+        "initials": "EB",
+        "when": "10 months ago",
+        "rating": 5,
+        "text": "Ms. Hirani was so amazing they had great communication and handled my child custody very well.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Roxana Gonzales Castillo",
+        "initials": "RG",
+        "when": "6 days ago",
+        "rating": 5,
+        "text": "I started a divorce process back in October with Ms. Hirani and it was smooth sailing thanks to her hard work and dedication. She strives to make sure her clients are taken care of in every aspect she works with you in every way possible. Thank you Ms. Hirani!! God Bless",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Nicole Erazo",
+        "initials": "NE",
+        "when": "2 months ago",
+        "rating": 5,
+        "text": "Phenomenal service. Sehar has been extremely thorough, professional, and informative throughout the entire process. She explains the legal system in a way that's easy to understand and has been very responsive and supportive every step of the way. I was honestly surprised to see some of the negative reviews because that has not been my experience at all. From my perspective, she has been nothing but helpful, knowledgeable, and genuinely committed to making sure everything is handled correctly. I highly recommend working with her.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Valerie Guzman",
+        "initials": "VG",
+        "when": "a month ago",
+        "rating": 5,
+        "text": "I just want to take this time to thank the entire Hirani Law Firm family. I went through a very difficult divorce and was struggling financially, especially since I had never worked in my life. The attorney and paralegal were extremely kind and professional throughout the entire process. They helped me obtain spousal support and achieved everything I was asking for. They guided me step by step through the entire case, always sending me text and email reminders about hearings and preparing me thoroughly for each one. Although I don't speak English, the paralegal explained every court procedure to me very clearly and always made sure I understood everything that was happening. I truly recommend this firm 100%.",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Ronnie A. Pacheco",
+        "initials": "RA",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "Mi Experiencia con la Lic.Hirani es muy Buena y Profesional. La Lic.Hirani me atendió mi caso muy Profesional y estoy muy Conforme con mi caso de Divorcio. Se la recomiendo a cualquier Persona que quiere sus servicios. Estoy muy satisfecho con mi caso que me atendió la Lic.Hirani law firm. También con su equipo de trabajo Mariela y Carlos son muy Buenos y Profesional. Gracias Lic.Hirani por su servicio. Estoy muy contento y satisfecho por todo lo que usted hizo con mi caso de Divorcio. Se la recomiendo 100%",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Luis Tapia",
+        "initials": "LT",
+        "when": "a month ago",
+        "rating": 5,
+        "text": "Luis Tapia esta contento por el servicio que le an dado todo su equipo fueron muy atento se los recomiendo",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Yamila Cabezas",
+        "initials": "YC",
+        "when": "5 months ago",
+        "rating": 5,
+        "text": "Los mejores abogados, muy satisfecha con su trabajo y unos resultados excelentes, 100 por ciento recomendado",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Constructions365",
+        "initials": "CO",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "Fue una experiencia sumamente agradable! Carlos y Mariela fueron muy profesionales siempre me asesoraron de la mejor manera fueron muy atentos y siempre estuvieron pendiente de mi caso en todo momento. Mi experiencia fue excelente al 100%",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Roger Lopaz",
+        "initials": "RL",
+        "when": "2 years ago",
+        "rating": 5,
+        "text": "Si Google tiene para 5 estrellas a ella y todo su personal les voy a dar 20 estrellas, desde el principio el Señor Carlos y su asistente Mariela la abogada fueron muy profesionales conmigo, me hicieron sentir la confianza, y darme una voz en lo jurídico, se los Recomiendo 100% para sus servicios Gracias por todo estoy muy feliz por el resultado",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Luis Zamora",
+        "initials": "LZ",
+        "when": "a year ago",
+        "rating": 5,
+        "text": "Buen servicio, me ayudaron con mi caso",
+        "source": "Google",
+        "verified": true
+      },
+      {
+        "name": "Dinora De Leon",
+        "initials": "DD",
+        "when": "a month ago",
+        "rating": 5,
+        "text": "No puedo recomendar a Hirani Law Firm lo suficiente. Pasar por un asunto de derecho familiar es increíblemente estresante, pero Hirani me hizo sentir respaldada, escuchada y protegida en cada paso del camino. Es una profesional altamente calificada, notablemente astuta y excepcionalmente organizada. Lo que más me impresionó fue su capacidad para explicar detalles legales complejos de manera sencilla, asegurándose de que yo siempre conociera mis opciones. Nunca hizo promesas que no pudiera cumplir, pero luchó con determinación para obtener el mejor resultado posible para mi familia. Si necesita una abogada de familia que combine una experiencia legal de primer nivel con una empatía genuina, no busque más: Hirani es la opción ideal.",
+        "source": "Google",
+        "verified": true
+      }
     ],
     "themes": {
       "eyebrow": "Review Themes",
       "title": "Clients often mention communication, preparation, and compassion.",
       "cards": [
-        { "title": "Clear", "description": "Legal explanations during stressful decisions." },
-        { "title": "Prompt", "description": "Communication and practical next steps." },
-        { "title": "Strong", "description": "Advocacy for parents, children, and injured clients." }
+        {
+          "title": "Clear",
+          "description": "Legal explanations during stressful decisions."
+        },
+        {
+          "title": "Prompt",
+          "description": "Communication and practical next steps."
+        },
+        {
+          "title": "Strong",
+          "description": "Advocacy for parents, children, and injured clients."
+        }
       ]
     }
   },
@@ -728,42 +1447,96 @@
             "id": "divorce-separation",
             "title": "Divorce & Separation",
             "items": [
-              { "q": "What is the difference between a contested and an uncontested divorce?", "a": "An uncontested divorce is one where both spouses agree on all major issues, such as property division, child custody, and support. It is generally faster and less expensive. A contested divorce is when spouses cannot agree on one or more issues, requiring negotiation, mediation, or even a court trial to resolve the disputes." },
-              { "q": "How is property divided in a Texas divorce? Is it always 50/50?", "a": "Texas is a community property state, meaning most assets and debts acquired during the marriage belong to both spouses. However, the division is not automatically 50/50. A judge will divide the property in a \"just and right\" manner, which can be influenced by factors like fault in the breakup of the marriage, disparity in earning power, and the needs of the children." },
-              { "q": "What is spousal support (alimony), and who is eligible for it in Texas?", "a": "Spousal support, or alimony, is a court-ordered payment from one spouse to the other after a divorce. In Texas, it is not awarded in every case. A judge may award it if the marriage lasted 10 years or more and the requesting spouse cannot earn sufficient income, or in cases involving family violence." },
-              { "q": "How long does a divorce take in Texas?", "a": "Texas has a mandatory 60-day waiting period after a divorce petition is filed. An uncontested divorce can be finalized shortly after this period. A contested divorce can take several months to over a year to resolve, depending on the complexity and level of conflict." },
-              { "q": "Do I need a lawyer for an amicable or uncontested divorce?", "a": "Yes, it is highly recommended. Even if you and your spouse agree on everything, an attorney ensures that your rights are protected and that the final divorce decree is drafted correctly and filed properly. Mistakes in the paperwork can lead to significant legal and financial problems in the future." }
+              {
+                "q": "What is the difference between a contested and an uncontested divorce?",
+                "a": "An uncontested divorce is one where both spouses agree on all major issues, such as property division, child custody, and support. It is generally faster and less expensive. A contested divorce is when spouses cannot agree on one or more issues, requiring negotiation, mediation, or even a court trial to resolve the disputes."
+              },
+              {
+                "q": "How is property divided in a Texas divorce? Is it always 50/50?",
+                "a": "Texas is a community property state, meaning most assets and debts acquired during the marriage belong to both spouses. However, the division is not automatically 50/50. A judge will divide the property in a \"just and right\" manner, which can be influenced by factors like fault in the breakup of the marriage, disparity in earning power, and the needs of the children."
+              },
+              {
+                "q": "What is spousal support (alimony), and who is eligible for it in Texas?",
+                "a": "Spousal support, or alimony, is a court-ordered payment from one spouse to the other after a divorce. In Texas, it is not awarded in every case. A judge may award it if the marriage lasted 10 years or more and the requesting spouse cannot earn sufficient income, or in cases involving family violence."
+              },
+              {
+                "q": "How long does a divorce take in Texas?",
+                "a": "Texas has a mandatory 60-day waiting period after a divorce petition is filed. An uncontested divorce can be finalized shortly after this period. A contested divorce can take several months to over a year to resolve, depending on the complexity and level of conflict."
+              },
+              {
+                "q": "Do I need a lawyer for an amicable or uncontested divorce?",
+                "a": "Yes, it is highly recommended. Even if you and your spouse agree on everything, an attorney ensures that your rights are protected and that the final divorce decree is drafted correctly and filed properly. Mistakes in the paperwork can lead to significant legal and financial problems in the future."
+              }
             ]
           },
           {
             "id": "custody-conservatorship",
             "title": "Child Custody & Conservatorship",
             "items": [
-              { "q": "What is the difference between \"custody\" and \"conservatorship\" in Texas?", "a": "In Texas, the legal term for custody is \"conservatorship.\" It defines a parent's legal rights and responsibilities. While people often use the term \"custody,\" all official court orders will refer to parents as \"conservators.\"" },
-              { "q": "How do Texas courts decide who gets custody? What is the \"best interest of the child\"?", "a": "The court's only consideration is the \"best interest of the child.\" A judge will evaluate many factors, including the child's emotional and physical needs, the stability of each parent's home, each parent's ability to care for the child, and any history of conflict or abuse." },
-              { "q": "Do Texas courts favor mothers over fathers?", "a": "No. The law in Texas is explicitly gender-neutral. Fathers have the same legal rights as mothers, and the court cannot use gender as a factor in its decision. The outcome is based entirely on what is best for the child." },
-              { "q": "What is a Standard Possession Order (SPO)?", "a": "The Standard Possession Order is a default parenting time (visitation) schedule that is presumed to be in the child's best interest. It outlines a detailed schedule for weekends, holidays, and summer vacation for the non-primary parent." },
-              { "q": "How can I modify my current custody or visitation order?", "a": "To modify an order, you must file a formal petition with the court and prove that there has been a \"material and substantial change\" in the circumstances of either the parents or the child since the last order was signed." }
+              {
+                "q": "What is the difference between \"custody\" and \"conservatorship\" in Texas?",
+                "a": "In Texas, the legal term for custody is \"conservatorship.\" It defines a parent's legal rights and responsibilities. While people often use the term \"custody,\" all official court orders will refer to parents as \"conservators.\""
+              },
+              {
+                "q": "How do Texas courts decide who gets custody? What is the \"best interest of the child\"?",
+                "a": "The court's only consideration is the \"best interest of the child.\" A judge will evaluate many factors, including the child's emotional and physical needs, the stability of each parent's home, each parent's ability to care for the child, and any history of conflict or abuse."
+              },
+              {
+                "q": "Do Texas courts favor mothers over fathers?",
+                "a": "No. The law in Texas is explicitly gender-neutral. Fathers have the same legal rights as mothers, and the court cannot use gender as a factor in its decision. The outcome is based entirely on what is best for the child."
+              },
+              {
+                "q": "What is a Standard Possession Order (SPO)?",
+                "a": "The Standard Possession Order is a default parenting time (visitation) schedule that is presumed to be in the child's best interest. It outlines a detailed schedule for weekends, holidays, and summer vacation for the non-primary parent."
+              },
+              {
+                "q": "How can I modify my current custody or visitation order?",
+                "a": "To modify an order, you must file a formal petition with the court and prove that there has been a \"material and substantial change\" in the circumstances of either the parents or the child since the last order was signed."
+              }
             ]
           },
           {
             "id": "child-support",
             "title": "Child Support",
             "items": [
-              { "q": "How is child support calculated in Texas?", "a": "Child support is calculated using state guidelines, which are based on a percentage of the paying parent's net monthly resources. The percentage changes based on the number of children. For one child, it is 20%; for two, it is 25%, and so on." },
-              { "q": "What do I do if the other parent stops paying child support?", "a": "You should contact an attorney immediately to file an enforcement action. A judge can force the other parent to pay what is owed and can impose penalties, including fines and even jail time." },
-              { "q": "Can my child support amount be changed if my income changes?", "a": "Yes. If you or the other parent has experienced a significant change in income (either an increase or a decrease), you can petition the court to modify the child support order to reflect the new financial reality." },
-              { "q": "How long does child support last in Texas?", "a": "Typically, child support continues until the child turns 18 or graduates from high school, whichever occurs later. Support can be extended indefinitely if the child has a qualifying disability." }
+              {
+                "q": "How is child support calculated in Texas?",
+                "a": "Child support is calculated using state guidelines, which are based on a percentage of the paying parent's net monthly resources. The percentage changes based on the number of children. For one child, it is 20%; for two, it is 25%, and so on."
+              },
+              {
+                "q": "What do I do if the other parent stops paying child support?",
+                "a": "You should contact an attorney immediately to file an enforcement action. A judge can force the other parent to pay what is owed and can impose penalties, including fines and even jail time."
+              },
+              {
+                "q": "Can my child support amount be changed if my income changes?",
+                "a": "Yes. If you or the other parent has experienced a significant change in income (either an increase or a decrease), you can petition the court to modify the child support order to reflect the new financial reality."
+              },
+              {
+                "q": "How long does child support last in Texas?",
+                "a": "Typically, child support continues until the child turns 18 or graduates from high school, whichever occurs later. Support can be extended indefinitely if the child has a qualifying disability."
+              }
             ]
           },
           {
             "id": "cps-defense",
             "title": "CPS Defense",
             "items": [
-              { "q": "What are my rights if a CPS caseworker comes to my door?", "a": "You have the right not to let them into your home without a court order. You have the right to remain silent, and you have the right to an attorney. It is crucial to be polite but firm and to call an attorney immediately before answering any questions." },
-              { "q": "Do I have to sign a CPS Safety Plan?", "a": "No, and you should not sign any document from CPS without first consulting with an attorney. These plans often require you to give up significant legal rights, and they can be used against you in court." },
-              { "q": "Can CPS take my children without a court order?", "a": "Only in very rare emergencies where they believe a child is in immediate, imminent danger. In nearly all other cases, they must obtain a court order to legally remove a child from your home." },
-              { "q": "How can I fight false allegations from CPS?", "a": "The best way to fight false allegations is to hire an experienced CPS defense attorney immediately. Your attorney will challenge the evidence, present your side of the story, and hold CPS accountable to the high legal standard required to interfere with your family." }
+              {
+                "q": "What are my rights if a CPS caseworker comes to my door?",
+                "a": "You have the right not to let them into your home without a court order. You have the right to remain silent, and you have the right to an attorney. It is crucial to be polite but firm and to call an attorney immediately before answering any questions."
+              },
+              {
+                "q": "Do I have to sign a CPS Safety Plan?",
+                "a": "No, and you should not sign any document from CPS without first consulting with an attorney. These plans often require you to give up significant legal rights, and they can be used against you in court."
+              },
+              {
+                "q": "Can CPS take my children without a court order?",
+                "a": "Only in very rare emergencies where they believe a child is in immediate, imminent danger. In nearly all other cases, they must obtain a court order to legally remove a child from your home."
+              },
+              {
+                "q": "How can I fight false allegations from CPS?",
+                "a": "The best way to fight false allegations is to hire an experienced CPS defense attorney immediately. Your attorney will challenge the evidence, present your side of the story, and hold CPS accountable to the high legal standard required to interfere with your family."
+              }
             ]
           }
         ]
@@ -775,31 +1548,70 @@
             "id": "after-accident",
             "title": "After an Accident & Initial Steps",
             "items": [
-              { "q": "What should I do immediately after a car accident?", "a": "First, ensure everyone is safe and seek medical attention, even for seemingly minor injuries. Second, call the police to create an official report. Third, document the scene by taking pictures of the vehicles, the area, and your injuries. Finally, do not admit fault and contact a personal injury attorney before speaking with any insurance companies." },
-              { "q": "How long do I have to file a personal injury claim in Texas?", "a": "In Texas, the statute of limitations for most personal injury claims is two years from the date of the injury. If you do not file a lawsuit within this timeframe, you will likely lose your right to recover any compensation." },
-              { "q": "What evidence is most important for my personal injury claim?", "a": "Key evidence includes the police report, photos and videos of the accident scene and your injuries, contact information for any witnesses, all of your medical records and bills, and documentation of any lost wages." },
-              { "q": "Should I talk to the other party's insurance company?", "a": "It is not recommended. The other party's insurance adjuster is trained to get you to say things that can hurt your claim. It is always best to let your attorney handle all communication with insurance companies." }
+              {
+                "q": "What should I do immediately after a car accident?",
+                "a": "First, ensure everyone is safe and seek medical attention, even for seemingly minor injuries. Second, call the police to create an official report. Third, document the scene by taking pictures of the vehicles, the area, and your injuries. Finally, do not admit fault and contact a personal injury attorney before speaking with any insurance companies."
+              },
+              {
+                "q": "How long do I have to file a personal injury claim in Texas?",
+                "a": "In Texas, the statute of limitations for most personal injury claims is two years from the date of the injury. If you do not file a lawsuit within this timeframe, you will likely lose your right to recover any compensation."
+              },
+              {
+                "q": "What evidence is most important for my personal injury claim?",
+                "a": "Key evidence includes the police report, photos and videos of the accident scene and your injuries, contact information for any witnesses, all of your medical records and bills, and documentation of any lost wages."
+              },
+              {
+                "q": "Should I talk to the other party's insurance company?",
+                "a": "It is not recommended. The other party's insurance adjuster is trained to get you to say things that can hurt your claim. It is always best to let your attorney handle all communication with insurance companies."
+              }
             ]
           },
           {
             "id": "legal-process",
             "title": "The Legal Process & Compensation",
             "items": [
-              { "q": "How much is my personal injury case worth?", "a": "The value of your case depends on many factors, including the severity of your injuries, the total cost of your medical treatment, the amount of lost income, and the impact on your quality of life. An experienced attorney can evaluate these factors to give you an estimate of your case's value." },
-              { "q": "What types of damages can I recover?", "a": "You can recover \"economic\" damages, such as medical bills and lost wages, and \"non-economic\" damages, such as compensation for pain and suffering, emotional distress, and physical impairment." },
-              { "q": "How does a personal injury lawyer get paid?", "a": "Most personal injury lawyers, including Hirani Law Firm, work on a contingency fee basis. This means we only get paid if we win your case, either through a settlement or a court verdict. Our fee is a percentage of the total recovery, so you pay nothing up front." },
-              { "q": "Will my case go to trial, or will it settle?", "a": "The vast majority of personal injury cases are resolved through a settlement with the insurance company. However, if the insurance company refuses to make a fair offer, we are always prepared to take your case to trial to fight for the compensation you deserve." },
-              { "q": "How long does it take to resolve a personal injury case?", "a": "The timeline varies. A straightforward case that settles can be resolved in a matter of months. A more complex case that requires a lawsuit and goes to trial can take a year or more." }
+              {
+                "q": "How much is my personal injury case worth?",
+                "a": "The value of your case depends on many factors, including the severity of your injuries, the total cost of your medical treatment, the amount of lost income, and the impact on your quality of life. An experienced attorney can evaluate these factors to give you an estimate of your case's value."
+              },
+              {
+                "q": "What types of damages can I recover?",
+                "a": "You can recover \"economic\" damages, such as medical bills and lost wages, and \"non-economic\" damages, such as compensation for pain and suffering, emotional distress, and physical impairment."
+              },
+              {
+                "q": "How does a personal injury lawyer get paid?",
+                "a": "Most personal injury lawyers, including Hirani Law Firm, work on a contingency fee basis. This means we only get paid if we win your case, either through a settlement or a court verdict. Our fee is a percentage of the total recovery, so you pay nothing up front."
+              },
+              {
+                "q": "Will my case go to trial, or will it settle?",
+                "a": "The vast majority of personal injury cases are resolved through a settlement with the insurance company. However, if the insurance company refuses to make a fair offer, we are always prepared to take your case to trial to fight for the compensation you deserve."
+              },
+              {
+                "q": "How long does it take to resolve a personal injury case?",
+                "a": "The timeline varies. A straightforward case that settles can be resolved in a matter of months. A more complex case that requires a lawsuit and goes to trial can take a year or more."
+              }
             ]
           },
           {
             "id": "insurance-liability",
             "title": "Insurance & Liability",
             "items": [
-              { "q": "What if I were partially at fault for the accident?", "a": "Texas follows a \"modified comparative fault\" rule. This means you can still recover damages as long as you are not found to be 51% or more at fault. However, your recovery will be reduced by your percentage of fault." },
-              { "q": "What happens if the at-fault driver doesn't have insurance?", "a": "If you have Uninsured/Underinsured Motorist (UM/UIM) coverage on your own auto insurance policy, you can file a claim with your own insurance company to cover your damages." },
-              { "q": "Can I sue for a slip and fall accident on someone else's property?", "a": "Yes. Property owners have a legal duty to keep their premises reasonably safe. If you were injured due to an unsafe condition that the owner knew or should have known about, you may have a valid premises liability claim." },
-              { "q": "What is a wrongful death claim, and who can file one?", "a": "A wrongful death claim can be filed when a person's death is caused by the negligence or wrongful act of another. In Texas, these claims can typically be filed by the deceased's surviving spouse, children, and parents." }
+              {
+                "q": "What if I were partially at fault for the accident?",
+                "a": "Texas follows a \"modified comparative fault\" rule. This means you can still recover damages as long as you are not found to be 51% or more at fault. However, your recovery will be reduced by your percentage of fault."
+              },
+              {
+                "q": "What happens if the at-fault driver doesn't have insurance?",
+                "a": "If you have Uninsured/Underinsured Motorist (UM/UIM) coverage on your own auto insurance policy, you can file a claim with your own insurance company to cover your damages."
+              },
+              {
+                "q": "Can I sue for a slip and fall accident on someone else's property?",
+                "a": "Yes. Property owners have a legal duty to keep their premises reasonably safe. If you were injured due to an unsafe condition that the owner knew or should have known about, you may have a valid premises liability claim."
+              },
+              {
+                "q": "What is a wrongful death claim, and who can file one?",
+                "a": "A wrongful death claim can be filed when a person's death is caused by the negligence or wrongful act of another. In Texas, these claims can typically be filed by the deceased's surviving spouse, children, and parents."
+              }
             ]
           }
         ]
@@ -825,13 +1637,26 @@
       "emailLabel": "Email",
       "email": "info@hiranilawfirm.com",
       "addressLabel": "Office Address",
-      "address": ["22336 Grand Corner Drive", "Suite 130", "Katy, TX 77494"],
+      "address": [
+        "22336 Grand Corner Drive",
+        "Suite 130",
+        "Katy, TX 77494"
+      ],
       "directionsLabel": "Get Directions",
       "hoursLabel": "Office Hours",
       "hours": [
-        { "day": "Monday – Friday", "time": "9:00 AM – 5:00 PM" },
-        { "day": "Saturday", "time": "By appointment" },
-        { "day": "Sunday", "time": "Closed" }
+        {
+          "day": "Monday – Friday",
+          "time": "9:00 AM – 5:00 PM"
+        },
+        {
+          "day": "Saturday",
+          "time": "By appointment"
+        },
+        {
+          "day": "Sunday",
+          "time": "Closed"
+        }
       ]
     },
     "map": "Hirani Law Firm, 22336 Grand Corner Dr Ste 130, Katy, TX 77494",
@@ -844,9 +1669,18 @@
         "heading": "Our Mission: A Client-First Approach to Law",
         "intro": "Our mission is simple: to provide exceptional legal representation that eases the emotional and financial burden on our clients. The \"Hirani Law Firm difference\" is our unwavering commitment to a client-first approach. This means we prioritize:",
         "bullets": [
-          { "label": "Clear Communication:", "text": "Keeping you informed and empowered at every stage of your case." },
-          { "label": "Compassionate Guidance:", "text": "Understanding the human side of your struggle and providing the support you need." },
-          { "label": "Aggressive Representation:", "text": "Fighting relentlessly in negotiations and in the courtroom to achieve the best possible outcome for you." }
+          {
+            "label": "Clear Communication:",
+            "text": "Keeping you informed and empowered at every stage of your case."
+          },
+          {
+            "label": "Compassionate Guidance:",
+            "text": "Understanding the human side of your struggle and providing the support you need."
+          },
+          {
+            "label": "Aggressive Representation:",
+            "text": "Fighting relentlessly in negotiations and in the courtroom to achieve the best possible outcome for you."
+          }
         ],
         "outro": "We are more than just lawyers; we are your partners and your advocates during life's most difficult chapters."
       },
@@ -854,28 +1688,58 @@
         "heading": "Our Story & Values",
         "intro": "Our story began with a simple belief: that legal representation should be personal. Attorney Sehar Hirani founded Hirani Law Firm in 2018 out of a frustration with the impersonal, volume-based nature of many larger firms. She envisioned a practice where every client's case is treated with the urgency and personal attention it deserves. This vision is the foundation of our core values:",
         "bullets": [
-          { "label": "Integrity:", "text": "We uphold the highest ethical standards, ensuring our actions are always aligned with your best interests." },
-          { "label": "Empathy:", "text": "We understand that behind every case are real people with real concerns. We approach every situation with the compassion and understanding it deserves." },
-          { "label": "Tenacity:", "text": "We are relentless in our pursuit of justice for our clients. We do not back down from a fight when our clients' futures are on the line." }
+          {
+            "label": "Integrity:",
+            "text": "We uphold the highest ethical standards, ensuring our actions are always aligned with your best interests."
+          },
+          {
+            "label": "Empathy:",
+            "text": "We understand that behind every case are real people with real concerns. We approach every situation with the compassion and understanding it deserves."
+          },
+          {
+            "label": "Tenacity:",
+            "text": "We are relentless in our pursuit of justice for our clients. We do not back down from a fight when our clients' futures are on the line."
+          }
         ]
       },
       {
         "heading": "Meet the Hirani Law Firm Team",
         "intro": "Our strength lies in our collaborative, team-based approach. From your first call to the final resolution of your case, our dedicated team is here to support you.",
         "bullets": [
-          { "label": "Sehar Hirani: Managing Attorney", "text": "— As the firm's founder and lead legal strategist, Sehar Hirani sets the tone for our aggressive, client-focused advocacy. She is your compassionate guide through the legal process and your powerful voice in the courtroom, personally overseeing the strategy for every case we handle." },
-          { "label": "Carlos Peraza: Intake Manager", "text": "— Your first call for legal help can be intimidating. Carlos is here to change that. As our Intake Manager, his most important role is to provide a calm, reassuring voice on the other end of the line. He listens with patience and empathy, transforming an anxious first step into a confident one." },
-          { "label": "Sami Hirani: Billing Specialist / Intake", "text": "— Financial stress can be one of the most challenging parts of a legal case. Sami is dedicated to providing clarity and transparency in all billing matters, ensuring you understand the costs involved with no surprises. He also provides a supportive role during the intake process, helping to make your transition into working with our firm seamless." }
+          {
+            "label": "Sehar Hirani: Managing Attorney",
+            "text": "— As the firm's founder and lead legal strategist, Sehar Hirani sets the tone for our aggressive, client-focused advocacy. She is your compassionate guide through the legal process and your powerful voice in the courtroom, personally overseeing the strategy for every case we handle."
+          },
+          {
+            "label": "Carlos Peraza: Intake Manager",
+            "text": "— Your first call for legal help can be intimidating. Carlos is here to change that. As our Intake Manager, his most important role is to provide a calm, reassuring voice on the other end of the line. He listens with patience and empathy, transforming an anxious first step into a confident one."
+          },
+          {
+            "label": "Sami Hirani: Billing Specialist / Intake",
+            "text": "— Financial stress can be one of the most challenging parts of a legal case. Sami is dedicated to providing clarity and transparency in all billing matters, ensuring you understand the costs involved with no surprises. He also provides a supportive role during the intake process, helping to make your transition into working with our firm seamless."
+          }
         ]
       },
       {
         "heading": "What It Means to Work With Us",
         "intro": "When you choose Hirani Law Firm, you are choosing a different kind of legal experience. Here is what you can expect:",
         "bullets": [
-          { "label": "A Dedicated Team in Your Corner:", "text": "From intake to resolution, our entire team is dedicated to supporting you." },
-          { "label": "Direct Communication:", "text": "We are committed to providing you with clear, consistent, and honest updates about the status of your case." },
-          { "label": "Clarity and Transparency:", "text": "We believe in straightforward communication about the legal process and transparent billing practices." },
-          { "label": "Compassion and Strength:", "text": "We provide the empathetic support you need to get through this difficult time and the aggressive legal representation required to win." }
+          {
+            "label": "A Dedicated Team in Your Corner:",
+            "text": "From intake to resolution, our entire team is dedicated to supporting you."
+          },
+          {
+            "label": "Direct Communication:",
+            "text": "We are committed to providing you with clear, consistent, and honest updates about the status of your case."
+          },
+          {
+            "label": "Clarity and Transparency:",
+            "text": "We believe in straightforward communication about the legal process and transparent billing practices."
+          },
+          {
+            "label": "Compassion and Strength:",
+            "text": "We provide the empathetic support you need to get through this difficult time and the aggressive legal representation required to win."
+          }
         ]
       }
     ],
@@ -883,11 +1747,75 @@
       "eyebrow": "Why Hirani Law Firm",
       "title": "What sets us apart in personal injury representation.",
       "cards": [
-        { "title": "No Fee Unless We Win", "description": "We handle personal injury cases on a contingency basis. You owe us nothing unless we recover compensation for you." },
-        { "title": "Texas-Wide Coverage", "description": "Personal injury representation is available throughout the State of Texas, not just the Houston metro area." },
-        { "title": "Fast Response", "description": "Evidence disappears quickly after accidents. We move fast to preserve records, photos, reports, and witness statements." },
-        { "title": "Trial-Ready Preparation", "description": "Every case is prepared as if it will go to trial — which gives you maximum leverage in settlement negotiations." }
+        {
+          "title": "No Fee Unless We Win",
+          "description": "We handle personal injury cases on a contingency basis. You owe us nothing unless we recover compensation for you."
+        },
+        {
+          "title": "Texas-Wide Coverage",
+          "description": "Personal injury representation is available throughout the State of Texas, not just the Houston metro area."
+        },
+        {
+          "title": "Fast Response",
+          "description": "Evidence disappears quickly after accidents. We move fast to preserve records, photos, reports, and witness statements."
+        },
+        {
+          "title": "Trial-Ready Preparation",
+          "description": "Every case is prepared as if it will go to trial — which gives you maximum leverage in settlement negotiations."
+        }
       ]
+    }
+  },
+  "ui": {
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email address",
+      "phone": "Phone number",
+      "helpPlaceholder": "What do you need help with?",
+      "submit": "Submit",
+      "sending": "Sending…",
+      "successTitle": "Thank you.",
+      "successBody": "Your consultation request has been sent successfully. Our team will contact you soon.",
+      "errFirstName": "Please enter your first name.",
+      "errLastName": "Please enter your last name.",
+      "errEmailRequired": "Please enter your email address.",
+      "errEmailInvalid": "Please enter a valid email address.",
+      "errPhoneInvalid": "Please enter a valid phone number.",
+      "errHelp": "Please tell us what you need help with.",
+      "errGeneric": "Unable to send your request. Please try again."
+    },
+    "readMore": "Read more",
+    "readLess": "Read less",
+    "requestConsultation": "Request Consultation",
+    "practiceAreasLabel": "Practice Areas",
+    "popup": {
+      "eyebrow": "We’re Here to Help",
+      "title": "Need a consultation?",
+      "body": "Tell us what you’re facing. Your first conversation is free and confidential.",
+      "caption": "Sehar Hirani · Attorney at Law",
+      "close": "Close consultation form"
+    },
+    "crumbs": {
+      "home": "Home",
+      "contact": "Contact",
+      "contactUs": "Contact Us",
+      "faqs": "FAQs",
+      "ourTeam": "Our Team",
+      "reviews": "Reviews",
+      "clientReviews": "Client Reviews",
+      "about": "About",
+      "serviceAreas": "Service Areas",
+      "meetSehar": "Meet Sehar Hirani"
+    },
+    "notFound": {
+      "seoTitle": "Page Not Found",
+      "eyebrow": "Case Not Found",
+      "title": "This page could not be located in our records.",
+      "desc": "The page you are looking for may have been moved, renamed, or no longer exists. Let’s get you back on the right path — or reach out and we’ll point you in the right direction.",
+      "backHome": "Back to Home",
+      "callLabel": "Call",
+      "helpfulLinks": "Helpful Links"
     }
   }
 }

@@ -11,7 +11,7 @@ const { business } = data
  * `items` = [{ label, to }] where the last item is the current page.
  */
 export default function Breadcrumbs({ items }) {
-  const trail = [{ label: 'Home', to: '/' }, ...items]
+  const trail = [{ label: data.ui.crumbs.home, to: '/' }, ...items]
 
   const jsonLd = {
     '@context': 'https://schema.org',

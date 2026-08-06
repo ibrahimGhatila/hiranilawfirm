@@ -37,7 +37,7 @@ export default function Reviews() {
       <PageHero
         title={reviewsPage.hero.title}
         description={reviewsPage.hero.description}
-        crumbs={[{ label: 'Reviews', to: '/reviews' }]}
+        crumbs={[{ label: data.ui.crumbs.reviews, to: '/reviews' }]}
       />
 
       <ClientsMention />

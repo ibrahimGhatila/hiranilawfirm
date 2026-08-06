@@ -28,7 +28,7 @@ export default function Contact() {
       <PageHero
         title={hero.title}
         description={hero.description}
-        crumbs={[{ label: 'Contact', to: '/contact' }]}
+        crumbs={[{ label: data.ui.crumbs.contact, to: '/contact' }]}
       />
 
       {/* Form + info */}
@@ -41,7 +41,7 @@ export default function Contact() {
               <p className="hl-body-muted mb-4">{form.description}</p>
               <LeadForm
                 helpOptions={contactCta.form.helpOptions}
-                submitLabel="Submit"
+                submitLabel={contactCta.form.submitLabel}
                 submitClass="btn-dark-solid"
               />
             </div>

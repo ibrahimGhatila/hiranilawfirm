@@ -2,10 +2,16 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import SEO from '../components/common/SEO.jsx'
 import PageHero from '../components/common/PageHero.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
-import data from '../data/active.js'
-import details from '../data/practiceDetails.json'
+import data, { currentLang } from '../data/active.js'
+import detailsEn from '../data/practiceDetails.json'
+import detailsEs from '../data/practiceDetails.es.json'
 
 const { business } = data
+// Sidebar consult box copy is language-aware (shares the attorney-page strings).
+const consult = data.attorneyPage.sidebar.consult
+// Practice-area detail content follows the active language (Spanish mirror
+// falls back to English content per item where a translation is missing).
+const details = currentLang === 'es' ? detailsEs : detailsEn
 
 export default function PracticeDetail() {
   const { category, slug } = useParams()
@@ -40,7 +46,7 @@ export default function PracticeDetail() {
         title={item.heroTitle}
         description={item.heroSubtitle}
         crumbs={[
-          { label: 'Practice Areas', to: '/practice-areas' },
+          { label: data.ui.practiceAreasLabel, to: '/practice-areas' },
           { label: group.label, to: categoryPath },
           { label: item.title, to: `${categoryPath}/${slug}` },
         ]}
@@ -76,13 +82,13 @@ export default function PracticeDetail() {
             {/* Sidebar */}
             <div className="col-lg-4">
               <div className="hl-side-consult mb-4">
-                <span className="hl-eyebrow">Free Consultation</span>
-                <h3 className="hl-h3 text-white mb-2">Talk to Sehar Hirani Today</h3>
+                <span className="hl-eyebrow">{consult.eyebrow}</span>
+                <h3 className="hl-h3 text-white mb-2">{consult.title}</h3>
                 <p className="mb-3" style={{ color: '#b7b2a8', fontSize: '0.8075rem' }}>
-                  Confidential · No obligation · We respond within 24 hours.
+                  {consult.note}
                 </p>
-                <Link to="/contact" className="btn btn-gold w-100 mb-3">
-                  Request Consultation
+                <Link to={consult.cta.to} className="btn btn-gold w-100 mb-3">
+                  {consult.cta.label}
                 </Link>
                 <a href={business.phoneHref} className="hl-side-phone">
                   {business.phone}

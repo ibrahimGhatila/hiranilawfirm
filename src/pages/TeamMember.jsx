@@ -26,7 +26,7 @@ export default function TeamMember() {
         <div className="hl-member-crumbs">
           <Breadcrumbs
             items={[
-              { label: 'Our Team', to: '/about/our-team' },
+              { label: data.ui.crumbs.ourTeam, to: '/about/our-team' },
               { label: member.name, to: `/about/our-team/${member.slug}` },
             ]}
           />

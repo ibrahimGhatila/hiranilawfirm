@@ -2,55 +2,111 @@
   "nav": {
     "topBarText": "Llame Para Una Consulta:",
     "links": [
-      { "label": "Inicio", "to": "/" },
+      {
+        "label": "Inicio",
+        "to": "/"
+      },
       {
         "label": "Nosotros",
         "to": "/about",
         "children": [
-          { "label": "Sobre Nosotros", "to": "/about" },
-          { "label": "Conozca a Sehar Hirani", "to": "/about/sehar-hirani" },
-          { "label": "Nuestro Equipo", "to": "/about/our-team" },
-          { "label": "Áreas de Servicio", "to": "/about/service-areas" }
+          {
+            "label": "Sobre Nosotros",
+            "to": "/about"
+          },
+          {
+            "label": "Conozca a Sehar Hirani",
+            "to": "/about/sehar-hirani"
+          },
+          {
+            "label": "Nuestro Equipo",
+            "to": "/about/our-team"
+          },
+          {
+            "label": "Áreas de Servicio",
+            "to": "/about/service-areas"
+          }
         ]
       },
       {
         "label": "Áreas de Práctica",
         "to": "/practice-areas",
         "children": [
-          { "label": "Derecho Familiar", "to": "/practice-areas/family-law" },
-          { "label": "Lesiones Personales", "to": "/practice-areas/personal-injury" }
+          {
+            "label": "Derecho Familiar",
+            "to": "/practice-areas/family-law"
+          },
+          {
+            "label": "Lesiones Personales",
+            "to": "/practice-areas/personal-injury"
+          }
         ]
       },
       {
         "label": "Reseñas",
         "to": "/reviews",
         "children": [
-          { "label": "Reseñas de Clientes", "to": "/reviews" },
-          { "label": "Preguntas Frecuentes", "to": "/faqs" }
+          {
+            "label": "Reseñas de Clientes",
+            "to": "/reviews"
+          },
+          {
+            "label": "Preguntas Frecuentes",
+            "to": "/faqs"
+          }
         ]
       },
-      { "label": "Contacto", "to": "/contact" }
+      {
+        "label": "Contacto",
+        "to": "/contact"
+      }
     ]
   },
   "hero": {
     "eyebrow": "Abogada de Derecho Familiar en Houston y Katy",
     "title": "¿Enfrenta un Desafío Familiar o una Lesión Grave?",
     "description": "La abogada Sehar Hirani ayuda a clientes en todo el área de Houston a navegar el divorcio, custodia, modificaciones, manutención de menores, adopción, cambios de nombre, ejecución de órdenes y reclamaciones de lesiones personales con orientación clara y representación firme.",
-    "primaryCta": { "label": "Evaluación Gratuita de su Caso", "to": "/contact" },
-    "secondaryCta": { "label": "Explorar Áreas de Práctica", "to": "/practice-areas" },
+    "primaryCta": {
+      "label": "Evaluación Gratuita de su Caso",
+      "to": "/contact"
+    },
+    "secondaryCta": {
+      "label": "Explorar Áreas de Práctica",
+      "to": "/practice-areas"
+    },
     "form": {
       "eyebrow": "Evaluación Gratuita de su Caso",
       "title": "Cuéntenos lo que pasó.",
       "description": "Una primera conversación confidencial puede ayudarle a entender sus opciones antes del próximo plazo o fecha en la corte.",
-      "helpOptions": ["Divorcio", "Custodia de Menores", "Manutención de Menores", "Adopción", "Cambio de Nombre", "Lesiones Personales", "Otro"],
+      "helpOptions": [
+        "Divorcio",
+        "Custodia de Menores",
+        "Manutención de Menores",
+        "Adopción",
+        "Cambio de Nombre",
+        "Lesiones Personales",
+        "Otro"
+      ],
       "submitLabel": "Comenzar Mi Evaluación"
     }
   },
   "stats": [
-    { "value": "Desde 2018", "label": "Sirviendo a familias de Texas" },
-    { "value": "200+", "label": "Familias Asesoradas" },
-    { "value": "Houston & Katy", "label": "Experiencia en cortes locales" },
-    { "value": "Gratis", "label": "Consulta confidencial" }
+    {
+      "value": "Desde 2018",
+      "label": "Sirviendo a familias de Texas"
+    },
+    {
+      "value": "200+",
+      "label": "Familias Asesoradas"
+    },
+    {
+      "value": "Houston & Katy",
+      "label": "Experiencia en cortes locales"
+    },
+    {
+      "value": "Gratis",
+      "label": "Consulta confidencial"
+    }
   ],
   "practiceAreas": {
     "eyebrow": "Nuestras Áreas de Práctica",
@@ -78,33 +134,74 @@
       "Como madre de dos hijos, la abogada Sehar Hirani comprende profundamente cómo los asuntos legales familiares pueden afectar a los niños, los padres y el futuro del hogar. Le apasiona proteger a los niños, apoyar a las familias y defender a los padres que desean permanecer presentes y activos en la vida de sus hijos.",
       "Sehar se graduó de la Universidad de Houston y del South Texas College of Law. Ha tenido licencia para ejercer en el Estado de Texas desde 2018."
     ],
-    "cta": { "label": "Ver Perfil Completo" }
+    "cta": {
+      "label": "Ver Perfil Completo"
+    }
   },
-  "memberships": { "eyebrow": "Membresías" },
+  "memberships": {
+    "eyebrow": "Membresías"
+  },
   "clientsMention": {
     "title": "Lo que los Clientes Mencionan Consistentemente",
     "description": "Basado en los comentarios de clientes en casos de derecho familiar y lesiones personales, estas son las cualidades que más se mencionan.",
     "metrics": [
-      { "label": "Defensa en Derecho Familiar", "value": 95 },
-      { "label": "Comunicación Clara", "value": 90 },
-      { "label": "Experiencia en Cortes Locales", "value": 88 },
-      { "label": "Estrategia Personalizada", "value": 92 },
-      { "label": "Representación Compasiva", "value": 94 }
+      {
+        "label": "Defensa en Derecho Familiar",
+        "value": 95
+      },
+      {
+        "label": "Comunicación Clara",
+        "value": 90
+      },
+      {
+        "label": "Experiencia en Cortes Locales",
+        "value": 88
+      },
+      {
+        "label": "Estrategia Personalizada",
+        "value": 92
+      },
+      {
+        "label": "Representación Compasiva",
+        "value": 94
+      }
     ]
   },
   "testimonials": {
     "title": "Lo Que Dicen Nuestros Clientes",
-    "cta": { "label": "Leer Más Reseñas de Clientes" }
+    "cta": {
+      "label": "Leer Más Reseñas de Clientes"
+    }
   },
   "whyChooseUs": {
     "eyebrow": "¿Por Qué Elegirnos?",
     "title": "Estrategia clara, conocimiento local y comunicación constante.",
     "features": [
-      { "icon": "strategy", "title": "Atención Personalizada", "description": "Su caso recibe una estrategia diseñada en torno a su familia, sus plazos y sus objetivos legales." },
-      { "icon": "experience", "title": "Representación con Experiencia", "description": "Sehar Hirani ha guiado a clientes en asuntos de derecho familiar y lesiones desde 2018." },
-      { "icon": "communication", "title": "Comunicación Constante", "description": "El bufete prioriza las actualizaciones directas para que los clientes sepan qué está pasando y por qué." },
-      { "icon": "court", "title": "Conocimiento de Cortes Locales", "description": "Experiencia con las cortes de Harris, Fort Bend, Montgomery, Galveston y Austin County." },
-      { "icon": "evaluation", "title": "Evaluación Gratuita de su Caso", "description": "Comience con una consulta confidencial antes de decidir el siguiente paso." }
+      {
+        "icon": "strategy",
+        "title": "Atención Personalizada",
+        "description": "Su caso recibe una estrategia diseñada en torno a su familia, sus plazos y sus objetivos legales."
+      },
+      {
+        "icon": "experience",
+        "title": "Representación con Experiencia",
+        "description": "Sehar Hirani ha guiado a clientes en asuntos de derecho familiar y lesiones desde 2018."
+      },
+      {
+        "icon": "communication",
+        "title": "Comunicación Constante",
+        "description": "El bufete prioriza las actualizaciones directas para que los clientes sepan qué está pasando y por qué."
+      },
+      {
+        "icon": "court",
+        "title": "Conocimiento de Cortes Locales",
+        "description": "Experiencia con las cortes de Harris, Fort Bend, Montgomery, Galveston y Austin County."
+      },
+      {
+        "icon": "evaluation",
+        "title": "Evaluación Gratuita de su Caso",
+        "description": "Comience con una consulta confidencial antes de decidir el siguiente paso."
+      }
     ]
   },
   "resources": {
@@ -125,7 +222,15 @@
     "description": "Reserve una consulta gratuita y confidencial con Hirani Law Firm PLLC.",
     "phoneLabel": "Teléfono",
     "form": {
-      "helpOptions": ["Divorcio", "Custodia de Menores", "Manutención de Menores", "Adopción", "Cambio de Nombre", "Lesiones Personales", "Otro"],
+      "helpOptions": [
+        "Divorcio",
+        "Custodia de Menores",
+        "Manutención de Menores",
+        "Adopción",
+        "Cambio de Nombre",
+        "Lesiones Personales",
+        "Otro"
+      ],
       "submitLabel": "Solicitar Consulta"
     }
   },
@@ -133,5 +238,967 @@
     "contactHeading": "Contacto",
     "bookLabel": "Reserve una Consulta Gratuita",
     "disclaimer": "© 2026 Hirani Law Firm, PLLC. Con licencia para ejercer la abogacía en el Estado de Texas. Este sitio web proporciona información general y no crea una relación abogado-cliente."
+  },
+  "aboutPage": {
+    "intro": {
+      "eyebrow": "Quiénes Somos",
+      "title": "Un bufete construido sobre un principio poderoso.",
+      "paragraphs": [
+        "Creemos que cada cliente merece un equipo dedicado comprometido a proteger sus derechos y asegurar su futuro.",
+        "Somos más que sus abogados — somos sus socios y defensores en los momentos más difíciles de la vida. Ya sea que esté navegando un divorcio, luchando por la custodia de sus hijos, presentando una reclamación por lesiones personales, o tramitando una adopción, Hirani Law Firm mantiene el mismo compromiso: su caso es personal para nosotros."
+      ],
+      "stats": [
+        {
+          "value": "2018",
+          "label": "Año de fundación"
+        },
+        {
+          "value": "200+",
+          "label": "Familias asesoradas"
+        },
+        {
+          "value": "5 Condados",
+          "label": "Área de Houston"
+        }
+      ]
+    },
+    "mission": {
+      "eyebrow": "Nuestra Misión",
+      "title": "Un Enfoque que Pone al Cliente Primero",
+      "description": "Nuestra misión es simple: brindar representación legal excepcional que alivie la carga emocional y financiera de nuestros clientes. La \"diferencia Hirani Law Firm\" es nuestro compromiso inquebrantable con el cliente. Esto significa que priorizamos:",
+      "cards": [
+        {
+          "title": "Comunicación Clara",
+          "description": "Manteniéndole informado y empoderado en cada etapa de su caso — sin tecnicismos, sin llamadas sin respuesta."
+        },
+        {
+          "title": "Orientación Compasiva",
+          "description": "Comprendiendo el lado humano de su situación y brindando el apoyo que necesita en asuntos de derecho familiar y lesiones personales.",
+          "links": [
+            {
+              "text": "derecho familiar",
+              "to": "/practice-areas/family-law"
+            },
+            {
+              "text": "lesiones personales",
+              "to": "/practice-areas/personal-injury"
+            }
+          ]
+        },
+        {
+          "title": "Representación Firme",
+          "description": "Luchando sin descanso en negociaciones y en la corte para lograr el mejor resultado posible para usted y su familia."
+        }
+      ]
+    },
+    "values": {
+      "eyebrow": "Nuestra Historia y Valores",
+      "title": "Fundado con la convicción de que la representación legal debe ser personal.",
+      "description": "La abogada Sehar Hirani fundó Hirani Law Firm en 2018 frustrada por la naturaleza impersonal y orientada al volumen de muchos bufetes grandes. Imaginó una práctica donde el caso de cada cliente se trata con la urgencia y atención personal que merece. Esta visión es la base de nuestros valores:",
+      "descriptionLinks": [
+        {
+          "text": "La abogada Sehar Hirani",
+          "to": "/about/sehar-hirani"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Integridad",
+          "description": "Mantenemos los más altos estándares éticos, asegurando que nuestras acciones siempre estén alineadas con sus mejores intereses."
+        },
+        {
+          "title": "Empatía",
+          "description": "Entendemos que detrás de cada caso hay personas reales con preocupaciones reales. Abordamos cada situación con la compasión y comprensión que merece."
+        },
+        {
+          "title": "Tenacidad",
+          "description": "Somos incansables en nuestra búsqueda de justicia para nuestros clientes. No retrocedemos ante una lucha cuando el futuro de nuestros clientes está en juego."
+        }
+      ]
+    },
+    "difference": {
+      "title": "Lo que Significa Trabajar con Nosotros",
+      "cards": [
+        {
+          "image": "team-photo-2",
+          "title": "Un Equipo Dedicado de su Lado",
+          "description": "Desde la admisión hasta la resolución, todo nuestro equipo está dedicado a apoyarle — sin traspasos, sin empezar de nuevo."
+        },
+        {
+          "image": "client-representation",
+          "title": "Comunicación Directa",
+          "description": "Estamos comprometidos a brindarle actualizaciones claras, consistentes y honestas sobre el estado de su caso en cada etapa."
+        },
+        {
+          "image": "clarity-compassion",
+          "title": "Claridad y Transparencia",
+          "description": "Creemos en la comunicación directa sobre el proceso legal y prácticas de facturación transparentes — sin sorpresas."
+        },
+        {
+          "image": "fl-custody",
+          "title": "Compasión y Fortaleza",
+          "description": "Brindamos el apoyo empático que necesita para superar este momento difícil y la representación legal firme necesaria para ganar."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Su Caso Merece un Compromiso Personal",
+      "title": "Su historia nos importa. Hablemos sobre cómo nuestro equipo puede ayudarle a avanzar.",
+      "primary": {
+        "label": "Cuéntenos Su Historia",
+        "to": "/contact"
+      }
+    }
+  },
+  "practiceIndex": {
+    "hero": {
+      "title": "Ayuda Legal para Familias y Víctimas de Lesiones en el Área de Houston",
+      "description": "La abogada Sehar Hirani maneja casos de derecho familiar en el área de Houston y casos de lesiones personales en todo Texas."
+    },
+    "familySection": {
+      "title": "Servicios de Derecho Familiar en Houston y Katy, TX",
+      "description": "Divorcio, custodia, manutención, adopción, modificaciones, derechos del padre, acuerdos prenupciales y más — sirviendo a los condados de Harris, Fort Bend, Montgomery, Galveston, Austin, Waller y Liberty.",
+      "cta": {
+        "label": "Ver Servicios de Derecho Familiar"
+      }
+    },
+    "injurySection": {
+      "title": "Representación en Lesiones Personales en Todo Texas",
+      "description": "Accidentes de auto, colisiones de camiones de 18 ruedas, caídas y resbalones, lesiones en el trabajo y accidentes de motocicleta — representando a víctimas de lesiones en todo el Estado de Texas.",
+      "cta": {
+        "label": "Ver Servicios de Lesiones Personales"
+      }
+    },
+    "seo": {
+      "title": "Áreas de Práctica | Derecho Familiar y Lesiones Personales | Hirani Law Firm PLLC"
+    }
+  },
+  "serviceAreaPage": {
+    "intro": {
+      "eyebrow": "Profundamente Arraigados en las Comunidades que Servimos",
+      "title": "Conocimiento local. Ventaja poderosa.",
+      "paragraphs": [
+        "Desde nuestra oficina central en Katy, Hirani Law Firm brinda representación legal dedicada en toda el área de Houston. Creemos que el éxito de un caso a menudo depende de tener una abogada local que comprenda su comunidad y su corte. Somos ese bufete.",
+        "Ser un bufete local significa más que solo tener una oficina aquí; significa comprender las comunidades que servimos. La abogada Sehar Hirani ha construido su práctica sobre un profundo conocimiento del panorama legal local. Entendemos los matices específicos de los diferentes sistemas de corte, los procedimientos de los jueces locales y los valores que importan a las familias de esta región."
+      ],
+      "citiesLabel": "Ciudades que Servimos"
+    },
+    "areas": {
+      "eyebrow": "Nuestras Principales Áreas de Servicio",
+      "counties": [
+        {
+          "name": "Condado de Harris",
+          "description": "Como el condado más grande de la región, el sistema legal del Condado de Harris puede ser complejo de navegar. Nuestra abogada tiene amplia experiencia defendiendo a clientes en el Harris County Family Law Center, manejando con confianza los procedimientos y el ritmo únicos de los ocupados tribunales de Houston. Servimos con orgullo a clientes en Houston, Pasadena, Cypress, Spring, Tomball y todas las comunidades circundantes.",
+          "cities": [
+            "Houston",
+            "Pasadena",
+            "Cypress",
+            "Spring",
+            "Tomball"
+          ],
+          "map": "Harris County, TX"
+        },
+        {
+          "name": "Condado de Fort Bend",
+          "description": "Con sede en el corazón del Condado de Fort Bend, nuestro bufete tiene una fuerte presencia en la comunidad local. Representamos regularmente a nuestros vecinos, navegando los procedimientos específicos de los tribunales del Condado de Fort Bend en Richmond con confianza y habilidad. Servimos a clientes en Sugar Land, Richmond, Rosenberg, Missouri City y, por supuesto, nuestra sede en Katy.",
+          "cities": [
+            "Sugar Land",
+            "Fulshear",
+            "Rosenberg",
+            "Missouri City",
+            "Katy"
+          ],
+          "map": "Fort Bend County, TX"
+        },
+        {
+          "name": "Condado de Montgomery",
+          "description": "Servimos a familias en todo el Condado de Montgomery, llevando la misma defensa dedicada a clientes en las comunidades de rápido crecimiento al norte de Houston. Comprendemos los tribunales locales y brindamos el mismo enfoque centrado en el cliente a cada familia que representamos en esta región, desde The Woodlands hasta Conroe.",
+          "cities": [
+            "The Woodlands",
+            "Spring",
+            "Conroe",
+            "Magnolia"
+          ],
+          "map": "Montgomery County, TX"
+        },
+        {
+          "name": "Condado de Galveston",
+          "description": "Extendemos nuestro compromiso de servir a las familias de Texas hasta la costa del Golfo. Si tiene un caso de derecho familiar o lesiones personales en el Condado de Galveston, puede esperar el mismo alto nivel de defensa dedicada que brindamos a todos nuestros clientes. Nuestras áreas de servicio incluyen Galveston, League City, Texas City, Friendswood y Dickinson.",
+          "cities": [
+            "Galveston",
+            "League City",
+            "Texas City",
+            "Friendswood",
+            "Dickinson"
+          ],
+          "map": "Galveston County, TX"
+        },
+        {
+          "name": "Condado de Austin",
+          "description": "Creemos que la representación legal experta debe ser accesible para todos, incluidos quienes viven en las comunidades más rurales de nuestra región. Hirani Law Firm se enorgullece de servir a clientes en todo el Condado de Austin, incluyendo las ciudades de Bellville, Sealy y Wallis.",
+          "cities": [
+            "Bellville",
+            "Sealy",
+            "Wallis"
+          ],
+          "map": "Austin County, TX"
+        },
+        {
+          "name": "Condado de Waller",
+          "description": "Nuestro bufete extiende con orgullo su representación a familias e individuos en el Condado de Waller, asegurando que los clientes en el creciente corredor oeste de Houston tengan acceso a la misma calidad de defensa legal que define nuestra práctica.",
+          "cities": [
+            "Hempstead",
+            "Prairie View",
+            "Brookshire"
+          ],
+          "map": "Waller County, TX"
+        },
+        {
+          "name": "Condado de Liberty",
+          "description": "Hirani Law Firm sirve a clientes en el Condado de Liberty como parte de nuestra área de cobertura de derecho familiar del área de Houston, brindando el mismo enfoque centrado en el cliente a las familias al este de la ciudad.",
+          "cities": [
+            "Liberty",
+            "Dayton",
+            "Baytown"
+          ],
+          "map": "Liberty County, TX"
+        },
+        {
+          "name": "Personal Injury — All of Texas",
+          "description": "For personal injury matters — auto accidents, 18-wheelers, motorcycle accidents, slip and fall, and workers' compensation — Hirani Law Firm practices all over Texas. Your location is never a barrier to representation. No matter where in Texas your accident occurred, we can help.",
+          "cities": [
+            "Auto Accidents",
+            "18-Wheeler Accidents",
+            "Motorcycle Accidents",
+            "Slip & Fall",
+            "Workers' Compensation"
+          ],
+          "map": "Texas",
+          "highlight": true
+        }
+      ],
+      "title": "Apoyo legal integral en todas nuestras áreas de servicio."
+    },
+    "contactCard": {
+      "eyebrow": "Contacte a su Abogada Local",
+      "phoneLabel": "Teléfono",
+      "addressLabel": "Dirección",
+      "address": [
+        "22336 Grand Corner Drive",
+        "Suite 130",
+        "Katy, TX 77494"
+      ],
+      "hoursLabel": "Horario",
+      "hours": [
+        "Lunes – Viernes",
+        "9:00 AM – 5:00 PM"
+      ],
+      "emailLabel": "Correo",
+      "email": "info@hiranilawfirm.com",
+      "cta": {
+        "label": "Consulta Gratuita",
+        "to": "/contact"
+      }
+    }
+  },
+  "familyLawPage": {
+    "eyebrow": "Derecho Familiar en Texas",
+    "title": "Protegiendo a las familias en las transiciones legales más difíciles de la vida.",
+    "paragraphs": [
+      "Los asuntos de derecho familiar rara vez son solo problemas legales. Involucran a sus hijos, su hogar, sus finanzas y su sentido de estabilidad. La abogada Sehar Hirani lo entiende — y aborda cada caso con pensamiento legal estratégico y cuidado personal genuino. El bufete sirve a clientes en los condados de Harris, Fort Bend, Montgomery, Galveston, Austin, Waller y Liberty. Ya sea que su asunto sea sencillo o muy disputado, estamos preparados para defenderle en cada etapa."
+    ],
+    "stats": [
+      {
+        "value": "200+",
+        "label": "Familias asesoradas"
+      },
+      {
+        "value": "7 Condados",
+        "label": "Área de Houston"
+      },
+      {
+        "value": "Desde 2018",
+        "label": "Con licencia en Texas"
+      }
+    ],
+    "areasTitle": "Áreas de Derecho Familiar que Manejamos",
+    "attorney": {
+      "eyebrow": "Su Abogada",
+      "cta": {
+        "label": "Perfil de la Abogada"
+      },
+      "title": "Sehar Hirani — Abogada de Derecho Familiar en Houston desde 2018",
+      "description": "Como madre de dos hijos, Sehar comprende lo que está en juego cuando las familias enfrentan desafíos legales. Ha construido su práctica en torno a la comunicación clara, la atención personal y la defensa orientada a resultados para clientes en toda el área de Houston."
+    },
+    "areas": [
+      {
+        "slug": "divorce-attorney-houston",
+        "image": "fl-divorce",
+        "title": "Divorcio",
+        "description": "Divorcio contencioso y de mutuo acuerdo, división de bienes, manutención conyugal y presentación del decreto final en Texas."
+      },
+      {
+        "slug": "child-custody-attorney-houston",
+        "image": "fl-custody",
+        "title": "Custodia de Menores",
+        "description": "Tutela, horarios de posesión, determinaciones de interés superior y negociaciones del plan de crianza."
+      },
+      {
+        "slug": "child-support-attorney-houston",
+        "image": "fl-support",
+        "title": "Manutención de Menores",
+        "description": "Establecer, hacer cumplir y modificar órdenes de manutención de menores conforme a las directrices de Texas."
+      },
+      {
+        "slug": "adoption-attorney-houston",
+        "image": "fl-adoption",
+        "title": "Adopción",
+        "description": "Adopciones de menores y adultos, adopciones por padrastro o madrastra y procedimientos de formación familiar en los tribunales de Texas."
+      },
+      {
+        "slug": "father-rights-attorney-houston",
+        "image": "fl-fathers",
+        "title": "Derechos del Padre",
+        "description": "Protegiendo los derechos legales de los padres al acceso, la custodia y la participación significativa en la vida de sus hijos."
+      },
+      {
+        "slug": "conservatorship-attorney-houston",
+        "image": "fl-conservatorship",
+        "title": "Tutela",
+        "description": "Tutela único y conjunto, derechos y deberes, y estructuración de órdenes de posesión."
+      },
+      {
+        "slug": "houston-order-modification-attorney",
+        "image": "fl-modifications",
+        "title": "Modificaciones",
+        "description": "Modificar órdenes de custodia, manutención y visitas cuando las circunstancias de vida han cambiado materialmente."
+      },
+      {
+        "slug": "enforcement-contempt-attorney-houston",
+        "image": "fl-enforcement",
+        "title": "Ejecución y Contempt",
+        "description": "Responsabilizar a las partes incumplidoras y hacer cumplir las órdenes judiciales existentes mediante acciones legales."
+      },
+      {
+        "slug": "property-division-attorney-houston",
+        "image": "fl-property",
+        "title": "División de Bienes",
+        "description": "Análisis de bienes comunitarios, valuación de activos y división equitativa del patrimonio matrimonial conforme a la ley de Texas."
+      },
+      {
+        "slug": "houston-prenups-marital-agreements-attorney",
+        "image": "fl-prenup",
+        "title": "Acuerdos Prenupciales",
+        "description": "Redacción y revisión de acuerdos prematrimoniales que protegen a ambas partes y son válidos en los tribunales de Texas."
+      },
+      {
+        "slug": "postnuptial-agreements-attorney-houston",
+        "image": "fl-postnup",
+        "title": "Acuerdos Postnupciales",
+        "description": "Acuerdos de bienes matrimoniales celebrados después del matrimonio para aclarar la propiedad de activos y las expectativas financieras."
+      },
+      {
+        "slug": "name-changes-attorney-houston",
+        "image": "fl-namechange",
+        "title": "Cambios de Nombre",
+        "description": "Peticiones de cambio de nombre de adultos y menores presentadas y tramitadas ante los tribunales de Texas correspondientes."
+      }
+    ]
+  },
+  "personalInjuryPage": {
+    "eyebrow": "Lesiones Personales en Texas",
+    "title": "Usted debe enfocarse en recuperarse. Nosotros nos encargamos de la lucha.",
+    "paragraphs": [
+      "Las aseguradoras actúan rápido tras un accidente — frecuentemente contactan a las víctimas antes de que tengan representación legal, esperando resolver reclamaciones por mucho menos de lo que valen. La abogada Sehar Hirani equilibra esa balanza. Maneja casos de lesiones en base a honorarios condicionales, lo que significa que usted no paga nada a menos que recuperemos compensación para usted. El bufete representa a víctimas de lesiones en todo el Estado de Texas, con especial experiencia en el área de Houston y Katy."
+    ],
+    "stats": [
+      {
+        "value": "$0",
+        "label": "Por adelantado — honorarios condicionales"
+      },
+      {
+        "value": "Todo Texas",
+        "label": "Cobertura de lesiones personales"
+      },
+      {
+        "value": "Gratis",
+        "label": "Consulta inicial"
+      }
+    ],
+    "areasTitle": "Tipos de Casos de Lesiones que Manejamos",
+    "attorney": {
+      "eyebrow": "Su Abogada",
+      "cta": {
+        "label": "Perfil de la Abogada"
+      },
+      "title": "Sehar Hirani — Abogada de Lesiones Personales",
+      "description": "La abogada Sehar Hirani aporta la misma tenacidad a los casos de lesiones personales que al derecho familiar — búsqueda implacable de justicia, comunicación clara y atención personal a cada cliente. Cuando el otro lado tiene un equipo legal, usted también debería tenerlo."
+    },
+    "areas": [
+      {
+        "slug": "houston-auto-accident-attorney",
+        "image": "pi-auto",
+        "title": "Accidentes de Auto",
+        "description": "Reclamaciones por accidente de auto, negociaciones con aseguradoras y litigios para víctimas de choques en Houston y Texas. Ya sea una colisión por alcance o un accidente de múltiples vehículos, luchamos por la compensación completa."
+      },
+      {
+        "slug": "18-wheeler-accident-attorney-houston",
+        "image": "pi-truck",
+        "title": "Accidentes de 18 Ruedas",
+        "description": "Casos de accidentes con camiones que involucran regulaciones federales, transportistas comerciales, violaciones de bitácora y lesiones catastróficas. Estos casos requieren conocimiento especializado — nosotros lo tenemos."
+      },
+      {
+        "slug": "motorcycle-accident-attorney-houston",
+        "image": "pi-moto",
+        "title": "Accidentes de Motocicleta",
+        "description": "Protegiendo a motociclistas lesionados de ajustadores de seguros parciales y buscando la compensación completa que merecen."
+      },
+      {
+        "slug": "houston-slip-fall-accident-attorney",
+        "image": "pi-slip",
+        "title": "Caídas en Propiedad Ajena",
+        "description": "Reclamaciones de responsabilidad de local contra propietarios y negocios que no mantuvieron condiciones razonablemente seguras."
+      },
+      {
+        "slug": "houston-workers-compensation-attorney",
+        "image": "pi-workers",
+        "title": "Compensación Laboral",
+        "description": "Reclamaciones por lesiones en el trabajo, disputas por beneficios denegados y casos de represalia del empleador en todo Texas."
+      }
+    ]
+  },
+  "teamPage": {
+    "hero": {
+      "title": "Conozca al Equipo de Hirani Law Firm",
+      "description": "Nuestra fortaleza está en nuestro enfoque colaborativo y de equipo. Desde su primera llamada hasta la resolución final de su caso, nuestro equipo dedicado está aquí para apoyarle."
+    },
+    "eyebrow": "Nuestro Equipo",
+    "members": [
+      {
+        "name": "Sehar Hirani",
+        "role": "Abogada Principal",
+        "image": "sehar-portrait",
+        "to": "/about/sehar-hirani"
+      },
+      {
+        "name": "Carlos Peraza",
+        "role": "Gerente de Admisión",
+        "image": "carlos",
+        "slug": "carlos-peraza",
+        "bio": [
+          "Su primera llamada para obtener ayuda legal puede ser intimidante. Carlos está aquí para cambiar eso. Como Gerente de Admisión, su función más importante es brindar una voz tranquila y reconfortante al otro lado de la línea. Escucha con paciencia y empatía, transformando un primer paso ansioso en uno seguro."
+        ]
+      },
+      {
+        "name": "Sami Hirani",
+        "role": "Especialista en Facturación / Admisión",
+        "image": "sami",
+        "slug": "sami-hirani",
+        "bio": [
+          "El estrés financiero puede ser una de las partes más desafiantes de un caso legal. Sami está dedicado a brindar claridad y transparencia en todos los asuntos de facturación, asegurando que usted comprenda los costos involucrados sin sorpresas. También brinda un rol de apoyo durante el proceso de admisión."
+        ]
+      },
+      {
+        "name": "Nicole Erazo",
+        "role": "Recepcionista",
+        "image": "nicole",
+        "slug": "nicole-erazo",
+        "bio": [
+          "Como la cara amigable de nuestra firma, Nicole se dedica a brindar a cada cliente una cálida bienvenida y un servicio excepcional desde la primera interacción. Le apasiona el campo legal y aspira a convertirse en abogada, aportando entusiasmo y una sólida ética de trabajo a nuestro equipo todos los días.",
+          "Fuera de la oficina, disfruta mantenerse activa a través del fitness y cree que la disciplina y la determinación son clave para el éxito tanto personal como profesionalmente."
+        ]
+      },
+      {
+        "name": "Noraly Martinez",
+        "role": "Paralegal",
+        "image": "noraly",
+        "slug": "noraly-martinez",
+        "bio": [
+          "Noraly Martinez es una paralegal dedicada, apasionada por ayudar a los clientes a navegar asuntos legales difíciles con compasión y cuidado. Aspira a convertirse en abogada y está comprometida a ampliar su conocimiento del derecho mientras aboga por quienes más lo necesitan.",
+          "Fuera de la oficina, Noraly disfruta pasar tiempo con sus sobrinos y sobrinas, y lleva su naturaleza paciente y cariñosa a cada interacción con los clientes."
+        ]
+      }
+    ]
+  },
+  "attorneyPage": {
+    "hero": {
+      "eyebrow": "Perfil de la Abogada",
+      "subtitle": [
+        "Abogada de Derecho Familiar y Lesiones Personales",
+        "Con licencia en Texas desde 2018"
+      ],
+      "description": "Madre de dos hijos, defensora de familias y guía firme en algunos de los momentos legales más difíciles de la vida — Sehar Hirani aporta comprensión personal y habilidad legal probada a cada caso que toma.",
+      "cta": {
+        "label": "Programe una Consulta Gratuita"
+      }
+    },
+    "sections": [
+      {
+        "title": "Una Práctica Construida sobre Compasión y Conexión Personal",
+        "paragraphs": [
+          "Sehar Hirani es madre de dos hijos, y esa perspectiva moldea la forma en que sirve a las familias. Comprende que el divorcio, la custodia, la manutención, la adopción y los asuntos de ejecución pueden afectar a los hijos, el hogar, las finanzas y la estabilidad de un cliente al mismo tiempo. Cuando se sienta frente a Sehar, no está hablando con alguien que solo ha leído sobre estos desafíos en un libro — está hablando con alguien que entiende lo que está en juego."
+        ]
+      }
+    ],
+    "sidebar": {
+      "consult": {
+        "eyebrow": "Consulta Gratuita",
+        "title": "Hable con Sehar Hirani Hoy",
+        "note": "Confidencial · Sin compromiso · Respondemos en 24 horas.",
+        "cta": {
+          "label": "Solicitar Consulta",
+          "to": "/contact"
+        }
+      },
+      "practiceAreas": {
+        "title": "Áreas de Práctica",
+        "items": [
+          {
+            "label": "Divorcio",
+            "to": "/practice-areas/family-law/divorce-attorney-houston"
+          },
+          {
+            "label": "Custodia de Menores",
+            "to": "/practice-areas/family-law/child-custody-attorney-houston"
+          },
+          {
+            "label": "Manutención de Menores",
+            "to": "/practice-areas/family-law/child-support-attorney-houston"
+          },
+          {
+            "label": "Adopción",
+            "to": "/practice-areas/family-law/adoption-attorney-houston"
+          },
+          {
+            "label": "Derechos del Padre",
+            "to": "/practice-areas/family-law/father-rights-attorney-houston"
+          },
+          {
+            "label": "Accidente de Auto",
+            "to": "/practice-areas/personal-injury/houston-auto-accident-attorney"
+          },
+          {
+            "label": "Accidente de 18 Ruedas",
+            "to": "/practice-areas/personal-injury/18-wheeler-accident-attorney-houston"
+          }
+        ]
+      },
+      "reviews": {
+        "title": "Lo que Dicen los Clientes",
+        "items": [
+          {
+            "text": "Conocedora, profesional y puntual en la comunicación.",
+            "author": "Victor Sims"
+          },
+          {
+            "text": "Informativa, compasiva y profesional durante todo el proceso.",
+            "author": "Astryd McIntyre-Pahls"
+          }
+        ]
+      }
+    },
+    "quote": {
+      "text": "Los clientes a menudo vienen al bufete en un momento doloroso o incierto. Mi objetivo es asegurarme de que salgan de cada reunión sintiéndose más claros, más estables y más preparados para lo que viene.",
+      "author": "Sehar Hirani"
+    },
+    "strategy": {
+      "title": "Enfoque Sensible, Pensamiento Estratégico",
+      "images": [
+        "about-team-hallway",
+        "about-team-office"
+      ],
+      "paragraphs": [
+        "Sehar utiliza un enfoque sensible que equilibra la genuina compasión con una dirección legal clara. Ayuda a los clientes a comprender el proceso y prepararse para las decisiones venideras — no solo emocionalmente, sino estratégicamente. Cada caso recibe un plan legal construido en torno a la familia específica del cliente, sus plazos y objetivos.",
+        "Si bien siempre trabaja para llegar a resoluciones amistosas, está completamente preparada para ser una defensora firme en la mediación o en la corte cuando la otra parte se niega a ser razonable. Cada caso se prepara como si fuera a juicio — lo que brinda a los clientes el máximo poder de negociación en cada etapa."
+      ]
+    },
+    "education": {
+      "title": "Educación, Credenciales y Experiencia en Cortes Locales",
+      "paragraphs": [
+        "Sehar se graduó de la Universidad de Houston y del South Texas College of Law. Ha tenido licencia en el Estado de Texas desde 2018 y es miembro activo del State Bar of Texas, la Family Law Section del State Bar of Texas, la Houston Bar Association y la Fort Bend County Bar Association.",
+        "Su práctica de derecho familiar cubre los condados de Harris, Fort Bend, Montgomery, Galveston, Austin, Waller y Liberty. Los casos de lesiones personales pueden manejarse en todo el Estado de Texas."
+      ]
+    }
+  },
+  "faqPage": {
+    "hero": {
+      "title": "Preguntas Frecuentes",
+      "description": "Cuando enfrenta un asunto legal serio, la incertidumbre puede ser abrumadora. Hemos creado esta página para brindar respuestas claras y directas a las preguntas más comunes que recibimos de clientes en Houston y las áreas circundantes."
+    },
+    "groups": [
+      {
+        "label": "Derecho Familiar",
+        "categories": [
+          {
+            "id": "divorce-separation",
+            "title": "Divorcio y Separación",
+            "items": [
+              {
+                "q": "¿Cuál es la diferencia entre un divorcio contencioso y uno de mutuo acuerdo?",
+                "a": "Un divorcio de mutuo acuerdo es aquel en que ambos cónyuges están de acuerdo en todos los asuntos principales, como la división de bienes, la custodia de los hijos y la manutención. Generalmente es más rápido y menos costoso. Un divorcio contencioso ocurre cuando los cónyuges no pueden ponerse de acuerdo en uno o más asuntos, lo que requiere negociación, mediación o incluso un juicio para resolver las disputas."
+              },
+              {
+                "q": "¿Cómo se dividen los bienes en un divorcio en Texas? ¿Siempre es 50/50?",
+                "a": "Texas es un estado de community property, lo que significa que la mayoría de los bienes y deudas adquiridos durante el matrimonio pertenecen a ambos cónyuges. Sin embargo, la división no es automáticamente 50/50. Un juez dividirá los bienes de manera \"justa y correcta\", lo que puede verse influenciado por factores como la culpa en la ruptura del matrimonio, la disparidad en el poder adquisitivo y las necesidades de los hijos."
+              },
+              {
+                "q": "¿Qué es la manutención conyugal (alimony), y quién tiene derecho a recibirla en Texas?",
+                "a": "La manutención conyugal, o alimony, es un pago ordenado por la corte de un cónyuge al otro después del divorcio. En Texas, no se otorga en todos los casos. Un juez puede otorgarla si el matrimonio duró 10 años o más y el cónyuge solicitante no puede generar ingresos suficientes, o en casos que involucren violencia familiar."
+              },
+              {
+                "q": "¿Cuánto tiempo tarda un divorcio en Texas?",
+                "a": "Texas tiene un período de espera obligatorio de 60 días después de que se presenta la petition de divorcio. Un divorcio de mutuo acuerdo puede finalizarse poco después de este período. Un divorcio contencioso puede tardar varios meses o más de un año en resolverse, dependiendo de la complejidad y el nivel de conflicto."
+              },
+              {
+                "q": "¿Necesito un abogado para un divorcio amistoso o de mutuo acuerdo?",
+                "a": "Sí, es muy recomendable. Incluso si usted y su cónyuge están de acuerdo en todo, una abogada garantiza que sus derechos estén protegidos y que el decreto de divorcio final esté redactado correctamente y presentado adecuadamente. Los errores en los documentos pueden generar problemas legales y financieros significativos en el futuro."
+              }
+            ]
+          },
+          {
+            "id": "custody-conservatorship",
+            "title": "Custodia de Menores y Tutela",
+            "items": [
+              {
+                "q": "¿Cuál es la diferencia entre \"custodia\" y \"tutela\" en Texas?",
+                "a": "En Texas, el término legal para la custodia es \"tutela.\" Define los derechos y responsabilidades legales de un padre. Aunque las personas suelen usar el término \"custodia,\" todas las órdenes judiciales oficiales se referirán a los padres como \"conservadores.\""
+              },
+              {
+                "q": "¿Cómo deciden los tribunales de Texas quién obtiene la custodia? ¿Qué es el \"mejor interés del menor\"?",
+                "a": "La única consideración del tribunal es el \"mejor interés del menor.\" Un juez evaluará muchos factores, incluyendo las necesidades emocionales y físicas del niño, la estabilidad del hogar de cada padre, la capacidad de cada padre para cuidar al niño y cualquier historial de conflicto o abuso."
+              },
+              {
+                "q": "¿Los tribunales de Texas favorecen a las madres sobre los padres?",
+                "a": "No. La ley en Texas es explícitamente neutral en cuanto al género. Los padres tienen los mismos derechos legales que las madres, y el tribunal no puede usar el género como factor en su decisión. El resultado se basa únicamente en lo que es mejor para el niño."
+              },
+              {
+                "q": "¿Qué es una orden estándar de posesión?",
+                "a": "La orden estándar de posesión es un horario de tiempo con los hijos (visitas) predeterminado que se presume está en el mejor interés del niño. Describe un horario detallado para fines de semana, días festivos y vacaciones de verano para el padre no custodio."
+              },
+              {
+                "q": "¿Cómo puedo modificar mi orden actual de custodia o visitas?",
+                "a": "Para modificar una orden, debe presentar una petition formal ante el tribunal y demostrar que ha habido un \"cambio material y sustancial\" en las circunstancias de los padres o del niño desde que se firmó la última orden."
+              }
+            ]
+          },
+          {
+            "id": "child-support",
+            "title": "Manutención de Menores",
+            "items": [
+              {
+                "q": "¿Cómo se calcula la manutención de menores en Texas?",
+                "a": "La manutención de menores se calcula usando las directrices estatales, que se basan en un porcentaje de los recursos netos mensuales del padre que paga. El porcentaje cambia según el número de hijos. Para un hijo es el 20%; para dos es el 25%, y así sucesivamente."
+              },
+              {
+                "q": "¿Qué hago si el otro padre deja de pagar la manutención de menores?",
+                "a": "Debe contactar a una abogada de inmediato para presentar una acción de ejecución. Un juez puede obligar al otro padre a pagar lo que debe e imponer sanciones, incluidas multas e incluso tiempo en prisión."
+              },
+              {
+                "q": "¿Puede cambiar el monto de la manutención de menores si cambia mi ingreso?",
+                "a": "Sí. Si usted o el otro padre ha experimentado un cambio significativo en los ingresos (ya sea un aumento o una disminución), puede solicitar al tribunal que modifique la orden de manutención de menores para reflejar la nueva realidad financiera."
+              },
+              {
+                "q": "¿Cuánto tiempo dura la manutención de menores en Texas?",
+                "a": "Típicamente, la manutención de menores continúa hasta que el niño cumple 18 años o se gradúa de la preparatoria, lo que ocurra después. La manutención puede extenderse indefinidamente si el niño tiene una discapacidad calificada."
+              }
+            ]
+          },
+          {
+            "id": "cps-defense",
+            "title": "Defensa ante DFPS",
+            "items": [
+              {
+                "q": "¿Cuáles son mis derechos si un trabajador de DFPS llega a mi puerta?",
+                "a": "Tiene el derecho de no dejarlos entrar a su hogar sin una orden judicial. Tiene el derecho de guardar silencio y el derecho a un abogado. Es crucial ser cortés pero firme y llamar a una abogada de inmediato antes de responder cualquier pregunta."
+              },
+              {
+                "q": "¿Tengo que firmar un Plan de Seguridad de DFPS?",
+                "a": "No, y no debe firmar ningún documento de DFPS sin antes consultar con una abogada. Estos planes a menudo le exigen renunciar a derechos legales significativos y pueden ser usados en su contra en el tribunal."
+              },
+              {
+                "q": "¿Puede DFPS llevarse a mis hijos sin una orden judicial?",
+                "a": "Solo en emergencias muy raras donde crean que un niño está en peligro inmediato e inminente. En casi todos los demás casos, deben obtener una orden judicial para retirar legalmente a un niño de su hogar."
+              },
+              {
+                "q": "¿Cómo puedo combatir las falsas acusaciones de DFPS?",
+                "a": "La mejor manera de combatir falsas acusaciones es contratar de inmediato a una abogada con experiencia en defensa ante DFPS. Su abogada cuestionará las pruebas, presentará su versión de los hechos y exigirá que DFPS cumpla con el alto estándar legal requerido para interferir con su familia."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Lesiones Personales",
+        "categories": [
+          {
+            "id": "after-accident",
+            "title": "Después de un Accidente y Primeros Pasos",
+            "items": [
+              {
+                "q": "¿Qué debo hacer inmediatamente después de un accidente de auto?",
+                "a": "Primero, asegúrese de que todos estén seguros y busque atención médica, incluso para lesiones aparentemente menores. Segundo, llame a la policía para crear un informe oficial. Tercero, documente la escena tomando fotos de los vehículos, el área y sus lesiones. Finalmente, no admita culpa y contacte a una abogada de lesiones personales antes de hablar con ninguna aseguradora."
+              },
+              {
+                "q": "¿Cuánto tiempo tengo para presentar una reclamación por lesiones personales en Texas?",
+                "a": "En Texas, el plazo de prescripción para la mayoría de las reclamaciones por lesiones personales es de dos años a partir de la fecha de la lesión. Si no presenta una demanda dentro de este plazo, probablemente perderá su derecho a recibir cualquier compensación."
+              },
+              {
+                "q": "¿Qué evidencia es más importante para mi reclamación por lesiones personales?",
+                "a": "La evidencia clave incluye el informe policial, fotos y videos de la escena del accidente y sus lesiones, información de contacto de cualquier testigo, todos sus registros médicos y facturas, y documentación de cualquier salario perdido."
+              },
+              {
+                "q": "¿Debo hablar con la aseguradora de la otra parte?",
+                "a": "No se recomienda. El ajustador de seguros de la otra parte está entrenado para hacer que usted diga cosas que pueden perjudicar su reclamación. Siempre es mejor dejar que su abogada maneje toda la comunicación con las aseguradoras."
+              }
+            ]
+          },
+          {
+            "id": "legal-process",
+            "title": "El Proceso Legal y la Compensación",
+            "items": [
+              {
+                "q": "¿Cuánto vale mi caso de lesiones personales?",
+                "a": "El valor de su caso depende de muchos factores, incluyendo la gravedad de sus lesiones, el costo total de su tratamiento médico, la cantidad de ingresos perdidos y el impacto en su calidad de vida. Una abogada con experiencia puede evaluar estos factores para darle una estimación del valor de su caso."
+              },
+              {
+                "q": "¿Qué tipos de daños puedo recuperar?",
+                "a": "Puede recuperar daños \"económicos,\" como facturas médicas y salarios perdidos, y daños \"no económicos,\" como compensación por dolor y sufrimiento, angustia emocional y discapacidad física."
+              },
+              {
+                "q": "¿Cómo cobra una abogada de lesiones personales?",
+                "a": "La mayoría de las abogadas de lesiones personales, incluida Hirani Law Firm, trabajan en base a honorarios condicionales. Esto significa que solo cobramos si ganamos su caso, ya sea mediante un acuerdo o un veredicto judicial. Nuestra tarifa es un porcentaje de la recuperación total, por lo que usted no paga nada por adelantado."
+              },
+              {
+                "q": "¿Mi caso irá a juicio o se resolverá mediante acuerdo?",
+                "a": "La gran mayoría de los casos de lesiones personales se resuelven mediante un acuerdo con la aseguradora. Sin embargo, si la aseguradora se niega a hacer una oferta justa, siempre estamos preparados para llevar su caso a juicio para luchar por la compensación que merece."
+              },
+              {
+                "q": "¿Cuánto tiempo tarda en resolverse un caso de lesiones personales?",
+                "a": "El plazo varía. Un caso sencillo que se resuelve mediante acuerdo puede finalizarse en cuestión de meses. Un caso más complejo que requiere una demanda y va a juicio puede tardar un año o más."
+              }
+            ]
+          },
+          {
+            "id": "insurance-liability",
+            "title": "Seguros y Responsabilidad",
+            "items": [
+              {
+                "q": "¿Qué pasa si tuve parte de la culpa en el accidente?",
+                "a": "Texas sigue la regla de \"culpa comparativa modificada.\" Esto significa que aún puede recuperar daños siempre que no se le declare 51% o más culpable. Sin embargo, su recuperación se reducirá por su porcentaje de culpa."
+              },
+              {
+                "q": "¿Qué pasa si el conductor culpable no tiene seguro?",
+                "a": "Si tiene cobertura de Motorista No Asegurado/Subasegurado (UM/UIM) en su propia póliza de seguro de auto, puede presentar una reclamación con su propia aseguradora para cubrir sus daños."
+              },
+              {
+                "q": "¿Puedo demandar por un accidente de caída en la propiedad de otra persona?",
+                "a": "Sí. Los propietarios tienen el deber legal de mantener sus instalaciones razonablemente seguras. Si resultó lesionado debido a una condición insegura que el propietario sabía o debería haber sabido, puede tener una reclamación de responsabilidad de local válida."
+              },
+              {
+                "q": "¿Qué es una reclamación por muerte injusta y quién puede presentarla?",
+                "a": "Una reclamación por muerte injusta puede presentarse cuando la muerte de una persona es causada por la negligencia o acto ilícito de otra. En Texas, estas reclamaciones generalmente pueden ser presentadas por el cónyuge sobreviviente, los hijos y los padres del fallecido."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Preguntas Frecuentes: Derecho Familiar y Lesiones Personales en Texas | Hirani Law Firm PLLC"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Programe su Consulta Gratuita",
+      "description": "Confidencial · Sin compromiso · Respondemos en 24 horas."
+    },
+    "form": {
+      "eyebrow": "Contáctenos",
+      "title": "Cuéntenos sobre su situación.",
+      "description": "La abogada Sehar Hirani revisa cada consulta personalmente. Todas las comunicaciones están protegidas por el privilegio abogado-cliente."
+    },
+    "info": {
+      "phoneLabel": "Teléfono",
+      "emailLabel": "Correo",
+      "addressLabel": "Dirección de la Oficina",
+      "directionsLabel": "Cómo llegar",
+      "hoursLabel": "Horario de Oficina",
+      "hours": [
+        {
+          "day": "Lunes – Viernes",
+          "time": "9:00 AM – 5:00 PM"
+        },
+        {
+          "day": "Sábado",
+          "time": "Con cita previa"
+        },
+        {
+          "day": "Domingo",
+          "time": "Cerrado"
+        }
+      ]
+    },
+    "about": [
+      {
+        "heading": "Hable con una Abogada de Familia en Houston Hoy — Consulta Gratuita",
+        "intro": "En el impersonal mundo del derecho, es fácil sentirse como un archivo más, su historia perdida en una pila de papeles. Fundamos Hirani Law Firm con un principio simple y poderoso: usted merece un equipo legal que conozca su nombre, comprenda su situación y esté comprometido personalmente con su éxito. Creemos que cada cliente merece un equipo dedicado comprometido a proteger sus derechos y asegurar su futuro."
+      },
+      {
+        "heading": "Nuestra Misión: Un Enfoque que Pone al Cliente Primero",
+        "intro": "Nuestra misión es simple: brindar representación legal excepcional que alivie la carga emocional y financiera de nuestros clientes. La \"diferencia Hirani Law Firm\" es nuestro compromiso inquebrantable con el cliente. Esto significa que priorizamos:",
+        "bullets": [
+          {
+            "label": "Comunicación Clara:",
+            "text": "Manteniéndole informado y empoderado en cada etapa de su caso."
+          },
+          {
+            "label": "Orientación Compasiva:",
+            "text": "Comprendiendo el lado humano de su situación y brindando el apoyo que necesita."
+          },
+          {
+            "label": "Representación Firme:",
+            "text": "Luchando sin descanso en negociaciones y en la corte para lograr el mejor resultado posible para usted."
+          }
+        ],
+        "outro": "Somos más que sus abogados; somos sus socios y defensores en los momentos más difíciles de la vida."
+      },
+      {
+        "heading": "Nuestra Historia y Valores",
+        "intro": "Nuestra historia comenzó con una creencia simple: que la representación legal debe ser personal. La abogada Sehar Hirani fundó Hirani Law Firm en 2018 frustrada por la naturaleza impersonal y orientada al volumen de muchos bufetes grandes. Imaginó una práctica donde el caso de cada cliente se trata con la urgencia y atención personal que merece. Esta visión es la base de nuestros valores:",
+        "bullets": [
+          {
+            "label": "Integridad:",
+            "text": "Mantenemos los más altos estándares éticos, asegurando que nuestras acciones siempre estén alineadas con sus mejores intereses."
+          },
+          {
+            "label": "Empatía:",
+            "text": "Entendemos que detrás de cada caso hay personas reales con preocupaciones reales. Abordamos cada situación con la compasión y comprensión que merece."
+          },
+          {
+            "label": "Tenacidad:",
+            "text": "Somos incansables en nuestra búsqueda de justicia para nuestros clientes. No retrocedemos ante una lucha cuando el futuro de nuestros clientes está en juego."
+          }
+        ]
+      },
+      {
+        "heading": "Conozca al Equipo de Hirani Law Firm",
+        "intro": "Nuestra fortaleza está en nuestro enfoque colaborativo y de equipo. Desde su primera llamada hasta la resolución final de su caso, nuestro equipo dedicado está aquí para apoyarle.",
+        "bullets": [
+          {
+            "label": "Sehar Hirani: Abogada Principal",
+            "text": "— Como fundadora del bufete y estratega legal principal, Sehar Hirani marca el tono de nuestra defensa agresiva y centrada en el cliente. Es su guía compasiva a través del proceso legal y su voz poderosa en la corte, supervisando personalmente la estrategia de cada caso."
+          },
+          {
+            "label": "Carlos Peraza: Gerente de Admisión",
+            "text": "— Su primera llamada para obtener ayuda legal puede ser intimidante. Carlos está aquí para cambiar eso. Como Gerente de Admisión, su función más importante es brindar una voz tranquila y reconfortante al otro lado de la línea. Escucha con paciencia y empatía, transformando un primer paso ansioso en uno seguro."
+          },
+          {
+            "label": "Sami Hirani: Especialista en Facturación / Admisión",
+            "text": "— El estrés financiero puede ser una de las partes más desafiantes de un caso legal. Sami está dedicado a brindar claridad y transparencia en todos los asuntos de facturación, asegurando que usted comprenda los costos involucrados sin sorpresas. También brinda un rol de apoyo durante el proceso de admisión."
+          }
+        ]
+      },
+      {
+        "heading": "Lo que Significa Trabajar con Nosotros",
+        "intro": "Cuando elige Hirani Law Firm, está eligiendo un tipo diferente de experiencia legal. Esto es lo que puede esperar:",
+        "bullets": [
+          {
+            "label": "Un Equipo Dedicado de su Lado:",
+            "text": "Desde la admisión hasta la resolución, todo nuestro equipo está dedicado a apoyarle."
+          },
+          {
+            "label": "Comunicación Directa:",
+            "text": "Estamos comprometidos a brindarle actualizaciones claras, consistentes y honestas sobre el estado de su caso."
+          },
+          {
+            "label": "Claridad y Transparencia:",
+            "text": "Creemos en la comunicación directa sobre el proceso legal y prácticas de facturación transparentes."
+          },
+          {
+            "label": "Compasión y Fortaleza:",
+            "text": "Brindamos el apoyo empático que necesita para superar este momento difícil y la representación legal firme necesaria para ganar."
+          }
+        ]
+      }
+    ]
+  },
+  "reviewsPage": {
+    "hero": {
+      "title": "Reseñas de Clientes",
+      "description": "Lo que los clientes mencionan sobre comunicación, preparación, orientación en derecho familiar y apoyo durante asuntos legales estresantes."
+    },
+    "themes": {
+      "eyebrow": "Temas de las Reseñas",
+      "title": "Los clientes frecuentemente mencionan comunicación, preparación y compasión.",
+      "cards": [
+        {
+          "title": "Clara",
+          "description": "Explicación legal durante decisiones estresantes."
+        },
+        {
+          "title": "Puntual",
+          "description": "Comunicación y próximos pasos prácticos."
+        },
+        {
+          "title": "Firme",
+          "description": "Defensa para padres, hijos y clientes lesionados."
+        }
+      ]
+    },
+    "seo": {
+      "title": "Reseñas de Clientes | Hirani Law Firm PLLC | 281-665-8188"
+    }
+  },
+  "ui": {
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo electrónico",
+      "phone": "Número de teléfono",
+      "helpPlaceholder": "¿En qué necesita ayuda?",
+      "submit": "Enviar",
+      "sending": "Enviando…",
+      "successTitle": "Gracias.",
+      "successBody": "Su solicitud de consulta se ha enviado con éxito. Nuestro equipo se comunicará con usted pronto.",
+      "errFirstName": "Por favor ingrese su nombre.",
+      "errLastName": "Por favor ingrese su apellido.",
+      "errEmailRequired": "Por favor ingrese su correo electrónico.",
+      "errEmailInvalid": "Por favor ingrese un correo electrónico válido.",
+      "errPhoneInvalid": "Por favor ingrese un número de teléfono válido.",
+      "errHelp": "Por favor díganos en qué necesita ayuda.",
+      "errGeneric": "No se pudo enviar su solicitud. Inténtelo de nuevo."
+    },
+    "readMore": "Leer más",
+    "readLess": "Leer menos",
+    "requestConsultation": "Solicitar Consulta",
+    "practiceAreasLabel": "Áreas de Práctica",
+    "popup": {
+      "eyebrow": "Estamos Aquí para Ayudar",
+      "title": "¿Necesita una consulta?",
+      "body": "Cuéntenos lo que enfrenta. Su primera conversación es gratuita y confidencial.",
+      "caption": "Sehar Hirani · Abogada",
+      "close": "Cerrar formulario de consulta"
+    },
+    "crumbs": {
+      "home": "Inicio",
+      "contact": "Contacto",
+      "contactUs": "Contáctenos",
+      "faqs": "Preguntas Frecuentes",
+      "ourTeam": "Nuestro Equipo",
+      "reviews": "Reseñas",
+      "clientReviews": "Reseñas de Clientes",
+      "about": "Sobre Nosotros",
+      "serviceAreas": "Áreas de Servicio",
+      "meetSehar": "Conozca a Sehar Hirani"
+    },
+    "notFound": {
+      "seoTitle": "Página No Encontrada",
+      "eyebrow": "Caso No Encontrado",
+      "title": "Esta página no se pudo encontrar en nuestros registros.",
+      "desc": "Es posible que la página que busca se haya movido, cambiado de nombre o ya no exista. Permítanos ayudarle a volver al camino correcto — o contáctenos y le orientaremos.",
+      "backHome": "Volver al Inicio",
+      "callLabel": "Llame al",
+      "helpfulLinks": "Enlaces Útiles"
+    }
   }
 }
