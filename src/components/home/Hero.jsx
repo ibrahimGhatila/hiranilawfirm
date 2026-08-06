@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="row align-items-center g-5">
           {/* Copy */}
           <div className="col-lg-8">
-            <span className="hl-eyebrow">{hero.eyebrow}</span>
+            <span className="hl-eyebrow mt-4">{hero.eyebrow}</span>
             <h1 className="hl-display hl-hero-title mb-4">{hero.title}</h1>
             <p className="hl-hero-desc mb-4">{hero.description}</p>
             <div className="d-flex flex-wrap gap-3 hl-hero-actions">
