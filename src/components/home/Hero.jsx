@@ -7,13 +7,19 @@ const { hero } = data
 
 // Drop an image named `hero-banner.(jpg|png|webp)` into src/assets to activate
 // the hero background banner — it auto-registers and shows behind a dark overlay.
+// `hero-banner-mobile` is a portrait crop swapped in on phones via CSS.
 const banner = images['hero-banner']
+const bannerMobile = images['hero-banner-mobile']
 
 export default function Hero() {
   return (
     <section
       className={'hl-hero hl-section' + (banner ? ' has-banner' : '')}
-      style={banner ? { backgroundImage: `url(${banner})` } : undefined}
+      style={
+        banner
+          ? { backgroundImage: `url(${banner})`, '--hero-mobile-bg': `url(${bannerMobile})` }
+          : undefined
+      }
     >
       <div className="hl-container">
         <div className="row align-items-center g-5">

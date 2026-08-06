@@ -54,7 +54,7 @@
     "eyebrow": "Houston and Katy Family Law Attorney",
     "title": "Facing a Family Challenge or Serious Injury?",
     "description": "Attorney Sehar Hirani helps clients across Greater Houston move through divorce, custody, modifications, child support, adoption, name changes, enforcement matters, and personal injury claims with clear guidance and steady advocacy.",
-    "primaryCta": { "label": "Free Case Evaluation", "to": "/contact" },
+    "primaryCta": { "label": "Request Consultation", "to": "/contact" },
     "secondaryCta": { "label": "Explore Practice Areas", "to": "/practice-areas" },
     "form": {
       "eyebrow": "Free Case Evaluation",
