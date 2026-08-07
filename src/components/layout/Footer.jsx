@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok } from 'react-icons/fa'
 
-import data from '../../data/active.js'
+import data, { currentLang } from '../../data/active.js'
 
 const { business, footer } = data
 
@@ -13,6 +13,8 @@ const socialIcons = {
 }
 
 export default function Footer() {
+  const openCookieSettings = () => window.dispatchEvent(new Event('hl:open-cookie-settings'))
+
   return (
     <footer className="hl-footer">
       <div className="hl-container">
@@ -51,7 +53,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="hl-footer-bottom">{footer.disclaimer}</div>
+        <div className="hl-footer-bottom">
+          <span>{footer.disclaimer}</span>
+          <div className="hl-footer-legal">
+            <Link to="/privacy-policy">{currentLang === 'es' ? 'Política de Privacidad' : 'Privacy Policy'}</Link>
+            <button type="button" className="hl-footer-cookie" onClick={openCookieSettings}>{currentLang === 'es' ? 'Configuración de cookies' : 'Cookie Settings'}</button>
+          </div>
+        </div>
       </div>
     </footer>
   )

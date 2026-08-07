@@ -33,6 +33,7 @@ const routes = [
   { route: '/reviews', ...data.reviewsPage.seo },
   { route: '/faqs', ...data.faqPage.seo },
   { route: '/contact', ...data.contactPage.seo },
+  { route: '/privacy-policy', title: 'Privacy Policy', description: 'Learn how Hirani Law Firm PLLC collects, uses, protects, and shares information submitted through this website.' },
 ]
 
 for (const member of data.teamPage.members.filter((item) => item.slug)) {

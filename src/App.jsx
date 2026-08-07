@@ -15,6 +15,7 @@ import PracticeDetail from './pages/PracticeDetail.jsx'
 import Reviews from './pages/Reviews.jsx'
 import FAQ from './pages/FAQ.jsx'
 import Contact from './pages/Contact.jsx'
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 function ScrollToTop() {
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/faqs" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

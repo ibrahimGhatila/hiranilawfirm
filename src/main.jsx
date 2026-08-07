@@ -7,6 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/theme.css'
 
 import App from './App.jsx'
+import { initializeConsentMode } from './utils/analytics.js'
+
+initializeConsentMode()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

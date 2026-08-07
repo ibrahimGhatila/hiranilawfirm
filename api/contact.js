@@ -1,6 +1,7 @@
 import { Resend } from 'resend'
 
 const RECIPIENTS = ['shihab.talukdar@primedeskgroup.com', 'sehar@hiranilawfirm.com']
+const FROM = 'Hirani Law Firm Website <website@hiranilawfirm.com>'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const clean = (value, max = 500) => String(value || '').trim().slice(0, max)
 const escapeHtml = (value = '') => String(value)
@@ -76,7 +77,7 @@ export default async function handler(req, res) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY)
     const { data, error } = await resend.emails.send({
-      from: 'Hirani Law Firm Website <onboarding@resend.dev>',
+      from: FROM,
       to: RECIPIENTS,
       replyTo: lead.email,
       subject: `New consultation request — ${lead.fullName} (${lead.help})`,

@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import data from '../../data/active.js'
+import { currentLang } from '../../data/active.js'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE_RE = /^[\d\s()+.-]{7,}$/
@@ -126,6 +128,12 @@ export default function LeadForm({
       <button type="submit" className={`btn ${submitClass} w-100`} disabled={sending}>
         {sending ? t.sending : submitLabel}
       </button>
+      <p className="hl-form-privacy mb-0">
+        {currentLang === 'es'
+          ? 'Al enviar este formulario, acepta que nos comuniquemos con usted sobre su consulta. El envío no crea una relación abogado-cliente. Consulte nuestra '
+          : 'By submitting this form, you agree that we may contact you about your inquiry. Submission does not create an attorney-client relationship. Read our '}
+        <Link to="/privacy-policy">{currentLang === 'es' ? 'Política de Privacidad' : 'Privacy Policy'}</Link>.
+      </p>
     </form>
   )
 }
