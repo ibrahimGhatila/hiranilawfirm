@@ -7,7 +7,8 @@ const dist = path.join(root, 'dist')
 const data = JSON.parse(await readFile(path.join(root, 'src/data/site.json'), 'utf8'))
 const details = JSON.parse(await readFile(path.join(root, 'src/data/practiceDetails.json'), 'utf8'))
 const template = await readFile(path.join(dist, 'index.html'), 'utf8')
-const siteUrl = (process.env.SITE_URL || process.env.VITE_SITE_URL || 'https://hiranilawfirm-azure.vercel.app').replace(/\/$/, '')
+// Canonicals must always identify the production domain, including preview builds.
+const siteUrl = 'https://www.hiranilawfirm.com'
 const imageUrl = `${siteUrl}/og-image.png`
 const logoUrl = `${siteUrl}/favicon.png`
 
