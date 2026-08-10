@@ -2,10 +2,10 @@ import { Resend } from 'resend'
 
 const RECIPIENTS = ['shihab.talukdar@primedeskgroup.com', 'sehar@hiranilawfirm.com']
 // TEMP: API key hardcoded for now (per request). Move back to process.env.RESEND_API_KEY before going public.
-const RESEND_API_KEY = 're_dUPPcdqd_MwZDKNQ4tErZrF6seqFQReAr'
+const RESEND_API_KEY = 're_bj1m2Y3W_48w3EViQamQwEZrvxLXvK7Q8'
 // Sender address — set RESEND_FROM in the environment (e.g. on Vercel) to an
 // email on a Resend-VERIFIED domain. Falls back to the default below if unset.
-const FROM = process.env.RESEND_FROM || 'Hirani Law Firm Website <website@hiranilawfirm.com>'
+const FROM = process.env.RESEND_FROM || 'Hirani Law Firm Website <noreply@hiranilawfirm.com>'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const clean = (value, max = 500) => String(value || '').trim().slice(0, max)
 const escapeHtml = (value = '') => String(value)
@@ -90,11 +90,13 @@ export default async function handler(req, res) {
     })
     if (error) {
       console.error('Resend error:', error)
-      return res.status(502).json({ error: 'Email delivery failed. Please try again.' })
+      // TEMP DEBUG: surface the real Resend reason on the live form.
+      return res.status(502).json({ error: `Resend: ${error?.message || error?.name || JSON.stringify(error)}` })
     }
     return res.status(200).json({ ok: true, id: data?.id })
   } catch (error) {
     console.error('Contact email error:', error)
-    return res.status(500).json({ error: 'Unable to send your request right now.' })
+    // TEMP DEBUG: surface the real exception on the live form.
+    return res.status(500).json({ error: `Server: ${error?.message || String(error)}` })
   }
 }
