@@ -1,8 +1,13 @@
-// Lead handler for the website consultation form.
-// Instead of talking to Resend directly, this builds a formatted subject + HTML
-// and forwards them to the standalone email service. That service owns the API
-// key, the sender, and the recipient list — this endpoint never sees them.
-const EMAIL_API_URL = process.env.EMAIL_API_URL || 'https://hiraniemailsender.vercel.app/api/send-email'
+import { Resend } from 'resend'
+
+// Sender + recipients are hardcoded (server-side). The API key comes from the
+// environment (RESEND_API_KEY) — set on Vercel and in .env.local for local dev.
+const FROM = 'Hirani Law Firm <noreply@hiranilawfirm.com>'
+const RECIPIENTS = [
+  'shihab.talukdar@primedeskgroup.com',
+  'sehar@hiranilawfirm.com',
+  'engr.mrehmantahir@gmail.com',
+]
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const clean = (value, max = 500) => String(value || '').trim().slice(0, max)
@@ -48,6 +53,10 @@ export default async function handler(req, res) {
     res.setHeader('Allow', 'POST')
     return res.status(405).json({ error: 'Method not allowed.' })
   }
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY is not configured')
+    return res.status(500).json({ error: 'Email service is not configured.' })
+  }
 
   const body = req.body || {}
   if (body.website) return res.status(200).json({ ok: true }) // honeypot
@@ -72,22 +81,21 @@ export default async function handler(req, res) {
     submittedAt: new Date().toLocaleString('en-US', { dateStyle: 'full', timeStyle: 'long', timeZone: 'America/Chicago' }),
   }
 
-  // Only subject + html go to the email service; it controls to/from/key.
-  const subject = `New consultation request — ${lead.fullName} (${lead.help})`
-  const html = renderEmail(lead)
-
   try {
-    const response = await fetch(EMAIL_API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ subject, html }),
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    const { data, error } = await resend.emails.send({
+      from: FROM,
+      to: RECIPIENTS,
+      replyTo: lead.email,
+      subject: `New consultation request — ${lead.fullName} (${lead.help})`,
+      html: renderEmail(lead),
+      text: [`NEW WEBSITE CONSULTATION REQUEST`, `Name: ${lead.fullName}`, `Email: ${lead.email}`, `Phone: ${lead.phone}`, `Help needed: ${lead.help}`, `Form location: ${lead.formContext}`, `Page: ${lead.pageTitle}`, `URL: ${lead.sourceUrl}`, `Referrer: ${lead.referrer}`, `Submitted: ${lead.submittedAt}`].join('\n'),
     })
-    const result = await response.json().catch(() => ({}))
-    if (!response.ok || !result.success) {
-      console.error('Email API error:', response.status, result)
+    if (error) {
+      console.error('Resend error:', error)
       return res.status(502).json({ error: 'Email delivery failed. Please try again.' })
     }
-    return res.status(200).json({ ok: true, id: result.id })
+    return res.status(200).json({ ok: true, id: data?.id })
   } catch (error) {
     console.error('Contact email error:', error)
     return res.status(500).json({ error: 'Unable to send your request right now.' })
