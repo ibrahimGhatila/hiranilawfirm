@@ -6,7 +6,6 @@ const FROM = 'Hirani Law Firm <noreply@hiranilawfirm.com>'
 const RECIPIENTS = [
   'shihab.talukdar@primedeskgroup.com',
   'sehar@hiranilawfirm.com',
-  'engr.mrehmantahir@gmail.com',
 ]
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
