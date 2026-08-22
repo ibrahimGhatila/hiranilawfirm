@@ -1,5 +1,7 @@
 const GTM_CONTAINER_ID = 'GTM-T8KPC6ZH'
 const SCRIPT_ID = 'hl-google-tag-manager'
+const BODY_CONTAINER_ID = 'hl-google-tag-manager-body'
+const IFRAME_ID = 'hl-google-tag-manager-iframe'
 
 function ensureGtag() {
   window.dataLayer = window.dataLayer || []
@@ -24,18 +26,31 @@ export function initializeConsentMode() {
 }
 
 function loadGoogleTagManager() {
-  if (document.getElementById(SCRIPT_ID)) return
+  if (!document.getElementById(SCRIPT_ID)) {
+    window.dataLayer.push({
+      'gtm.start': Date.now(),
+      event: 'gtm.js',
+    })
 
-  window.dataLayer.push({
-    'gtm.start': Date.now(),
-    event: 'gtm.js',
-  })
+    const script = document.createElement('script')
+    script.id = SCRIPT_ID
+    script.async = true
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_CONTAINER_ID}`
+    document.head.appendChild(script)
+  }
 
-  const script = document.createElement('script')
-  script.id = SCRIPT_ID
-  script.async = true
-  script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_CONTAINER_ID}`
-  document.head.appendChild(script)
+  const bodyContainer = document.getElementById(BODY_CONTAINER_ID)
+  if (bodyContainer && !document.getElementById(IFRAME_ID)) {
+    const iframe = document.createElement('iframe')
+    iframe.id = IFRAME_ID
+    iframe.src = `https://www.googletagmanager.com/ns.html?id=${GTM_CONTAINER_ID}`
+    iframe.height = '0'
+    iframe.width = '0'
+    iframe.style.display = 'none'
+    iframe.style.visibility = 'hidden'
+    iframe.title = 'Google Tag Manager'
+    bodyContainer.appendChild(iframe)
+  }
 }
 
 function clearAnalyticsCookies() {
@@ -60,5 +75,8 @@ export function applyAnalyticsConsent(granted) {
     ad_personalization: 'denied',
   })
   if (granted) loadGoogleTagManager()
-  else clearAnalyticsCookies()
+  else {
+    document.getElementById(IFRAME_ID)?.remove()
+    clearAnalyticsCookies()
+  }
 }
