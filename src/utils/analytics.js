@@ -1,5 +1,5 @@
-const GOOGLE_TAG_ID = 'GT-M6JLVZ7K'
-const SCRIPT_ID = 'hl-google-tag'
+const GTM_CONTAINER_ID = 'GTM-T8KPC6ZH'
+const SCRIPT_ID = 'hl-google-tag-manager'
 
 function ensureGtag() {
   window.dataLayer = window.dataLayer || []
@@ -23,33 +23,18 @@ export function initializeConsentMode() {
   })
 }
 
-function configureGoogleTag() {
-  const gtag = ensureGtag()
-  gtag('set', 'linker', { domains: ['hiranilawfirm.com'] })
-  gtag('js', new Date())
-  gtag('set', 'developer_id.dZTNiMT', true)
-  gtag('config', GOOGLE_TAG_ID, { googlesitekit_post_type: 'page' })
-
-  window._googlesitekit = window._googlesitekit || {}
-  window._googlesitekit.throttledEvents = []
-  window._googlesitekit.gtagEvent = (name, data) => {
-    const key = JSON.stringify({ name, data })
-    if (window._googlesitekit.throttledEvents[key]) return
-    window._googlesitekit.throttledEvents[key] = true
-    window.setTimeout(() => {
-      delete window._googlesitekit.throttledEvents[key]
-    }, 5)
-    gtag('event', name, { ...data, event_source: 'site-kit' })
-  }
-}
-
-function loadGoogleTag() {
+function loadGoogleTagManager() {
   if (document.getElementById(SCRIPT_ID)) return
+
+  window.dataLayer.push({
+    'gtm.start': Date.now(),
+    event: 'gtm.js',
+  })
+
   const script = document.createElement('script')
   script.id = SCRIPT_ID
   script.async = true
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`
-  script.onload = configureGoogleTag
+  script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_CONTAINER_ID}`
   document.head.appendChild(script)
 }
 
@@ -74,6 +59,6 @@ export function applyAnalyticsConsent(granted) {
     ad_user_data: 'denied',
     ad_personalization: 'denied',
   })
-  if (granted) loadGoogleTag()
+  if (granted) loadGoogleTagManager()
   else clearAnalyticsCookies()
 }
