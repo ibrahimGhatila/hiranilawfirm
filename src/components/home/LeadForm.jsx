@@ -69,6 +69,8 @@ export default function LeadForm({
       })
       const result = await response.json().catch(() => ({}))
       if (!response.ok) throw new Error(result.error || t.errGeneric)
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push({ event: 'form_submitted' })
       setSent(true)
     } catch (error) {
       setSubmitError(error.message || t.errGeneric)
