@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../../data/active.js'
 import { currentLang } from '../../data/active.js'
+import { sendLeadToSheet } from '../../utils/leadSheet.js'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE_RE = /^[\d\s()+.-]{7,}$/
@@ -19,6 +20,9 @@ export default function LeadForm({
   const [sending, setSending] = useState(false)
   const [submitError, setSubmitError] = useState('')
   const [errors, setErrors] = useState({})
+  // One ID per filled-in form: retries after a failed email reuse it, so the
+  // sheet script (which skips IDs already in column G) never duplicates a lead.
+  const submissionId = useRef('')
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -30,6 +34,7 @@ export default function LeadForm({
 
   const update = (key) => (event) => {
     const { value } = event.target
+    submissionId.current = ''
     setForm((previous) => ({ ...previous, [key]: value }))
     setErrors((previous) => (previous[key] ? { ...previous, [key]: undefined } : previous))
     if (submitError) setSubmitError('')
@@ -55,26 +60,38 @@ export default function LeadForm({
 
     setSending(true)
     setSubmitError('')
+    if (!submissionId.current) {
+      submissionId.current =
+        window.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`
+    }
+    const payload = {
+      ...form,
+      formContext: layout === 'spaced' ? 'Page consultation section' : 'Consultation form',
+      sourceUrl: window.location.href,
+      pageTitle: document.title,
+      referrer: document.referrer,
+    }
+    let emailStatus = 'failed'
     try {
+      // 1) Email notification (server-side, Resend)
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...form,
-          formContext: layout === 'spaced' ? 'Page consultation section' : 'Consultation form',
-          sourceUrl: window.location.href,
-          pageTitle: document.title,
-          referrer: document.referrer,
-        }),
+        body: JSON.stringify(payload),
       })
       const result = await response.json().catch(() => ({}))
       if (!response.ok) throw new Error(result.error || t.errGeneric)
+      emailStatus = 'sent'
+      // 2) GTM conversion event
       window.dataLayer = window.dataLayer || []
       window.dataLayer.push({ event: 'form_submitted' })
       setSent(true)
     } catch (error) {
       setSubmitError(error.message || t.errGeneric)
     } finally {
+      // 3) Spreadsheet row — always, even if the email failed, so no lead is
+      // lost (skipped for honeypot-caught bots).
+      if (!form.website) sendLeadToSheet({ ...payload, id: submissionId.current, emailStatus })
       setSending(false)
     }
   }
