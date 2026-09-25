@@ -1,10 +1,12 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import SEO from '../components/common/SEO.jsx'
 import PageHero from '../components/common/PageHero.jsx'
+import StickySidebar from '../components/common/StickySidebar.jsx'
 import ContactCTA from '../components/home/ContactCTA.jsx'
 import data, { currentLang } from '../data/active.js'
 import detailsEn from '../data/practiceDetails.json'
 import detailsEs from '../data/practiceDetails.es.json'
+import blog from '../data/blog.json'
 
 const { business } = data
 // Sidebar consult box copy is language-aware (shares the attorney-page strings).
@@ -22,6 +24,10 @@ export default function PracticeDetail() {
   if (!item) return <Navigate to="/practice-areas" replace />
 
   const categoryPath = `/practice-areas/${category}`
+  // Blog posts that list this service as related (internal linking for SEO).
+  const articles = blog.posts.filter((post) =>
+    post.related.some((r) => r.category === category && r.slug === slug)
+  )
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
@@ -81,35 +87,48 @@ export default function PracticeDetail() {
 
             {/* Sidebar */}
             <div className="col-lg-4">
-              <div className="hl-side-consult mb-4">
-                <span className="hl-eyebrow">{consult.eyebrow}</span>
-                <h3 className="hl-h3 text-white mb-2">{consult.title}</h3>
-                <p className="mb-3" style={{ color: '#b7b2a8', fontSize: '0.8075rem' }}>
-                  {consult.note}
-                </p>
-                <Link to={consult.cta.to} className="btn btn-gold w-100 mb-3">
-                  {consult.cta.label}
-                </Link>
-                <a href={business.phoneHref} className="hl-side-phone">
-                  {business.phone}
-                </a>
-              </div>
+              <StickySidebar>
+                <div className="hl-side-consult mb-4">
+                  <span className="hl-eyebrow">{consult.eyebrow}</span>
+                  <h3 className="hl-h3 text-white mb-2">{consult.title}</h3>
+                  <p className="mb-3" style={{ color: '#b7b2a8', fontSize: '0.8075rem' }}>
+                    {consult.note}
+                  </p>
+                  <Link to={consult.cta.to} className="btn btn-gold w-100 mb-3">
+                    {consult.cta.label}
+                  </Link>
+                  <a href={business.phoneHref} className="hl-side-phone">
+                    {business.phone}
+                  </a>
+                </div>
 
-              <div className="hl-side-list">
-                <div className="hl-side-list-title">{group.label}</div>
-                {group.items.map((sibling) => {
-                  const active = sibling.slug === slug
-                  return (
-                    <Link
-                      key={sibling.slug}
-                      to={`${categoryPath}/${sibling.slug}`}
-                      className={'hl-side-link' + (active ? ' active' : '')}
-                    >
-                      {sibling.title}
-                    </Link>
-                  )
-                })}
-              </div>
+                <div className="hl-side-list">
+                  <div className="hl-side-list-title">{group.label}</div>
+                  {group.items.map((sibling) => {
+                    const active = sibling.slug === slug
+                    return (
+                      <Link
+                        key={sibling.slug}
+                        to={`${categoryPath}/${sibling.slug}`}
+                        className={'hl-side-link' + (active ? ' active' : '')}
+                      >
+                        {sibling.title}
+                      </Link>
+                    )
+                  })}
+                </div>
+
+                {articles.length > 0 && (
+                  <nav className="hl-side-list mt-4" aria-label={data.ui.blog.relatedArticles}>
+                    <div className="hl-side-list-title">{data.ui.blog.relatedArticles}</div>
+                    {articles.map((post) => (
+                      <Link key={post.slug} to={`/blog/${post.slug}`} className="hl-side-link">
+                        {post.title}
+                      </Link>
+                    ))}
+                  </nav>
+                )}
+              </StickySidebar>
             </div>
           </div>
         </div>

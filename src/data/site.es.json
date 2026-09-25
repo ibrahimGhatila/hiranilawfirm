@@ -57,6 +57,10 @@
         ]
       },
       {
+        "label": "Blog",
+        "to": "/blog"
+      },
+      {
         "label": "Contacto",
         "to": "/contact"
       }
@@ -1154,6 +1158,25 @@
     }
   },
   "ui": {
+    "blog": {
+      "label": "Blog",
+      "article": "Artículo",
+      "articles": "Artículos",
+      "allArticles": "Todos los Art\u00edculos",
+      "filterLabel": "Filtrar art\u00edculos por \u00e1rea de pr\u00e1ctica",
+      "categories": {
+        "family-law": "Derecho Familiar",
+        "personal-injury": "Lesiones Personales"
+      },
+      "minRead": "min de lectura",
+      "readArticle": "Leer Art\u00edculo",
+      "by": "Por",
+      "faqTitle": "Preguntas Frecuentes",
+      "ctaButton": "Programe una Consulta Gratuita",
+      "relatedServices": "Servicios Relacionados",
+      "moreArticles": "M\u00e1s Art\u00edculos",
+      "relatedArticles": "Art\u00edculos Relacionados"
+    },
     "form": {
       "firstName": "Nombre",
       "lastName": "Apellido",

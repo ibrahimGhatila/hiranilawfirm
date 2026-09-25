@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.hiranilawfirm.com/</loc>
     <changefreq>weekly</changefreq>
@@ -64,6 +64,39 @@
   </url>
   <url>
     <loc>https://www.hiranilawfirm.com/faqs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hiranilawfirm.com/blog</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hiranilawfirm.com/blog/texas-child-custody-factors</loc>
+    <lastmod>2026-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.hiranilawfirm.com/og/blog/texas-child-custody-factors.jpg</image:loc>
+    </image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hiranilawfirm.com/blog/texas-divorce-property-division</loc>
+    <lastmod>2026-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.hiranilawfirm.com/og/blog/texas-divorce-property-division.jpg</image:loc>
+    </image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hiranilawfirm.com/blog/car-accident-texas-what-to-do</loc>
+    <lastmod>2026-09-25</lastmod>
+    <image:image>
+      <image:loc>https://www.hiranilawfirm.com/og/blog/car-accident-texas-what-to-do.jpg</image:loc>
+    </image:image>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

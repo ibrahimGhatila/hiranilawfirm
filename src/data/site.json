@@ -82,6 +82,10 @@
         ]
       },
       {
+        "label": "Blog",
+        "to": "/blog"
+      },
+      {
         "label": "Contact",
         "to": "/contact"
       }
@@ -1771,6 +1775,25 @@
     }
   },
   "ui": {
+    "blog": {
+      "label": "Blog",
+      "article": "Article",
+      "articles": "Articles",
+      "allArticles": "All Articles",
+      "filterLabel": "Filter articles by practice area",
+      "categories": {
+        "family-law": "Family Law",
+        "personal-injury": "Personal Injury"
+      },
+      "minRead": "min read",
+      "readArticle": "Read Article",
+      "by": "By",
+      "faqTitle": "Frequently Asked Questions",
+      "ctaButton": "Schedule a Free Consultation",
+      "relatedServices": "Related Services",
+      "moreArticles": "More Articles",
+      "relatedArticles": "Related Articles"
+    },
     "form": {
       "firstName": "First Name",
       "lastName": "Last Name",
