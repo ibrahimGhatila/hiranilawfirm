@@ -1921,7 +1921,12 @@ h1, h2, h3, h4, h5, h6,
 .hl-resource-card--wide {
   max-width: 620px;
   padding: 3rem 2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
+/* Keep the download label on the same baseline when cards sit side by side */
+.hl-resource-card--wide .hl-resource-meta { margin-top: auto; padding-top: 1rem; }
 .hl-resource-card--wide h3 { font-size: 1.445rem; }
 .hl-resource-card--wide p { font-size: 0.918rem; }
 

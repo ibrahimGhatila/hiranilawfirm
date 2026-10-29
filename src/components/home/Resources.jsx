@@ -14,11 +14,11 @@ export default function Resources() {
 
         <div className="row g-2 justify-content-center">
           {resources.cards.map((card) => (
-            <div className="col-md-8 col-lg-6" key={card.title}>
+            <div className="col-md-8 col-lg-6 d-flex" key={card.title}>
               <a
                 href={card.to}
                 download
-                className="text-decoration-none d-block"
+                className="text-decoration-none d-flex w-100"
                 aria-label={`Download ${card.title}`}
               >
                 <div className="hl-resource-card hl-resource-card--wide mx-auto">
