@@ -8,6 +8,12 @@ const RECIPIENTS = [
   'sehar@hiranilawfirm.com',
 ]
 
+// Google Apps Script web app that appends website leads to the leads sheet.
+// Called only from here so the script URL never ships in the browser bundle
+// (client-side posts to script.google.com get sites flagged as phishing).
+const LEAD_SHEET_URL =
+  'https://script.google.com/macros/s/AKfycbzJgb8w3JaMaqLEvXD1QhFT08q9eqWx__bAeXVueSFGOdT-jmAjQzPqal06BvUHYkXGmQ/exec'
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const clean = (value, max = 500) => String(value || '').trim().slice(0, max)
 const escapeHtml = (value = '') => String(value)
@@ -47,14 +53,74 @@ function renderEmail(lead) {
   </td></tr></table></body></html>`
 }
 
+// Matches the sheet's existing Date column format, e.g. "7/2/2026 9:07:44".
+function sheetDate(date = new Date()) {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago',
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hourCycle: 'h23',
+    })
+      .formatToParts(date)
+      .map((p) => [p.type, p.value])
+  )
+  return `${parts.month}/${parts.day}/${parts.year} ${parts.hour}:${parts.minute}:${parts.second}`
+}
+
+/**
+ * Appends the lead to the spreadsheet. Fields are form-encoded so the script
+ * reads them from `e.parameter`. Never throws: a sheet failure must not fail
+ * the form. Apps Script answers with a 302 after running doPost, so the
+ * redirect is not followed.
+ */
+async function sendLeadToSheet(row) {
+  try {
+    await fetch(LEAD_SHEET_URL, {
+      method: 'POST',
+      body: new URLSearchParams(row),
+      redirect: 'manual',
+      signal: AbortSignal.timeout(8000),
+    })
+  } catch (error) {
+    console.error('Lead sheet error:', error)
+  }
+}
+
+async function sendLeadEmail(lead) {
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY is not configured')
+    return { status: 500, body: { error: 'Email service is not configured.' } }
+  }
+  try {
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    const { data, error } = await resend.emails.send({
+      from: FROM,
+      to: RECIPIENTS,
+      replyTo: lead.email,
+      subject: `New consultation request — ${lead.fullName} (${lead.help})`,
+      html: renderEmail(lead),
+      text: [`NEW WEBSITE CONSULTATION REQUEST`, `Name: ${lead.fullName}`, `Email: ${lead.email}`, `Phone: ${lead.phone}`, `Help needed: ${lead.help}`, `Form location: ${lead.formContext}`, `Page: ${lead.pageTitle}`, `URL: ${lead.sourceUrl}`, `Referrer: ${lead.referrer}`, `Submitted: ${lead.submittedAt}`].join('\n'),
+    })
+    if (error) {
+      console.error('Resend error:', error)
+      return { status: 502, body: { error: 'Email delivery failed. Please try again.' } }
+    }
+    return { status: 200, body: { ok: true, id: data?.id } }
+  } catch (error) {
+    console.error('Contact email error:', error)
+    return { status: 500, body: { error: 'Unable to send your request right now.' } }
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')
     return res.status(405).json({ error: 'Method not allowed.' })
-  }
-  if (!process.env.RESEND_API_KEY) {
-    console.error('RESEND_API_KEY is not configured')
-    return res.status(500).json({ error: 'Email service is not configured.' })
   }
 
   const body = req.body || {}
@@ -80,23 +146,22 @@ export default async function handler(req, res) {
     submittedAt: new Date().toLocaleString('en-US', { dateStyle: 'full', timeStyle: 'long', timeZone: 'America/Chicago' }),
   }
 
-  try {
-    const resend = new Resend(process.env.RESEND_API_KEY)
-    const { data, error } = await resend.emails.send({
-      from: FROM,
-      to: RECIPIENTS,
-      replyTo: lead.email,
-      subject: `New consultation request — ${lead.fullName} (${lead.help})`,
-      html: renderEmail(lead),
-      text: [`NEW WEBSITE CONSULTATION REQUEST`, `Name: ${lead.fullName}`, `Email: ${lead.email}`, `Phone: ${lead.phone}`, `Help needed: ${lead.help}`, `Form location: ${lead.formContext}`, `Page: ${lead.pageTitle}`, `URL: ${lead.sourceUrl}`, `Referrer: ${lead.referrer}`, `Submitted: ${lead.submittedAt}`].join('\n'),
-    })
-    if (error) {
-      console.error('Resend error:', error)
-      return res.status(502).json({ error: 'Email delivery failed. Please try again.' })
-    }
-    return res.status(200).json({ ok: true, id: data?.id })
-  } catch (error) {
-    console.error('Contact email error:', error)
-    return res.status(500).json({ error: 'Unable to send your request right now.' })
-  }
+  // Email first, then the sheet row — always, even if the email failed, so no
+  // lead is lost. Awaited so the serverless function isn't frozen mid-request.
+  const result = await sendLeadEmail(lead)
+  await sendLeadToSheet({
+    date: sheetDate(),
+    firstName,
+    lastName,
+    email,
+    phone: clean(body.phone, 40),
+    service: help,
+    // Retries of the same form reuse this ID; the script skips IDs already in column G.
+    id: clean(body.id, 100),
+    emailStatus: result.status === 200 ? 'sent' : 'failed',
+    formContext: lead.formContext,
+    sourceUrl: clean(body.sourceUrl, 1000),
+    pageTitle: clean(body.pageTitle, 200),
+  })
+  return res.status(result.status).json(result.body)
 }

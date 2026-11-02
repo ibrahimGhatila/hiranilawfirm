@@ -2,7 +2,6 @@ import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../../data/active.js'
 import { currentLang } from '../../data/active.js'
-import { sendLeadToSheet } from '../../utils/leadSheet.js'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE_RE = /^[\d\s()+.-]{7,}$/
@@ -66,14 +65,14 @@ export default function LeadForm({
     }
     const payload = {
       ...form,
+      id: submissionId.current,
       formContext: layout === 'spaced' ? 'Page consultation section' : 'Consultation form',
       sourceUrl: window.location.href,
       pageTitle: document.title,
       referrer: document.referrer,
     }
-    let emailStatus = 'failed'
     try {
-      // 1) Email notification (server-side, Resend)
+      // 1) Email notification + spreadsheet row (both server-side)
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -81,7 +80,6 @@ export default function LeadForm({
       })
       const result = await response.json().catch(() => ({}))
       if (!response.ok) throw new Error(result.error || t.errGeneric)
-      emailStatus = 'sent'
       // 2) GTM conversion event
       window.dataLayer = window.dataLayer || []
       window.dataLayer.push({ event: 'form_submitted' })
@@ -89,9 +87,6 @@ export default function LeadForm({
     } catch (error) {
       setSubmitError(error.message || t.errGeneric)
     } finally {
-      // 3) Spreadsheet row — always, even if the email failed, so no lead is
-      // lost (skipped for honeypot-caught bots).
-      if (!form.website) sendLeadToSheet({ ...payload, id: submissionId.current, emailStatus })
       setSending(false)
     }
   }
